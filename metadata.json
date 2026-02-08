@@ -1,0 +1,8 @@
+{
+  "name": "Realm Labs - Modern Mobile App Development",
+  "description": "A high-end website for Realm Labs, a mobile app development agency, featuring an AI-powered project architect to help users design and plan their next big mobile application.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
