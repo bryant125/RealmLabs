@@ -79,34 +79,54 @@ const Header: React.FC<HeaderProps> = ({ onHome }) => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Backdrop & Drawer */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 md:hidden animate-in fade-in slide-in-from-top-10 duration-200">
-          <div className="flex flex-col gap-6">
-            <div className="space-y-4">
-              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">Projects</h3>
-              <Link
-                to="/burnscroll"
+        <div className="fixed inset-0 z-[70] md:hidden">
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm animate-in fade-in duration-200"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+
+          {/* Drawer */}
+          <div className="fixed inset-y-0 right-0 w-full sm:w-[320px] bg-white shadow-2xl animate-in slide-in-from-right duration-300 flex flex-col p-6 z-50">
+            <div className="flex items-center justify-between mb-8">
+              <span className="text-sm font-bold uppercase tracking-widest text-slate-900">Menu</span>
+              <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100"
+                className="p-2 -mr-2 text-slate-500 hover:text-slate-900 transition-colors"
+                aria-label="Close menu"
               >
-                <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-neon shadow-lg shadow-black/20">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg>
-                </div>
-                <div>
-                  <span className="block text-lg font-bold text-slate-900">Burn Scroll</span>
-                  <span className="block text-xs text-slate-500 font-medium">Mobile App</span>
-                </div>
-              </Link>
+                <X className="w-6 h-6" />
+              </button>
             </div>
 
-            <div className="pt-6 border-t border-slate-100">
-              <a
-                href="mailto:support@realmlabs.app"
-                className="flex items-center justify-center w-full px-8 py-4 bg-slate-900 text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-indigo-600 transition-colors shadow-xl shadow-slate-200"
-              >
-                Contact Us
-              </a>
+            <div className="flex flex-col gap-6">
+              <div className="space-y-4">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">Projects</h3>
+                <Link
+                  to="/burnscroll"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:bg-slate-50 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-neon shadow-lg shadow-black/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg>
+                  </div>
+                  <div>
+                    <span className="block text-lg font-bold text-slate-900">Burn Scroll</span>
+                    <span className="block text-xs text-slate-500 font-medium">Mobile App</span>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="pt-6 border-t border-slate-100 mt-auto">
+                <a
+                  href="mailto:support@realmlabs.app"
+                  className="flex items-center justify-center w-full px-8 py-4 bg-slate-900 text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-indigo-600 transition-colors shadow-xl shadow-slate-200"
+                >
+                  Contact Us
+                </a>
+              </div>
             </div>
           </div>
         </div>
