@@ -61,6 +61,28 @@ nav{
 .n-menu-sub{font-size:10px;font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--mid)}
 .n-cta{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--black);background:var(--white);padding:9px 22px;border-radius:2px;text-decoration:none;transition:opacity .2s;white-space:nowrap}
 .n-cta:hover{opacity:.8}
+/* Mobile nav */
+.n-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.n-burger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.n-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.n-burger.open span:nth-child(2){opacity:0}
+.n-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.n-mobile{
+  display:none;position:fixed;top:52px;left:0;right:0;z-index:998;
+  flex-direction:column;padding:12px 20px 22px;gap:2px;
+  background:rgba(10,10,10,0.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--line);
+  max-height:calc(100vh - 52px);overflow-y:auto;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-12px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s;
+}
+.n-mobile.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.n-m-link{display:block;padding:15px 6px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;border-bottom:1px solid var(--line);transition:color .2s}
+.n-m-link:hover{color:var(--white)}
+.n-m-label{padding:16px 6px 6px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);opacity:.6}
+.n-m-sec{border-bottom:1px solid var(--line);padding-bottom:8px}
+.n-m-cta{margin-top:18px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--black);background:var(--white);padding:14px 22px;border-radius:2px;text-decoration:none;transition:opacity .2s}
+.n-m-cta:hover{opacity:.8}
 
 /* ── HERO ── */
 .hero{
@@ -368,6 +390,9 @@ footer{background:var(--g1);padding:40px;border-top:1px solid var(--line)}
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .n-links{display:none}
+  .n-cta{display:none}
+  .n-burger{display:flex}
+  .n-mobile{display:flex}
   nav{padding:0 20px}
   .sec{padding:80px 20px}
   .hero{padding:100px 22px 80px}
@@ -428,7 +453,35 @@ footer{background:var(--g1);padding:40px;border-top:1px solid var(--line)}
     <li><a href="#about">About</a></li>
   </ul>
   <a href="#contact" class="n-cta">Get in touch</a>
+  <button class="n-burger" id="nBurger" aria-label="Open menu" aria-expanded="false" aria-controls="nMobile">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE NAV PANEL -->
+<div class="n-mobile" id="nMobile">
+  <a href="#manifesto" class="n-m-link">Philosophy</a>
+  <a href="#capabilities" class="n-m-link">What we build</a>
+  <div class="n-m-sec">
+    <div class="n-m-label">Projects</div>
+    <a href="https://www.realmlabs.app/mamabee/" target="_blank" class="n-menu-item">
+      <div class="n-menu-ic"><img src="assets/mamabee-logo.jpg" alt="MamaBee"></div>
+      <div class="n-menu-tx">
+        <div class="n-menu-name">MamaBee</div>
+        <div class="n-menu-sub">Calm baby tracker · Live</div>
+      </div>
+    </a>
+    <a href="https://www.realmlabs.app/burnscroll" target="_blank" class="n-menu-item">
+      <div class="n-menu-ic"><img src="assets/burnscroll-logo.jpg" alt="BurnScroll"></div>
+      <div class="n-menu-tx">
+        <div class="n-menu-name">BurnScroll</div>
+        <div class="n-menu-sub">Screen-time control · Live</div>
+      </div>
+    </a>
+  </div>
+  <a href="#about" class="n-m-link">About</a>
+  <a href="#contact" class="n-m-cta">Get in touch</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -724,6 +777,24 @@ footer{background:var(--g1);padding:40px;border-top:1px solid var(--line)}
   },{threshold:0.06,rootMargin:'0px 0px -20px 0px'});
   els.forEach(function(el){io.observe(el)});
   setTimeout(function(){els.forEach(function(el){el.classList.add('v')})},2000);
+})();
+
+// MOBILE NAV TOGGLE
+(function(){
+  var burger=document.getElementById('nBurger');
+  var panel=document.getElementById('nMobile');
+  if(!burger||!panel)return;
+  function setOpen(open){
+    panel.classList.toggle('open',open);
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+  }
+  burger.addEventListener('click',function(){setOpen(!panel.classList.contains('open'));});
+  // Close when a link is tapped, on Escape, or when resizing up to desktop
+  panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>900)setOpen(false);});
 })();
 </script>
 </body>
