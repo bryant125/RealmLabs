@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BurnScroll — Features</title>
+<meta name="description" content="Every BurnScroll feature that turns screen-time into a workout: blocklists, calorie unlocks, focus stats and more." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          neon: '#CEFF00',
+          'muted-foreground': '#a1a1aa',
+        },
+        fontFamily: {
+          outfit: ['Outfit', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        },
+        animation: {
+          'gradient-x': 'gradient-x 3s ease infinite',
+        },
+        keyframes: {
+          'gradient-x': {
+            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+          },
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/jpeg" href="/burnscroll/logo.jpg" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-mono-tech { font-family: 'JetBrains Mono', monospace; }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .perspective-1000 { perspective: 1000px; }
+  ::selection { background: #CEFF00; color: #000; }
+  @keyframes floaty { 0%, 100% { transform: translateY(-12px); } 50% { transform: translateY(12px); } }
+  .animate-floaty { animation: floaty 6s ease-in-out infinite; }
+</style>
+</head>
+<body class="bg-black text-white font-sans antialiased selection:bg-neon selection:text-black min-h-screen">
+<nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+  <div class="flex items-center gap-2 p-2 pl-4 pr-2 bg-white/10 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl">
+    <a href="/" class="flex items-center gap-2 group">
+      <div class="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+        <img src="/burnscroll/logo.jpg" alt="BurnScroll Logo" class="object-contain rounded-full w-full h-full" />
+      </div>
+      <span class="text-xl font-bold font-outfit tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-neon to-white">BurnScroll</span>
+    </a>
+    <div class="hidden md:flex items-center gap-1 ml-4 mr-2">
+      <a href="/burnscroll/use-cases" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">Use Cases</a>
+      <a href="/burnscroll/features" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">Features</a>
+      <a href="/burnscroll/contact" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">Support</a>
+    </div>
+    <div class="flex items-center gap-2 ml-2">
+      <button class="h-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-white/20 font-semibold px-5 inline-flex items-center justify-center gap-2 text-sm shadow-lg shadow-white/5 transition-all">
+        <svg viewBox="0 0 384 512" fill="currentColor" class="w-4 h-4 mb-0.5"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-22-101.9-56.1-102.6-91.8zM248.2 86C261 68 266 43 263.1 18.6c-24.3 1.9-52 17-68 40.5-12.7 18.6-18.3 43-15.3 70 26.6 2.2 55.4-23.7 68.4-43.1z" /></svg>
+        App Store
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="min-h-screen bg-black text-white selection:bg-neon selection:text-black font-sans">
+
+  <section class="pt-32 pb-20 relative overflow-hidden bg-black">
+    <!-- Background Ambient Glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-24 space-y-6">
+        <h1 class="text-5xl md:text-8xl font-bold tracking-tighter text-white">
+          Ingredients of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-neon to-emerald-400 animate-gradient-x">Focus.</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light">
+          Industrial-grade blocking technology. Zero distractions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-6 h-auto md:h-[850px]">
+
+        <!-- Card 1: Blocklist (Interactive) -->
+        <div class="relative overflow-hidden group border border-white/5 bg-[#050505] rounded-[2.5rem] md:col-span-3 md:row-span-2 p-8 flex flex-col justify-between bg-gradient-to-b from-[#0a0a0a] to-black">
+          <div class="pointer-events-none absolute -inset-px rounded-[2.5rem] opacity-0 transition duration-500 group-hover:opacity-100"></div>
+          <div class="relative h-full w-full z-10 flex flex-col justify-between">
+            <div class="mb-8">
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6">
+                <i class="fa-solid fa-shield-halved w-7 h-7 text-xl text-blue-400 flex items-center justify-center"></i>
+              </div>
+              <h3 class="text-4xl font-bold text-white mb-3">Blocklist</h3>
+              <p class="text-gray-400 text-lg">Tap to toggle blocking state.</p>
+            </div>
+
+            <div class="flex-1 overflow-hidden relative rounded-3xl bg-[#111] border border-white/5 p-2 shadow-2xl">
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 pointer-events-none z-20"></div>
+              <div class="flex flex-col gap-2 p-2">
+
+                <!-- Instagram (blocked) -->
+                <div class="relative flex items-center justify-between p-4 rounded-2xl border cursor-pointer transition-all duration-300 bg-red-500/5 border-red-500/20 hover:bg-red-500/10">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">IG</div>
+                    <div>
+                      <span class="font-semibold text-white text-lg block">Instagram</span>
+                      <span class="text-xs font-medium text-red-400">Distraction blocked</span>
+                    </div>
+                  </div>
+                  <div class="w-14 h-8 rounded-full p-1 transition-colors duration-300 flex items-center bg-red-500 justify-end">
+                    <div class="w-6 h-6 rounded-full bg-white shadow-sm"></div>
+                  </div>
+                </div>
+
+                <!-- TikTok (blocked) -->
+                <div class="relative flex items-center justify-between p-4 rounded-2xl border cursor-pointer transition-all duration-300 bg-red-500/5 border-red-500/20 hover:bg-red-500/10">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-black to-gray-800 flex items-center justify-center text-white font-bold text-sm shadow-lg">TT</div>
+                    <div>
+                      <span class="font-semibold text-white text-lg block">TikTok</span>
+                      <span class="text-xs font-medium text-red-400">Distraction blocked</span>
+                    </div>
+                  </div>
+                  <div class="w-14 h-8 rounded-full p-1 transition-colors duration-300 flex items-center bg-red-500 justify-end">
+                    <div class="w-6 h-6 rounded-full bg-white shadow-sm"></div>
+                  </div>
+                </div>
+
+                <!-- Snapchat (allowed) -->
+                <div class="relative flex items-center justify-between p-4 rounded-2xl border cursor-pointer transition-all duration-300 bg-white/5 border-white/5 hover:bg-white/10">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-yellow-300 flex items-center justify-center text-white font-bold text-sm shadow-lg">SC</div>
+                    <div>
+                      <span class="font-semibold text-white text-lg block">Snapchat</span>
+                      <span class="text-xs font-medium text-emerald-400">Usage allowed</span>
+                    </div>
+                  </div>
+                  <div class="w-14 h-8 rounded-full p-1 transition-colors duration-300 flex items-center bg-white/20 justify-start">
+                    <div class="w-6 h-6 rounded-full bg-white shadow-sm"></div>
+                  </div>
+                </div>
+
+                <!-- Mock Extra Items to fill space -->
+                <div class="opacity-30 pointer-events-none grayscale">
+                  <div class="flex items-center justify-between p-4 rounded-2xl border border-white/5 bg-white/5">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-sm">FB</div>
+                      <span class="font-semibold text-white text-lg">Facebook</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Difficulty Levels -->
+        <div class="relative overflow-hidden group border border-white/5 bg-[#050505] rounded-[2.5rem] md:col-span-3 p-8 flex flex-col justify-between">
+          <div class="pointer-events-none absolute -inset-px rounded-[2.5rem] opacity-0 transition duration-500 group-hover:opacity-100"></div>
+          <div class="relative h-full w-full z-10 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-neon/10 flex items-center justify-center mb-6">
+                <i class="fa-solid fa-bolt w-7 h-7 text-xl text-neon flex items-center justify-center"></i>
+              </div>
+              <h3 class="text-3xl font-bold text-white mb-2">Difficulty</h3>
+              <p class="text-gray-400">How strict do you want to be?</p>
+            </div>
+            <div class="mt-8 grid grid-cols-3 gap-4">
+
+              <!-- Normal -->
+              <button class="relative p-4 rounded-2xl border transition-all duration-300 flex flex-col items-center justify-center gap-2 group bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:border-white/20">
+                <span class="text-3xl filter drop-shadow-lg">😌</span>
+                <div class="text-center">
+                  <span class="block text-sm font-bold uppercase tracking-wider text-white">Normal</span>
+                  <span class="text-[10px] text-gray-500">Can cancel</span>
+                </div>
+              </button>
+
+              <!-- Hardcore (selected) -->
+              <button class="relative p-4 rounded-2xl border transition-all duration-300 flex flex-col items-center justify-center gap-2 group bg-neon text-black border-neon shadow-[0_0_20px_rgba(206,255,0,0.4)] transform scale-105">
+                <span class="text-3xl filter drop-shadow-lg">🔥</span>
+                <div class="text-center">
+                  <span class="block text-sm font-bold uppercase tracking-wider text-black">Hardcore</span>
+                  <span class="text-[10px] text-black/70">Cannot cancel</span>
+                </div>
+              </button>
+
+              <!-- Nuke -->
+              <button class="relative p-4 rounded-2xl border transition-all duration-300 flex flex-col items-center justify-center gap-2 group bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:border-white/20">
+                <span class="text-3xl filter drop-shadow-lg">😈</span>
+                <div class="text-center">
+                  <span class="block text-sm font-bold uppercase tracking-wider text-white">Nuke</span>
+                  <span class="text-[10px] text-gray-500">Phone bricked</span>
+                </div>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: App Limits (Circular Slider Concept) -->
+        <div class="relative overflow-hidden group border border-white/5 bg-[#050505] rounded-[2.5rem] md:col-span-1 md:col-start-4 p-6 flex flex-col justify-center items-center text-center bg-[#080808]">
+          <div class="pointer-events-none absolute -inset-px rounded-[2.5rem] opacity-0 transition duration-500 group-hover:opacity-100"></div>
+          <div class="relative h-full w-full z-10 flex flex-col justify-center items-center text-center">
+            <div class="relative w-32 h-32 flex items-center justify-center mb-6">
+              <!-- Simple Visualization of a dial -->
+              <svg class="w-full h-full -rotate-90">
+                <circle cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" class="text-white/10" />
+                <circle cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="364" stroke-dashoffset="303.3333333333333" stroke-linecap="round" class="text-emerald-500 transition-all duration-500" />
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <span class="text-3xl font-bold text-white">2h</span>
+                <span class="text-xs text-emerald-400 font-medium tracking-wide">ALLOWED</span>
+              </div>
+            </div>
+
+            <h4 class="font-bold text-white mb-2">Daily Limit</h4>
+            <div class="relative w-full h-6 flex items-center cursor-pointer group">
+              <div class="absolute inset-0 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-neon transition-all duration-300" style="width: 16.666666666666664%"></div>
+              </div>
+              <div class="absolute h-5 w-5 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-300 group-hover:scale-110" style="left: calc(16.666666666666664% - 10px)"></div>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">Slide to adjust cap</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Focus Score / Stats -->
+        <div class="relative overflow-hidden group border border-white/5 bg-[#050505] rounded-[2.5rem] md:col-span-2 p-8 flex flex-col justify-between">
+          <div class="pointer-events-none absolute -inset-px rounded-[2.5rem] opacity-0 transition duration-500 group-hover:opacity-100"></div>
+          <div class="relative h-full w-full z-10 flex flex-col justify-between">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Focus Score</h3>
+                <i class="fa-solid fa-wave-square text-neon w-6 h-6 text-xl animate-pulse flex items-center justify-center"></i>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-7xl font-mono font-bold text-white tracking-tighter">98</span>
+                <span class="text-xl text-gray-500 font-medium">/ 100</span>
+              </div>
+              <p class="text-gray-400 mt-2 text-sm">Top 1% of users today.</p>
+            </div>
+
+            <!-- Abstract Chart Background -->
+            <div class="absolute bottom-0 left-0 right-0 h-32 flex items-end gap-1 p-8 opacity-20">
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 40%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 60%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 45%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 70%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 85%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 95%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 80%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 75%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 60%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 90%"></div>
+              <div class="flex-1 bg-neon rounded-t-sm" style="height: 100%"></div>
+            </div>
+
+            <div class="absolute right-0 top-0 w-64 h-64 bg-neon/10 blur-[80px] rounded-full pointer-events-none"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="bg-black/80 border-t border-white/10 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="md:col-span-2 space-y-6">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+            <img src="/burnscroll/logo.jpg" alt="BurnScroll Logo" class="object-contain rounded-full w-full h-full" />
+          </div>
+          <span class="text-xl font-bold font-outfit tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-neon to-white">BurnScroll</span>
+        </a>
+        <p class="text-muted-foreground w-full md:w-2/3">Real Focus in Real-Time. Measure and improve your focus day by day.</p>
+        <div class="flex gap-4">
+          <a href="#" aria-label="Twitter" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+          <a href="#" aria-label="Instagram" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a href="#" aria-label="LinkedIn" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+          <a href="#" aria-label="GitHub" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Product</h4>
+        <ul class="space-y-4 text-muted-foreground">
+          <li><a href="/burnscroll" class="hover:text-white transition-colors">Download</a></li>
+          <li><a href="/burnscroll/use-cases" class="hover:text-white transition-colors">Use Cases</a></li>
+          <li><a href="/burnscroll/features" class="hover:text-white transition-colors">Features</a></li>
+          <li><a href="/burnscroll/contact" class="hover:text-white transition-colors">Contact &amp; Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-muted-foreground">
+          <li><a href="/burnscroll/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="/burnscroll/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">© 2026 BurnScroll. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>

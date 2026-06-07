@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BurnScroll — Privacy Policy</title>
+<meta name="description" content="How BurnScroll collects, uses, and protects your data." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          neon: '#CEFF00',
+          'muted-foreground': '#a1a1aa',
+        },
+        fontFamily: {
+          outfit: ['Outfit', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        },
+        animation: {
+          'gradient-x': 'gradient-x 3s ease infinite',
+        },
+        keyframes: {
+          'gradient-x': {
+            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+          },
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/jpeg" href="/burnscroll/logo.jpg" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-mono-tech { font-family: 'JetBrains Mono', monospace; }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .perspective-1000 { perspective: 1000px; }
+  ::selection { background: #CEFF00; color: #000; }
+  @keyframes floaty { 0%, 100% { transform: translateY(-12px); } 50% { transform: translateY(12px); } }
+  .animate-floaty { animation: floaty 6s ease-in-out infinite; }
+</style>
+</head>
+<body class="bg-black text-white font-sans antialiased selection:bg-neon selection:text-black min-h-screen">
+<nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+  <div class="flex items-center gap-2 p-2 pl-4 pr-2 bg-white/10 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl">
+    <a href="/" class="flex items-center gap-2 group">
+      <div class="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+        <img src="/burnscroll/logo.jpg" alt="BurnScroll Logo" class="object-contain rounded-full w-full h-full" />
+      </div>
+      <span class="text-xl font-bold font-outfit tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-neon to-white">BurnScroll</span>
+    </a>
+    <div class="hidden md:flex items-center gap-1 ml-4 mr-2">
+      <a href="/burnscroll/use-cases" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">Use Cases</a>
+      <a href="/burnscroll/features" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">Features</a>
+      <a href="/burnscroll/contact" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">Support</a>
+    </div>
+    <div class="flex items-center gap-2 ml-2">
+      <button class="h-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-white/20 font-semibold px-5 inline-flex items-center justify-center gap-2 text-sm shadow-lg shadow-white/5 transition-all">
+        <svg viewBox="0 0 384 512" fill="currentColor" class="w-4 h-4 mb-0.5"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-22-101.9-56.1-102.6-91.8zM248.2 86C261 68 266 43 263.1 18.6c-24.3 1.9-52 17-68 40.5-12.7 18.6-18.3 43-15.3 70 26.6 2.2 55.4-23.7 68.4-43.1z" /></svg>
+        App Store
+      </button>
+    </div>
+  </div>
+</nav>
+<main class="min-h-screen bg-black text-white selection:bg-neon selection:text-black font-sans">
+  <div class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">Privacy Policy</h1>
+    <p class="text-gray-400 mb-12">Last Updated: January 18, 2026</p>
+
+    <div class="space-y-12 text-gray-300 leading-relaxed">
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">1. Introduction</h2>
+        <p>
+          Welcome to BurnScroll. This Privacy Policy explains how we collect, use, disclose, and safeguard your
+          information when you use our BurnScroll mobile application and website (collectively, the "Service").
+        </p>
+        <p class="mt-4">
+          Please read this Privacy Policy carefully. By accessing or using the Service, you acknowledge that you
+          have read, understood, and agree to be bound by all the terms of this Privacy Policy and our Terms of Service.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">2. Who We Are</h2>
+        <p>
+          BurnScroll is a mobile application that encourages physical activity by requiring users to perform exercises
+          (such as heavy cardio) in order to earn scrolling time on social media and other applications.
+        </p>
+        <p class="mt-4">
+          <strong>Contact Information:</strong><br />
+          Email: support@realmlabs.app
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">3. Information We Collect</h2>
+
+        <h3 class="text-xl font-semibold text-white mt-6 mb-3">3.1 Information You Provide to Us</h3>
+        <ul class="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Account Information:</strong> When you register for an account, we collect information necessary to set up and maintain your account, such as your email address, name, and other identifying information provided through third-party authentication services (Google, Apple).</li>
+          <li><strong>User Content:</strong> Information you provide when using the Service, such as profile information or content you share if you use social features.</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-white mt-6 mb-3">3.2 Information We Collect Automatically</h3>
+        <ul class="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Usage Data:</strong> Information about your activity on the Service, including exercise data (active calories burned), streak information, time budget usage, historical statistics, and session duration.</li>
+          <li><strong>Device Information:</strong> Information about your mobile device and internet connection, including device type, operating system, unique device identifiers, mobile network information, and IP address.</li>
+          <li><strong>App Usage Information:</strong> Through the screen time API on iOS and equivalent on Android, we collect information about the time you spend on various applications. We do not collect information about specific content viewed within those applications.</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-white mt-6 mb-3">3.3 Face Data and Exercise Detection</h3>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 my-4">
+          <ul class="list-disc pl-5 space-y-2">
+            <li>
+              <strong>How We Use Face Data:</strong> BurnScroll does NOT use facial recognition. We use your device's camera only if you opt for camera-based exercises to verify completion.
+            </li>
+            <li>
+              <strong>No Storage or Transmission:</strong> We do not collect, store, or retain any face data. All processing occurs entirely on your device in real-time and is immediately discarded. Face data never leaves your device.
+            </li>
+            <li>
+              <strong>Why We Don't Store Face Data:</strong> We prioritize your privacy. Exercise detection works in real-time without needing to store facial data.
+            </li>
+            <li>
+              <strong>No Third-Party Sharing:</strong> We do not share face data with any third parties.
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mt-6 mb-3">3.4 Information from Third Parties</h3>
+        <p>
+          We may receive information about you from third-party services when you choose to connect your account (such as Google or Apple for authentication).
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">4. How We Use Your Information</h2>
+        <p>
+          We use the information we collect to provide and maintain the Service, manage your account, track exercise statistics, improve user experience, and comply with legal obligations.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">5. Data Sharing and Disclosure</h2>
+        <p>
+          We may share your information with service providers like Supabase (hosting), Superwall (payments), and Google Analytics (performance monitoring). We may also disclose information for legal requirements or business transfers.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">6. Social Features</h2>
+        <p>
+          Future social features may allow you to connect with friends, and additional privacy controls will be provided when implemented.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">7. Data Retention</h2>
+        <p>
+          We retain your personal information as long as your account is active. If you delete your account, we will delete or anonymize your personal information unless required by law to retain it.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">8. Data Security</h2>
+        <p>
+          We implement appropriate measures to protect your information, though no online transmission is 100% secure.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">9. Children's Privacy</h2>
+        <p>
+          The Service is intended for users 13 and older. We do not knowingly collect data from children under 13.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">10. Your Data Protection Rights</h2>
+        <p>
+          You may have rights including Access, Rectification, Erasure, Restriction, Data Portability, and Right to Object. Contact us at support@realmlabs.app to exercise these rights.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">11. International Data Transfers</h2>
+        <p>
+          Your information may be processed in countries other than your own with appropriate safeguards in place.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">12. Cookies and Similar Technologies</h2>
+        <p>
+          We use cookies to track activity and hold certain information. You can adjust your browser settings to refuse cookies.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">13. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this policy periodically and will notify you of any changes by updating the "Last Updated" date.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">14. Contact Us</h2>
+        <p>
+          <strong>Email:</strong> support@realmlabs.app
+        </p>
+      </section>
+    </div>
+  </div>
+</main>
+<footer class="bg-black/80 border-t border-white/10 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="md:col-span-2 space-y-6">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+            <img src="/burnscroll/logo.jpg" alt="BurnScroll Logo" class="object-contain rounded-full w-full h-full" />
+          </div>
+          <span class="text-xl font-bold font-outfit tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-neon to-white">BurnScroll</span>
+        </a>
+        <p class="text-muted-foreground w-full md:w-2/3">Real Focus in Real-Time. Measure and improve your focus day by day.</p>
+        <div class="flex gap-4">
+          <a href="#" aria-label="Twitter" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+          <a href="#" aria-label="Instagram" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a href="#" aria-label="LinkedIn" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+          <a href="#" aria-label="GitHub" class="text-muted-foreground hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Product</h4>
+        <ul class="space-y-4 text-muted-foreground">
+          <li><a href="/burnscroll" class="hover:text-white transition-colors">Download</a></li>
+          <li><a href="/burnscroll/use-cases" class="hover:text-white transition-colors">Use Cases</a></li>
+          <li><a href="/burnscroll/features" class="hover:text-white transition-colors">Features</a></li>
+          <li><a href="/burnscroll/contact" class="hover:text-white transition-colors">Contact &amp; Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-muted-foreground">
+          <li><a href="/burnscroll/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="/burnscroll/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">© 2026 BurnScroll. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
