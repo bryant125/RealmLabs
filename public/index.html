@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realm Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#000;--g1:#080808;--g2:#0f0f0f;--g3:#161616;
+  --white:#fff;--mid:rgba(255,255,255,0.42);--lite:rgba(255,255,255,0.16);
+  --line:rgba(255,255,255,0.06);--accent:#C8FF00;
+  --f:'Outfit',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;
+  background:rgba(0,0,0,0.55);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--line);
+}
+.n-logo{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.n-mark{width:28px;height:28px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center}
+.n-mark svg{width:14px;height:14px}
+.n-links{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:40px;list-style:none}
+.n-links>li{position:relative;display:flex;align-items:center;height:100%}
+.n-links a{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;white-space:nowrap;display:inline-flex;align-items:center;line-height:1}
+.n-links a:hover{color:var(--white)}
+/* Dropdown */
+.n-drop{display:inline-flex;align-items:center;gap:6px;cursor:pointer;line-height:1}
+.n-drop-caret{width:8px;height:8px;stroke:currentColor;fill:none;stroke-width:1.6;transition:transform .25s}
+.n-has-drop:hover .n-drop-caret{transform:rotate(180deg)}
+.n-menu{
+  position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);
+  min-width:230px;padding:8px;
+  background:rgba(10,10,10,0.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 24px 60px rgba(0,0,0,0.6);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s ease,transform .22s ease,visibility .22s;
+  list-style:none;
+}
+.n-has-drop:hover .n-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(8px)}
+.n-menu::before{content:'';position:absolute;top:-8px;left:0;right:0;height:8px}
+.n-menu li{margin:0}
+.n-menu-item{
+  display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:6px;
+  text-decoration:none;transition:background .18s;
+}
+.n-menu-item:hover{background:rgba(255,255,255,0.05)}
+.n-menu-ic{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.n-menu-ic img{width:100%;height:100%;object-fit:cover;display:block}
+.n-menu-tx{display:flex;flex-direction:column;gap:2px}
+.n-menu-name{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:none;color:var(--white)}
+.n-menu-sub{font-size:10px;font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--mid)}
+.n-cta{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--black);background:var(--white);padding:9px 22px;border-radius:2px;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.n-cta:hover{opacity:.8}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:80px 40px;position:relative;overflow:hidden;
+}
+.hero-canvas{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;z-index:0;
+}
+.hero-grid{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:80px 80px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 35%,transparent 100%);
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 35%,transparent 100%);
+}
+.hero-glow{
+  position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);
+  width:700px;height:280px;
+  background:radial-gradient(ellipse,rgba(200,255,0,0.05) 0%,transparent 70%);
+  pointer-events:none;z-index:1;
+}
+.hero-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:36px;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  position:relative;z-index:2;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{
+  content:'';width:48px;height:1px;background:rgba(255,255,255,0.12);
+}
+.hero-h{
+  font-size:clamp(36px,6.2vw,92px);font-weight:900;letter-spacing:-.04em;
+  line-height:.96;color:var(--white);
+  max-width:min(90vw,860px);width:100%;
+  text-align:center;margin-bottom:40px;position:relative;z-index:2;
+}
+.hero-sub{
+  font-size:clamp(15px,1.3vw,17px);font-weight:300;line-height:1.7;
+  color:var(--mid);max-width:480px;margin-bottom:52px;position:relative;z-index:2;
+}
+.hero-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:2}
+.btn-w{
+  background:var(--white);color:var(--black);
+  padding:14px 30px;border-radius:2px;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:opacity .2s;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+}
+.btn-w:hover{opacity:.84}
+.btn-line{
+  border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.62);
+  padding:14px 30px;border-radius:2px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:border-color .2s,color .2s;white-space:nowrap;
+}
+.btn-line:hover{border-color:rgba(255,255,255,.5);color:var(--white)}
+.hero-scroll{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--lite);
+  z-index:2;
+}
+.scroll-bar{width:1px;height:44px;background:linear-gradient(to bottom,rgba(255,255,255,0.2),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:.2}50%{opacity:.8}}
+
+/* ── HERO DEVICES ── */
+.hero-devices{
+  display:flex;align-items:flex-end;justify-content:center;gap:20px;
+  margin-top:64px;position:relative;z-index:2;
+}
+.hero-devices::before{
+  content:'';position:absolute;bottom:-50px;left:50%;transform:translateX(-50%);
+  width:560px;height:180px;
+  background:radial-gradient(ellipse,rgba(200,255,0,0.07) 0%,transparent 70%);
+  filter:blur(30px);pointer-events:none;
+}
+.dev{
+  border-radius:40px;flex-shrink:0;position:relative;
+  padding:4px;
+  background:linear-gradient(150deg,#3a3a40 0%,#1a1a1e 30%,#0e0e11 60%,#2c2c31 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+.dev::after{
+  /* side power button */
+  content:'';position:absolute;right:-2px;top:96px;width:2px;height:42px;border-radius:2px;
+  background:linear-gradient(to right,#36363b,#1a1a1e);
+}
+.dev::before{
+  /* volume buttons */
+  content:'';position:absolute;left:-2px;top:80px;width:2px;height:30px;border-radius:2px;
+  background:linear-gradient(to left,#36363b,#1a1a1e);
+  box-shadow:0 44px 0 0 #2a2a2e,0 -40px 0 0 #2a2a2e;
+}
+.dev-mid{width:198px;height:408px;box-shadow:0 50px 90px rgba(0,0,0,.9),0 18px 36px rgba(0,0,0,.55)}
+.dev-side{width:166px;height:340px;box-shadow:0 38px 70px rgba(0,0,0,.8),0 14px 28px rgba(0,0,0,.45)}
+.dev-scr{width:100%;height:100%;border-radius:36px;overflow:hidden;position:relative;background:#0a0a0f;box-shadow:inset 0 0 0 1.5px rgba(0,0,0,0.8)}
+.dev-side .dev-scr{border-radius:34px}
+.dev-notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:74px;height:21px;background:#000;border-radius:12px;z-index:10;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.04)}
+.dev-side .dev-notch{width:58px;height:17px;top:9px}
+
+/* shared screen bits */
+.ds{display:flex;flex-direction:column;height:100%;padding:30px 14px 16px}
+.ds-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.ds-ttl{font-size:12px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.ds-sub{font-size:8px;color:rgba(255,255,255,.4);margin-top:1px}
+.ds-dot{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.08)}
+
+/* Health screen */
+.dh{background:linear-gradient(165deg,#04130c 0%,#06251a 55%,#03150e 100%)}
+.dh-rings{display:flex;justify-content:center;margin:6px 0 14px}
+.dh-rings svg{width:92px;height:92px}
+.dh-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
+.dh-st{background:rgba(255,255,255,.06);border-radius:8px;padding:7px 4px;text-align:center}
+.dh-st-n{font-size:12px;font-weight:700;color:#fff}
+.dh-st-l{font-size:6.5px;color:rgba(255,255,255,.4);margin-top:1px;letter-spacing:.04em}
+.dh-bars{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.dh-br{display:flex;align-items:center;gap:6px}
+.dh-br-t{flex:1;height:4px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.dh-br-f{height:100%;border-radius:2px}
+
+/* AI assistant screen */
+.da{background:linear-gradient(165deg,#0a0f02 0%,#141d05 55%,#0a1003 100%)}
+.da-msgs{display:flex;flex-direction:column;gap:8px;flex:1}
+.da-q{align-self:flex-end;background:rgba(255,255,255,.1);border-radius:12px 12px 3px 12px;padding:8px 10px;font-size:8.5px;color:rgba(255,255,255,.85);max-width:78%;line-height:1.4}
+.da-a{align-self:flex-start;background:rgba(200,255,0,.12);border:1px solid rgba(200,255,0,.2);border-radius:12px 12px 12px 3px;padding:8px 10px;font-size:8.5px;color:#eaffb0;max-width:82%;line-height:1.45}
+.da-typing{align-self:flex-start;display:flex;gap:3px;padding:8px 10px}
+.da-typing span{width:4px;height:4px;border-radius:50%;background:rgba(200,255,0,.5);animation:dotpulse 1.2s infinite}
+.da-typing span:nth-child(2){animation-delay:.2s}
+.da-typing span:nth-child(3){animation-delay:.4s}
+@keyframes dotpulse{0%,100%{opacity:.3}50%{opacity:1}}
+.da-bar{margin-top:8px;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border-radius:980px;padding:7px 12px}
+.da-bar-ph{font-size:8px;color:rgba(255,255,255,.3);flex:1}
+.da-bar-go{width:18px;height:18px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.da-bar-go svg{width:9px;height:9px;stroke:#000;fill:none;stroke-width:2.5}
+
+/* Analytics screen */
+.dn{background:linear-gradient(165deg,#02080f 0%,#051320 55%,#020a12 100%)}
+.dn-big{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:1px}
+.dn-chg{font-size:8px;color:#4ea8ff;font-weight:600;margin-bottom:12px}
+.dn-chart{height:60px;margin-bottom:12px}
+.dn-chart svg{width:100%;height:100%}
+.dn-rows{display:flex;flex-direction:column;gap:7px}
+.dn-row{display:flex;align-items:center;gap:8px}
+.dn-row-ic{width:22px;height:22px;border-radius:6px;flex-shrink:0}
+.dn-row-i{flex:1}
+.dn-row-n{font-size:8.5px;color:rgba(255,255,255,.78);font-weight:600}
+.dn-row-s{font-size:7px;color:rgba(255,255,255,.32);margin-top:1px}
+.dn-row-v{font-size:8.5px;font-weight:700;color:#fff}
+
+/* ── DIVIDER ── */
+.divider{border:none;border-top:1px solid var(--line);margin:0}
+
+/* ── SECTION BASE ── */
+.sec{padding:120px 40px}
+.sec-inner{max-width:1080px;margin:0 auto}
+.sec-label{
+  font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:20px;display:flex;align-items:center;gap:14px;
+}
+.sec-label::before{content:'';width:20px;height:1px;background:rgba(255,255,255,.2)}
+.h2{
+  font-size:clamp(36px,5vw,72px);font-weight:900;letter-spacing:-.04em;
+  line-height:1.0;color:var(--white);text-wrap:balance;
+}
+.psub{font-size:17px;font-weight:300;color:var(--mid);line-height:1.7;max-width:520px;margin-top:24px}
+
+/* ── VISION ── */
+.vision-bg{background:var(--g1)}
+.vision-layout{display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:start}
+.vision-sticky{position:sticky;top:100px}
+.vision-items{display:flex;flex-direction:column}
+.v-item{
+  padding:40px 0;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:100px 1fr;gap:32px;align-items:start;
+}
+.v-item:last-child{border-bottom:none}
+.v-n{font-size:11px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.2);padding-top:4px}
+.v-body{}
+.v-t{font-size:18px;font-weight:700;letter-spacing:-.02em;color:var(--white);margin-bottom:10px}
+.v-d{font-size:14px;color:var(--mid);line-height:1.7;font-weight:300}
+
+/* ── ABOUT ── */
+.about-bg{background:var(--g2)}
+.about-layout{display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:start}
+.about-big{font-size:clamp(28px,3.2vw,48px);font-weight:900;letter-spacing:-.04em;line-height:1.06;color:var(--white);margin-bottom:24px}
+.about-p{font-size:15px;color:var(--mid);font-weight:300;line-height:1.75;margin-bottom:14px}
+.about-contact-l{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:10px;margin-top:32px}
+.about-email{
+  font-size:17px;font-weight:600;color:var(--white);text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;transition:color .2s;
+}
+.about-email:hover{color:rgba(255,255,255,.6)}
+.about-table{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.about-row{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  padding:18px 22px;border-bottom:1px solid var(--line);
+}
+.about-row:last-child{border-bottom:none}
+.about-row-l{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.25);white-space:nowrap}
+.about-row-v{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);text-align:right}
+
+/* ── MANIFESTO ── */
+.manifesto{background:var(--black);padding:140px 40px;position:relative;overflow:hidden;text-align:center}
+.man-inner{max-width:860px;margin:0 auto;position:relative;z-index:2}
+.man-def{
+  font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--mid);
+  margin-bottom:40px;display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;
+}
+.man-def b{color:var(--accent);font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.man-def i{font-style:italic;color:rgba(255,255,255,0.3)}
+.man-quote{
+  font-size:clamp(26px,3.6vw,46px);font-weight:800;letter-spacing:-.03em;
+  line-height:1.18;color:var(--white);margin-bottom:36px;text-wrap:balance;
+}
+.man-quote .hl{color:var(--accent)}
+.man-body{font-size:17px;font-weight:300;line-height:1.8;color:var(--mid);max-width:560px;margin:0 auto}
+.man-body strong{color:rgba(255,255,255,0.85);font-weight:500}
+
+/* ── CAPABILITIES ── */
+.cap-bg{background:var(--g1)}
+.cap-head{margin-bottom:64px}
+.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cap-item{
+  background:var(--g1);padding:44px 40px;position:relative;
+  transition:background .3s;
+}
+.cap-item:hover{background:var(--g2)}
+.cap-n{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--accent);margin-bottom:24px}
+.cap-ic{width:44px;height:44px;border-radius:10px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:22px;background:rgba(255,255,255,0.02)}
+.cap-ic svg{width:20px;height:20px;stroke:var(--white);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.cap-t{font-size:21px;font-weight:700;letter-spacing:-.02em;color:var(--white);margin-bottom:12px}
+.cap-d{font-size:14px;color:var(--mid);line-height:1.7;font-weight:300}
+
+/* ── PROJECTS ── */
+.proj-head{margin-bottom:56px}
+.proj-card{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  text-decoration:none;color:inherit;transition:border-color .3s;margin-bottom:16px;
+}
+.proj-card:hover{border-color:rgba(200,255,0,0.3)}
+.proj-info{padding:48px;display:flex;flex-direction:column;justify-content:center}
+.proj-tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.proj-tag span{color:var(--mid)}
+.proj-name{font-size:34px;font-weight:900;letter-spacing:-.03em;color:var(--white);margin-bottom:12px}
+.proj-desc{font-size:15px;color:var(--mid);line-height:1.65;font-weight:300;margin-bottom:28px;max-width:380px}
+.proj-link{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
+.proj-card:hover .proj-link{gap:13px}
+.proj-link svg{width:14px;height:14px}
+.proj-visual{
+  background:linear-gradient(150deg,#1a0025 0%,#2d0040 50%,#10001a 100%);
+  display:flex;align-items:center;justify-content:center;min-height:300px;position:relative;overflow:hidden;
+}
+.proj-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 400px 280px at 60% 40%,rgba(255,107,53,0.18) 0%,transparent 70%)}
+.proj-glyph{width:96px;height:96px;border-radius:26px;background:linear-gradient(135deg,#FF6B35,#FF3B30);display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 24px 60px rgba(255,59,48,.35);position:relative;z-index:1}
+.proj-more{
+  border:1px dashed var(--line);border-radius:4px;padding:32px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+}
+.proj-more-t{font-size:15px;font-weight:600;color:rgba(255,255,255,0.7)}
+.proj-more-d{font-size:13px;color:var(--mid);font-weight:300}
+
+/* ── CTA ── */
+.cta-sec{
+  background:var(--black);padding:160px 40px;text-align:center;
+  position:relative;overflow:hidden;border-top:1px solid var(--line);
+}
+.cta-grid{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:80px 80px;
+  -webkit-mask-image:radial-gradient(ellipse 65% 65% at 50% 50%,black 30%,transparent 100%);
+  mask-image:radial-gradient(ellipse 65% 65% at 50% 50%,black 30%,transparent 100%);
+}
+.cta-label{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-bottom:24px}
+.cta-h{
+  font-size:clamp(44px,6.5vw,88px);font-weight:900;letter-spacing:-.04em;
+  line-height:.96;color:var(--white);
+  max-width:min(90vw,760px);width:100%;margin:0 auto 24px;
+  position:relative;text-align:center;
+}
+.cta-p{font-size:16px;color:var(--mid);font-weight:300;margin:0 auto 48px;max-width:380px;line-height:1.65;position:relative}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;position:relative;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--g1);padding:40px;border-top:1px solid var(--line)}
+.ft{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.ft-logo{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.ft-mark{width:20px;height:20px;border-radius:5px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+.ft-mark svg{width:10px;height:10px}
+.ft-links{display:flex;gap:28px;list-style:none}
+.ft-links a{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+.ft-links a:hover{color:rgba(255,255,255,.65)}
+.ft-copy{font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.15)}
+
+/* ── REVEAL ── */
+.sr{transition:opacity .7s ease,transform .7s ease}
+.sr.h{opacity:0;transform:translateY(28px)}
+.sr.h.v{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .n-links{display:none}
+  nav{padding:0 20px}
+  .sec{padding:80px 20px}
+  .hero{padding:100px 22px 80px}
+  .manifesto{padding:90px 20px}
+  .cta-sec{padding:100px 20px}
+  footer{padding:36px 20px}
+  .vision-layout{grid-template-columns:1fr}
+  .vision-sticky{position:static;margin-bottom:40px}
+  .about-layout{grid-template-columns:1fr}
+  .cap-grid{grid-template-columns:1fr}
+  .proj-card{grid-template-columns:1fr}
+  .proj-visual{min-height:220px;order:-1}
+  .proj-info{padding:36px}
+  .hero-btns{flex-direction:column;width:100%;max-width:300px}
+  .hero-btns .btn-w,.hero-btns .btn-line{width:100%;justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="n-logo">
+    <div class="n-mark">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M7 1L1 4.5V10l6 3.5L13 10V4.5L7 1z" fill="black"/></svg>
+    </div>
+    Realm Labs
+  </a>
+  <ul class="n-links">
+    <li><a href="#manifesto">Philosophy</a></li>
+    <li><a href="#capabilities">What we build</a></li>
+    <li class="n-has-drop">
+      <a href="#projects" class="n-drop">
+        Projects
+        <svg class="n-drop-caret" viewBox="0 0 12 12"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+      </a>
+      <ul class="n-menu">
+        <li>
+          <a href="https://www.realmlabs.app/mamabee" target="_blank" class="n-menu-item">
+            <div class="n-menu-ic"><img src="assets/mamabee-logo.jpg" alt="MamaBee"></div>
+            <div class="n-menu-tx">
+              <div class="n-menu-name">MamaBee</div>
+              <div class="n-menu-sub">Calm baby tracker · Live</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.realmlabs.app/burnscroll" target="_blank" class="n-menu-item">
+            <div class="n-menu-ic"><img src="assets/burnscroll-logo.jpg" alt="BurnScroll"></div>
+            <div class="n-menu-tx">
+              <div class="n-menu-name">BurnScroll</div>
+              <div class="n-menu-sub">Screen-time control · Live</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#contact" class="n-cta">Get in touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-eyebrow">Realm Labs — Independent Tech Studio</div>
+
+  <h1 class="hero-h">In the right realm,<br>anything is possible.</h1>
+
+  <p class="hero-sub">Realm Labs is an independent studio built on one belief — with the right craft, the right design, and the right intent, anything can be made real.</p>
+
+  <div class="hero-btns">
+    <a href="#projects" class="btn-w">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v10M3 10l5 5 5-5"/></svg>
+      Explore our work
+    </a>
+    <a href="#contact" class="btn-line">Get in touch</a>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="man-inner sr">
+    <div class="man-def"><b>Realm</b> <i>/rɛlm/</i> &nbsp;·&nbsp; a domain where what's possible is decided by craft, not chance.</div>
+    <div class="man-quote">We don't ask <span class="hl">if</span> something can be built.<br>We ask whether it <span class="hl">should</span> exist —<br>then we make it real.</div>
+    <p class="man-body">Realm Labs was founded on a single conviction: in the right hands, with the right engineering and intent, <strong>anything can be built and anything can be achieved.</strong> We don't chase trends or fill app stores. We build what deserves to exist — and we build it right.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CAPABILITIES -->
+<section class="sec cap-bg" id="capabilities">
+  <div class="sec-inner">
+    <div class="cap-head sr">
+      <div class="sec-label">What we build</div>
+      <h2 class="h2">One realm.<br>Endless possibility.</h2>
+      <p class="psub">From mobile apps to intelligent systems, we engineer across the full spectrum of modern software — whatever the problem demands.</p>
+    </div>
+    <div class="cap-grid sr">
+      <div class="cap-item">
+        <div class="cap-n">01</div>
+        <div class="cap-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2.5"/><circle cx="12" cy="18.5" r="1" fill="currentColor" stroke="none"/></svg></div>
+        <div class="cap-t">Mobile Applications</div>
+        <div class="cap-d">Native iOS and Android experiences, engineered to the highest standard. Fast, beautiful, and built to last.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-n">02</div>
+        <div class="cap-ic"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0-1 7.87M12 2a4 4 0 0 1 4 4 4 4 0 0 1 1 7.87M9 18h6M10 22h4"/><circle cx="12" cy="11" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+        <div class="cap-t">AI &amp; Intelligent Systems</div>
+        <div class="cap-d">Tools that think. We harness modern AI to build software that adapts, learns, and solves problems intelligently.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-n">03</div>
+        <div class="cap-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
+        <div class="cap-t">Digital Products &amp; Tools</div>
+        <div class="cap-d">Utilities and products designed around genuine human needs — the kind people return to every single day.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-n">04</div>
+        <div class="cap-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="cap-t">Custom Development</div>
+        <div class="cap-d">When teams share our ambition for quality, we partner with them to build their vision the right way.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="sec-inner">
+    <div class="proj-head sr">
+      <div class="sec-label">Projects</div>
+      <h2 class="h2">Built in the lab.<br>Shipped to the world.</h2>
+      <p class="psub">We're always building — quietly, and only when a problem is worth solving. New projects are on the way.</p>
+    </div>
+
+    <div class="proj-more sr">
+      <div>
+        <div class="proj-more-t">Have something worth building?</div>
+        <div class="proj-more-d">We partner with teams who share our standards. Let's talk.</div>
+      </div>
+      <a href="#contact" class="proj-link" style="color:var(--accent)">
+        Get in touch
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- VISION -->
+<section class="sec vision-bg" id="vision">
+  <div class="sec-inner">
+    <div class="vision-layout">
+      <div class="vision-sticky sr">
+        <div class="sec-label">Vision</div>
+        <h2 class="h2" style="margin-bottom:16px">We build when<br>something needs<br>to exist.</h2>
+        <p class="psub">Not for metrics. Not to fill a portfolio. We build when a problem is real and no one has solved it well enough.</p>
+      </div>
+      <div class="vision-items sr">
+        <div class="v-item">
+          <div class="v-n">01</div>
+          <div class="v-body">
+            <div class="v-t">We use what we build</div>
+            <div class="v-d">Every product we ship starts from a real problem we personally experience. If we wouldn't use it daily, we don't build it.</div>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-n">02</div>
+          <div class="v-body">
+            <div class="v-t">Depth over volume</div>
+            <div class="v-d">We'd rather spend a year making one great product than three months shipping four forgettable ones. The market doesn't need more noise.</div>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-n">03</div>
+          <div class="v-body">
+            <div class="v-t">Privacy is fundamental</div>
+            <div class="v-d">We design every product with a privacy-first architecture. User data stays on-device wherever possible. No surveillance, no data resale — ever.</div>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-n">04</div>
+          <div class="v-body">
+            <div class="v-t">Long-term commitment</div>
+            <div class="v-d">We maintain and improve everything we ship. Launching is the beginning, not the end. We're building things meant to last.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section class="sec about-bg" id="about">
+  <div class="sec-inner">
+    <div class="about-layout sr">
+      <div>
+        <div class="sec-label">About</div>
+        <div class="about-big">Small studio.<br>Serious work.</div>
+        <p class="about-p">Realm Labs is an independent mobile technology studio. We create our own products — building things we believe the world genuinely needs and shipping them publicly for everyone.</p>
+        <p class="about-p">We're not an agency. But when we encounter clients who share our standards and their problem is worth solving, we collaborate.</p>
+        <div class="about-contact-l">Contact</div>
+        <a href="mailto:support@realmlabs.app" class="about-email">
+          support@realmlabs.app
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="about-table">
+        <div class="about-row"><span class="about-row-l">Studio type</span><span class="about-row-v">Independent</span></div>
+        <div class="about-row"><span class="about-row-l">Platform</span><span class="about-row-v">iOS &amp; Android</span></div>
+        <div class="about-row"><span class="about-row-l">Approach</span><span class="about-row-v">Original products</span></div>
+        <div class="about-row"><span class="about-row-l">Client work</span><span class="about-row-v">Selective</span></div>
+        <div class="about-row"><span class="about-row-l">Data policy</span><span class="about-row-v">Privacy-first</span></div>
+        <div class="about-row"><span class="about-row-l">Contact</span><span class="about-row-v">support@realmlabs.app</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA / CONTACT -->
+<section class="cta-sec" id="contact">
+  <div class="cta-grid"></div>
+  <div class="cta-label">Get in touch</div>
+  <h2 class="cta-h">Have something<br>worth building?</h2>
+  <p class="cta-p">Tell us what you're working on. We respond to every message personally.</p>
+  <div class="cta-btns">
+    <a href="mailto:support@realmlabs.app" class="btn-w">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Send a message
+    </a>
+    <a href="#vision" class="btn-line">Our vision</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <a href="#" class="ft-logo">
+      <div class="ft-mark"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1L1 4.5V10l6 3.5L13 10V4.5L7 1z" fill="white"/></svg></div>
+      Realm Labs
+    </a>
+    <ul class="ft-links">
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="mailto:support@realmlabs.app">Contact</a></li>
+    </ul>
+    <div class="ft-copy">© 2026 Realm Labs Studio</div>
+  </div>
+</footer>
+
+<script>
+// PARTICLE NETWORK
+(function(){
+  var canvas=document.getElementById('heroCanvas');
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d'),W,H,particles=[],mouse={x:-999,y:-999};
+  var N=60,MAX=170,SPD=0.28;
+
+  function densityN(){
+    // Fewer, sparser stars on small screens to avoid clutter
+    var area=W*H;
+    var n=Math.round(area/16000);
+    return Math.max(22,Math.min(60,n));
+  }
+  function resize(){var h=canvas.parentElement;W=canvas.width=h.offsetWidth;H=canvas.height=h.offsetHeight;}
+
+  function P(){
+    this.x=Math.random()*W;
+    this.y=Math.random()*H;
+    this.vx=(Math.random()-.5)*SPD;
+    this.vy=(Math.random()-.5)*SPD;
+    // Constellation: varied star sizes — most small, a few bright
+    var bright=Math.random()<0.15;
+    this.r=bright?(2.2+Math.random()*1.8):(0.8+Math.random()*1.2);
+    this.baseA=bright?(0.75+Math.random()*.25):(0.35+Math.random()*.35);
+    this.a=this.baseA;
+    this.twPhase=Math.random()*Math.PI*2;
+    this.twSpeed=0.018+Math.random()*.025;
+    this.bright=bright;
+  }
+
+  P.prototype.update=function(){
+    var dx=this.x-mouse.x,dy=this.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<120&&d>0){var f=(120-d)/120*.8;this.vx+=(dx/d)*f;this.vy+=(dy/d)*f;}
+    var s=Math.sqrt(this.vx*this.vx+this.vy*this.vy);
+    if(s>SPD*3){this.vx=(this.vx/s)*SPD*3;this.vy=(this.vy/s)*SPD*3;}
+    this.vx*=.995;this.vy*=.995;
+    this.x+=this.vx;this.y+=this.vy;
+    if(this.x<0){this.x=0;this.vx*=-1;}if(this.x>W){this.x=W;this.vx*=-1;}
+    if(this.y<0){this.y=0;this.vy*=-1;}if(this.y>H){this.y=H;this.vy*=-1;}
+    // Twinkle
+    this.twPhase+=this.twSpeed;
+    this.a=this.baseA+Math.sin(this.twPhase)*(this.bright?.12:.06);
+  };
+
+  P.prototype.draw=function(){
+    // Glow for bright stars
+    if(this.bright){
+      var g=ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r*5);
+      g.addColorStop(0,'rgba(255,255,255,'+(this.a*.45)+')');
+      g.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.beginPath();ctx.arc(this.x,this.y,this.r*5,0,Math.PI*2);
+      ctx.fillStyle=g;ctx.fill();
+    }
+    ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(255,255,255,'+this.a+')';ctx.fill();
+  };
+
+  function lines(){
+    for(var i=0;i<particles.length;i++)for(var j=i+1;j<particles.length;j++){
+      var dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<MAX){
+        var a=(1-d/MAX)*.28;
+        ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.strokeStyle='rgba(200,220,255,'+a+')';ctx.lineWidth=.7;ctx.stroke();
+      }
+    }
+  }
+
+  function tick(){ctx.clearRect(0,0,W,H);for(var i=0;i<particles.length;i++){particles[i].update();particles[i].draw();}lines();requestAnimationFrame(tick);}
+  function build(){particles=[];var n=densityN();MAX=W<700?120:170;for(var i=0;i<n;i++)particles.push(new P());}
+  function init(){resize();build();tick();}
+  var hero=document.querySelector('.hero');
+  hero.addEventListener('mousemove',function(e){var r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+  hero.addEventListener('mouseleave',function(){mouse.x=-999;mouse.y=-999;});
+  var rT;window.addEventListener('resize',function(){clearTimeout(rT);rT=setTimeout(function(){resize();build();},200);});
+  init();
+})();
+
+// SCROLL REVEAL
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.sr'));
+  if(!('IntersectionObserver'in window))return;
+  els.forEach(function(el){el.classList.add('h')});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}});
+  },{threshold:0.06,rootMargin:'0px 0px -20px 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('v')})},2000);
+})();
+</script>
+</body>
+</html>
