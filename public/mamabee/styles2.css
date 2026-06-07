@@ -632,7 +632,11 @@ details > summary::-webkit-details-marker { display: none; }
   transition: background-color .16s ease;
 }
 .nav-lang:hover { background: var(--honey); }
-@media (max-width: 760px) { .nav-lang { display: none; } }
+@media (max-width: 760px) {
+  /* Keep the language switcher visible on the top bar (next to the hamburger) */
+  .nav-cta .nav-lang { display: inline-block; height: 40px; padding: 6px 9px; font-size: 0.85rem; border-radius: 11px; }
+  .nav-cta { gap: 10px; }
+}
 
 /* Drawer lang row */
 .drawer-lang {
