@@ -29,13 +29,21 @@ const description = 'Tactics and science on screen-time control, breaking phone 
     body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 50% 0%,rgba(206,255,0,.05),transparent 50%)}
     body>*{position:relative;z-index:1}
     ::selection{background:var(--neon);color:#000}
-    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
-    .nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-    .brand{display:flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-weight:900;font-size:18px;color:#fff;text-decoration:none}
-    .brand img{width:32px;height:32px;border-radius:8px}
-    .nav-links{display:flex;gap:22px;font-weight:600;font-size:13px}
-    .nav-links a{color:var(--muted);text-decoration:none}
-    .nav-links a:hover{color:#fff}
+    .nav{position:sticky;top:0;z-index:50;padding:18px 16px 6px;display:flex;justify-content:center}
+    .nav-pill{display:flex;align-items:center;gap:6px;padding:8px 8px 8px 16px;background:rgba(255,255,255,.08);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1);border-radius:999px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .brand{display:flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-weight:900;font-size:16px;letter-spacing:.02em;color:#fff;text-decoration:none}
+    .brand img{width:30px;height:30px;border-radius:8px}
+    .nav-links{display:flex;gap:2px;margin-left:6px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:13px;padding:8px 14px;border-radius:999px;transition:color .16s,background .16s}
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+    .nav-app{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#000;font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px;text-decoration:none;margin-left:4px}
+    .nav-app:hover{background:#e6e6e6}
+    @media(max-width:760px){
+      .nav{padding:12px 12px 4px}
+      .nav-links{display:none}
+      .nav-pill{padding:7px 7px 7px 14px}
+      .brand{font-size:15px}
+    }
     .wrap{max-width:960px;margin:0 auto;padding:0 20px}
     .hero{text-align:center;padding:64px 0 40px}
     .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--neon)}
@@ -55,13 +63,15 @@ const description = 'Tactics and science on screen-time control, breaking phone 
 </head>
 <body>
   <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="/burnscroll/"><img src="/burnscroll/logo.jpg" alt="" width="32" height="32" />BurnScroll</a>
+    <div class="nav-pill">
+      <a class="brand" href="/burnscroll/"><img src="/burnscroll/logo.jpg" alt="" width="30" height="30" />BurnScroll</a>
       <nav class="nav-links">
-        <a href="/burnscroll/">Home</a>
-        <a href="/burnscroll/articles/">Articles</a>
-        <a href="/burnscroll/#download">Download</a>
+        <a href="/burnscroll/use-cases">Use Cases</a>
+        <a href="/burnscroll/features">Features</a>
+        <a href="/burnscroll/articles">Articles</a>
+        <a href="/burnscroll/contact">Support</a>
       </nav>
+      <a class="nav-app" href="https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932" target="_blank" rel="noopener">App Store</a>
     </div>
   </header>
 
