@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Astro / Tina generated
+.astro
+tina/__generated__
+public/admin
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

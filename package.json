@@ -1,0 +1,21 @@
+{
+  "name": "realm-labs",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "tina-dev": "tinacms dev -c \"astro dev\"",
+    "tina-build": "tinacms build && astro build"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.0"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.7.0",
+    "tinacms": "^2.4.0"
+  }
+}

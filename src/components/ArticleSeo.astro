@@ -1,0 +1,52 @@
+---
+// Emits all per-article SEO tags: title, description, canonical,
+// Open Graph, Twitter card, and Article JSON-LD structured data.
+const {
+  title,
+  description,
+  canonical,
+  publishedDate,
+  updatedDate,
+  author = 'Realm Labs',
+  image,
+  brand,
+} = Astro.props;
+
+const site = 'https://www.realmlabs.app';
+const canonicalUrl = new URL(canonical, site).toString();
+const imageUrl = image ? new URL(image, site).toString() : undefined;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  ...(imageUrl ? { image: imageUrl } : {}),
+  datePublished: publishedDate?.toISOString?.() ?? publishedDate,
+  ...(updatedDate ? { dateModified: updatedDate?.toISOString?.() ?? updatedDate } : {}),
+  author: { '@type': 'Organization', name: author },
+  publisher: {
+    '@type': 'Organization',
+    name: brand,
+    logo: { '@type': 'ImageObject', url: `${site}/assets/${brand.toLowerCase()}-logo.jpg` },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+};
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:site_name" content={brand} />
+{imageUrl && <meta property="og:image" content={imageUrl} />}
+
+<meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{imageUrl && <meta name="twitter:image" content={imageUrl} />}
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
