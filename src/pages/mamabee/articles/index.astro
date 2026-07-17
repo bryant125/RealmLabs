@@ -1,7 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
-const posts = (await getCollection('mamabee', ({ data }) => !data.draft))
-  .sort((a, b) => +new Date(b.data.publishedDate) - +new Date(a.data.publishedDate));
+import { getArticlesByBrand, urlForImage } from '../../../sanity/lib';
+const posts = await getArticlesByBrand('mamabee');
+const coverUrl = (p) => p.coverImage ? urlForImage(p.coverImage).width(700).height(394).fit('crop').auto('format').url() : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 const title = 'MamaBee Journal — Calm parenting & baby-tracking articles';
 const description = 'Gentle, practical articles on newborn sleep, feeding, and calm parenting from the MamaBee team.';
@@ -75,13 +75,13 @@ const description = 'Gentle, practical articles on newborn sleep, feeding, and c
       <div class="grid">
         {posts.map((post) => (
           <a class="card" href={`/mamabee/articles/${post.slug}`}>
-            {post.data.cover
-              ? <img class="card-cover" src={post.data.cover} alt={post.data.title} />
+            {coverUrl(post)
+              ? <img class="card-cover" src={coverUrl(post)} alt={post.title} />
               : <div class="card-cover"></div>}
             <div class="card-body">
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
-              <div class="date">{dateFmt(post.data.publishedDate)}</div>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+              <div class="date">{dateFmt(post.publishedAt)}</div>
             </div>
           </a>
         ))}
