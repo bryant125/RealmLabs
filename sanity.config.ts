@@ -2,8 +2,8 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './src/sanity/schemaTypes'
 
-// projectId is NOT secret — it's set via env for both the Studio and the site.
-const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || import.meta.env?.PUBLIC_SANITY_PROJECT_ID || ''
+// projectId/dataset are NOT secret — hardcoded (env can override if needed).
+const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || import.meta.env?.PUBLIC_SANITY_PROJECT_ID || '1jrna7ry'
 const dataset = process.env.PUBLIC_SANITY_DATASET || import.meta.env?.PUBLIC_SANITY_DATASET || 'production'
 
 export default defineConfig({

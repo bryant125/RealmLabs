@@ -3,8 +3,9 @@ import sitemap from '@astrojs/sitemap';
 import sanity from '@sanity/astro';
 import react from '@astrojs/react';
 
-// projectId is not secret; set PUBLIC_SANITY_PROJECT_ID in .env / Vercel.
-const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || '';
+// projectId/dataset are NOT secret (they ship in the browser bundle), so we
+// hardcode them — no Vercel env var needed. Override via env if ever required.
+const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || '1jrna7ry';
 const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 
 // NOTE: publicDir defaults to ./public — every existing page in public/
