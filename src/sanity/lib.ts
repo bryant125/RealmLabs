@@ -50,9 +50,16 @@ export async function getArticlesByBrand(brand: 'mamabee' | 'burnscroll'): Promi
   }
 }
 
-// Render Portable Text body to HTML, turning embedded images into optimized <img> tags.
-export function renderBody(body: any): string {
+export const APP_STORE_URL: Record<'mamabee' | 'burnscroll', string> = {
+  mamabee: 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521',
+  burnscroll: 'https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932',
+}
+
+// Render Portable Text body to HTML: optimized images, inline download links,
+// and an insertable "Download the app" CTA button (brand-aware App Store link).
+export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee'): string {
   if (!body) return ''
+  const appUrl = APP_STORE_URL[brand]
   return toHTML(body, {
     components: {
       types: {
@@ -62,6 +69,19 @@ export function renderBody(body: any): string {
           const alt = value.alt || ''
           return `<img src="${url}" alt="${alt}" loading="lazy" />`
         },
+        appCta: ({value}: any) => {
+          const label = value?.label || 'Get the app'
+          const heading = value?.heading
+            ? `<p class="article-cta-h">${value.heading}</p>`
+            : ''
+          return `<div class="article-cta">${heading}<a class="article-cta-btn" href="${appUrl}" target="_blank" rel="noopener">${label}</a></div>`
+        },
+      },
+      marks: {
+        appLink: ({children}: any) =>
+          `<a href="${appUrl}" target="_blank" rel="noopener">${children}</a>`,
+        link: ({children, value}: any) =>
+          `<a href="${value?.href || '#'}" target="_blank" rel="noopener">${children}</a>`,
       },
     },
   })

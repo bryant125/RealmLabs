@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const bodyHtml = renderBody(post.body);
+const bodyHtml = renderBody(post.body, 'burnscroll');
 const cover = post.coverImage
   ? urlForImage(post.coverImage).width(1600).fit('max').auto('format').url()
   : undefined;

@@ -53,6 +53,12 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
     .prose img{max-width:100%;border-radius:14px;margin:24px 0}
     .prose blockquote{border-left:3px solid var(--neon);background:var(--panel);padding:14px 20px;border-radius:10px;margin:24px 0;color:var(--muted)}
     .prose code{background:var(--panel);border:1px solid var(--line);padding:2px 6px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:.9em}
+    /* insertable App-download CTA */
+    .prose .article-cta{background:var(--panel);border:1px solid rgba(206,255,0,.25);border-radius:16px;padding:28px 26px;margin:34px 0;text-align:center}
+    .prose .article-cta-h{font-family:'Outfit',sans-serif;font-weight:800;font-size:19px;color:#fff;margin:0 0 16px}
+    .prose .article-cta-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:14px;font-weight:800;font-size:1.02rem;text-decoration:none;background:var(--neon);color:#000;box-shadow:0 6px 24px rgba(206,255,0,.25);transition:transform .06s,box-shadow .16s}
+    .prose .article-cta-btn:hover{box-shadow:0 8px 30px rgba(206,255,0,.4)}
+    .prose .article-cta-btn:active{transform:translateY(2px)}
     .back{display:inline-block;margin:8px 0 0;font-weight:700;color:var(--neon);text-decoration:none}
     footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted);font-size:14px}
     @media(max-width:600px){

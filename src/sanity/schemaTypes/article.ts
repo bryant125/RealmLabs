@@ -72,8 +72,43 @@ export const article = defineType({
       title: 'Article body',
       type: 'array',
       of: [
-        {type: 'block'},
+        {
+          type: 'block',
+          // inline "download link" mark: highlight any text and link it to the app
+          marks: {
+            annotations: [
+              {
+                name: 'appLink',
+                type: 'object',
+                title: '📲 Download-app link',
+                fields: [{name: 'note', type: 'string', title: 'Internal note (optional)'}],
+              },
+              {
+                name: 'link',
+                type: 'object',
+                title: 'External link',
+                fields: [{name: 'href', type: 'url', title: 'URL'}],
+              },
+            ],
+          },
+        },
         {type: 'image', options: {hotspot: true}},
+        // Insertable "Download the app" call-to-action button block
+        {
+          type: 'object',
+          name: 'appCta',
+          title: '📲 App Download button',
+          fields: [
+            {name: 'heading', type: 'string', title: 'Headline (optional)', description: 'e.g. "Track every feed and nap — without the 3 AM math."'},
+            {name: 'label', type: 'string', title: 'Button text', initialValue: 'Get the app'},
+          ],
+          preview: {
+            select: {heading: 'heading'},
+            prepare({heading}: any) {
+              return {title: heading || 'App Download button', subtitle: '📲 CTA'}
+            },
+          },
+        },
       ],
     }),
   ],
