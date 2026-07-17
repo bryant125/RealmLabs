@@ -9,7 +9,7 @@
     "build:site-only": "astro build",
     "preview": "astro preview",
     "tina-dev": "tinacms dev -c \"astro dev\"",
-    "tina-build": "tinacms build && astro build"
+    "tina-build": "tinacms build --skip-cloud-checks && astro build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
