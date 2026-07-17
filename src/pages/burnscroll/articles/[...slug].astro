@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import BurnScrollArticle from '../../../layouts/BurnScrollArticle.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('burnscroll', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const canonical = `/burnscroll/articles/${post.slug}`;
+---
+<BurnScrollArticle
+  title={post.data.title}
+  description={post.data.description}
+  publishedDate={post.data.publishedDate}
+  updatedDate={post.data.updatedDate}
+  author={post.data.author}
+  cover={post.data.cover}
+  canonical={canonical}
+>
+  <Content />
+</BurnScrollArticle>
