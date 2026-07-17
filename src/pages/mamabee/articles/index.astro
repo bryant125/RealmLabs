@@ -1,5 +1,7 @@
 ---
 import { getArticlesByBrand, urlForImage } from '../../../sanity/lib';
+import GtmHead from '../../../components/GtmHead.astro';
+import GtmBody from '../../../components/GtmBody.astro';
 const posts = await getArticlesByBrand('mamabee');
 const coverUrl = (p) => p.coverImage ? urlForImage(p.coverImage).width(700).height(394).fit('crop').auto('format').url() : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -9,6 +11,7 @@ const description = 'Gentle, practical articles on newborn sleep, feeding, and c
 <!DOCTYPE html>
 <html lang="en" data-mood="golden">
 <head>
+  <GtmHead />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>{title}</title>
@@ -64,6 +67,7 @@ const description = 'Gentle, practical articles on newborn sleep, feeding, and c
   </style>
 </head>
 <body>
+  <GtmBody />
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="/mamabee/"><img class="bee-logo" src="/mamabee/assets/bee.png" alt="" width="46" height="46" />MamaBee</a>

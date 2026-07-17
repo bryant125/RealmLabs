@@ -1,11 +1,14 @@
 ---
 import ArticleSeo from '../components/ArticleSeo.astro';
+import GtmHead from '../components/GtmHead.astro';
+import GtmBody from '../components/GtmBody.astro';
 const { title, description, publishedDate, updatedDate, author, cover, canonical } = Astro.props;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <!DOCTYPE html>
 <html lang="en" data-mood="golden">
 <head>
+  <GtmHead />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,6 +81,7 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
   </style>
 </head>
 <body>
+  <GtmBody />
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="/mamabee/"><img class="bee-logo" src="/mamabee/assets/bee.png" alt="" width="46" height="46" />MamaBee</a>

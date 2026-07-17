@@ -1,5 +1,7 @@
 ---
 import { getArticlesByBrand, urlForImage } from '../../../sanity/lib';
+import GtmHead from '../../../components/GtmHead.astro';
+import GtmBody from '../../../components/GtmBody.astro';
 const posts = await getArticlesByBrand('burnscroll');
 const coverUrl = (p) => p.coverImage ? urlForImage(p.coverImage).width(700).height(394).fit('crop').auto('format').url() : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -9,6 +11,7 @@ const description = 'Tactics and science on screen-time control, breaking phone 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <GtmHead />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
@@ -62,6 +65,7 @@ const description = 'Tactics and science on screen-time control, breaking phone 
   </style>
 </head>
 <body>
+  <GtmBody />
   <header class="nav">
     <div class="nav-pill">
       <a class="brand" href="/burnscroll/"><img src="/burnscroll/logo.jpg" alt="" width="30" height="30" />BurnScroll</a>
