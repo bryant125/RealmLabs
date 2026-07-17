@@ -12,15 +12,12 @@ dist
 dist-ssr
 *.local
 
-# Astro / Tina generated
+# Astro generated
 .astro
-public/admin
-# Ignore Tina's generated client/types, but COMMIT the schema files that
-# TinaCloud reads from the repo to index your content.
-tina/__generated__/*
-!tina/__generated__/_graphql.json
-!tina/__generated__/_lookup.json
-!tina/__generated__/_schema.json
+
+# Sanity
+dist
+.sanity
 
 # Secrets (never commit)
 .env

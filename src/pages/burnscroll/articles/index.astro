@@ -1,7 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
-const posts = (await getCollection('burnscroll', ({ data }) => !data.draft))
-  .sort((a, b) => +new Date(b.data.publishedDate) - +new Date(a.data.publishedDate));
+import { getArticlesByBrand, urlForImage } from '../../../sanity/lib';
+const posts = await getArticlesByBrand('burnscroll');
+const coverUrl = (p) => p.coverImage ? urlForImage(p.coverImage).width(700).height(394).fit('crop').auto('format').url() : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 const title = 'BurnScroll Blog — Beat doomscrolling & build real focus';
 const description = 'Tactics and science on screen-time control, breaking phone addiction, and turning scrolling into movement.';
@@ -78,13 +78,13 @@ const description = 'Tactics and science on screen-time control, breaking phone 
       <div class="grid">
         {posts.map((post) => (
           <a class="card" href={`/burnscroll/articles/${post.slug}`}>
-            {post.data.cover
-              ? <img class="card-cover" src={post.data.cover} alt={post.data.title} />
+            {coverUrl(post)
+              ? <img class="card-cover" src={coverUrl(post)} alt={post.title} />
               : <div class="card-cover"></div>}
             <div class="card-body">
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
-              <div class="date">{dateFmt(post.data.publishedDate)}</div>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+              <div class="date">{dateFmt(post.publishedAt)}</div>
             </div>
           </a>
         ))}
