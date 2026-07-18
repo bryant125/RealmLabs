@@ -25,13 +25,22 @@ cover (see cover-style memory), reading time, "Keep reading" related cards.
 | 8 | ✅ Published | Why Is My Newborn So Gassy? Real Gas Relief That Actually Works | `newborn-gas-relief` | newborn gas relief | Health |
 | 9 | ✅ Published | Cluster Feeding: Is My Baby Getting Enough? (What It Is and How to Survive It) | `cluster-feeding` | cluster feeding | Feeding |
 | 10 | ✅ Published | The 3 AM Question Every Parent Googles — and How MamaBee Answers It | `3am-question-mamabee-ai-tracker` | AI baby tracker | App ◆ |
+| 11 | ✅ Published (Wk1) | Baby Milestones Month by Month: What to Expect in the First Year | `baby-milestones-by-month` | baby milestones by month | Milestones |
+| 12 | ✅ Published (Wk1) | How to Swaddle a Baby: A Step-by-Step Guide to Safe, Snug Sleep | `how-to-swaddle-a-baby` | how to swaddle a baby | Sleep |
+| 13 | ✅ Published (Wk1) | Baby Growth Spurts: Ages, Signs, and How to Survive the Hungry Days | `baby-growth-spurts` | baby growth spurts | Feeding |
 
-### 💡 MamaBee backlog (not yet written — future batches)
+### 💡 MamaBee backlog (not yet written — future weeks)
 Keep these distinct from the topics above.
-- Baby milestones month by month (first year) — `baby milestones by month` — Milestones
 - Newborn witching hour / evening fussiness — `witching hour baby` — Sleep/Behavior
-- How to swaddle a baby (safe swaddling) — `how to swaddle a baby` — Sleep
-- Baby growth spurts: ages & signs — `baby growth spurts` — Feeding/Development
+- Starting solids: when & how (4–6 months) — `when to start solids` — Feeding
+- Baby sleep training methods compared — `baby sleep training methods` — Sleep
+- Newborn hiccups: why & what to do — `newborn hiccups` — Health
+- Nap transitions / dropping to one nap — `baby nap transitions` — Sleep
+- Breastfeeding vs. formula: an honest guide — `breastfeeding vs formula` — Feeding
+- Baby's first cold: what to do — `baby first cold` — Health
+- Teething: signs, timeline, soothing — `baby teething symptoms` — Health
+- Postpartum recovery & mental health for new parents — `postpartum tips` — Parent wellness
+- Establishing a baby bedtime routine — `baby bedtime routine` — Sleep
 - Starting solids: when & how (4–6 months) — `when to start solids` — Feeding
 - Newborn hiccups: why & what to do — `newborn hiccups` — Health
 - Dropping to one nap / nap transitions — `nap transitions` — Sleep
