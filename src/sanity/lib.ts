@@ -121,7 +121,7 @@ export async function getRelated(
 export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee'): string {
   if (!body) return ''
   const appUrl = APP_STORE_URL[brand]
-  return toHTML(body, {
+  const html = toHTML(body, {
     components: {
       types: {
         image: ({value}: any) => {
@@ -168,4 +168,12 @@ export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee
       },
     },
   })
+  // Pair each phone screenshot with the paragraphs/lists that follow it into a
+  // two-column row (text left, image right) so the text fills the space beside
+  // the image instead of leaving an empty column. If nothing follows before the
+  // next heading, the figure is left as-is (centered). Stacks on mobile via CSS.
+  return html.replace(
+    /(<figure class="shot phone">[\s\S]*?<\/figure>)((?:\s*<(?:p|ul|ol)\b[\s\S]*?<\/(?:p|ul|ol)>)+)/g,
+    (_m, fig, txt) => `<div class="media-row"><div class="media-col">${txt}</div>${fig}</div>`,
+  )
 }
