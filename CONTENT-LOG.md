@@ -52,6 +52,18 @@ Keep these distinct from the topics above.
 
 ---
 
+## 🧲 Free tools (link magnets + email capture → MailerLite "MamaBee Sleep Tips")
+All under `/mamabee/tools/`, email opt-in delivers the [Baby Sleep Cheat-Sheet](https://www.realmlabs.app/mamabee/baby-sleep-cheat-sheet) instantly + tags `signup_source`.
+| Status | Tool | URL | Ranks for |
+|---|---|---|---|
+| ✅ Live | Wake Window Calculator | `/mamabee/tools/wake-window-calculator` | wake window calculator |
+| ✅ Live | Due Date Calculator | `/mamabee/tools/due-date-calculator` | due date calculator |
+| ✅ Live | Baby Feeding Calculator | `/mamabee/tools/baby-feeding-calculator` | baby formula calculator |
+| ✅ Live | Baby Sleep Schedule Generator | `/mamabee/tools/baby-sleep-schedule-generator` | baby sleep schedule by age |
+| 💡 Idea | Baby Growth Percentile / Clothing Size | — | baby size by age |
+
+Lead magnet: `/mamabee/baby-sleep-cheat-sheet` (printable, branded). Welcome-email copy drafted (set up as a MailerLite automation on group "MamaBee Sleep Tips").
+
 ## 🔥 BurnScroll (screen-time control) — target: US users beating doomscrolling
 *No articles written yet.* Backlog ideas (target US "digital wellbeing" searches):
 - 💡 How to stop doomscrolling — `how to stop doomscrolling`
