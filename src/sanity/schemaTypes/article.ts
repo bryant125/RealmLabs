@@ -92,7 +92,15 @@ export const article = defineType({
             ],
           },
         },
-        {type: 'image', options: {hotspot: true}},
+        {
+          type: 'image',
+          options: {hotspot: true},
+          fields: [
+            {name: 'caption', type: 'string', title: 'Caption (shown under the image)'},
+            {name: 'alt', type: 'string', title: 'Alt text (accessibility/SEO)'},
+            {name: 'phone', type: 'boolean', title: 'App screenshot (show in a phone frame)'},
+          ],
+        },
         // Insertable "Download the app" call-to-action button block
         {
           type: 'object',

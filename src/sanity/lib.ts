@@ -126,9 +126,14 @@ export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee
       types: {
         image: ({value}: any) => {
           if (!value?.asset) return ''
+          const alt = value.alt || value.caption || ''
+          const caption = value.caption ? `<figcaption>${value.caption}</figcaption>` : ''
+          if (value.phone) {
+            const url = urlForImage(value).width(640).fit('max').auto('format').url()
+            return `<figure class="shot phone"><img src="${url}" alt="${alt}" loading="lazy" />${caption}</figure>`
+          }
           const url = urlForImage(value).width(1200).fit('max').auto('format').url()
-          const alt = value.alt || ''
-          return `<img src="${url}" alt="${alt}" loading="lazy" />`
+          return `<figure class="shot"><img src="${url}" alt="${alt}" loading="lazy" />${caption}</figure>`
         },
         appCta: ({value}: any) => {
           const label = value?.label || 'Get the app'
