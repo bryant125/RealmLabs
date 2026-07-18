@@ -621,6 +621,12 @@ details > summary::-webkit-details-marker { display: none; }
 .nav-drawer a:hover { background: var(--honey-lt); color: var(--cocoa); }
 .nav-drawer.open { display: flex; }
 
+/* Ensure the hamburger shows on mobile — this must come after the base
+   `.nav-toggle { display: none }` rule above so it wins the source-order tie. */
+@media (max-width: 980px) {
+  .nav-toggle { display: flex; }
+}
+
 
 
 /* ---- Nav language selector ---- */

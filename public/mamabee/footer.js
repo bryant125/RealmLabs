@@ -21,7 +21,7 @@
     '      <a class="appstore" href="#" aria-label="Download on the App Store"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.23 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.81 1.4-.03 2.28-1.27 3.13-2.53.99-1.45 1.4-2.85 1.42-2.93-.03-.01-2.72-1.04-2.75-4.13M14.62 4.7c.71-.86 1.19-2.06 1.06-3.25-1.02.04-2.26.68-2.99 1.54-.66.76-1.23 1.98-1.08 3.15 1.14.09 2.3-.58 3.01-1.44"/></svg><span><span class="as-top">Download on the</span><span class="as-big">App Store</span></span></a>',
     '    </div>',
     '    <nav class="footer-links" aria-label="Footer">',
-    '      <div class="footer-col"><h4>Product</h4><a href="index.html#how">How it works</a><a href="index.html#features">Features</a><a href="index.html#ai">AI</a><a href="index.html#download">Download</a></div>',
+    '      <div class="footer-col"><h4>Product</h4><a href="index.html#how">How it works</a><a href="index.html#features">Features</a><a href="index.html#ai">AI</a><a href="/mamabee/tools">Free tools</a><a href="/mamabee/articles">Articles</a><a href="index.html#download">Download</a></div>',
     '      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="contact.html">Contact</a></div>',
     '      <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>',
     '      <div class="footer-col"><h4>Language</h4>',
