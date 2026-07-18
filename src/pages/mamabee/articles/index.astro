@@ -2,6 +2,7 @@
 import { getArticlesByBrand, urlForImage } from '../../../sanity/lib';
 import GtmHead from '../../../components/GtmHead.astro';
 import GtmBody from '../../../components/GtmBody.astro';
+import MamaBeeAppBanner from '../../../components/MamaBeeAppBanner.astro';
 const posts = await getArticlesByBrand('mamabee');
 const coverUrl = (p) => p.coverImage ? urlForImage(p.coverImage).width(700).height(394).fit('crop').auto('format').url() : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -84,6 +85,8 @@ const description = 'Gentle, practical articles on newborn sleep, feeding, and c
       </div>
     </div>
   </header>
+
+  <div style="padding:0 24px"><MamaBeeAppBanner /></div>
 
   <section class="wrap">
     <div class="hero">

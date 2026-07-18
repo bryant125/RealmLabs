@@ -142,6 +142,23 @@ export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee
             : ''
           return `<div class="article-cta">${heading}<a class="article-cta-btn" href="${appUrl}" target="_blank" rel="noopener">${label}</a></div>`
         },
+        comparisonTable: ({value}: any) => {
+          const esc = (s: any) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          const headers: string[] = Array.isArray(value?.headers) ? value.headers : []
+          const rows: any[] = Array.isArray(value?.rows) ? value.rows : []
+          if (!headers.length && !rows.length) return ''
+          const thead = headers.length
+            ? `<thead><tr>${headers.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead>`
+            : ''
+          const tbody = `<tbody>${rows
+            .map((r) => {
+              const cells: string[] = Array.isArray(r?.cells) ? r.cells : []
+              return `<tr>${cells.map((c, i) => `<td${i === 0 ? ' class="rh"' : ''}>${esc(c)}</td>`).join('')}</tr>`
+            })
+            .join('')}</tbody>`
+          const caption = value?.caption ? `<figcaption>${esc(value.caption)}</figcaption>` : ''
+          return `<figure class="table-wrap"><table class="cmp">${thead}${tbody}</table>${caption}</figure>`
+        },
       },
       marks: {
         appLink: ({children}: any) =>

@@ -117,6 +117,46 @@ export const article = defineType({
             },
           },
         },
+        // Comparison table block — clean side-by-side comparison (GainFrame-style)
+        {
+          type: 'object',
+          name: 'comparisonTable',
+          title: '📊 Comparison table',
+          fields: [
+            {name: 'caption', type: 'string', title: 'Caption (optional)'},
+            {
+              name: 'headers',
+              type: 'array',
+              title: 'Column headers',
+              of: [{type: 'string'}],
+              options: {layout: 'tags'},
+            },
+            {
+              name: 'rows',
+              type: 'array',
+              title: 'Rows',
+              of: [
+                {
+                  type: 'object',
+                  name: 'row',
+                  fields: [{name: 'cells', type: 'array', title: 'Cells (left → right)', of: [{type: 'string'}], options: {layout: 'tags'}}],
+                  preview: {
+                    select: {cells: 'cells'},
+                    prepare({cells}: any) {
+                      return {title: (cells || []).join('  ·  ') || 'Row'}
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+          preview: {
+            select: {caption: 'caption', rows: 'rows'},
+            prepare({caption, rows}: any) {
+              return {title: caption || 'Comparison table', subtitle: `📊 ${(rows || []).length} rows`}
+            },
+          },
+        },
       ],
     }),
   ],
