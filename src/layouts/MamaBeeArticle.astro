@@ -2,7 +2,7 @@
 import ArticleSeo from '../components/ArticleSeo.astro';
 import GtmHead from '../components/GtmHead.astro';
 import GtmBody from '../components/GtmBody.astro';
-const { title, description, publishedDate, updatedDate, author, cover, canonical } = Astro.props;
+const { title, description, publishedDate, updatedDate, author, cover, canonical, readingTime, related = [] } = Astro.props;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <!DOCTYPE html>
@@ -65,10 +65,20 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
     /* insertable App-download CTA */
     .prose .article-cta{background:linear-gradient(160deg,#FDF1D2,#FCE7B5);border:1px solid #F0E6D6;border-radius:20px;padding:28px 26px;margin:34px 0;text-align:center}
     .prose .article-cta-h{font-weight:800;font-size:19px;color:var(--ink);margin:0 0 16px}
-    .prose .article-cta-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:16px;font-weight:800;font-size:1.02rem;text-decoration:none;background:linear-gradient(160deg,#F6C158,#E7A636);color:#643018;box-shadow:0 5px 0 #B97E1F,0 6px 18px rgba(61,46,32,.12);transition:filter .16s,transform .06s}
+    .prose .article-cta-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:16px;font-weight:800;font-size:1.05rem;font-family:"Nunito",sans-serif;text-decoration:none;background:linear-gradient(160deg,#F6C158,#E7A636);color:#643018;box-shadow:0 5px 0 #B97E1F,0 6px 18px rgba(61,46,32,.12);transition:filter .16s,transform .06s}
     .prose .article-cta-btn:hover{filter:brightness(1.03)}
     .prose .article-cta-btn:active{transform:translateY(4px);box-shadow:0 1px 0 #B97E1F}
     .back{display:inline-block;margin:8px 0 0;font-weight:700;color:var(--honey-dk);text-decoration:none}
+    /* Keep reading — related article cards */
+    .keep-reading{max-width:960px;padding-bottom:20px}
+    .kr-title{font-weight:900;font-size:24px;color:var(--ink);margin:0 0 20px}
+    .kr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+    .kr-card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow-card);overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s}
+    .kr-card:hover{transform:translateY(-4px)}
+    .kr-cover{aspect-ratio:16/9;width:100%;object-fit:cover;background:linear-gradient(160deg,#F6C158,#E7A636);display:block}
+    .kr-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px}
+    .kr-body h3{font-size:16px;font-weight:800;line-height:1.3;color:var(--ink);margin:0}
+    .kr-go{font-size:13px;font-weight:800;color:var(--honey-dk)}
     footer{border-top:1px solid var(--divider);padding:32px 0;text-align:center;color:var(--ink-muted);font-size:14px}
     @media(max-width:600px){
       .wrap{padding:0 18px}
@@ -103,7 +113,7 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
       <div class="article-head">
         <span class="eyebrow">MamaBee Journal</span>
         <h1>{title}</h1>
-        <div class="meta">By {author} · {dateFmt(publishedDate)}</div>
+        <div class="meta">By {author} · {dateFmt(publishedDate)}{readingTime ? ` · ${readingTime} min read` : ''}</div>
       </div>
     </div>
     {cover && <img class="cover" src={cover} alt={title} />}
@@ -114,6 +124,20 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
       </div>
     </div>
   </article>
+
+  {related && related.length > 0 && (
+    <section class="wrap keep-reading">
+      <h2 class="kr-title">Keep reading</h2>
+      <div class="kr-grid">
+        {related.map((r) => (
+          <a class="kr-card" href={`/mamabee/articles/${r.slug}`}>
+            {r.cover ? <img class="kr-cover" src={r.cover} alt={r.title} loading="lazy" /> : <div class="kr-cover"></div>}
+            <div class="kr-body"><h3>{r.title}</h3><span class="kr-go">Read next →</span></div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 
   <footer>© MamaBee · Made with honey by parents · <a href="/">Realm Labs</a></footer>
 </body>

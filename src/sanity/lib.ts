@@ -1,8 +1,18 @@
 import {sanityClient} from 'sanity:client'
+import {createClient} from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 import {toHTML} from '@portabletext/to-html'
 
 const builder = imageUrlBuilder(sanityClient)
+
+// Preview mode (LOCAL only): when PUBLIC_SANITY_PREVIEW=true and a token are
+// set, read DRAFTS too so you can preview unpublished articles on the site.
+// Production never sets these, so it only ever shows published content.
+const previewToken = process.env.SANITY_API_TOKEN
+const isPreview = process.env.PUBLIC_SANITY_PREVIEW === 'true' && !!previewToken
+const readClient = isPreview
+  ? createClient({...sanityClient.config(), token: previewToken, useCdn: false, perspective: 'previewDrafts'})
+  : sanityClient
 
 // Build an optimized image URL from a Sanity image reference.
 export function urlForImage(source: any) {
@@ -40,7 +50,7 @@ const ARTICLE_FIELDS = `
 // never fails just because there are no articles or no projectId.
 export async function getArticlesByBrand(brand: 'mamabee' | 'burnscroll'): Promise<Article[]> {
   try {
-    return await sanityClient.fetch(
+    return await readClient.fetch(
       `*[_type == "article" && brand == $brand && defined(slug.current)] | order(publishedAt desc){${ARTICLE_FIELDS}}`,
       {brand}
     )
@@ -53,6 +63,30 @@ export async function getArticlesByBrand(brand: 'mamabee' | 'burnscroll'): Promi
 export const APP_STORE_URL: Record<'mamabee' | 'burnscroll', string> = {
   mamabee: 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521',
   burnscroll: 'https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932',
+}
+
+// Estimate reading time in minutes from a Portable Text body (~200 wpm).
+export function readingMinutes(body: any): number {
+  if (!Array.isArray(body)) return 1
+  let words = 0
+  for (const block of body) {
+    if (block?._type === 'block' && Array.isArray(block.children)) {
+      for (const span of block.children) {
+        if (span?.text) words += span.text.split(/\s+/).filter(Boolean).length
+      }
+    }
+  }
+  return Math.max(1, Math.round(words / 200))
+}
+
+// Up to `limit` other articles from the same brand, for a "Keep reading" block.
+export async function getRelated(
+  brand: 'mamabee' | 'burnscroll',
+  currentSlug: string,
+  limit = 3,
+): Promise<Article[]> {
+  const all = await getArticlesByBrand(brand)
+  return all.filter((a) => a.slug !== currentSlug).slice(0, limit)
 }
 
 // Render Portable Text body to HTML: optimized images, inline download links,
