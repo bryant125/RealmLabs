@@ -31,12 +31,12 @@ cover (see cover-style memory), reading time, "Keep reading" related cards.
 | 14 | ✅ Published (Wk2) | How to Build a Baby Bedtime Routine That Actually Works | `baby-bedtime-routine` | baby bedtime routine | Sleep |
 | 15 | ✅ Published (Wk2) | The Newborn Witching Hour: Why Your Baby Cries Every Evening | `newborn-witching-hour` | witching hour baby | Sleep/Behavior |
 | 16 | ✅ Published (Wk2) | Baby's First Cold: What to Do and When to Call the Doctor | `baby-first-cold` | baby first cold | Health |
+| 17 | ✅ Published (Wk3) | When to Start Solids: Signs Your Baby Is Ready (+ app screenshot) | `when-to-start-solids` | when to start solids | Feeding |
+| 18 | ✅ Published (Wk3) | Baby Teething Symptoms: Signs, Timeline, and What Soothes | `baby-teething-symptoms` | baby teething symptoms | Health |
+| 19 | ✅ Published (Wk3) | Baby Nap Transitions: When Your Baby Drops a Nap | `baby-nap-transitions` | baby nap transitions | Sleep |
 
 ### 💡 MamaBee backlog (not yet written — future weeks)
 Keep these distinct from the topics above.
-- **Week 3:** Starting solids (4–6 months) — `when to start solids` — Feeding
-- **Week 3:** Teething: signs, timeline, soothing — `baby teething symptoms` — Health
-- **Week 3:** Nap transitions / dropping to one nap — `baby nap transitions` — Sleep
 - **Week 4:** Baby sleep training methods compared — `baby sleep training methods` — Sleep
 - **Week 4:** Breastfeeding vs. formula: an honest guide — `breastfeeding vs formula` — Feeding
 - **Week 4:** Postpartum recovery & mental health — `postpartum tips` — Parent wellness
