@@ -1,6 +1,10 @@
 ---
-const { title, description, canonical, source, kicker = 'Free Tool · MamaBee', heroTitle, heroSub, emailHeading = 'Get your baby’s free sleep cheat-sheet 🐝', emailSub = 'Enter your email for a printable wake-windows & sample-schedule cheat-sheet, plus a few genuinely helpful sleep tips.', faq = [] } = Astro.props;
+import { MAMABEE_TOOLS, getTool } from '../data/mamabeeTools';
+const { title, description, canonical, source, kicker = 'Free Tool · MamaBee', heroTitle, heroSub, emailHeading = 'Get your baby’s free sleep cheat-sheet 🐝', emailSub = 'Enter your email for a printable wake-windows & sample-schedule cheat-sheet, plus a few genuinely helpful sleep tips.', faq = [], toolSlug } = Astro.props;
 const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
+const tool = toolSlug ? getTool(toolSlug) : undefined;
+const relatedReads = tool?.articles ?? [];
+const otherTools = MAMABEE_TOOLS.filter((t) => t.slug !== toolSlug);
 const faqSchema = faq.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) } : null;
 const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication', name: heroTitle, applicationCategory: 'HealthApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, url: canonical };
 ---
@@ -77,6 +81,11 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
     .faq details[open] summary{color:var(--honey-dk)}
     .faq p{padding:0 0 16px;color:var(--ink-muted)}
     .links a{display:inline-block;margin:4px 10px 4px 0;font-weight:800}
+    .xlink{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px 22px;margin:18px 0}
+    .xlink-h{display:block;font-size:15px;color:var(--ink);margin-bottom:10px}
+    .xlink-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+    .xlink-list a{font-weight:800;text-decoration:none}
+    .xlink-list a:hover{text-decoration:underline}
     table.ref{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
     table.ref th,table.ref td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--divider)}
     table.ref th{font-weight:800;color:var(--ink-muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
@@ -89,6 +98,7 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
     <div class="nav-inner">
       <a class="brand" href="/mamabee/"><img src="/mamabee/assets/bee.png" alt="" width="42" height="42" />MamaBee</a>
       <div class="nav-cta">
+        <a class="lnk" href="/mamabee/tools">Free tools</a>
         <a class="lnk" href="/mamabee/articles">Articles</a>
         <a class="btn" href={appUrl} target="_blank" rel="noopener" style="min-height:44px;padding:0 20px">Get the app</a>
       </div>
@@ -130,11 +140,22 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
       </>
     )}
 
-    <div class="links" style="margin:26px 0">
-      <strong style="display:block;margin-bottom:8px">More from MamaBee:</strong>
-      <a href="/mamabee/tools/wake-window-calculator">Wake Window Calculator →</a>
-      <a href="/mamabee/baby-sleep-cheat-sheet">Baby Sleep Cheat-Sheet →</a>
-      <a href="/mamabee/articles">All articles →</a>
+    {relatedReads.length > 0 && (
+      <div class="xlink">
+        <strong class="xlink-h">Helpful reads that go with this tool</strong>
+        <ul class="xlink-list">
+          {relatedReads.map((a) => (<li><a href={`/mamabee/articles/${a.slug}`}>{a.title} →</a></li>))}
+        </ul>
+      </div>
+    )}
+
+    <div class="xlink">
+      <strong class="xlink-h">More free MamaBee tools</strong>
+      <ul class="xlink-list">
+        {otherTools.map((t) => (<li><a href={`/mamabee/tools/${t.slug}`}>{t.emoji} {t.name} →</a></li>))}
+        <li><a href="/mamabee/tools">See all free tools →</a></li>
+        <li><a href="/mamabee/articles">All articles →</a></li>
+      </ul>
     </div>
   </section>
 

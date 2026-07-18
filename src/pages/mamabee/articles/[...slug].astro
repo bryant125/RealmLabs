@@ -1,6 +1,7 @@
 ---
 import MamaBeeArticle from '../../../layouts/MamaBeeArticle.astro';
 import { getArticlesByBrand, getRelated, readingMinutes, extractFaq, urlForImage, renderBody } from '../../../sanity/lib';
+import { articleTool } from '../../../data/mamabeeTools';
 
 export async function getStaticPaths() {
   const posts = await getArticlesByBrand('mamabee');
@@ -20,6 +21,7 @@ const related = (await getRelated('mamabee', post.slug, 3)).map((a) => ({
   cover: a.coverImage ? urlForImage(a.coverImage).width(480).height(270).fit('crop').auto('format').url() : null,
 }));
 const canonical = `/mamabee/articles/${post.slug}`;
+const tool = articleTool(post.slug);
 ---
 <MamaBeeArticle
   title={post.title}
@@ -31,6 +33,7 @@ const canonical = `/mamabee/articles/${post.slug}`;
   readingTime={readingTime}
   related={related}
   faq={faq}
+  tool={tool}
 >
   <Fragment set:html={bodyHtml} />
 </MamaBeeArticle>
