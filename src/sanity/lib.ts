@@ -79,6 +79,33 @@ export function readingMinutes(body: any): number {
   return Math.max(1, Math.round(words / 200))
 }
 
+// Extract Q&A pairs from the "Frequently asked questions" section of a body,
+// for FAQPage structured data (rich results / People Also Ask).
+export function extractFaq(body: any): {question: string; answer: string}[] {
+  if (!Array.isArray(body)) return []
+  const faqs: {question: string; answer: string}[] = []
+  let inFaq = false
+  let current: {question: string; answer: string} | null = null
+  const textOf = (b: any) => (b.children || []).map((s: any) => s.text || '').join('')
+  for (const block of body) {
+    if (block?._type !== 'block') continue
+    if (block.style === 'h2') {
+      if (current) { faqs.push(current); current = null }
+      inFaq = /frequently asked questions/i.test(textOf(block))
+      continue
+    }
+    if (!inFaq) continue
+    if (block.style === 'h3') {
+      if (current) faqs.push(current)
+      current = {question: textOf(block), answer: ''}
+    } else if (current && block.style === 'normal') {
+      current.answer += (current.answer ? ' ' : '') + textOf(block)
+    }
+  }
+  if (current) faqs.push(current)
+  return faqs.filter((f) => f.question && f.answer)
+}
+
 // Up to `limit` other articles from the same brand, for a "Keep reading" block.
 export async function getRelated(
   brand: 'mamabee' | 'burnscroll',

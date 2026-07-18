@@ -1,7 +1,7 @@
 // Uploads generated cover images and attaches them to the matching MamaBee
 // article drafts. Run: SANITY_WRITE_TOKEN=xxx node scripts/attach-covers.mjs <coversDir>
 import {createClient} from '@sanity/client'
-import {createReadStream, existsSync} from 'node:fs'
+import {createReadStream, readdirSync} from 'node:fs'
 import path from 'node:path'
 
 const dir = process.argv[2]
@@ -13,20 +13,16 @@ const client = createClient({
   token: process.env.SANITY_WRITE_TOKEN, useCdn: false,
 })
 
-const slugs = [
-  'newborn-sleep-schedule', 'how-much-should-a-newborn-eat', 'baby-poop-color-chart',
-  '4-month-sleep-regression', 'day-with-mamabee-baby-tracker', 'wake-windows-by-age',
-  'tummy-time-guide', 'newborn-gas-relief', 'cluster-feeding', '3am-question-mamabee-ai-tracker',
-]
-
-for (const slug of slugs) {
-  const file = path.join(dir, `${slug}.png`)
-  if (!existsSync(file)) { console.log(`- skip (no file): ${slug}`); continue }
-  const asset = await client.assets.upload('image', createReadStream(file), {filename: `${slug}.png`})
-  await client
-    .patch(`drafts.mamabee-${slug}`)
-    .set({coverImage: {_type: 'image', asset: {_type: 'reference', _ref: asset._id}}})
-    .commit()
-  console.log(`✓ cover attached: ${slug}`)
+// Attach every <slug>.png in the folder to draft OR published mamabee-<slug>.
+const files = readdirSync(dir).filter((f) => f.endsWith('.png'))
+for (const file of files) {
+  const slug = file.replace(/\.png$/, '')
+  const asset = await client.assets.upload('image', createReadStream(path.join(dir, file)), {filename: file})
+  const cover = {coverImage: {_type: 'image', asset: {_type: 'reference', _ref: asset._id}}}
+  // patch whichever exists (draft preferred)
+  const draftId = `drafts.mamabee-${slug}`, pubId = `mamabee-${slug}`
+  const exists = await client.getDocument(draftId).catch(() => null)
+  await client.patch(exists ? draftId : pubId).set(cover).commit()
+  console.log(`✓ cover attached: ${slug} (${exists ? 'draft' : 'published'})`)
 }
 console.log('\nDone — covers attached to all drafts.')

@@ -2,7 +2,8 @@
 import ArticleSeo from '../components/ArticleSeo.astro';
 import GtmHead from '../components/GtmHead.astro';
 import GtmBody from '../components/GtmBody.astro';
-const { title, description, publishedDate, updatedDate, author, cover, canonical, readingTime, related = [] } = Astro.props;
+const { title, description, publishedDate, updatedDate, author, cover, canonical, readingTime, related = [], faq = [] } = Astro.props;
+const faqSchema = faq.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) } : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/jpeg" href="/burnscroll/logo.jpg" />
   <ArticleSeo brand="BurnScroll" {title} {description} {publishedDate} {updatedDate} {author} image={cover} {canonical} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
   <style>
     :root{--neon:#CEFF00;--ink:#fff;--muted:#a1a1aa;--bg:#000;--panel:#111;--line:rgba(255,255,255,.1)}
     *{box-sizing:border-box;margin:0;padding:0}
