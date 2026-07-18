@@ -1,0 +1,81 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+const faq = [
+  { q: 'How does the baby sleep schedule generator work?', a: 'It takes your baby’s age (to load age-appropriate wake windows) and your morning wake-up time, then spaces naps and bedtime through the day based on how long babies that age can comfortably stay awake between sleeps.' },
+  { q: 'Is a set sleep schedule right for newborns?', a: 'Newborns don’t follow a strict clock — they run on wake windows and cues. Use the generated times as a flexible rhythm, not rigid rules, and always follow your baby’s sleepy signals.' },
+  { q: 'My baby’s naps are shorter than the schedule — is that okay?', a: 'Completely normal, especially under 5–6 months when short "catnaps" are common. Focus on the wake windows between sleeps rather than exact nap lengths.' },
+];
+---
+<ToolLayout
+  title="Baby Sleep Schedule Generator by Age — Free Tool | MamaBee"
+  description="Free baby sleep schedule generator: enter your baby’s age and wake-up time to instantly create a sample daily schedule of naps and bedtime, based on age-appropriate wake windows."
+  canonical="https://www.realmlabs.app/mamabee/tools/baby-sleep-schedule-generator"
+  source="schedule_generator"
+  heroTitle="Baby Sleep Schedule Generator"
+  heroSub="Enter your baby’s age and this morning’s wake-up time to instantly build a sample day of naps and bedtime — based on age-appropriate wake windows."
+  faq={faq}
+>
+  <div class="card">
+    <div class="field">
+      <label for="age">Your baby’s age</label>
+      <select id="age">
+        <option value="50,5,60">Newborn (0–1 month)</option>
+        <option value="70,4,75">1–2 months</option>
+        <option value="105,4,60" selected>3–4 months</option>
+        <option value="135,3,75">5–6 months</option>
+        <option value="180,2,90">7–9 months</option>
+        <option value="210,2,90">10–12 months</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="wake">This morning’s wake-up time</label>
+      <input type="time" id="wake" />
+    </div>
+    <button class="btn full" id="calc">Generate my baby’s schedule →</button>
+    <div class="result" id="result">
+      <div class="lbl">Your baby’s sample day</div>
+      <div id="schedule" style="text-align:left;max-width:340px;margin:14px auto 0"></div>
+      <div class="tip" style="text-align:center">A flexible starting point — watch your baby’s sleepy cues and adjust by 10–15 minutes. See <a href="/mamabee/articles/wake-windows-by-age">wake windows by age</a> for more.</div>
+    </div>
+  </div>
+  <style is:global>
+    #schedule .row{display:grid;grid-template-columns:70px 1fr;gap:14px;align-items:center;padding:9px 0;border-bottom:1px solid #F0E6D6}
+    #schedule .row:last-child{border-bottom:none}
+    #schedule .row .t{font-variant-numeric:tabular-nums;font-weight:900;color:#B97E1F;text-align:right}
+    #schedule .row .l{font-weight:700;color:#3D2E20;position:relative;padding-left:18px}
+    #schedule .row .l::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#F0B040;box-shadow:0 0 0 3px #FBF1DA}
+    #schedule .row.bed .l::before{background:#643018}
+  </style>
+  <script is:inline>
+    (function () {
+      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+      var fmt = function (mins) {
+        mins = ((mins % 1440) + 1440) % 1440;
+        var h = Math.floor(mins / 60), m = mins % 60, ap = h < 12 ? 'AM' : 'PM', h12 = h % 12 || 12;
+        return h12 + ':' + pad(m) + ' ' + ap;
+      };
+      var wakeEl = document.getElementById('wake');
+      var now = new Date(); wakeEl.value = '07:00';
+      document.getElementById('calc').addEventListener('click', function () {
+        if (!wakeEl.value) { wakeEl.focus(); return; }
+        var p = document.getElementById('age').value.split(',');
+        var ww = +p[0], naps = +p[1], napLen = +p[2];
+        var parts = wakeEl.value.split(':'), t = (+parts[0]) * 60 + (+parts[1]);
+        var rows = [{ t: t, l: 'Wake up', bed: false }];
+        for (var i = 1; i <= naps; i++) {
+          var ns = t + ww;
+          rows.push({ t: ns, l: naps > 3 ? 'Nap' : 'Nap ' + i, bed: false });
+          t = ns + napLen;
+        }
+        var bed = t + Math.round(ww * 0.9);
+        rows.push({ t: bed, l: 'Bedtime', bed: true });
+        var html = rows.map(function (r) {
+          return '<div class="row' + (r.bed ? ' bed' : '') + '"><span class="t">' + fmt(r.t) + '</span><span class="l">' + r.l + '</span></div>';
+        }).join('');
+        document.getElementById('schedule').innerHTML = html;
+        var res = document.getElementById('result'); res.classList.add('show');
+        res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+  </script>
+</ToolLayout>

@@ -1,0 +1,67 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+const faq = [
+  { q: 'How is my due date calculated?', a: 'The standard method (Naegele’s rule) adds 280 days — 40 weeks — to the first day of your last menstrual period, adjusted slightly if your cycle isn’t 28 days. It estimates the date, but only about 1 in 20 babies actually arrives on it.' },
+  { q: 'How accurate is a due date calculator?', a: 'It gives a solid estimate from your last period, but a first-trimester dating ultrasound is more accurate — your provider may adjust the date. A normal, full-term birth can happen anytime from 37 to 42 weeks.' },
+  { q: 'Can I calculate my due date from conception or IVF?', a: 'This tool uses your last period. If you know your conception date, your due date is roughly 266 days after it; IVF due dates are calculated from the transfer date. Ask your provider for an exact IVF due date.' },
+];
+---
+<ToolLayout
+  title="Due Date Calculator — Free Pregnancy Due Date Tool | MamaBee"
+  description="Free due date calculator: enter the first day of your last period to estimate your due date, how many weeks along you are, and your trimester. Simple and instant."
+  canonical="https://www.realmlabs.app/mamabee/tools/due-date-calculator"
+  source="due_date_calculator"
+  heroTitle="Due Date Calculator"
+  heroSub="Enter the first day of your last period to estimate your due date, how far along you are, and your trimester — instantly."
+  emailHeading="Prepping for baby? Get the free sleep cheat-sheet 🐝"
+  emailSub="Get a printable newborn wake-windows & sample-schedule cheat-sheet ready for the day baby arrives, plus a few calm-parenting tips."
+  faq={faq}
+>
+  <div class="card">
+    <div class="field">
+      <label for="lmp">First day of your last period</label>
+      <input type="date" id="lmp" />
+    </div>
+    <div class="field">
+      <label for="cycle">Average cycle length</label>
+      <select id="cycle">
+        <option value="21">21 days</option><option value="24">24 days</option>
+        <option value="26">26 days</option><option value="28" selected>28 days (average)</option>
+        <option value="30">30 days</option><option value="32">32 days</option><option value="35">35 days</option>
+      </select>
+    </div>
+    <button class="btn full" id="calc">Calculate my due date →</button>
+    <div class="result" id="result">
+      <div class="lbl">Estimated due date</div>
+      <div class="big" id="dd">—</div>
+      <div class="note" id="along"></div>
+      <div class="tip">Only about 1 in 20 babies arrives on the exact due date — a normal birth can happen any time from 37 to 42 weeks. Your provider’s dating scan is the most accurate.</div>
+    </div>
+  </div>
+  <script is:inline>
+    (function () {
+      var DAY = 86400000;
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var lmpEl = document.getElementById('lmp');
+      document.getElementById('calc').addEventListener('click', function () {
+        if (!lmpEl.value) { lmpEl.focus(); return; }
+        var lmp = new Date(lmpEl.value + 'T00:00:00');
+        var cycle = parseInt(document.getElementById('cycle').value, 10);
+        var edd = new Date(lmp.getTime() + (280 + (cycle - 28)) * DAY);
+        var today = new Date(); today.setHours(0,0,0,0);
+        var days = Math.floor((today - lmp) / DAY);
+        document.getElementById('dd').textContent = months[edd.getMonth()] + ' ' + edd.getDate() + ', ' + edd.getFullYear();
+        var alongEl = document.getElementById('along');
+        if (days < 0) { alongEl.textContent = 'That date is in the future — double-check it.'; }
+        else if (days > 300) { alongEl.textContent = 'Congratulations — baby may already be here! 🐝'; }
+        else {
+          var w = Math.floor(days / 7), d = days % 7;
+          var tri = w < 14 ? 'First trimester' : (w < 28 ? 'Second trimester' : 'Third trimester');
+          alongEl.textContent = "You're about " + w + ' weeks' + (d ? ' ' + d + ' days' : '') + ' along · ' + tri;
+        }
+        var r = document.getElementById('result'); r.classList.add('show');
+        r.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+  </script>
+</ToolLayout>

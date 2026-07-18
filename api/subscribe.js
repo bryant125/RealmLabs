@@ -5,10 +5,11 @@ export default async function handler(req, res) {
     res.status(405).json({error: 'Method not allowed'})
     return
   }
-  let email
+  let email, source
   try {
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
     email = body?.email
+    source = typeof body?.source === 'string' ? body.source.slice(0, 60) : 'unknown'
   } catch {
     /* fall through to validation */
   }
@@ -31,8 +32,8 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         email,
-        groups: ['193315157946926539'], // MamaBee Sleep Tips (Calculator)
-        fields: {source: 'wake_window_calculator'},
+        groups: ['193315157946926539'], // MamaBee Sleep Tips
+        fields: {source: source || 'unknown'},
       }),
     })
     if (!r.ok && r.status !== 422) {
