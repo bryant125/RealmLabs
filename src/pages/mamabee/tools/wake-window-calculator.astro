@@ -67,8 +67,8 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
     .email h2{font-size:22px;font-weight:900;margin-bottom:8px}
     .email p{color:var(--ink-muted);margin-bottom:18px;max-width:44ch;margin-left:auto;margin-right:auto}
     .email form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-    .email input[type=email]{flex:1;min-width:200px;min-height:54px;padding:0 16px;font-family:inherit;font-size:1.02rem;font-weight:600;background:#fff;border:2px solid var(--divider);border-radius:14px}
-    .email input[type=email]:focus{outline:none;border-color:var(--honey)}
+    .email input[type=email],.email input[type=text]{flex:1;min-width:170px;min-height:54px;padding:0 16px;font-family:inherit;font-size:1.02rem;font-weight:600;background:#fff;border:2px solid var(--divider);border-radius:14px}
+    .email input:focus{outline:none;border-color:var(--honey)}
     .email .msg{margin-top:14px;font-weight:700;min-height:22px}
     .email .msg.ok{color:#2f8f5b}.email .msg.err{color:#c0563f}
     table.ref{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
@@ -140,7 +140,8 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
       <h2>Get your baby’s free sleep cheat-sheet 🐝</h2>
       <p>Enter your email and we’ll send you a printable wake-windows &amp; sample-schedule cheat-sheet, plus a few genuinely helpful sleep tips.</p>
       <form id="emailForm">
-        <input type="email" id="emailInput" placeholder="you@email.com" required aria-label="Email address" />
+        <input type="text" id="nameInput" placeholder="First name (optional)" aria-label="First name" autocomplete="given-name" />
+        <input type="email" id="emailInput" placeholder="you@email.com" required aria-label="Email address" autocomplete="email" />
         <button class="btn" type="submit" id="emailBtn">Send it to me</button>
       </form>
       <div class="msg" id="emailMsg" role="status"></div>
@@ -208,12 +209,13 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var email = document.getElementById('emailInput').value.trim();
+        var name = document.getElementById('nameInput').value.trim();
         var msg = document.getElementById('emailMsg'); var btn = document.getElementById('emailBtn');
         msg.className = 'msg'; msg.textContent = 'Sending…'; btn.disabled = true;
-        fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })
+        fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, name: name, source: 'wake_window_calculator' }) })
           .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
           .then(function (res) {
-            if (res.ok) { msg.className = 'msg ok'; msg.textContent = '🎉 Check your inbox — your cheat-sheet is on the way!'; form.reset(); }
+            if (res.ok) { msg.className = 'msg ok'; msg.innerHTML = '🎉 You’re in! Grab your cheat-sheet now → <a href="/mamabee/baby-sleep-cheat-sheet">Open it</a>'; form.reset(); }
             else { msg.className = 'msg err'; msg.textContent = (res.d && res.d.error) || 'Something went wrong. Please try again.'; }
           })
           .catch(function () { msg.className = 'msg err'; msg.textContent = 'Something went wrong. Please try again.'; })
