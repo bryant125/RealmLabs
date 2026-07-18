@@ -49,6 +49,22 @@
     onScroll();
   }
 
+  // mobile burger drawer (sub-pages share this script)
+  var navToggle = document.getElementById('nav-toggle');
+  var navDrawer = document.getElementById('nav-drawer');
+  if (navToggle && navDrawer) {
+    navToggle.addEventListener('click', function () {
+      var open = navDrawer.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navDrawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navDrawer.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // TOC scroll-spy
   var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.legal-toc a'));
   if (tocLinks.length) {

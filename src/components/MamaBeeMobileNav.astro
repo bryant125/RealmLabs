@@ -1,0 +1,54 @@
+---
+// Shared mobile burger drawer for all MamaBee Astro pages. Place right after
+// the <header>, and put <button class="nav-toggle" id="mbToggle" ...> inside the
+// header's .nav-cta. Styles are global so the .nav-toggle button (which lives in
+// the parent header) is styled and the desktop links hide at the same breakpoint.
+const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
+---
+<nav class="nav-drawer" id="mbDrawer" aria-label="Mobile navigation">
+  <a href="/mamabee/#how">How it works</a>
+  <a href="/mamabee/#features">Features</a>
+  <a href="/mamabee/#ai">AI</a>
+  <a href="/mamabee/#faq">FAQ</a>
+  <a href="/mamabee/tools">Free tools</a>
+  <a href="/mamabee/articles">Articles</a>
+  <a class="drawer-app" href={appUrl} target="_blank" rel="noopener">Get the app</a>
+</nav>
+
+<style is:global>
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:8px;border-radius:12px;transition:background-color .16s;flex-shrink:0}
+  .nav-toggle:hover{background:#FDF1D2}
+  .nav-toggle span{display:block;width:22px;height:2.5px;background:#3D2E20;border-radius:2px;transition:transform .25s,opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .nav-drawer{display:none;flex-direction:column;background:rgba(252,235,206,.97);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);padding:14px 20px 22px;border-bottom:1px solid #F0E6D6;gap:4px}
+  .nav-drawer a{font-family:"Nunito",system-ui,sans-serif;font-weight:800;font-size:1.05rem;color:#3D2E20;padding:12px 14px;border-radius:14px;text-decoration:none}
+  .nav-drawer a:hover{background:#FDF1D2;color:#643018}
+  .nav-drawer a.drawer-app{background:linear-gradient(160deg,#F6C158,#E7A636);color:#643018;text-align:center;margin-top:6px;box-shadow:0 4px 0 #B97E1F}
+  .nav-drawer.open{display:flex}
+  /* show the burger + hide the desktop links on phones/small tablets */
+  @media(max-width:760px){
+    .nav-toggle{display:flex}
+    .nav-links{display:none}
+    .nav-cta a.lnk{display:none}
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var t = document.getElementById('mbToggle');
+    var d = document.getElementById('mbDrawer');
+    if (!t || !d) return;
+    t.addEventListener('click', function () {
+      var open = d.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    d.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        d.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>

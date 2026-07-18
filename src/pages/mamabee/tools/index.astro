@@ -1,5 +1,6 @@
 ---
 import { MAMABEE_TOOLS } from '../../../data/mamabeeTools';
+import MamaBeeMobileNav from '../../../components/MamaBeeMobileNav.astro';
 const title = 'Free Baby Tools & Calculators — Wake Windows, Feeding & Sleep | MamaBee';
 const description = 'Free, instant baby calculators from MamaBee: wake window calculator, sleep schedule generator, feeding calculator, and due date calculator. No sign-up needed.';
 const canonical = 'https://www.realmlabs.app/mamabee/tools';
@@ -84,9 +85,11 @@ const itemList = {
       </nav>
       <div class="nav-cta">
         <a class="btn" href={appUrl} target="_blank" rel="noopener">Get the app</a>
+        <button class="nav-toggle" id="mbToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+  <MamaBeeMobileNav />
 
   <section class="wrap">
     <div class="hero">

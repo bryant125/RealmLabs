@@ -1,4 +1,5 @@
 ---
+import MamaBeeMobileNav from '../../../components/MamaBeeMobileNav.astro';
 const title = 'Baby Wake Window Calculator — Free Nap Timing Tool | MamaBee';
 const description = 'Free baby wake window calculator: enter your baby’s age and last wake-up time to get the ideal next nap window instantly. Stop guessing nap times and beat the overtired meltdown.';
 const canonical = 'https://www.realmlabs.app/mamabee/tools/wake-window-calculator';
@@ -91,12 +92,14 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
     <div class="nav-inner">
       <a class="brand" href="/mamabee/"><img src="/mamabee/assets/bee.png" alt="" width="42" height="42" />MamaBee</a>
       <div class="nav-cta">
-        <a href="/mamabee/tools">Free tools</a>
-        <a href="/mamabee/articles">Articles</a>
+        <a class="lnk" href="/mamabee/tools">Free tools</a>
+        <a class="lnk" href="/mamabee/articles">Articles</a>
         <a class="btn" href={appUrl} target="_blank" rel="noopener" style="min-height:44px;padding:0 20px">Get the app</a>
+        <button class="nav-toggle" id="mbToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+  <MamaBeeMobileNav />
 
   <section class="wrap">
     <div class="hero">

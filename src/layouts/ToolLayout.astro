@@ -1,5 +1,6 @@
 ---
 import { MAMABEE_TOOLS, getTool } from '../data/mamabeeTools';
+import MamaBeeMobileNav from '../components/MamaBeeMobileNav.astro';
 const { title, description, canonical, source, kicker = 'Free Tool · MamaBee', heroTitle, heroSub, emailHeading = 'Get your baby’s free sleep cheat-sheet 🐝', emailSub = 'Enter your email for a printable wake-windows & sample-schedule cheat-sheet, plus a few genuinely helpful sleep tips.', faq = [], toolSlug } = Astro.props;
 const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
 const tool = toolSlug ? getTool(toolSlug) : undefined;
@@ -101,9 +102,11 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
         <a class="lnk" href="/mamabee/tools">Free tools</a>
         <a class="lnk" href="/mamabee/articles">Articles</a>
         <a class="btn" href={appUrl} target="_blank" rel="noopener" style="min-height:44px;padding:0 20px">Get the app</a>
+        <button class="nav-toggle" id="mbToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+  <MamaBeeMobileNav />
 
   <section class="wrap">
     <div class="hero">

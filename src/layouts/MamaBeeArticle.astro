@@ -3,6 +3,7 @@ import ArticleSeo from '../components/ArticleSeo.astro';
 import GtmHead from '../components/GtmHead.astro';
 import GtmBody from '../components/GtmBody.astro';
 import MamaBeeAppBanner from '../components/MamaBeeAppBanner.astro';
+import MamaBeeMobileNav from '../components/MamaBeeMobileNav.astro';
 const { title, description, publishedDate, updatedDate, author, cover, canonical, readingTime, related = [], faq = [], tool = null } = Astro.props;
 const faqSchema = faq.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) } : null;
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -138,6 +139,9 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
       .prose h2{font-size:24px}
       .prose h3{font-size:20px}
       .cover{border-radius:14px}
+      .kr-grid{grid-template-columns:1fr 1fr;gap:12px}
+      .kr-body{padding:12px 13px 14px}
+      .kr-body h3{font-size:14px;line-height:1.3}
     }
   </style>
 </head>
@@ -156,9 +160,11 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
       </nav>
       <div class="nav-cta">
         <a class="btn btn-primary" href="https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521" target="_blank" rel="noopener">Get the app</a>
+        <button class="nav-toggle" id="mbToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+  <MamaBeeMobileNav />
 
   <div class="banner-wrap"><MamaBeeAppBanner /></div>
 
