@@ -33,7 +33,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         email,
         groups: ['193315157946926539'], // MamaBee Sleep Tips
-        fields: {source: source || 'unknown'},
+        fields: {signup_source: source || 'unknown'},
       }),
     })
     if (!r.ok && r.status !== 422) {
