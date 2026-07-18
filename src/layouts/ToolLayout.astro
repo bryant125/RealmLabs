@@ -22,7 +22,7 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
   <link rel="icon" type="image/png" href="/mamabee/assets/bee.png" />
   {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
   <script type="application/ld+json" set:html={JSON.stringify(appSchema)} />
-  <style>
+  <style is:global>
     :root{--honey:#F0B040;--honey-dk:#D89A2E;--cream:#FCEBCE;--cream-tint:#FBF1DA;--surface:#fff;--ink:#3D2E20;--ink-muted:#8A7A68;--divider:#F0E6D6;--cocoa:#643018;--shadow:0 10px 30px rgba(61,46,32,.1)}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:"Nunito",system-ui,sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
@@ -44,8 +44,12 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
     .card{background:var(--surface);border-radius:26px;box-shadow:var(--shadow);padding:30px 28px;margin:26px 0}
     .field{margin-bottom:20px}
     .field label{display:block;font-weight:800;margin-bottom:8px;font-size:.98rem}
-    .field select,.field input{width:100%;min-height:54px;padding:0 16px;font-family:inherit;font-size:1.05rem;font-weight:700;color:var(--ink);background:var(--cream-tint);border:2px solid var(--divider);border-radius:14px;appearance:none}
-    .field select:focus,.field input:focus{outline:none;border-color:var(--honey)}
+    .field select,.field input{width:100%;min-height:54px;padding:0 16px;font-family:inherit;font-size:1.05rem;font-weight:700;color:var(--ink);background:var(--cream-tint);border:2px solid var(--divider);border-radius:14px}
+    .field select{-webkit-appearance:none;appearance:none;padding-right:44px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5L6 8l3.5-3.5' fill='none' stroke='%23B97E1F' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+    .field input[type=number]{-webkit-appearance:none;appearance:none}
+    .field input::-webkit-datetime-edit{color:var(--ink)}
+    .field input::-webkit-calendar-picker-indicator{cursor:pointer;opacity:.6}
+    .field select:focus,.field input:focus{outline:none;border-color:var(--honey);background-color:#fff}
     .full{width:100%}
     .result{display:none;margin-top:24px;background:linear-gradient(160deg,#FDF1D2,#FCE7B5);border:1px solid var(--divider);border-radius:20px;padding:26px 24px;text-align:center}
     .result.show{display:block}
