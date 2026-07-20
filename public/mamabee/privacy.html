@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Privacy Policy — MamaBee</title>
-<meta name="description" content="MamaBee's privacy policy. Your baby's data stays on your device. Never sold, never used to train external AI, no ads, no analytics." />
+<meta name="description" content="MamaBee's privacy policy. What we collect, where it lives, and who we share it with. Never sold, never used to train external AI, no ads in the app." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -69,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <span class="crumb" data-i18n="pv.crumb"><a href="index.html" style="color:inherit">Home</a> · Legal · Privacy</span>
     <h1 data-i18n="pv.title">Privacy Policy</h1>
-    <p class="updated" data-i18n="pv.updated">Last updated: May 2026</p>
+    <p class="updated" data-i18n="pv.updated">Last updated: July 2026</p>
   </div>
 </section>
 
@@ -83,7 +83,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#summary" data-i18n="pv.toc.summary">Plain-English summary</a>
         <a href="#collect" data-i18n="pv.h.collect">What we collect</a>
         <a href="#lives" data-i18n="pv.h.lives">Where your data lives</a>
-        <a href="#ai" data-i18n="pv.h.ai">MamaBee AI Assistant</a>
+        <a href="#analytics" data-i18n="pv2.h.analytics">Analytics</a>
+        <a href="#ads" data-i18n="pv2.h.ads">Advertising measurement</a>
+        <a href="#ai" data-i18n="pv2.h.ai">Bee AI</a>
+        <a href="#purchases" data-i18n="pv2.h.purchases">Purchases</a>
+        <a href="#dont" data-i18n="pv.h.dont">What we don't do</a>
         <a href="#rights" data-i18n="pv.h.rights">Your rights</a>
         <a href="#children" data-i18n="pv.h.children">Children</a>
         <a href="#contact" data-i18n="pv.h.contact">Contact</a>
@@ -95,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="legal-summary" id="summary">
         <span class="tag" data-i18n="pv.sum.tag">🍯 Plain-English summary</span>
-        <p data-i18n="pv.sum.body">MamaBee is built for parents tracking their baby. Your data — your baby's profile, photos, and every log you write — stays on YOUR device. We don't sell it, we don't show ads on it, and we don't run analytics on it. The only time anything leaves your device is when you tap "Ask MamaBee AI" (and even then we never send your baby's name or photo) or when you tap Export (we hand you a file; what you do with it is up to you).</p>
+        <p data-i18n="pv2.sum.body">MamaBee is built for parents tracking their baby. By default everything you log stays on your device. If you turn on Co-Parent Sharing, your baby's profile and logs are copied to our own database so the co-parents you invite can see them. We use analytics tools that tell us how the app is used — which screens get opened, that a log was created — but never what's inside your logs: no names, no photos, no notes, no measurements. We never sell your data and there are no ads in the app.</p>
       </div>
 
       <section id="collect">
@@ -104,39 +108,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li data-i18n="pv.collect.1"><strong>Baby profile</strong> — name, date &amp; time of birth, gender, country, optional photo.</li>
           <li data-i18n="pv.collect.2"><strong>Tracking logs</strong> — sleep sessions, feeds, diaper changes (including any photo you attach), growth measurements, health events, milestones, activities, vaccinations.</li>
           <li data-i18n="pv.collect.3"><strong>App preferences</strong> — measurement units, bottom-bar order, country selection.</li>
+          <li data-i18n="pv2.collect.4"><strong>Anonymous usage data</strong> — a random ID we generate for your install, the app version, and your device's region and language.</li>
+          <li data-i18n="pv2.collect.5"><strong>Subscription status</strong> — whether you have an active subscription.</li>
         </ul>
-        <p data-i18n="pv.collect.note">We do <strong>NOT</strong> collect device identifiers, location, contacts, or anything else not directly typed/tapped by you.</p>
+        <p data-i18n="pv2.collect.note">We do <strong>NOT</strong> collect your location, your contacts, or the contents of the notes you write.</p>
       </section>
 
       <section id="lives">
         <h2><span class="hx"></span><span data-i18n="pv.h.lives">Where your data lives</span></h2>
         <ul class="bullets">
-          <li data-i18n="pv.lives.1">Locally on your device, in Apple's SwiftData store.</li>
-          <li data-i18n="pv.lives.2">Optionally synced through your private iCloud account when iCloud Drive is enabled (we never see this — Apple does the sync directly between your devices).</li>
-          <li data-i18n="pv.lives.3">Photos use external storage attached to the SwiftData record so the database stays small.</li>
+          <li data-i18n="pv2.lives.1"><strong>On your device, by default</strong> — everything you log is stored locally in Apple's SwiftData store. Photos use external storage attached to the record so the database stays small.</li>
+          <li data-i18n="pv2.lives.2"><strong>On our server, if you turn on Co-Parent Sharing</strong> — your baby's profile and logs are copied to our Google Firebase (Firestore) database, and full-size photos to Firebase Storage, so the co-parents you invite can see them.</li>
         </ul>
-        <p data-i18n="pv.lives.note">We don't run our own server and we don't have a database with your records on it.</p>
+        <p data-i18n="pv2.lives.note">To be straight with you: that Firebase database is a server <strong>we</strong> run, not your private iCloud. Those records are technically accessible to us. We don't go looking at them, but we're not going to claim we can't.</p>
+        <ul class="bullets">
+          <li data-i18n="pv2.lives.3">Leaving a shared family stops the syncing.</li>
+          <li data-i18n="pv2.lives.4">Deleting your account removes the records we hold.</li>
+        </ul>
+      </section>
+
+      <section id="analytics">
+        <h2><span class="hx"></span><span data-i18n="pv2.h.analytics">Analytics</span></h2>
+        <p data-i18n="pv2.an.intro">We use Google Firebase Analytics and PostHog to understand how the app is used. They receive:</p>
+        <ul class="bullets">
+          <li data-i18n="pv2.an.1">Which screen you opened, and when you opened the app.</li>
+          <li data-i18n="pv2.an.2">That a log was created and what type it was (feed, sleep, diaper) — never the values, notes or photos inside it.</li>
+          <li data-i18n="pv2.an.3">Your app version, and your device's region and language.</li>
+        </ul>
+        <p data-i18n="pv2.an.note">They never receive your baby's name, birth date, measurements, health records, photos, or anything you've typed.</p>
+      </section>
+
+      <section id="ads">
+        <h2><span class="hx"></span><span data-i18n="pv2.h.ads">Advertising measurement</span></h2>
+        <p data-i18n="pv2.ads.body">We use Meta's and TikTok's measurement tools to see whether our ads actually bring people to MamaBee. Apple's App Tracking Transparency prompt decides whether they may use your device's advertising identifier — if you choose "Ask App Not to Track", that's fully respected.</p>
+        <p data-i18n="pv2.ads.note">No ads are ever shown inside MamaBee.</p>
       </section>
 
       <section id="ai">
-        <h2><span class="hx"></span><span data-i18n="pv.h.ai">MamaBee AI Assistant</span></h2>
-        <p data-i18n="pv.ai.intro">When you tap a question in the AI Assistant, we send to Google (the AI provider behind MamaBee Chat):</p>
+        <h2><span class="hx"></span><span data-i18n="pv2.h.ai">Bee AI</span></h2>
+        <p data-i18n="pv2.ai.intro">When you tap a question in Bee AI, we send to OpenRouter — which routes it to a large-language-model provider:</p>
         <ul class="bullets">
-          <li data-i18n="pv.ai.1">Your typed question.</li>
-          <li data-i18n="pv.ai.2">A short numerical summary of your baby's recent logs (e.g. "8 sleep sessions in the last 7 days totalling 56 hours, avg feed 110ml").</li>
-          <li data-i18n="pv.ai.3">Your baby's age in months, and gender if set.</li>
+          <li data-i18n="pv2.ai.1">Your question.</li>
+          <li data-i18n="pv2.ai.2">A summary of your baby's logged history.</li>
+          <li data-i18n="pv2.ai.3">Your baby's first name, age, date of birth and gender.</li>
         </ul>
-        <p data-i18n="pv.ai.note">We do <strong>NOT</strong> send your baby's name, photo, full log history, or any free-text notes you've written. The "AI context" sheet inside the assistant shows you the exact data going out so you can verify yourself.</p>
+        <p data-i18n="pv2.ai.note">We do <strong>NOT</strong> send your baby's photo or any free-text notes you've written.</p>
+      </section>
+
+      <section id="purchases">
+        <h2><span class="hx"></span><span data-i18n="pv2.h.purchases">Purchases</span></h2>
+        <p data-i18n="pv2.purch.body">Subscriptions are handled by Apple and by RevenueCat. We never see your card details — we only receive whether your subscription is active.</p>
+      </section>
+
+      <section id="dont">
+        <h2><span class="hx"></span><span data-i18n="pv.h.dont">What we don't do</span></h2>
+        <ul class="bullets">
+          <li data-i18n="pv2.dont.1">No ads inside the app.</li>
+          <li data-i18n="pv2.dont.2">We never sell, rent or license your data.</li>
+          <li data-i18n="pv2.dont.3">We never send your baby's name, photos, notes or health values to analytics or advertising services.</li>
+          <li data-i18n="pv2.dont.4">No third-party login, and we don't collect your email address.</li>
+          <li data-i18n="pv2.dont.5">We don't build advertising profiles about you or your baby.</li>
+        </ul>
       </section>
 
       <section id="rights">
         <h2><span class="hx"></span><span data-i18n="pv.h.rights">Your rights</span></h2>
-        <p data-i18n="pv.rights.intro">Because data lives on your device, you control it directly:</p>
+        <p data-i18n="pv2.rights.intro">You control your data directly from inside the app:</p>
         <ul class="bullets">
           <li data-i18n="pv.rights.1"><strong>Export</strong> — Profile → Data → Export as CSV / PDF.</li>
           <li data-i18n="pv.rights.2"><strong>Edit</strong> — every record can be edited or deleted from the timeline.</li>
-          <li data-i18n="pv.rights.3"><strong>Wipe</strong> — Profile → Account → Delete Account erases everything irreversibly.</li>
+          <li data-i18n="pv2.rights.3"><strong>Wipe</strong> — Profile → Account → Delete Account erases your data on the device and the records we hold on our server.</li>
           <li data-i18n="pv.rights.4"><strong>Photos</strong> — diaper photos and avatars can be removed from the record's edit screen.</li>
+          <li data-i18n="pv2.rights.5"><strong>Stop sharing</strong> — leaving a shared family stops your logs syncing to our server.</li>
         </ul>
       </section>
 
@@ -148,6 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section id="contact">
         <h2><span class="hx"></span><span data-i18n="pv.h.contact">Contact</span></h2>
         <p data-i18n="pv.contact.body">Questions or concerns about privacy? Email <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> and we'll respond within a few days. Updates to this policy will be highlighted here with a new "Last updated" date.</p>
+        <p data-i18n="pv2.lang.note">This policy is translated into several languages for convenience. If there is any discrepancy between a translation and the English version, the English version prevails.</p>
       </section>
 
       <section id="permissions">
@@ -192,14 +236,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="perm-card">
-            <h3><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.6-1.5A4 4 0 0 0 6 19h11.5Z"/></svg></span><span data-i18n="pv.perm.icloud.t">iCloud Drive</span></h3>
+            <h3><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.6-1.5A4 4 0 0 0 6 19h11.5Z"/></svg></span><span data-i18n="pv2.perm.share.t">Co-Parent Sharing</span></h3>
             <dl>
               <dt data-i18n="pv.perm.lbl.why">Why</dt>
-              <dd data-i18n="pv.perm.icloud.why">Syncing your baby's logs across your iPhone, iPad, and Mac through your private iCloud account. We never see this data — Apple handles the sync.</dd>
-              <dt data-i18n="pv.perm.lbl.denied">If denied</dt>
-              <dd data-i18n="pv.perm.icloud.denied">MamaBee runs entirely on this device. Other devices won't see the same logs.</dd>
+              <dd data-i18n="pv2.perm.share.why">Letting the co-parents you invite see the same logs. Turning it on copies your baby's profile and logs to our Firebase database so their device can read them.</dd>
+              <dt data-i18n="pv2.perm.lbl.off">If off</dt>
+              <dd data-i18n="pv2.perm.share.denied">MamaBee runs entirely on this device and nothing is copied to our server.</dd>
               <dt data-i18n="pv.perm.lbl.change">Where to change</dt>
-              <dd><code>iOS Settings → Apple ID → iCloud → MamaBee</code></dd>
+              <dd><code>MamaBee → Profile → Co-Parent Sharing</code></dd>
             </dl>
           </div>
         </div>
@@ -219,6 +263,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="site-footer"></div>
 <script src="footer.js?v=4"></script>
 <script src="i18n.js?v=2"></script>
-<script src="legal-i18n.js?v=3"></script>
+<script src="legal-i18n.js?v=4"></script>
 </body>
 </html>

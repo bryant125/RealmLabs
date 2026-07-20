@@ -39,12 +39,11 @@
     '<a href="index.html" style="color:inherit">Trang chủ</a> · Pháp lý · Quyền riêng tư'
   ]);
   L('pv.title', ['隐私政策','隱私政策','プライバシーポリシー','개인정보 처리방침','Datenschutzerklärung','Política de privacidad','Politique de confidentialité','Informativa sulla privacy','Политика конфиденциальности','นโยบายความเป็นส่วนตัว','Chính sách quyền riêng tư']);
-  L('pv.updated', ['最后更新：2026 年 5 月','最後更新：2026 年 5 月','最終更新：2026 年 5 月','최종 업데이트: 2026년 5월','Zuletzt aktualisiert: Mai 2026','Última actualización: mayo de 2026','Dernière mise à jour : mai 2026','Ultimo aggiornamento: maggio 2026','Последнее обновление: май 2026','อัปเดตล่าสุด: พฤษภาคม 2026','Cập nhật lần cuối: Tháng 5 năm 2026']);
+  L('pv.updated', ['最后更新：2026 年 7 月','最後更新：2026 年 7 月','最終更新：2026 年 7 月','최종 업데이트: 2026년 7월','Zuletzt aktualisiert: Juli 2026','Última actualización: julio de 2026','Dernière mise à jour : juillet 2026','Ultimo aggiornamento: luglio 2026','Последнее обновление: июль 2026','อัปเดตล่าสุด: กรกฎาคม 2026','Cập nhật lần cuối: Tháng 7 năm 2026']);
   L('pv.toc.summary', ['通俗摘要','白話摘要','かんたんな概要','쉬운 요약','Zusammenfassung','Resumen sencillo','Résumé en clair','Riepilogo semplice','Кратко по-простому','สรุปแบบเข้าใจง่าย','Tóm tắt dễ hiểu']);
 
   L('pv.h.collect', ['我们收集什么','我們收集什麼','収集する情報','수집하는 정보','Was wir erfassen','Qué recopilamos','Ce que nous collectons','Cosa raccogliamo','Что мы собираем','ข้อมูลที่เราเก็บ','Những gì chúng tôi thu thập']);
   L('pv.h.lives', ['你的数据存放在哪里','你的資料存放在哪裡','データの保存場所','데이터가 저장되는 곳','Wo Ihre Daten liegen','Dónde viven tus datos','Où vivent vos données','Dove risiedono i tuoi dati','Где хранятся ваши данные','ข้อมูลของคุณอยู่ที่ไหน','Dữ liệu của bạn nằm ở đâu']);
-  L('pv.h.ai', ['MamaBee AI 助手','MamaBee AI 助手','MamaBee AI アシスタント','MamaBee AI 어시스턴트','MamaBee KI-Assistent','Asistente de IA de MamaBee','Assistant IA MamaBee','Assistente IA di MamaBee','AI-ассистент MamaBee','ผู้ช่วย AI ของ MamaBee','Trợ lý AI MamaBee']);
   L('pv.h.dont', ['我们不做什么','我們不做什麼','私たちがしないこと','우리가 하지 않는 것','Was wir NICHT tun','Lo que NO hacemos','Ce que nous ne faisons pas','Ciò che NON facciamo','Чего мы НЕ делаем','สิ่งที่เราไม่ทำ','Những gì chúng tôi KHÔNG làm']);
   L('pv.h.rights', ['你的权利','你的權利','あなたの権利','당신의 권리','Ihre Rechte','Tus derechos','Vos droits','I tuoi diritti','Ваши права','สิทธิของคุณ','Quyền của bạn']);
   L('pv.h.children', ['儿童','兒童','お子さまについて','아동','Kinder','Niños','Enfants','Bambini','Дети','เด็ก','Trẻ em']);
@@ -52,19 +51,6 @@
   L('pv.h.perm', ['数据权限','資料權限','データ権限','데이터 권한','Datenberechtigungen','Permisos de datos','Autorisations de données','Autorizzazioni dati','Разрешения на данные','สิทธิ์การเข้าถึงข้อมูล','Quyền truy cập dữ liệu']);
 
   L('pv.sum.tag', ['🍯 通俗摘要','🍯 白話摘要','🍯 かんたんな概要','🍯 쉬운 요약','🍯 Zusammenfassung','🍯 Resumen sencillo','🍯 Résumé en clair','🍯 Riepilogo semplice','🍯 Кратко по-простому','🍯 สรุปแบบเข้าใจง่าย','🍯 Tóm tắt dễ hiểu']);
-  L('pv.sum.body', [
-    'MamaBee 是为记录宝宝的父母打造的。你的数据——宝宝的档案、照片以及你写下的每一条记录——都保存在你自己的设备上。我们不出售它，不在上面投放广告，也不对它做分析。唯一会离开你设备的情形，是你点按"询问 MamaBee AI"时（即便如此，我们也绝不发送宝宝的姓名或照片），或你点按导出时（我们把文件交给你，之后如何使用由你决定）。',
-    'MamaBee 是為記錄寶寶的父母打造的。你的資料——寶寶的檔案、照片以及你寫下的每一條記錄——都保存在你自己的裝置上。我們不出售它，不在上面投放廣告，也不對它做分析。唯一會離開你裝置的情形，是你點按「詢問 MamaBee AI」時（即便如此，我們也絕不傳送寶寶的姓名或照片），或你點按匯出時（我們把檔案交給你，之後如何使用由你決定）。',
-    'MamaBee は赤ちゃんを記録する親のために作られています。あなたのデータ——赤ちゃんのプロフィール、写真、あなたが書いたすべての記録——は、あなたの端末内に留まります。私たちはそれを売らず、広告も出さず、分析もしません。データが端末を離れるのは、「MamaBee AI に聞く」をタップしたとき（その場合でも赤ちゃんの名前や写真は決して送りません）か、エクスポートをタップしたとき（ファイルをお渡しします。その後の扱いはあなた次第です）だけです。',
-    'MamaBee는 아기를 기록하는 부모를 위해 만들어졌습니다. 당신의 데이터 — 아기의 프로필, 사진, 당신이 작성한 모든 기록 — 는 당신의 기기에 남아 있습니다. 우리는 그것을 팔지 않고, 광고를 띄우지 않으며, 분석하지도 않습니다. 데이터가 기기를 벗어나는 유일한 경우는 "MamaBee AI에 묻기"를 탭할 때(그조차도 아기의 이름이나 사진은 절대 보내지 않습니다)이거나 내보내기를 탭할 때(파일을 건네드리며, 이후 사용은 당신에게 달려 있습니다)뿐입니다.',
-    'MamaBee ist für Eltern gemacht, die ihr Baby tracken. Ihre Daten — das Profil Ihres Babys, Fotos und jeder Eintrag, den Sie schreiben — bleiben auf IHREM Gerät. Wir verkaufen sie nicht, zeigen keine Werbung darauf und werten sie nicht aus. Das Einzige, was Ihr Gerät je verlässt, ist, wenn Sie auf „MamaBee AI fragen" tippen (und selbst dann senden wir nie den Namen oder das Foto Ihres Babys) oder wenn Sie auf Export tippen (wir geben Ihnen eine Datei; was Sie damit tun, ist Ihre Sache).',
-    'MamaBee está hecho para padres que registran a su bebé. Tus datos —el perfil de tu bebé, las fotos y cada registro que escribes— se quedan en TU dispositivo. No los vendemos, no mostramos anuncios y no hacemos analítica sobre ellos. Lo único que sale de tu dispositivo es cuando tocas "Preguntar a MamaBee AI" (y aun así nunca enviamos el nombre ni la foto de tu bebé) o cuando tocas Exportar (te damos un archivo; lo que hagas con él depende de ti).',
-    'MamaBee est conçu pour les parents qui suivent leur bébé. Vos données — le profil de votre bébé, les photos et chaque enregistrement que vous écrivez — restent sur VOTRE appareil. Nous ne les vendons pas, n\'affichons pas de publicité dessus et ne faisons pas d\'analyse. La seule fois où quelque chose quitte votre appareil, c\'est quand vous touchez « Demander à MamaBee AI » (et même là, nous n\'envoyons jamais le nom ni la photo de votre bébé) ou quand vous touchez Exporter (nous vous remettons un fichier ; ce que vous en faites vous regarde).',
-    'MamaBee è fatto per i genitori che monitorano il loro bambino. I tuoi dati — il profilo del tuo bambino, le foto e ogni voce che scrivi — restano sul TUO dispositivo. Non li vendiamo, non ci mostriamo pubblicità e non facciamo analisi su di essi. L\'unica volta in cui qualcosa lascia il tuo dispositivo è quando tocchi "Chiedi a MamaBee AI" (e anche allora non inviamo mai il nome o la foto del tuo bambino) o quando tocchi Esporta (ti consegniamo un file; cosa ne fai dipende da te).',
-    'MamaBee создан для родителей, отслеживающих своего малыша. Ваши данные — профиль малыша, фотографии и каждая ваша запись — остаются на ВАШЕМ устройстве. Мы их не продаём, не показываем на них рекламу и не анализируем их. Единственный случай, когда что-либо покидает ваше устройство, — это когда вы нажимаете «Спросить MamaBee AI» (и даже тогда мы никогда не отправляем имя или фото малыша) или когда вы нажимаете «Экспорт» (мы выдаём вам файл; что с ним делать — решаете вы).',
-    'MamaBee สร้างมาเพื่อพ่อแม่ที่บันทึกข้อมูลลูกน้อย ข้อมูลของคุณ — โปรไฟล์ของลูก รูปภาพ และทุกบันทึกที่คุณเขียน — จะอยู่บนอุปกรณ์ของคุณ เราไม่ขายมัน ไม่แสดงโฆษณาบนมัน และไม่วิเคราะห์มัน สิ่งเดียวที่ออกจากอุปกรณ์ของคุณคือเมื่อคุณแตะ "ถาม MamaBee AI" (และแม้กระนั้นเราก็ไม่เคยส่งชื่อหรือรูปของลูก) หรือเมื่อคุณแตะ ส่งออก (เรามอบไฟล์ให้คุณ ส่วนคุณจะนำไปทำอะไรก็แล้วแต่คุณ)',
-    'MamaBee được tạo ra cho cha mẹ theo dõi em bé của mình. Dữ liệu của bạn — hồ sơ của bé, ảnh, và mọi nhật ký bạn viết — đều nằm trên THIẾT BỊ CỦA BẠN. Chúng tôi không bán nó, không hiển thị quảng cáo trên nó, và không phân tích nó. Lần duy nhất bất cứ thứ gì rời khỏi thiết bị của bạn là khi bạn chạm "Hỏi MamaBee AI" (và ngay cả khi đó chúng tôi cũng không bao giờ gửi tên hay ảnh của bé) hoặc khi bạn chạm Xuất (chúng tôi đưa bạn một tệp; bạn làm gì với nó là tùy bạn).'
-  ]);
 
   L('pv.collect.1', [
     '<strong>宝宝档案</strong> — 姓名、出生日期与时间、性别、国家/地区、可选照片。',
@@ -105,181 +91,10 @@
     '<strong>การตั้งค่าแอป</strong> — หน่วยวัด ลำดับแถบด้านล่าง การเลือกประเทศ',
     '<strong>Tùy chọn ứng dụng</strong> — đơn vị đo, thứ tự thanh dưới, lựa chọn quốc gia.'
   ]);
-  L('pv.collect.note', [
-    '我们<strong>不会</strong>收集设备标识符、位置、通讯录，或任何并非由你直接输入/点按的其他信息。',
-    '我們<strong>不會</strong>收集裝置識別碼、位置、通訊錄，或任何並非由你直接輸入/點按的其他資訊。',
-    '私たちは、デバイス識別子、位置情報、連絡先、その他あなたが直接入力・タップしていないものを<strong>収集しません</strong>。',
-    '우리는 기기 식별자, 위치, 연락처, 그리고 당신이 직접 입력/탭하지 않은 그 어떤 것도 <strong>수집하지 않습니다</strong>.',
-    'Wir erfassen <strong>KEINE</strong> Gerätekennungen, keinen Standort, keine Kontakte und nichts anderes, das nicht direkt von Ihnen eingegeben/angetippt wurde.',
-    '<strong>NO</strong> recopilamos identificadores del dispositivo, ubicación, contactos ni nada que no escribas o toques directamente.',
-    'Nous ne collectons <strong>PAS</strong> d\'identifiants d\'appareil, de localisation, de contacts, ni quoi que ce soit que vous n\'avez pas directement saisi/touché.',
-    '<strong>NON</strong> raccogliamo identificatori del dispositivo, posizione, contatti o qualsiasi altra cosa non digitata/toccata direttamente da te.',
-    'Мы <strong>НЕ</strong> собираем идентификаторы устройства, геолокацию, контакты или что-либо ещё, что вы не вводили/нажимали напрямую.',
-    'เรา<strong>ไม่</strong>เก็บตัวระบุอุปกรณ์ ตำแหน่ง รายชื่อผู้ติดต่อ หรือสิ่งอื่นใดที่คุณไม่ได้พิมพ์/แตะโดยตรง',
-    'Chúng tôi <strong>KHÔNG</strong> thu thập mã định danh thiết bị, vị trí, danh bạ, hay bất cứ thứ gì khác không do bạn trực tiếp nhập/chạm.'
-  ]);
 
-  L('pv.lives.1', [
-    '本地存储在你的设备上，位于 Apple 的 SwiftData 存储中。',
-    '本地儲存在你的裝置上，位於 Apple 的 SwiftData 儲存中。',
-    'あなたの端末内、Apple の SwiftData ストアにローカル保存されます。',
-    '당신의 기기에, Apple의 SwiftData 저장소에 로컬로 보관됩니다.',
-    'Lokal auf Ihrem Gerät, im SwiftData-Speicher von Apple.',
-    'Localmente en tu dispositivo, en el almacén SwiftData de Apple.',
-    'Localement sur votre appareil, dans le stockage SwiftData d\'Apple.',
-    'Localmente sul tuo dispositivo, nell\'archivio SwiftData di Apple.',
-    'Локально на вашем устройстве, в хранилище Apple SwiftData.',
-    'จัดเก็บในเครื่องบนอุปกรณ์ของคุณ ในที่เก็บ SwiftData ของ Apple',
-    'Cục bộ trên thiết bị của bạn, trong kho SwiftData của Apple.'
-  ]);
-  L('pv.lives.2', [
-    '在启用 iCloud Drive 时，可选择通过你的私人 iCloud 账户同步（我们绝不会看到——由 Apple 直接在你的设备之间完成同步）。',
-    '在啟用 iCloud Drive 時，可選擇透過你的私人 iCloud 帳戶同步（我們絕不會看到——由 Apple 直接在你的裝置之間完成同步）。',
-    'iCloud Drive を有効にすると、あなたのプライベートな iCloud アカウントを通じて任意で同期されます（私たちはこれを見ることはなく、Apple があなたの端末間で直接同期します）。',
-    'iCloud Drive를 켜면 당신의 비공개 iCloud 계정을 통해 선택적으로 동기화됩니다(우리는 이를 절대 보지 못하며, Apple이 당신의 기기 간에 직접 동기화합니다).',
-    'Optional über Ihr privates iCloud-Konto synchronisiert, wenn iCloud Drive aktiviert ist (wir sehen das nie — Apple synchronisiert direkt zwischen Ihren Geräten).',
-    'Opcionalmente sincronizado a través de tu cuenta privada de iCloud cuando iCloud Drive está activado (nunca lo vemos: Apple hace la sincronización directamente entre tus dispositivos).',
-    'Synchronisé en option via votre compte iCloud privé quand iCloud Drive est activé (nous ne le voyons jamais — Apple synchronise directement entre vos appareils).',
-    'Sincronizzato in via opzionale tramite il tuo account iCloud privato quando iCloud Drive è attivo (non lo vediamo mai — Apple esegue la sincronizzazione direttamente tra i tuoi dispositivi).',
-    'По желанию синхронизируется через ваш личный аккаунт iCloud, если включён iCloud Drive (мы этого никогда не видим — Apple синхронизирует напрямую между вашими устройствами).',
-    'ซิงค์ผ่านบัญชี iCloud ส่วนตัวของคุณได้ (ตัวเลือก) เมื่อเปิด iCloud Drive (เราไม่เคยเห็นข้อมูลนี้ — Apple ทำการซิงค์โดยตรงระหว่างอุปกรณ์ของคุณ)',
-    'Tùy chọn đồng bộ qua tài khoản iCloud riêng của bạn khi bật iCloud Drive (chúng tôi không bao giờ thấy điều này — Apple đồng bộ trực tiếp giữa các thiết bị của bạn).'
-  ]);
-  L('pv.lives.3', [
-    '照片使用附加到 SwiftData 记录的外部存储，以保持数据库体积小巧。',
-    '照片使用附加到 SwiftData 記錄的外部儲存，以保持資料庫體積小巧。',
-    '写真は SwiftData レコードに添付された外部ストレージを使用し、データベースを小さく保ちます。',
-    '사진은 SwiftData 레코드에 연결된 외부 저장소를 사용해 데이터베이스를 작게 유지합니다.',
-    'Fotos nutzen externen Speicher, der an den SwiftData-Datensatz angehängt ist, damit die Datenbank klein bleibt.',
-    'Las fotos usan almacenamiento externo adjunto al registro de SwiftData para que la base de datos siga siendo pequeña.',
-    'Les photos utilisent un stockage externe rattaché à l\'enregistrement SwiftData afin que la base de données reste légère.',
-    'Le foto usano un archivio esterno collegato al record SwiftData così il database resta piccolo.',
-    'Фотографии используют внешнее хранилище, привязанное к записи SwiftData, чтобы база данных оставалась небольшой.',
-    'รูปภาพใช้ที่เก็บภายนอกที่แนบกับเรกคอร์ด SwiftData เพื่อให้ฐานข้อมูลมีขนาดเล็ก',
-    'Ảnh dùng bộ nhớ ngoài gắn với bản ghi SwiftData để cơ sở dữ liệu luôn nhỏ gọn.'
-  ]);
-  L('pv.lives.note', [
-    '我们不运行自己的服务器，也没有存放你记录的数据库。',
-    '我們不營運自己的伺服器，也沒有存放你記錄的資料庫。',
-    '私たちは自前のサーバーを運用しておらず、あなたの記録を保持するデータベースも持っていません。',
-    '우리는 자체 서버를 운영하지 않으며, 당신의 기록이 담긴 데이터베이스도 없습니다.',
-    'Wir betreiben keinen eigenen Server und haben keine Datenbank mit Ihren Datensätzen.',
-    'No tenemos servidor propio ni una base de datos con tus registros.',
-    'Nous n\'exploitons pas notre propre serveur et n\'avons pas de base de données contenant vos enregistrements.',
-    'Non gestiamo un nostro server e non abbiamo un database con i tuoi dati.',
-    'У нас нет собственного сервера и нет базы данных с вашими записями.',
-    'เราไม่ได้ใช้งานเซิร์ฟเวอร์ของเราเอง และไม่มีฐานข้อมูลที่เก็บบันทึกของคุณ',
-    'Chúng tôi không vận hành máy chủ riêng và không có cơ sở dữ liệu chứa bản ghi của bạn.'
-  ]);
 
-  L('pv.ai.intro', [
-    '当你在 AI 助手中点按某个问题时，我们会向 Google（AI 提供方）发送：',
-    '當你在 AI 助手中點按某個問題時，我們會向 Google（AI 提供方）傳送：',
-    'AI アシスタントで質問をタップすると、私たちは Google（AI プロバイダー）に次を送信します：',
-    'AI 어시스턴트에서 질문을 탭하면, 우리는 Google(AI 제공자)에 다음을 보냅니다:',
-    'Wenn Sie im KI-Assistenten eine Frage antippen, senden wir an Google (den KI-Anbieter):',
-    'Cuando tocas una pregunta en el Asistente de IA, enviamos a Google (el proveedor de IA):',
-    'Quand vous touchez une question dans l\'assistant IA, nous envoyons à Google (le fournisseur d\'IA) :',
-    'Quando tocchi una domanda nell\'Assistente IA, inviamo ad Google (il fornitore di IA):',
-    'Когда вы нажимаете на вопрос в AI-ассистенте, мы отправляем в Google (поставщику ИИ):',
-    'เมื่อคุณแตะคำถามในผู้ช่วย AI เราจะส่งไปยัง Google (ผู้ให้บริการ AI):',
-    'Khi bạn chạm vào một câu hỏi trong Trợ lý AI, chúng tôi gửi đến Google (nhà cung cấp AI):'
-  ]);
-  L('pv.ai.1', ['你输入的问题。','你輸入的問題。','あなたが入力した質問。','당신이 입력한 질문.','Ihre eingegebene Frage.','Tu pregunta escrita.','Votre question saisie.','La tua domanda digitata.','Ваш набранный вопрос.','คำถามที่คุณพิมพ์','Câu hỏi bạn đã nhập.']);
-  L('pv.ai.2', [
-    '关于宝宝近期记录的简短数字摘要（例如"过去 7 天 8 次睡眠，共 56 小时，平均每次喂养 110 毫升"）。',
-    '關於寶寶近期記錄的簡短數字摘要（例如「過去 7 天 8 次睡眠，共 56 小時，平均每次餵養 110 毫升」）。',
-    '赤ちゃんの最近の記録の短い数値サマリー（例：「過去 7 日間で睡眠 8 回、合計 56 時間、平均授乳 110ml」）。',
-    '아기의 최근 기록에 대한 짧은 수치 요약(예: "지난 7일간 수면 8회, 총 56시간, 평균 수유 110ml").',
-    'Eine kurze numerische Zusammenfassung der jüngsten Logs Ihres Babys (z. B. „8 Schlafphasen in den letzten 7 Tagen mit insgesamt 56 Stunden, durchschnittliche Mahlzeit 110 ml").',
-    'Un breve resumen numérico de los registros recientes de tu bebé (p. ej., "8 sesiones de sueño en los últimos 7 días que suman 56 horas, toma media de 110 ml").',
-    'Un bref résumé chiffré des journaux récents de votre bébé (p. ex. « 8 sessions de sommeil sur les 7 derniers jours totalisant 56 heures, repas moyen 110 ml »).',
-    'Un breve riepilogo numerico dei registri recenti del tuo bambino (es. "8 sessioni di sonno negli ultimi 7 giorni per un totale di 56 ore, poppata media 110 ml").',
-    'Краткую числовую сводку недавних записей малыша (например, «8 периодов сна за 7 дней суммарно 56 часов, среднее кормление 110 мл»).',
-    'สรุปตัวเลขสั้น ๆ ของบันทึกล่าสุดของลูก (เช่น "นอน 8 ครั้งใน 7 วันที่ผ่านมา รวม 56 ชั่วโมง ป้อนนมเฉลี่ย 110 มล.")',
-    'Một bản tóm tắt số liệu ngắn về nhật ký gần đây của bé (ví dụ: "8 lần ngủ trong 7 ngày qua tổng cộng 56 giờ, cữ bú trung bình 110ml").'
-  ]);
-  L('pv.ai.3', [
-    '宝宝以月计的年龄，以及（如已设置）性别。',
-    '寶寶以月計的年齡，以及（如已設定）性別。',
-    '赤ちゃんの月齢、設定されていれば性別。',
-    '아기의 개월 수 나이, 설정되어 있다면 성별.',
-    'Das Alter Ihres Babys in Monaten und das Geschlecht, falls angegeben.',
-    'La edad de tu bebé en meses y el sexo, si está configurado.',
-    'L\'âge de votre bébé en mois, et le sexe s\'il est renseigné.',
-    'L\'età del tuo bambino in mesi e il sesso, se impostato.',
-    'Возраст малыша в месяцах и пол, если указан.',
-    'อายุของลูกเป็นเดือน และเพศ หากตั้งค่าไว้',
-    'Tuổi của bé theo tháng, và giới tính nếu đã đặt.'
-  ]);
-  L('pv.ai.note', [
-    '我们<strong>不会</strong>发送宝宝的姓名、照片、完整记录历史，或你写下的任何自由文本备注。助手内的"AI 上下文"面板会向你显示实际发出的确切数据，便于你自行核实。',
-    '我們<strong>不會</strong>傳送寶寶的姓名、照片、完整記錄歷史，或你寫下的任何自由文字備註。助手內的「AI 內容」面板會向你顯示實際發出的確切資料，便於你自行核實。',
-    '私たちは赤ちゃんの名前、写真、すべての記録履歴、あなたが書いた自由記述メモを<strong>送信しません</strong>。アシスタント内の「AI コンテキスト」シートに、実際に送信される正確なデータが表示され、自分で確認できます。',
-    '우리는 아기의 이름, 사진, 전체 기록 이력, 당신이 작성한 자유 텍스트 메모를 <strong>보내지 않습니다</strong>. 어시스턴트 내의 "AI 컨텍스트" 시트에서 실제로 나가는 정확한 데이터를 직접 확인할 수 있습니다.',
-    'Wir senden <strong>NICHT</strong> den Namen, das Foto, den vollständigen Verlauf oder freie Textnotizen Ihres Babys. Das Blatt „KI-Kontext" im Assistenten zeigt Ihnen die genauen ausgehenden Daten, sodass Sie es selbst überprüfen können.',
-    '<strong>NO</strong> enviamos el nombre, la foto, el historial completo de registros ni ninguna nota de texto libre que hayas escrito sobre tu bebé. La hoja "Contexto de IA" dentro del asistente te muestra los datos exactos que salen, para que lo verifiques tú mismo.',
-    'Nous n\'envoyons <strong>PAS</strong> le nom, la photo, l\'historique complet ni les notes en texte libre de votre bébé. La fiche « Contexte IA » dans l\'assistant vous montre les données exactes qui sortent, pour que vous puissiez le vérifier vous-même.',
-    '<strong>NON</strong> inviamo il nome, la foto, l\'intera cronologia o eventuali note in testo libero sul tuo bambino. Il foglio "Contesto IA" nell\'assistente ti mostra i dati esatti in uscita, così puoi verificarlo tu stesso.',
-    'Мы <strong>НЕ</strong> отправляем имя малыша, фото, всю историю записей или любые свободные текстовые заметки. Панель «Контекст ИИ» в ассистенте показывает точные исходящие данные, чтобы вы могли проверить сами.',
-    'เรา<strong>ไม่</strong>ส่งชื่อลูก รูปภาพ ประวัติบันทึกทั้งหมด หรือโน้ตข้อความอิสระที่คุณเขียน แผง "บริบท AI" ในผู้ช่วยจะแสดงข้อมูลที่ส่งออกจริงให้คุณตรวจสอบเองได้',
-    'Chúng tôi <strong>KHÔNG</strong> gửi tên bé, ảnh, toàn bộ lịch sử nhật ký, hay bất kỳ ghi chú văn bản tự do nào bạn viết. Bảng "Ngữ cảnh AI" trong trợ lý cho bạn thấy chính xác dữ liệu gửi đi để bạn tự kiểm chứng.'
-  ]);
 
-  L('pv.dont.1', ['绝不投放广告。','絕不投放廣告。','広告は一切ありません。','광고는 절대 없습니다.','Niemals Werbung.','Nunca publicidad.','Jamais de publicité.','Nessuna pubblicità, mai.','Никакой рекламы, никогда.','ไม่มีโฆษณาเด็ดขาด','Không bao giờ có quảng cáo.']);
-  L('pv.dont.2', [
-    '没有分析 SDK，没有追踪像素，没有行为画像。',
-    '沒有分析 SDK，沒有追蹤像素，沒有行為剖析。',
-    '分析 SDK も、トラッキングピクセルも、行動プロファイリングもありません。',
-    '분석 SDK도, 추적 픽셀도, 행동 프로파일링도 없습니다.',
-    'Keine Analyse-SDKs, keine Tracking-Pixel, kein Verhaltens-Profiling.',
-    'Sin SDK de analítica, sin píxeles de rastreo, sin perfilado de comportamiento.',
-    'Aucun SDK d\'analyse, aucun pixel de suivi, aucun profilage comportemental.',
-    'Nessun SDK di analisi, nessun pixel di tracciamento, nessuna profilazione comportamentale.',
-    'Никаких аналитических SDK, пикселей отслеживания и поведенческого профилирования.',
-    'ไม่มี SDK วิเคราะห์ ไม่มีพิกเซลติดตาม ไม่มีการทำโปรไฟล์พฤติกรรม',
-    'Không SDK phân tích, không pixel theo dõi, không lập hồ sơ hành vi.'
-  ]);
-  L('pv.dont.3', [
-    '绝不向任何人出售、共享或授权你的数据。',
-    '絕不向任何人出售、分享或授權你的資料。',
-    'あなたのデータを誰かに販売・共有・ライセンス供与することはありません。',
-    '당신의 데이터를 누구에게도 판매·공유·라이선스하지 않습니다.',
-    'Kein Verkauf, keine Weitergabe und keine Lizenzierung Ihrer Daten an irgendwen.',
-    'Sin venta, intercambio ni licencia de tus datos a nadie.',
-    'Aucune vente, aucun partage, aucune licence de vos données à qui que ce soit.',
-    'Nessuna vendita, condivisione o concessione in licenza dei tuoi dati a chiunque.',
-    'Никакой продажи, передачи или лицензирования ваших данных кому-либо.',
-    'ไม่ขาย ไม่แชร์ หรือให้สิทธิ์ข้อมูลของคุณแก่ใครทั้งสิ้น',
-    'Không bán, chia sẻ hay cấp phép dữ liệu của bạn cho bất kỳ ai.'
-  ]);
-  L('pv.dont.4', [
-    '没有第三方登录，没有社交账号登录，不收集电子邮箱。',
-    '沒有第三方登入，沒有社交帳號登入，不收集電子郵件。',
-    'サードパーティログインも、ソーシャルログインも、メール収集もありません。',
-    '제3자 로그인도, 소셜 로그인도, 이메일 수집도 없습니다.',
-    'Kein Drittanbieter-Login, kein Social-Login, keine E-Mail-Erfassung.',
-    'Sin inicio de sesión de terceros, sin acceso con redes sociales, sin recogida de correo.',
-    'Aucune connexion tierce, aucune connexion sociale, aucune collecte d\'e-mail.',
-    'Nessun login di terze parti, nessun accesso social, nessuna raccolta di e-mail.',
-    'Никакого стороннего входа, входа через соцсети и сбора email.',
-    'ไม่มีการล็อกอินผ่านบุคคลที่สาม ไม่มีการล็อกอินผ่านโซเชียล ไม่เก็บอีเมล',
-    'Không đăng nhập bên thứ ba, không đăng nhập mạng xã hội, không thu thập email.'
-  ]);
 
-  L('pv.rights.intro', [
-    '因为数据存放在你的设备上，你可以直接掌控它：',
-    '因為資料存放在你的裝置上，你可以直接掌控它：',
-    'データはあなたの端末にあるため、あなたが直接コントロールできます：',
-    '데이터가 당신의 기기에 있으므로, 당신이 직접 제어합니다:',
-    'Da die Daten auf Ihrem Gerät liegen, kontrollieren Sie sie direkt:',
-    'Como los datos viven en tu dispositivo, los controlas directamente:',
-    'Comme les données vivent sur votre appareil, vous les contrôlez directement :',
-    'Poiché i dati risiedono sul tuo dispositivo, li controlli direttamente:',
-    'Поскольку данные хранятся на вашем устройстве, вы управляете ими напрямую:',
-    'เนื่องจากข้อมูลอยู่บนอุปกรณ์ของคุณ คุณจึงควบคุมมันได้โดยตรง:',
-    'Vì dữ liệu nằm trên thiết bị của bạn, bạn kiểm soát nó trực tiếp:'
-  ]);
   L('pv.rights.1', [
     '<strong>导出</strong> — 个人资料 → 数据 → 导出为 CSV / PDF。',
     '<strong>匯出</strong> — 個人資料 → 資料 → 匯出為 CSV / PDF。',
@@ -305,19 +120,6 @@
     '<strong>Редактирование</strong> — любую запись можно изменить или удалить из ленты.',
     '<strong>แก้ไข</strong> — ทุกบันทึกแก้ไขหรือลบได้จากไทม์ไลน์',
     '<strong>Chỉnh sửa</strong> — mọi bản ghi có thể chỉnh hoặc xóa từ dòng thời gian.'
-  ]);
-  L('pv.rights.3', [
-    '<strong>清除</strong> — 个人资料 → 账户 → 删除账户，会不可逆地清除一切。',
-    '<strong>清除</strong> — 個人資料 → 帳戶 → 刪除帳戶，會不可逆地清除一切。',
-    '<strong>消去</strong> — プロフィール → アカウント → アカウント削除で、すべてが取り消し不能に消去されます。',
-    '<strong>완전 삭제</strong> — 프로필 → 계정 → 계정 삭제 시 모든 것이 되돌릴 수 없이 지워집니다.',
-    '<strong>Löschen</strong> — Profil → Konto → Konto löschen entfernt alles unwiderruflich.',
-    '<strong>Borrar</strong> — Perfil → Cuenta → Eliminar cuenta borra todo de forma irreversible.',
-    '<strong>Effacer</strong> — Profil → Compte → Supprimer le compte efface tout de façon irréversible.',
-    '<strong>Cancella</strong> — Profilo → Account → Elimina account cancella tutto in modo irreversibile.',
-    '<strong>Удаление</strong> — Профиль → Аккаунт → Удалить аккаунт безвозвратно стирает всё.',
-    '<strong>ล้างข้อมูล</strong> — โปรไฟล์ → บัญชี → ลบบัญชี จะลบทุกอย่างอย่างถาวร',
-    '<strong>Xóa sạch</strong> — Hồ sơ → Tài khoản → Xóa tài khoản sẽ xóa mọi thứ không thể khôi phục.'
   ]);
   L('pv.rights.4', [
     '<strong>照片</strong> — 尿布照片和头像可以在记录的编辑界面中移除。',
@@ -463,33 +265,6 @@
     'Mọi lịch vẫn hiển thị trong ứng dụng — bạn chỉ không nhận được nhắc.'
   ]);
 
-  L('pv.perm.icloud.t', ['iCloud 云盘','iCloud 雲碟','iCloud Drive','iCloud Drive','iCloud Drive','iCloud Drive','iCloud Drive','iCloud Drive','iCloud Drive','iCloud Drive','iCloud Drive']);
-  L('pv.perm.icloud.why', [
-    '通过你的私人 iCloud 账户，在你的 iPhone、iPad 和 Mac 之间同步宝宝的记录。我们绝不会看到这些数据——由 Apple 处理同步。',
-    '透過你的私人 iCloud 帳戶，在你的 iPhone、iPad 和 Mac 之間同步寶寶的記錄。我們絕不會看到這些資料——由 Apple 處理同步。',
-    'あなたのプライベートな iCloud アカウントを通じて、iPhone・iPad・Mac の間で赤ちゃんの記録を同期します。私たちはこのデータを見ることはなく、Apple が同期を処理します。',
-    '당신의 비공개 iCloud 계정을 통해 iPhone, iPad, Mac 간에 아기 기록을 동기화합니다. 우리는 이 데이터를 절대 보지 못하며, Apple이 동기화를 처리합니다.',
-    'Synchronisiert die Logs Ihres Babys über Ihr privates iCloud-Konto zwischen iPhone, iPad und Mac. Wir sehen diese Daten nie — Apple übernimmt die Synchronisierung.',
-    'Sincroniza los registros de tu bebé entre tu iPhone, iPad y Mac a través de tu cuenta privada de iCloud. Nunca vemos estos datos: Apple se encarga de la sincronización.',
-    'Synchronise les journaux de votre bébé entre votre iPhone, iPad et Mac via votre compte iCloud privé. Nous ne voyons jamais ces données — Apple gère la synchronisation.',
-    'Sincronizza i registri del tuo bambino tra iPhone, iPad e Mac tramite il tuo account iCloud privato. Non vediamo mai questi dati — la sincronizzazione la gestisce Apple.',
-    'Синхронизирует записи малыша между вашими iPhone, iPad и Mac через ваш личный аккаунт iCloud. Мы никогда не видим эти данные — синхронизацией занимается Apple.',
-    'ซิงค์บันทึกของลูกระหว่าง iPhone, iPad และ Mac ผ่านบัญชี iCloud ส่วนตัวของคุณ เราไม่เคยเห็นข้อมูลนี้ — Apple เป็นผู้จัดการการซิงค์',
-    'Đồng bộ nhật ký của bé giữa iPhone, iPad và Mac qua tài khoản iCloud riêng của bạn. Chúng tôi không bao giờ thấy dữ liệu này — Apple xử lý việc đồng bộ.'
-  ]);
-  L('pv.perm.icloud.denied', [
-    'MamaBee 将完全在本设备上运行。其他设备将看不到相同的记录。',
-    'MamaBee 將完全在本裝置上運行。其他裝置將看不到相同的記錄。',
-    'MamaBee はこの端末内だけで動作します。他の端末では同じ記録は見られません。',
-    'MamaBee는 이 기기에서만 작동합니다. 다른 기기에서는 같은 기록을 볼 수 없습니다.',
-    'MamaBee läuft vollständig auf diesem Gerät. Andere Geräte sehen nicht dieselben Logs.',
-    'MamaBee funciona por completo en este dispositivo. Otros dispositivos no verán los mismos registros.',
-    'MamaBee fonctionne entièrement sur cet appareil. Les autres appareils ne verront pas les mêmes journaux.',
-    'MamaBee funziona interamente su questo dispositivo. Gli altri dispositivi non vedranno gli stessi registri.',
-    'MamaBee работает целиком на этом устройстве. Другие устройства не увидят те же записи.',
-    'MamaBee จะทำงานบนอุปกรณ์นี้ทั้งหมด อุปกรณ์อื่นจะไม่เห็นบันทึกเดียวกัน',
-    'MamaBee chạy hoàn toàn trên thiết bị này. Các thiết bị khác sẽ không thấy cùng nhật ký.'
-  ]);
 
   /* ====================================================
      TERMS
