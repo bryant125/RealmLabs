@@ -762,6 +762,516 @@
     'Có câu hỏi về các điều khoản này? Gửi email đến <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.'
   ]);
 
+
+  /* ---------- privacy: corrected copy (July 2026) ---------- */
+  L('pv2.h.analytics', [
+    '分析',
+    '分析',
+    '分析',
+    '분석',
+    'Analyse',
+    'Analítica',
+    'Analyse',
+    'Analisi',
+    'Аналитика',
+    'การวิเคราะห์',
+    'Phân tích'
+  ]);
+  L('pv2.h.ads', [
+    '广告衡量',
+    '廣告衡量',
+    '広告効果測定',
+    '광고 측정',
+    'Werbemessung',
+    'Medición publicitaria',
+    'Mesure publicitaire',
+    'Misurazione pubblicitaria',
+    'Измерение рекламы',
+    'การวัดผลโฆษณา',
+    'Đo lường quảng cáo'
+  ]);
+  L('pv2.h.ai', [
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI',
+    'Bee AI'
+  ]);
+  L('pv2.h.purchases', [
+    '购买',
+    '購買',
+    '購入',
+    '구매',
+    'Käufe',
+    'Compras',
+    'Achats',
+    'Acquisti',
+    'Покупки',
+    'การซื้อ',
+    'Mua hàng'
+  ]);
+  L('pv2.sum.body', [
+    'MamaBee 是为记录宝宝日常的父母打造的。默认情况下，你记录的一切都保存在你的设备上。如果你开启共同养育者共享，宝宝的资料和记录会被复制到我们自己的数据库，以便你邀请的共同养育者查看。我们使用分析工具来了解应用的使用情况——哪些页面被打开、创建了一条记录——但绝不会知道记录里的内容：没有姓名、没有照片、没有备注、没有测量数据。我们绝不出售你的数据，应用内也没有广告。',
+    'MamaBee 是為記錄寶寶日常的父母打造的。預設情況下，你記錄的一切都儲存在你的裝置上。如果你開啟共同養育者共享，寶寶的資料和記錄會被複製到我們自己的資料庫，以便你邀請的共同養育者查看。我們使用分析工具來了解應用程式的使用情況——哪些頁面被開啟、建立了一筆記錄——但絕不會知道記錄裡的內容：沒有姓名、沒有照片、沒有備註、沒有測量數據。我們絕不出售你的資料，應用程式內也沒有廣告。',
+    'MamaBee は赤ちゃんを記録する親のために作られています。既定では、記録したものはすべてあなたの端末に保存されます。共同養育者共有をオンにすると、赤ちゃんのプロフィールと記録が当社のデータベースにコピーされ、招待した共同養育者が見られるようになります。当社はアプリの使われ方を知るために分析ツールを使用します——どの画面が開かれたか、記録が作成されたか——が、記録の中身は決してわかりません。名前も写真もメモも測定値もです。当社があなたのデータを販売することはなく、アプリ内に広告もありません。',
+    'MamaBee는 아기를 기록하는 부모를 위해 만들어졌습니다. 기본적으로 기록하는 모든 것은 기기에 저장됩니다. 공동양육자 공유를 켜면 아기의 프로필과 기록이 저희 데이터베이스로 복사되어, 초대한 공동양육자가 볼 수 있습니다. 저희는 앱이 어떻게 사용되는지 파악하기 위해 분석 도구를 사용합니다 — 어떤 화면이 열렸는지, 기록이 생성되었는지 — 하지만 기록 안의 내용은 결코 알지 못합니다. 이름도, 사진도, 메모도, 측정값도 마찬가지입니다. 저희는 데이터를 판매하지 않으며 앱 내 광고도 없습니다.',
+    'MamaBee ist für Eltern gemacht, die ihr Baby protokollieren. Standardmäßig bleibt alles, was Sie erfassen, auf Ihrem Gerät. Wenn Sie die Co-Eltern-Freigabe aktivieren, werden das Profil und die Protokolle Ihres Babys in unsere eigene Datenbank kopiert, damit die von Ihnen eingeladenen Co-Eltern sie sehen können. Wir nutzen Analysewerkzeuge, die uns zeigen, wie die App verwendet wird — welche Bildschirme geöffnet werden, dass ein Eintrag erstellt wurde — aber nie, was in Ihren Einträgen steht: keine Namen, keine Fotos, keine Notizen, keine Messwerte. Wir verkaufen Ihre Daten nie, und in der App gibt es keine Werbung.',
+    'MamaBee está hecha para madres y padres que registran a su bebé. De forma predeterminada, todo lo que registras se queda en tu dispositivo. Si activas el uso compartido con el co-progenitor, el perfil y los registros de tu bebé se copian a nuestra propia base de datos para que las personas que invites puedan verlos. Usamos herramientas de analítica que nos indican cómo se usa la app —qué pantallas se abren, que se creó un registro— pero nunca lo que hay dentro de tus registros: ni nombres, ni fotos, ni notas, ni mediciones. Nunca vendemos tus datos y no hay anuncios en la app.',
+    'MamaBee est conçue pour les parents qui suivent leur bébé. Par défaut, tout ce que vous enregistrez reste sur votre appareil. Si vous activez le partage co-parent, le profil et les journaux de votre bébé sont copiés dans notre propre base de données afin que les co-parents que vous invitez puissent les consulter. Nous utilisons des outils d\'analyse qui nous indiquent comment l\'app est utilisée — quels écrans sont ouverts, qu\'une entrée a été créée — mais jamais ce que contiennent vos entrées : aucun nom, aucune photo, aucune note, aucune mesure. Nous ne vendons jamais vos données et il n\'y a aucune publicité dans l\'app.',
+    'MamaBee è pensata per i genitori che registrano il proprio bambino. Per impostazione predefinita, tutto ciò che registri resta sul tuo dispositivo. Se attivi la condivisione con il co-genitore, il profilo e i registri del tuo bambino vengono copiati nel nostro database, così i co-genitori che inviti possono vederli. Usiamo strumenti di analisi che ci dicono come viene usata l\'app — quali schermate vengono aperte, che è stato creato un registro — ma mai cosa contengono i tuoi registri: nessun nome, nessuna foto, nessuna nota, nessuna misurazione. Non vendiamo mai i tuoi dati e nell\'app non ci sono pubblicità.',
+    'MamaBee создана для родителей, которые ведут дневник малыша. По умолчанию всё, что вы записываете, остаётся на вашем устройстве. Если вы включите совместный доступ для второго родителя, профиль и записи малыша копируются в нашу собственную базу данных, чтобы приглашённые вами могли их видеть. Мы используем аналитические инструменты, которые показывают, как используется приложение — какие экраны открываются, что запись была создана — но никогда не показывают содержимое записей: ни имён, ни фото, ни заметок, ни измерений. Мы никогда не продаём ваши данные, и в приложении нет рекламы.',
+    'MamaBee สร้างขึ้นสำหรับพ่อแม่ที่บันทึกข้อมูลลูก โดยค่าเริ่มต้น ทุกอย่างที่คุณบันทึกจะอยู่บนอุปกรณ์ของคุณ หากคุณเปิดการแชร์กับผู้ปกครองร่วม โปรไฟล์และบันทึกของลูกจะถูกคัดลอกไปยังฐานข้อมูลของเราเอง เพื่อให้ผู้ปกครองร่วมที่คุณเชิญสามารถดูได้ เราใช้เครื่องมือวิเคราะห์ที่บอกเราว่าแอปถูกใช้อย่างไร — หน้าจอใดถูกเปิด มีการสร้างบันทึก — แต่ไม่เคยรู้ว่าในบันทึกของคุณมีอะไร ไม่มีชื่อ ไม่มีรูป ไม่มีโน้ต ไม่มีค่าที่วัดได้ เราไม่เคยขายข้อมูลของคุณ และไม่มีโฆษณาในแอป',
+    'MamaBee được xây dựng cho cha mẹ theo dõi em bé của mình. Theo mặc định, mọi thứ bạn ghi lại đều nằm trên thiết bị của bạn. Nếu bạn bật Chia sẻ đồng phụ huynh, hồ sơ và nhật ký của bé sẽ được sao chép vào cơ sở dữ liệu của chúng tôi để những người đồng phụ huynh bạn mời có thể xem. Chúng tôi dùng công cụ phân tích cho biết ứng dụng được sử dụng như thế nào — màn hình nào được mở, rằng một mục nhật ký đã được tạo — nhưng không bao giờ biết bên trong nhật ký có gì: không tên, không ảnh, không ghi chú, không số đo. Chúng tôi không bao giờ bán dữ liệu của bạn và không có quảng cáo trong ứng dụng.'
+  ]);
+  L('pv2.collect.4', [
+    '<strong>匿名使用数据</strong> — 我们为你的安装生成的一个随机 ID、应用版本，以及你设备的地区与语言。',
+    '<strong>匿名使用資料</strong> — 我們為你的安裝產生的一個隨機 ID、應用程式版本，以及你裝置的地區與語言。',
+    '<strong>匿名の利用データ</strong> — インストールごとに当社が生成するランダムな ID、アプリのバージョン、端末の地域と言語。',
+    '<strong>익명 사용 데이터</strong> — 설치마다 저희가 생성하는 무작위 ID, 앱 버전, 기기의 지역과 언어.',
+    '<strong>Anonyme Nutzungsdaten</strong> — eine zufällige ID, die wir für Ihre Installation erzeugen, die App-Version sowie Region und Sprache Ihres Geräts.',
+    '<strong>Datos de uso anónimos</strong> — un ID aleatorio que generamos para tu instalación, la versión de la app y la región e idioma de tu dispositivo.',
+    '<strong>Données d\'usage anonymes</strong> — un identifiant aléatoire que nous générons pour votre installation, la version de l\'app, ainsi que la région et la langue de votre appareil.',
+    '<strong>Dati d\'uso anonimi</strong> — un ID casuale che generiamo per la tua installazione, la versione dell\'app e la regione e la lingua del tuo dispositivo.',
+    '<strong>Анонимные данные об использовании</strong> — случайный идентификатор, который мы создаём для вашей установки, версия приложения, а также регион и язык устройства.',
+    '<strong>ข้อมูลการใช้งานแบบไม่ระบุตัวตน</strong> — ID แบบสุ่มที่เราสร้างให้การติดตั้งของคุณ เวอร์ชันแอป และภูมิภาคกับภาษาของอุปกรณ์',
+    '<strong>Dữ liệu sử dụng ẩn danh</strong> — một ID ngẫu nhiên chúng tôi tạo cho bản cài đặt của bạn, phiên bản ứng dụng, cùng khu vực và ngôn ngữ của thiết bị.'
+  ]);
+  L('pv2.collect.5', [
+    '<strong>订阅状态</strong> — 你是否拥有有效订阅。',
+    '<strong>訂閱狀態</strong> — 你是否擁有有效訂閱。',
+    '<strong>サブスクリプションの状態</strong> — 有効なサブスクリプションがあるかどうか。',
+    '<strong>구독 상태</strong> — 활성 구독이 있는지 여부.',
+    '<strong>Abo-Status</strong> — ob Sie ein aktives Abonnement haben.',
+    '<strong>Estado de la suscripción</strong> — si tienes una suscripción activa.',
+    '<strong>Statut de l\'abonnement</strong> — si votre abonnement est actif.',
+    '<strong>Stato dell\'abbonamento</strong> — se hai un abbonamento attivo.',
+    '<strong>Статус подписки</strong> — есть ли у вас активная подписка.',
+    '<strong>สถานะการสมัครสมาชิก</strong> — คุณมีการสมัครสมาชิกที่ใช้งานอยู่หรือไม่',
+    '<strong>Trạng thái đăng ký</strong> — bạn có gói đăng ký đang hoạt động hay không.'
+  ]);
+  L('pv2.collect.note', [
+    '我们<strong>不会</strong>收集你的位置、通讯录，或你所写备注的内容。',
+    '我們<strong>不會</strong>收集你的位置、通訊錄，或你所寫備註的內容。',
+    '当社はあなたの位置情報、連絡先、そして書かれたメモの内容を<strong>収集しません</strong>。',
+    '저희는 위치, 연락처, 작성한 메모의 내용을 <strong>수집하지 않습니다</strong>.',
+    'Wir erfassen <strong>NICHT</strong> Ihren Standort, Ihre Kontakte oder den Inhalt der Notizen, die Sie schreiben.',
+    '<strong>NO</strong> recopilamos tu ubicación, tus contactos ni el contenido de las notas que escribes.',
+    'Nous ne collectons <strong>PAS</strong> votre position, vos contacts, ni le contenu des notes que vous écrivez.',
+    '<strong>NON</strong> raccogliamo la tua posizione, i tuoi contatti né il contenuto delle note che scrivi.',
+    'Мы <strong>НЕ</strong> собираем ваше местоположение, контакты и содержимое написанных вами заметок.',
+    'เรา<strong>ไม่</strong>เก็บตำแหน่งที่ตั้ง รายชื่อผู้ติดต่อ หรือเนื้อหาของโน้ตที่คุณเขียน',
+    'Chúng tôi <strong>KHÔNG</strong> thu thập vị trí, danh bạ, hay nội dung các ghi chú bạn viết.'
+  ]);
+  L('pv2.lives.1', [
+    '<strong>默认存放在你的设备上</strong> — 你记录的一切都本地保存在 Apple 的 SwiftData 存储中。照片使用附加到记录的外部存储，让数据库保持轻量。',
+    '<strong>預設存放在你的裝置上</strong> — 你記錄的一切都本地儲存在 Apple 的 SwiftData 儲存中。照片使用附加到記錄的外部儲存，讓資料庫保持輕量。',
+    '<strong>既定ではあなたの端末に</strong> — 記録したものはすべて Apple の SwiftData ストアにローカル保存されます。写真はレコードに紐づく外部ストレージを使い、データベースを小さく保ちます。',
+    '<strong>기본적으로 기기에</strong> — 기록하는 모든 것은 Apple의 SwiftData 저장소에 로컬로 저장됩니다. 사진은 레코드에 연결된 외부 저장소를 사용해 데이터베이스를 작게 유지합니다.',
+    '<strong>Standardmäßig auf Ihrem Gerät</strong> — alles, was Sie erfassen, wird lokal in Apples SwiftData-Speicher abgelegt. Fotos nutzen externen Speicher, der am Datensatz hängt, damit die Datenbank klein bleibt.',
+    '<strong>En tu dispositivo, por defecto</strong> — todo lo que registras se guarda localmente en el almacén SwiftData de Apple. Las fotos usan almacenamiento externo adjunto al registro para que la base de datos siga siendo pequeña.',
+    '<strong>Sur votre appareil, par défaut</strong> — tout ce que vous enregistrez est stocké localement dans le magasin SwiftData d\'Apple. Les photos utilisent un stockage externe rattaché à l\'enregistrement, afin que la base reste légère.',
+    '<strong>Sul tuo dispositivo, per impostazione predefinita</strong> — tutto ciò che registri è salvato localmente nell\'archivio SwiftData di Apple. Le foto usano uno spazio esterno collegato al record, così il database resta piccolo.',
+    '<strong>По умолчанию — на вашем устройстве</strong> — всё, что вы записываете, хранится локально в хранилище Apple SwiftData. Фотографии используют внешнее хранилище, привязанное к записи, чтобы база данных оставалась небольшой.',
+    '<strong>บนอุปกรณ์ของคุณตามค่าเริ่มต้น</strong> — ทุกอย่างที่คุณบันทึกจะถูกเก็บไว้ในเครื่องใน SwiftData ของ Apple รูปภาพใช้พื้นที่จัดเก็บภายนอกที่แนบกับระเบียน เพื่อให้ฐานข้อมูลมีขนาดเล็ก',
+    '<strong>Trên thiết bị của bạn, theo mặc định</strong> — mọi thứ bạn ghi lại được lưu cục bộ trong kho SwiftData của Apple. Ảnh dùng bộ nhớ ngoài gắn với bản ghi để cơ sở dữ liệu luôn nhỏ gọn.'
+  ]);
+  L('pv2.lives.2', [
+    '<strong>如果你开启共同养育者共享，则存放在我们的服务器上</strong> — 宝宝的资料和记录会被复制到我们的 Google Firebase（Firestore）数据库，全尺寸照片则复制到 Firebase Storage，以便你邀请的共同养育者查看。',
+    '<strong>如果你開啟共同養育者共享，則存放在我們的伺服器上</strong> — 寶寶的資料和記錄會被複製到我們的 Google Firebase（Firestore）資料庫，全尺寸照片則複製到 Firebase Storage，以便你邀請的共同養育者查看。',
+    '<strong>共同養育者共有をオンにした場合は当社のサーバーに</strong> — 赤ちゃんのプロフィールと記録は当社の Google Firebase（Firestore）データベースへ、フルサイズの写真は Firebase Storage へコピーされ、招待した共同養育者が見られるようになります。',
+    '<strong>공동양육자 공유를 켜면 저희 서버에</strong> — 아기의 프로필과 기록은 저희 Google Firebase(Firestore) 데이터베이스로, 원본 크기 사진은 Firebase Storage로 복사되어 초대한 공동양육자가 볼 수 있습니다.',
+    '<strong>Auf unserem Server, wenn Sie die Co-Eltern-Freigabe aktivieren</strong> — das Profil und die Protokolle Ihres Babys werden in unsere Google-Firebase-Datenbank (Firestore) kopiert und Fotos in voller Größe in Firebase Storage, damit die eingeladenen Co-Eltern sie sehen können.',
+    '<strong>En nuestro servidor, si activas el uso compartido con el co-progenitor</strong> — el perfil y los registros de tu bebé se copian a nuestra base de datos de Google Firebase (Firestore), y las fotos a tamaño completo a Firebase Storage, para que las personas que invites puedan verlos.',
+    '<strong>Sur notre serveur, si vous activez le partage co-parent</strong> — le profil et les journaux de votre bébé sont copiés dans notre base de données Google Firebase (Firestore), et les photos en pleine résolution dans Firebase Storage, afin que les co-parents invités puissent les voir.',
+    '<strong>Sul nostro server, se attivi la condivisione con il co-genitore</strong> — il profilo e i registri del tuo bambino vengono copiati nel nostro database Google Firebase (Firestore) e le foto a dimensione piena su Firebase Storage, così i co-genitori invitati possono vederli.',
+    '<strong>На нашем сервере, если вы включите совместный доступ для второго родителя</strong> — профиль и записи малыша копируются в нашу базу данных Google Firebase (Firestore), а полноразмерные фото — в Firebase Storage, чтобы приглашённые могли их видеть.',
+    '<strong>บนเซิร์ฟเวอร์ของเรา หากคุณเปิดการแชร์กับผู้ปกครองร่วม</strong> — โปรไฟล์และบันทึกของลูกจะถูกคัดลอกไปยังฐานข้อมูล Google Firebase (Firestore) ของเรา และรูปขนาดเต็มไปยัง Firebase Storage เพื่อให้ผู้ปกครองร่วมที่คุณเชิญดูได้',
+    '<strong>Trên máy chủ của chúng tôi, nếu bạn bật Chia sẻ đồng phụ huynh</strong> — hồ sơ và nhật ký của bé được sao chép vào cơ sở dữ liệu Google Firebase (Firestore) của chúng tôi, và ảnh kích thước đầy đủ vào Firebase Storage, để những người đồng phụ huynh bạn mời có thể xem.'
+  ]);
+  L('pv2.lives.note', [
+    '把话说明白：那个 Firebase 数据库是<strong>我们</strong>运营的服务器，不是你的私人 iCloud。这些记录在技术上我们是可以访问的。我们不会去翻看它们，但我们也不会声称自己做不到。',
+    '把話說明白：那個 Firebase 資料庫是<strong>我們</strong>營運的伺服器，不是你的私人 iCloud。這些記錄在技術上我們是可以存取的。我們不會去翻看它們，但我們也不會聲稱自己做不到。',
+    '正直に申し上げます。その Firebase データベースは<strong>当社</strong>が運用するサーバーであり、あなたのプライベートな iCloud ではありません。これらの記録は技術的には当社からアクセス可能です。当社が中身を見て回ることはありませんが、「できない」と主張するつもりもありません。',
+    '솔직히 말씀드리면: 그 Firebase 데이터베이스는 <strong>저희가</strong> 운영하는 서버이며, 당신의 비공개 iCloud가 아닙니다. 해당 기록은 기술적으로 저희가 접근할 수 있습니다. 저희가 들여다보지는 않지만, 할 수 없다고 주장하지도 않겠습니다.',
+    'Ganz offen gesagt: Diese Firebase-Datenbank ist ein Server, den <strong>wir</strong> betreiben — nicht Ihre private iCloud. Diese Datensätze sind für uns technisch zugänglich. Wir sehen sie uns nicht an, aber wir behaupten auch nicht, dass wir es nicht könnten.',
+    'Para ser claros: esa base de datos de Firebase es un servidor que <strong>nosotros</strong> operamos, no tu iCloud privado. Técnicamente podemos acceder a esos registros. No los miramos, pero tampoco vamos a afirmar que no podríamos.',
+    'Soyons directs : cette base Firebase est un serveur que <strong>nous</strong> exploitons, et non votre iCloud privé. Ces enregistrements nous sont techniquement accessibles. Nous n\'allons pas les consulter, mais nous n\'allons pas prétendre que nous ne le pourrions pas.',
+    'Diciamolo chiaramente: quel database Firebase è un server che gestiamo <strong>noi</strong>, non il tuo iCloud privato. Quei record ci sono tecnicamente accessibili. Non andiamo a guardarli, ma non sosterremo di non poterlo fare.',
+    'Скажем прямо: эта база данных Firebase — сервер, которым управляем <strong>мы</strong>, а не ваш личный iCloud. Технически эти записи нам доступны. Мы в них не заглядываем, но и утверждать, что не можем, не станем.',
+    'พูดกันตรง ๆ: ฐานข้อมูล Firebase นั้นเป็นเซิร์ฟเวอร์ที่<strong>เรา</strong>ดำเนินการ ไม่ใช่ iCloud ส่วนตัวของคุณ ในทางเทคนิคเราเข้าถึงระเบียนเหล่านั้นได้ เราไม่เข้าไปดู แต่เราก็จะไม่อ้างว่าเราทำไม่ได้',
+    'Nói thẳng: cơ sở dữ liệu Firebase đó là máy chủ do <strong>chúng tôi</strong> vận hành, không phải iCloud riêng của bạn. Về mặt kỹ thuật chúng tôi có thể truy cập các bản ghi đó. Chúng tôi không đi xem chúng, nhưng cũng sẽ không tuyên bố là mình không thể.'
+  ]);
+  L('pv2.lives.3', [
+    '退出共享家庭即会停止同步。',
+    '退出共享家庭即會停止同步。',
+    '共有ファミリーから退出すると同期は停止します。',
+    '공유 가족에서 나가면 동기화가 중단됩니다.',
+    'Wenn Sie eine geteilte Familie verlassen, endet die Synchronisierung.',
+    'Salir de una familia compartida detiene la sincronización.',
+    'Quitter une famille partagée arrête la synchronisation.',
+    'Uscire da una famiglia condivisa interrompe la sincronizzazione.',
+    'Выход из общей семьи останавливает синхронизацию.',
+    'การออกจากครอบครัวที่แชร์จะหยุดการซิงค์',
+    'Rời khỏi một gia đình được chia sẻ sẽ dừng đồng bộ.'
+  ]);
+  L('pv2.lives.4', [
+    '删除账户会移除我们持有的记录。',
+    '刪除帳戶會移除我們持有的記錄。',
+    'アカウントを削除すると、当社が保持する記録は削除されます。',
+    '계정을 삭제하면 저희가 보유한 기록이 삭제됩니다.',
+    'Wenn Sie Ihr Konto löschen, werden die bei uns liegenden Datensätze entfernt.',
+    'Eliminar tu cuenta borra los registros que tenemos.',
+    'Supprimer votre compte efface les enregistrements que nous détenons.',
+    'Eliminare l\'account rimuove i record che conserviamo.',
+    'Удаление аккаунта удаляет записи, которые мы храним.',
+    'การลบบัญชีจะลบระเบียนที่เราเก็บไว้',
+    'Xoá tài khoản sẽ gỡ bỏ các bản ghi chúng tôi đang giữ.'
+  ]);
+  L('pv2.an.intro', [
+    '我们使用 Google Firebase Analytics 和 PostHog 来了解应用的使用情况。它们会收到：',
+    '我們使用 Google Firebase Analytics 和 PostHog 來了解應用程式的使用情況。它們會收到：',
+    '当社はアプリの使われ方を把握するため、Google Firebase Analytics と PostHog を使用しています。これらが受け取るのは：',
+    '저희는 앱 사용 방식을 파악하기 위해 Google Firebase Analytics와 PostHog를 사용합니다. 이들이 받는 정보는:',
+    'Wir nutzen Google Firebase Analytics und PostHog, um zu verstehen, wie die App genutzt wird. Sie erhalten:',
+    'Usamos Google Firebase Analytics y PostHog para entender cómo se usa la app. Reciben:',
+    'Nous utilisons Google Firebase Analytics et PostHog pour comprendre comment l\'app est utilisée. Ils reçoivent :',
+    'Usiamo Google Firebase Analytics e PostHog per capire come viene usata l\'app. Ricevono:',
+    'Мы используем Google Firebase Analytics и PostHog, чтобы понимать, как используется приложение. Они получают:',
+    'เราใช้ Google Firebase Analytics และ PostHog เพื่อทำความเข้าใจว่าแอปถูกใช้อย่างไร โดยจะได้รับ:',
+    'Chúng tôi dùng Google Firebase Analytics và PostHog để hiểu ứng dụng được sử dụng ra sao. Họ nhận được:'
+  ]);
+  L('pv2.an.1', [
+    '你打开了哪个页面，以及你何时打开应用。',
+    '你開啟了哪個頁面，以及你何時開啟應用程式。',
+    'どの画面を開いたか、いつアプリを開いたか。',
+    '어떤 화면을 열었는지, 언제 앱을 열었는지.',
+    'Welchen Bildschirm Sie geöffnet haben und wann Sie die App geöffnet haben.',
+    'Qué pantalla abriste y cuándo abriste la app.',
+    'Quel écran vous avez ouvert et quand vous avez ouvert l\'app.',
+    'Quale schermata hai aperto e quando hai aperto l\'app.',
+    'Какой экран вы открыли и когда открыли приложение.',
+    'คุณเปิดหน้าจอใด และเปิดแอปเมื่อใด',
+    'Bạn đã mở màn hình nào, và mở ứng dụng khi nào.'
+  ]);
+  L('pv2.an.2', [
+    '创建了一条记录以及它的类型（喂养、睡眠、尿布）——绝不包括其中的数值、备注或照片。',
+    '建立了一筆記錄以及它的類型（餵養、睡眠、尿布）——絕不包括其中的數值、備註或照片。',
+    '記録が作成されたことと、その種類（授乳・睡眠・おむつ）——中の数値、メモ、写真は決して含みません。',
+    '기록이 생성되었다는 사실과 그 유형(수유, 수면, 기저귀) — 그 안의 값, 메모, 사진은 결코 포함되지 않습니다.',
+    'Dass ein Eintrag erstellt wurde und welcher Typ es war (Fütterung, Schlaf, Windel) — nie die Werte, Notizen oder Fotos darin.',
+    'Que se creó un registro y de qué tipo era (toma, sueño, pañal) — nunca los valores, notas o fotos que contiene.',
+    'Qu\'une entrée a été créée et de quel type (tétée, sommeil, couche) — jamais les valeurs, notes ou photos qu\'elle contient.',
+    'Che è stato creato un registro e di che tipo era (poppata, sonno, pannolino) — mai i valori, le note o le foto al suo interno.',
+    'Что запись была создана и какого она типа (кормление, сон, подгузник) — но никогда значения, заметки или фото внутри неё.',
+    'มีการสร้างบันทึกและเป็นประเภทใด (การให้นม การนอน ผ้าอ้อม) — ไม่รวมค่า โน้ต หรือรูปภาพภายในเลย',
+    'Rằng một mục nhật ký đã được tạo và thuộc loại nào (bú, ngủ, tã) — không bao giờ gồm giá trị, ghi chú hay ảnh bên trong.'
+  ]);
+  L('pv2.an.3', [
+    '你的应用版本，以及你设备的地区与语言。',
+    '你的應用程式版本，以及你裝置的地區與語言。',
+    'アプリのバージョン、および端末の地域と言語。',
+    '앱 버전과 기기의 지역 및 언어.',
+    'Ihre App-Version sowie Region und Sprache Ihres Geräts.',
+    'La versión de tu app y la región e idioma de tu dispositivo.',
+    'La version de votre app, ainsi que la région et la langue de votre appareil.',
+    'La versione della tua app e la regione e la lingua del tuo dispositivo.',
+    'Версия вашего приложения, а также регион и язык устройства.',
+    'เวอร์ชันแอปของคุณ และภูมิภาคกับภาษาของอุปกรณ์',
+    'Phiên bản ứng dụng của bạn, cùng khu vực và ngôn ngữ của thiết bị.'
+  ]);
+  L('pv2.an.note', [
+    '它们绝不会收到宝宝的姓名、出生日期、测量数据、健康记录、照片，或你输入的任何文字。',
+    '它們絕不會收到寶寶的姓名、出生日期、測量數據、健康記錄、照片，或你輸入的任何文字。',
+    'これらが赤ちゃんの名前、生年月日、測定値、健康記録、写真、あなたが入力した文字を受け取ることは決してありません。',
+    '이들은 아기의 이름, 생년월일, 측정값, 건강 기록, 사진, 그리고 당신이 입력한 어떤 문자도 결코 받지 않습니다.',
+    'Sie erhalten nie den Namen Ihres Babys, das Geburtsdatum, Messwerte, Gesundheitsdaten, Fotos oder etwas, das Sie getippt haben.',
+    'Nunca reciben el nombre de tu bebé, su fecha de nacimiento, mediciones, registros de salud, fotos ni nada que hayas escrito.',
+    'Ils ne reçoivent jamais le nom de votre bébé, sa date de naissance, ses mesures, ses données de santé, ses photos, ni rien de ce que vous avez saisi.',
+    'Non ricevono mai il nome del tuo bambino, la data di nascita, le misurazioni, i dati sanitari, le foto o qualsiasi cosa tu abbia digitato.',
+    'Они никогда не получают имя малыша, дату рождения, измерения, медицинские записи, фотографии или что-либо, что вы напечатали.',
+    'พวกเขาไม่เคยได้รับชื่อลูก วันเกิด ค่าที่วัดได้ บันทึกสุขภาพ รูปภาพ หรือสิ่งใดที่คุณพิมพ์',
+    'Họ không bao giờ nhận tên bé, ngày sinh, số đo, hồ sơ sức khoẻ, ảnh, hay bất cứ điều gì bạn đã nhập.'
+  ]);
+  L('pv2.ads.body', [
+    '我们使用 Meta 和 TikTok 的衡量工具，来了解我们的广告是否真的为 MamaBee 带来了用户。Apple 的 App Tracking Transparency 提示决定了它们是否可以使用你设备的广告标识符——如果你选择「要求 App 不追踪」，我们会完全遵从。',
+    '我們使用 Meta 和 TikTok 的衡量工具，來了解我們的廣告是否真的為 MamaBee 帶來了使用者。Apple 的 App Tracking Transparency 提示決定了它們是否可以使用你裝置的廣告識別碼——如果你選擇「要求 App 不追蹤」，我們會完全遵從。',
+    '当社は、広告が実際に MamaBee へ人を連れてきているかを確認するため、Meta と TikTok の測定ツールを使用しています。これらが端末の広告識別子を使用してよいかどうかは、Apple の App Tracking Transparency の確認画面で決まります。「Appにトラッキングしないように要求」を選んだ場合、それは完全に尊重されます。',
+    '저희는 광고가 실제로 MamaBee로 사람들을 데려오는지 확인하기 위해 Meta와 TikTok의 측정 도구를 사용합니다. 이들이 기기의 광고 식별자를 사용할 수 있는지는 Apple의 App Tracking Transparency 요청이 결정하며, "앱이 추적하지 않도록 요청"을 선택하면 완전히 존중됩니다.',
+    'Wir nutzen die Messwerkzeuge von Meta und TikTok, um zu sehen, ob unsere Anzeigen tatsächlich Menschen zu MamaBee bringen. Apples App-Tracking-Transparency-Abfrage entscheidet, ob sie den Werbe-Identifier Ihres Geräts verwenden dürfen — wenn Sie „App bitten, nicht zu tracken" wählen, wird das vollständig respektiert.',
+    'Usamos las herramientas de medición de Meta y TikTok para ver si nuestros anuncios realmente traen gente a MamaBee. El aviso de App Tracking Transparency de Apple decide si pueden usar el identificador publicitario de tu dispositivo: si eliges "Pedir a la app que no rastree", se respeta por completo.',
+    'Nous utilisons les outils de mesure de Meta et TikTok pour voir si nos publicités amènent réellement des personnes vers MamaBee. L\'invite App Tracking Transparency d\'Apple détermine s\'ils peuvent utiliser l\'identifiant publicitaire de votre appareil — si vous choisissez « Demander à l\'app de ne pas me suivre », cela est totalement respecté.',
+    'Usiamo gli strumenti di misurazione di Meta e TikTok per capire se le nostre inserzioni portano davvero persone su MamaBee. La richiesta App Tracking Transparency di Apple decide se possano usare l\'identificatore pubblicitario del tuo dispositivo — se scegli "Chiedi all\'app di non tracciare", viene pienamente rispettato.',
+    'Мы используем инструменты измерения Meta и TikTok, чтобы понять, действительно ли наша реклама приводит людей в MamaBee. Запрос Apple App Tracking Transparency определяет, могут ли они использовать рекламный идентификатор вашего устройства — если вы выберете «Запретить приложению отслеживать», это будет полностью соблюдено.',
+    'เราใช้เครื่องมือวัดผลของ Meta และ TikTok เพื่อดูว่าโฆษณาของเรานำผู้คนมาที่ MamaBee จริงหรือไม่ คำขอ App Tracking Transparency ของ Apple เป็นตัวกำหนดว่าพวกเขาจะใช้ตัวระบุโฆษณาของอุปกรณ์คุณได้หรือไม่ — หากคุณเลือก "ขอให้แอปไม่ติดตาม" เราจะเคารพอย่างเต็มที่',
+    'Chúng tôi dùng công cụ đo lường của Meta và TikTok để xem quảng cáo của mình có thực sự đưa người dùng đến MamaBee hay không. Lời nhắc App Tracking Transparency của Apple quyết định họ có được dùng mã định danh quảng cáo của thiết bị bạn hay không — nếu bạn chọn "Yêu cầu Ứng dụng Không Theo dõi", điều đó được tôn trọng hoàn toàn.'
+  ]);
+  L('pv2.ads.note', [
+    'MamaBee 应用内绝不展示任何广告。',
+    'MamaBee 應用程式內絕不展示任何廣告。',
+    'MamaBee のアプリ内に広告が表示されることは決してありません。',
+    'MamaBee 앱 안에는 어떤 광고도 표시되지 않습니다.',
+    'In MamaBee wird niemals Werbung angezeigt.',
+    'Nunca se muestran anuncios dentro de MamaBee.',
+    'Aucune publicité n\'est jamais affichée dans MamaBee.',
+    'All\'interno di MamaBee non viene mai mostrata pubblicità.',
+    'Внутри MamaBee никогда не показывается реклама.',
+    'ไม่มีการแสดงโฆษณาภายใน MamaBee เลย',
+    'Không có quảng cáo nào được hiển thị bên trong MamaBee.'
+  ]);
+  L('pv2.ai.intro', [
+    '当你在 Bee AI 中点选一个问题时，我们会发送给 OpenRouter——由它转发给一家大型语言模型供应商：',
+    '當你在 Bee AI 中點選一個問題時，我們會傳送給 OpenRouter——由它轉發給一家大型語言模型供應商：',
+    'Bee AI で質問をタップすると、当社は OpenRouter に次の内容を送信します。OpenRouter はそれを大規模言語モデルの提供事業者へ振り分けます：',
+    'Bee AI에서 질문을 탭하면, 저희는 OpenRouter로 다음을 전송하며 OpenRouter가 이를 대규모 언어 모델 제공업체로 전달합니다:',
+    'Wenn Sie in Bee AI auf eine Frage tippen, senden wir an OpenRouter — das sie an einen Anbieter großer Sprachmodelle weiterleitet:',
+    'Cuando tocas una pregunta en Bee AI, enviamos a OpenRouter —que la enruta a un proveedor de modelos de lenguaje grandes—:',
+    'Lorsque vous touchez une question dans Bee AI, nous envoyons à OpenRouter — qui l\'achemine vers un fournisseur de grands modèles de langage :',
+    'Quando tocchi una domanda in Bee AI, inviamo a OpenRouter — che la instrada a un fornitore di modelli linguistici di grandi dimensioni:',
+    'Когда вы нажимаете на вопрос в Bee AI, мы отправляем в OpenRouter — который направляет его поставщику больших языковых моделей:',
+    'เมื่อคุณแตะคำถามใน Bee AI เราจะส่งไปยัง OpenRouter ซึ่งจะส่งต่อไปยังผู้ให้บริการโมเดลภาษาขนาดใหญ่:',
+    'Khi bạn chạm vào một câu hỏi trong Bee AI, chúng tôi gửi tới OpenRouter — nơi định tuyến nó đến một nhà cung cấp mô hình ngôn ngữ lớn:'
+  ]);
+  L('pv2.ai.1', [
+    '你的问题。',
+    '你的問題。',
+    'あなたの質問。',
+    '당신의 질문.',
+    'Ihre Frage.',
+    'Tu pregunta.',
+    'Votre question.',
+    'La tua domanda.',
+    'Ваш вопрос.',
+    'คำถามของคุณ',
+    'Câu hỏi của bạn.'
+  ]);
+  L('pv2.ai.2', [
+    '你宝宝已记录历史的摘要。',
+    '你寶寶已記錄歷史的摘要。',
+    '赤ちゃんの記録履歴の要約。',
+    '아기의 기록된 이력 요약.',
+    'Eine Zusammenfassung der protokollierten Historie Ihres Babys.',
+    'Un resumen del historial registrado de tu bebé.',
+    'Un résumé de l\'historique enregistré de votre bébé.',
+    'Un riepilogo dello storico registrato del tuo bambino.',
+    'Сводку по истории записей вашего малыша.',
+    'สรุปประวัติที่บันทึกไว้ของลูกคุณ',
+    'Bản tóm tắt lịch sử đã ghi của bé.'
+  ]);
+  L('pv2.ai.3', [
+    '你宝宝的名字、年龄、出生日期和性别。',
+    '你寶寶的名字、年齡、出生日期和性別。',
+    '赤ちゃんの名前（ファーストネーム）、年齢、生年月日、性別。',
+    '아기의 이름, 나이, 생년월일, 성별.',
+    'Den Vornamen, das Alter, das Geburtsdatum und das Geschlecht Ihres Babys.',
+    'El nombre, la edad, la fecha de nacimiento y el sexo de tu bebé.',
+    'Le prénom, l\'âge, la date de naissance et le sexe de votre bébé.',
+    'Il nome, l\'età, la data di nascita e il sesso del tuo bambino.',
+    'Имя, возраст, дату рождения и пол вашего малыша.',
+    'ชื่อ อายุ วันเกิด และเพศของลูกคุณ',
+    'Tên, tuổi, ngày sinh và giới tính của bé.'
+  ]);
+  L('pv2.ai.note', [
+    '我们<strong>不会</strong>发送宝宝的照片，也不会发送你写下的任何自由文本备注。',
+    '我們<strong>不會</strong>傳送寶寶的照片，也不會傳送你寫下的任何自由文字備註。',
+    '当社は赤ちゃんの写真や、あなたが書いた自由記述のメモを<strong>送信しません</strong>。',
+    '저희는 아기의 사진이나 당신이 작성한 자유 서술 메모를 <strong>보내지 않습니다</strong>.',
+    'Wir senden <strong>NICHT</strong> das Foto Ihres Babys oder Freitext-Notizen, die Sie geschrieben haben.',
+    '<strong>NO</strong> enviamos la foto de tu bebé ni ninguna nota de texto libre que hayas escrito.',
+    'Nous n\'envoyons <strong>PAS</strong> la photo de votre bébé ni les notes en texte libre que vous avez écrites.',
+    '<strong>NON</strong> inviamo la foto del tuo bambino né le note in testo libero che hai scritto.',
+    'Мы <strong>НЕ</strong> отправляем фотографию малыша и написанные вами свободные заметки.',
+    'เรา<strong>ไม่</strong>ส่งรูปของลูกคุณ หรือโน้ตข้อความอิสระใด ๆ ที่คุณเขียน',
+    'Chúng tôi <strong>KHÔNG</strong> gửi ảnh của bé hay bất kỳ ghi chú văn bản tự do nào bạn đã viết.'
+  ]);
+  L('pv2.purch.body', [
+    '订阅由 Apple 和 RevenueCat 处理。我们绝不会看到你的银行卡信息——我们只会收到你的订阅是否有效。',
+    '訂閱由 Apple 和 RevenueCat 處理。我們絕不會看到你的銀行卡資訊——我們只會收到你的訂閱是否有效。',
+    'サブスクリプションは Apple と RevenueCat が処理します。当社がカード情報を見ることは決してなく、受け取るのはサブスクリプションが有効かどうかだけです。',
+    '구독은 Apple과 RevenueCat이 처리합니다. 저희는 카드 정보를 결코 보지 않으며, 구독이 활성 상태인지만 전달받습니다.',
+    'Abonnements werden von Apple und RevenueCat abgewickelt. Wir sehen Ihre Kartendaten nie — wir erfahren nur, ob Ihr Abonnement aktiv ist.',
+    'Las suscripciones las gestionan Apple y RevenueCat. Nunca vemos los datos de tu tarjeta: solo recibimos si tu suscripción está activa.',
+    'Les abonnements sont gérés par Apple et RevenueCat. Nous ne voyons jamais vos informations de carte — nous recevons uniquement si votre abonnement est actif.',
+    'Gli abbonamenti sono gestiti da Apple e RevenueCat. Non vediamo mai i dati della tua carta — riceviamo solo se il tuo abbonamento è attivo.',
+    'Подписки обрабатывают Apple и RevenueCat. Мы никогда не видим данные вашей карты — мы получаем только сведения о том, активна ли подписка.',
+    'การสมัครสมาชิกดำเนินการโดย Apple และ RevenueCat เราไม่เคยเห็นข้อมูลบัตรของคุณ — เราได้รับเพียงว่าการสมัครสมาชิกของคุณใช้งานอยู่หรือไม่',
+    'Đăng ký được xử lý bởi Apple và RevenueCat. Chúng tôi không bao giờ thấy thông tin thẻ của bạn — chỉ nhận được việc gói đăng ký của bạn có đang hoạt động hay không.'
+  ]);
+  L('pv2.dont.1', [
+    '应用内没有广告。',
+    '應用程式內沒有廣告。',
+    'アプリ内に広告はありません。',
+    '앱 내 광고가 없습니다.',
+    'Keine Werbung in der App.',
+    'Sin anuncios dentro de la app.',
+    'Aucune publicité dans l\'app.',
+    'Nessuna pubblicità nell\'app.',
+    'Никакой рекламы в приложении.',
+    'ไม่มีโฆษณาในแอป',
+    'Không có quảng cáo trong ứng dụng.'
+  ]);
+  L('pv2.dont.2', [
+    '我们绝不出售、出租或授权你的数据。',
+    '我們絕不出售、出租或授權你的資料。',
+    '当社はあなたのデータを販売・貸与・ライセンス供与しません。',
+    '저희는 당신의 데이터를 판매, 대여, 라이선스하지 않습니다.',
+    'Wir verkaufen, vermieten oder lizenzieren Ihre Daten nie.',
+    'Nunca vendemos, alquilamos ni licenciamos tus datos.',
+    'Nous ne vendons, ne louons ni ne cédons jamais vos données sous licence.',
+    'Non vendiamo, affittiamo o concediamo mai in licenza i tuoi dati.',
+    'Мы никогда не продаём, не сдаём в аренду и не лицензируем ваши данные.',
+    'เราไม่เคยขาย ให้เช่า หรือให้สิทธิ์ใช้ข้อมูลของคุณ',
+    'Chúng tôi không bao giờ bán, cho thuê hay cấp phép dữ liệu của bạn.'
+  ]);
+  L('pv2.dont.3', [
+    '我们绝不会把宝宝的姓名、照片、备注或健康数值发送给分析或广告服务。',
+    '我們絕不會把寶寶的姓名、照片、備註或健康數值傳送給分析或廣告服務。',
+    '当社が赤ちゃんの名前、写真、メモ、健康の数値を分析サービスや広告サービスへ送ることは決してありません。',
+    '저희는 아기의 이름, 사진, 메모, 건강 수치를 분석 또는 광고 서비스로 결코 보내지 않습니다.',
+    'Wir senden nie den Namen, Fotos, Notizen oder Gesundheitswerte Ihres Babys an Analyse- oder Werbedienste.',
+    'Nunca enviamos el nombre, las fotos, las notas ni los valores de salud de tu bebé a servicios de analítica o publicidad.',
+    'Nous n\'envoyons jamais le nom, les photos, les notes ou les valeurs de santé de votre bébé à des services d\'analyse ou de publicité.',
+    'Non inviamo mai il nome, le foto, le note o i valori sanitari del tuo bambino a servizi di analisi o pubblicitari.',
+    'Мы никогда не отправляем имя, фотографии, заметки или показатели здоровья вашего малыша в аналитические или рекламные сервисы.',
+    'เราไม่เคยส่งชื่อ รูปภาพ โน้ต หรือค่าสุขภาพของลูกคุณไปยังบริการวิเคราะห์หรือโฆษณา',
+    'Chúng tôi không bao giờ gửi tên, ảnh, ghi chú hay các chỉ số sức khoẻ của bé tới dịch vụ phân tích hoặc quảng cáo.'
+  ]);
+  L('pv2.dont.4', [
+    '没有第三方登录，我们也不收集你的电子邮件地址。',
+    '沒有第三方登入，我們也不收集你的電子郵件地址。',
+    '第三者ログインはなく、当社はあなたのメールアドレスも収集しません。',
+    '제3자 로그인이 없으며, 저희는 이메일 주소도 수집하지 않습니다.',
+    'Kein Login über Dritte, und wir erfassen Ihre E-Mail-Adresse nicht.',
+    'Sin inicio de sesión de terceros, y no recopilamos tu dirección de correo electrónico.',
+    'Aucune connexion via un tiers, et nous ne collectons pas votre adresse e-mail.',
+    'Nessun accesso tramite terze parti e non raccogliamo il tuo indirizzo email.',
+    'Никакого входа через сторонние сервисы, и мы не собираем ваш адрес электронной почты.',
+    'ไม่มีการเข้าสู่ระบบผ่านบุคคลที่สาม และเราไม่เก็บอีเมลของคุณ',
+    'Không đăng nhập qua bên thứ ba, và chúng tôi không thu thập địa chỉ email của bạn.'
+  ]);
+  L('pv2.dont.5', [
+    '我们不会为你或你的宝宝建立广告画像。',
+    '我們不會為你或你的寶寶建立廣告輪廓。',
+    '当社があなたや赤ちゃんの広告プロファイルを作成することはありません。',
+    '저희는 당신이나 아기에 대한 광고 프로필을 만들지 않습니다.',
+    'Wir erstellen keine Werbeprofile über Sie oder Ihr Baby.',
+    'No creamos perfiles publicitarios sobre ti ni sobre tu bebé.',
+    'Nous ne créons pas de profils publicitaires sur vous ou votre bébé.',
+    'Non costruiamo profili pubblicitari su di te o sul tuo bambino.',
+    'Мы не создаём рекламные профили о вас или вашем малыше.',
+    'เราไม่สร้างโปรไฟล์โฆษณาเกี่ยวกับคุณหรือลูกของคุณ',
+    'Chúng tôi không xây dựng hồ sơ quảng cáo về bạn hoặc bé.'
+  ]);
+  L('pv2.rights.intro', [
+    '你可以直接在应用内掌控你的数据：',
+    '你可以直接在應用程式內掌控你的資料：',
+    'あなたはアプリ内から直接データを管理できます：',
+    '앱 안에서 직접 데이터를 관리할 수 있습니다:',
+    'Sie steuern Ihre Daten direkt in der App:',
+    'Controlas tus datos directamente desde la app:',
+    'Vous contrôlez vos données directement depuis l\'app :',
+    'Controlli i tuoi dati direttamente dall\'app:',
+    'Вы управляете своими данными прямо в приложении:',
+    'คุณควบคุมข้อมูลของคุณได้โดยตรงจากในแอป:',
+    'Bạn kiểm soát dữ liệu của mình ngay trong ứng dụng:'
+  ]);
+  L('pv2.rights.3', [
+    '<strong>清除</strong> — 个人资料 → 账户 → 删除账户，会清除设备上的数据以及我们服务器上持有的记录。',
+    '<strong>清除</strong> — 個人資料 → 帳戶 → 刪除帳戶，會清除裝置上的資料以及我們伺服器上持有的記錄。',
+    '<strong>消去</strong> — プロフィール → アカウント → アカウントを削除。端末上のデータと、当社サーバーに保持している記録を消去します。',
+    '<strong>삭제</strong> — 프로필 → 계정 → 계정 삭제. 기기의 데이터와 저희 서버에 보유한 기록을 지웁니다.',
+    '<strong>Löschen</strong> — Profil → Konto → Konto löschen entfernt Ihre Daten auf dem Gerät sowie die Datensätze, die wir auf unserem Server halten.',
+    '<strong>Borrar</strong> — Perfil → Cuenta → Eliminar cuenta borra tus datos del dispositivo y los registros que tenemos en nuestro servidor.',
+    '<strong>Effacer</strong> — Profil → Compte → Supprimer le compte efface vos données sur l\'appareil et les enregistrements que nous détenons sur notre serveur.',
+    '<strong>Cancella</strong> — Profilo → Account → Elimina account cancella i tuoi dati sul dispositivo e i record che conserviamo sul nostro server.',
+    '<strong>Стереть</strong> — Профиль → Аккаунт → Удалить аккаунт удаляет данные на устройстве и записи, которые мы храним на нашем сервере.',
+    '<strong>ล้างข้อมูล</strong> — โปรไฟล์ → บัญชี → ลบบัญชี จะลบข้อมูลบนอุปกรณ์และระเบียนที่เราเก็บไว้บนเซิร์ฟเวอร์ของเรา',
+    '<strong>Xoá sạch</strong> — Hồ sơ → Tài khoản → Xoá tài khoản sẽ xoá dữ liệu trên thiết bị và các bản ghi chúng tôi giữ trên máy chủ.'
+  ]);
+  L('pv2.rights.5', [
+    '<strong>停止共享</strong> — 退出共享家庭即会停止你的记录同步到我们的服务器。',
+    '<strong>停止共享</strong> — 退出共享家庭即會停止你的記錄同步到我們的伺服器。',
+    '<strong>共有を停止</strong> — 共有ファミリーから退出すると、記録が当社サーバーへ同期されなくなります。',
+    '<strong>공유 중단</strong> — 공유 가족에서 나가면 기록이 저희 서버로 동기화되지 않습니다.',
+    '<strong>Freigabe beenden</strong> — Wenn Sie eine geteilte Familie verlassen, werden Ihre Protokolle nicht mehr auf unseren Server synchronisiert.',
+    '<strong>Dejar de compartir</strong> — salir de una familia compartida detiene la sincronización de tus registros con nuestro servidor.',
+    '<strong>Arrêter le partage</strong> — quitter une famille partagée arrête la synchronisation de vos journaux vers notre serveur.',
+    '<strong>Interrompi la condivisione</strong> — uscire da una famiglia condivisa interrompe la sincronizzazione dei tuoi registri sul nostro server.',
+    '<strong>Прекратить общий доступ</strong> — выход из общей семьи останавливает синхронизацию ваших записей с нашим сервером.',
+    '<strong>หยุดแชร์</strong> — การออกจากครอบครัวที่แชร์จะหยุดการซิงค์บันทึกของคุณไปยังเซิร์ฟเวอร์ของเรา',
+    '<strong>Ngừng chia sẻ</strong> — rời khỏi một gia đình được chia sẻ sẽ dừng đồng bộ nhật ký của bạn lên máy chủ của chúng tôi.'
+  ]);
+  L('pv2.lang.note', [
+    '为方便阅读，本政策提供多种语言版本。若译文与英文版本之间存在任何歧义，以英文版本为准。',
+    '為方便閱讀，本政策提供多種語言版本。若譯文與英文版本之間存在任何歧義，以英文版本為準。',
+    '本ポリシーは便宜のため複数の言語に翻訳されています。翻訳と英語版との間に相違がある場合は、英語版が優先します。',
+    '본 정책은 편의를 위해 여러 언어로 번역되었습니다. 번역본과 영문본 사이에 불일치가 있는 경우 영문본이 우선합니다.',
+    'Diese Richtlinie wird zur Vereinfachung in mehrere Sprachen übersetzt. Bei Abweichungen zwischen einer Übersetzung und der englischen Fassung ist die englische Fassung maßgeblich.',
+    'Esta política se traduce a varios idiomas por comodidad. Si hay alguna discrepancia entre una traducción y la versión en inglés, prevalece la versión en inglés.',
+    'Cette politique est traduite en plusieurs langues par commodité. En cas de divergence entre une traduction et la version anglaise, la version anglaise prévaut.',
+    'Questa informativa è tradotta in più lingue per comodità. In caso di discrepanza tra una traduzione e la versione inglese, prevale la versione inglese.',
+    'Эта политика переведена на несколько языков для удобства. В случае любых расхождений между переводом и английской версией преимущественную силу имеет английская версия.',
+    'นโยบายนี้แปลเป็นหลายภาษาเพื่อความสะดวก หากมีข้อขัดแย้งใด ๆ ระหว่างคำแปลกับฉบับภาษาอังกฤษ ให้ยึดฉบับภาษาอังกฤษเป็นหลัก',
+    'Chính sách này được dịch sang nhiều ngôn ngữ để thuận tiện. Nếu có bất kỳ khác biệt nào giữa bản dịch và bản tiếng Anh, bản tiếng Anh sẽ được ưu tiên áp dụng.'
+  ]);
+  L('pv2.perm.share.t', [
+    '共同养育者共享',
+    '共同養育者共享',
+    '共同養育者共有',
+    '공동양육자 공유',
+    'Co-Eltern-Freigabe',
+    'Uso compartido con el co-progenitor',
+    'Partage co-parent',
+    'Condivisione con il co-genitore',
+    'Совместный доступ для второго родителя',
+    'การแชร์กับผู้ปกครองร่วม',
+    'Chia sẻ đồng phụ huynh'
+  ]);
+  L('pv2.perm.share.why', [
+    '让你邀请的共同养育者看到同样的记录。开启后，会把宝宝的资料和记录复制到我们的 Firebase 数据库，以便他们的设备读取。',
+    '讓你邀請的共同養育者看到同樣的記錄。開啟後，會把寶寶的資料和記錄複製到我們的 Firebase 資料庫，以便他們的裝置讀取。',
+    '招待した共同養育者が同じ記録を見られるようにします。オンにすると、赤ちゃんのプロフィールと記録が当社の Firebase データベースにコピーされ、相手の端末から読み取れるようになります。',
+    '초대한 공동양육자가 같은 기록을 볼 수 있게 합니다. 켜면 아기의 프로필과 기록이 저희 Firebase 데이터베이스로 복사되어 상대 기기에서 읽을 수 있습니다.',
+    'Damit die von Ihnen eingeladenen Co-Eltern dieselben Protokolle sehen. Beim Aktivieren werden Profil und Protokolle Ihres Babys in unsere Firebase-Datenbank kopiert, damit deren Gerät sie lesen kann.',
+    'Para que las personas co-progenitoras que invites vean los mismos registros. Al activarlo se copian el perfil y los registros de tu bebé a nuestra base de datos de Firebase para que su dispositivo pueda leerlos.',
+    'Pour que les co-parents que vous invitez voient les mêmes journaux. L\'activation copie le profil et les journaux de votre bébé dans notre base de données Firebase afin que leur appareil puisse les lire.',
+    'Per far vedere gli stessi registri ai co-genitori che inviti. Attivandola, il profilo e i registri del tuo bambino vengono copiati nel nostro database Firebase così il loro dispositivo può leggerli.',
+    'Чтобы приглашённые вами вторые родители видели те же записи. При включении профиль и записи малыша копируются в нашу базу данных Firebase, чтобы их устройство могло их прочитать.',
+    'ให้ผู้ปกครองร่วมที่คุณเชิญเห็นบันทึกเดียวกัน เมื่อเปิดใช้ โปรไฟล์และบันทึกของลูกจะถูกคัดลอกไปยังฐานข้อมูล Firebase ของเรา เพื่อให้อุปกรณ์ของพวกเขาอ่านได้',
+    'Để những người đồng phụ huynh bạn mời xem được cùng nhật ký. Bật lên sẽ sao chép hồ sơ và nhật ký của bé vào cơ sở dữ liệu Firebase của chúng tôi để thiết bị của họ đọc được.'
+  ]);
+  L('pv2.perm.lbl.off', [
+    '若关闭',
+    '若關閉',
+    'オフの場合',
+    '꺼져 있으면',
+    'Wenn deaktiviert',
+    'Si está desactivado',
+    'Si désactivé',
+    'Se disattivata',
+    'Если выключено',
+    'หากปิด',
+    'Nếu tắt'
+  ]);
+  L('pv2.perm.share.denied', [
+    'MamaBee 完全在本机运行，不会有任何内容被复制到我们的服务器。',
+    'MamaBee 完全在本機執行，不會有任何內容被複製到我們的伺服器。',
+    'MamaBee はこの端末内だけで動作し、当社のサーバーへは何もコピーされません。',
+    'MamaBee는 이 기기에서만 실행되며, 저희 서버로 아무것도 복사되지 않습니다.',
+    'MamaBee läuft vollständig auf diesem Gerät, und nichts wird auf unseren Server kopiert.',
+    'MamaBee funciona por completo en este dispositivo y no se copia nada a nuestro servidor.',
+    'MamaBee fonctionne entièrement sur cet appareil et rien n\'est copié sur notre serveur.',
+    'MamaBee funziona interamente su questo dispositivo e nulla viene copiato sul nostro server.',
+    'MamaBee работает полностью на этом устройстве, и ничего не копируется на наш сервер.',
+    'MamaBee ทำงานทั้งหมดบนอุปกรณ์นี้ และไม่มีอะไรถูกคัดลอกไปยังเซิร์ฟเวอร์ของเรา',
+    'MamaBee chạy hoàn toàn trên thiết bị này và không có gì được sao chép lên máy chủ của chúng tôi.'
+  ]);
+
   /* ---------- engine ---------- */
   var store = new WeakMap();
 
