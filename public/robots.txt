@@ -1,5 +1,53 @@
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /studio
+
+# AI answer engines — named explicitly so our articles can be retrieved and
+# cited in AI answers. The wildcard above already allows them; these entries
+# make the intent unambiguous and survive stricter default policies.
+
+# OpenAI — ChatGPT browsing + search index
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / AI Overviews grounding
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot
+User-agent: BingBot
+Allow: /
+
+# Common Crawl (feeds many model training sets and retrieval corpora)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://www.realmlabs.app/sitemap-index.xml

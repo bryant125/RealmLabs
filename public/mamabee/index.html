@@ -20,6 +20,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" href="assets/bee.png" />
 <link rel="apple-touch-icon" href="assets/bee.png" />
 <script src="image-slot.js?v=2"></script>
+
+<!-- Structured data: defines MamaBee as an entity for search + AI answer
+     engines. NOTE: no aggregateRating — self-declared ratings on your own
+     site violate Google's structured-data policy. Add it only when sourced
+     from real, verifiable App Store review data. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.realmlabs.app/#organization",
+      "name": "Realm Labs Studio",
+      "url": "https://www.realmlabs.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.realmlabs.app/assets/mamabee-logo.jpg"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://www.realmlabs.app/mamabee/#app",
+      "name": "MamaBee",
+      "alternateName": "MamaBee Baby Tracker",
+      "description": "MamaBee is a calm, AI-powered baby tracker for iPhone. One-thumb logging for sleep, feeds, diapers and growth; gentle insights; Sleep Coach nap prediction and Bee AI on Premium. Local-first, no ads, free to start.",
+      "url": "https://www.realmlabs.app/mamabee/",
+      "installUrl": "https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521",
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Baby Tracker",
+      "operatingSystem": "iOS",
+      "publisher": { "@id": "https://www.realmlabs.app/#organization" },
+      "inLanguage": ["en","zh-Hans","zh-Hant","ja","ko","de","es","fr","it","ru","th","vi"],
+      "featureList": [
+        "One-thumb logging for sleep, feeds, diapers and solids",
+        "Works fully offline with background sync",
+        "WHO growth percentiles for height, weight and head circumference",
+        "45+ official CDC milestones tracked automatically",
+        "Country-specific vaccine schedules with reminders",
+        "Free co-parent sync for two caregivers",
+        "Export to CSV, JSON and pediatrician PDF",
+        "Sleep Coach nap prediction (Premium)",
+        "Unlimited Bee AI chat (Premium)",
+        "Solid Food Allergen Test (Premium)",
+        "Multi-baby sync and extra co-parents (Premium)"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Core logging, insights, co-parent sync for two and full export — free forever, with no ads."
+        },
+        {
+          "@type": "Offer",
+          "name": "MamaBee Premium (monthly)",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "category": "subscription"
+        },
+        {
+          "@type": "Offer",
+          "name": "MamaBee Premium (annual)",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "category": "subscription"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.realmlabs.app/mamabee/#website",
+      "url": "https://www.realmlabs.app/mamabee/",
+      "name": "MamaBee",
+      "publisher": { "@id": "https://www.realmlabs.app/#organization" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -101,7 +181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="ic" style="background:var(--lavender-lt)">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#867BA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         </span>
-        <span>Next nap ~2:40<small>SweetDream predictor</small></span>
+        <span>Next nap ~2:40<small>Sleep Coach</small></span>
       </div>
 
       <div class="phone">
@@ -299,13 +379,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="ai-grid">
       <div class="ai-card reveal">
         <div class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></div>
-        <h3>SweetDream Predictor</h3>
+        <h3>Sleep Coach</h3>
         <p>Reads your baby's sleep history and predicts the next nap window — so you can get ahead of the meltdown.</p>
       </div>
       <div class="ai-card reveal">
         <div class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9Z"/></svg></div>
-        <h3>MamaBee Chat</h3>
-        <p>A gentle chat companion that knows your baby's log and answers your 3 AM questions — powered by Gemini Flash.</p>
+        <h3>Bee AI</h3>
+        <p>A gentle chat companion that knows your baby's log and answers your 3 AM questions in plain, reassuring language.</p>
       </div>
     </div>
   </div>
@@ -350,7 +430,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="faq reveal">
       <details class="faq-item" open>
         <summary class="faq-q">Is MamaBee free? <span class="fic">+</span></summary>
-        <div class="faq-a">Yes — all core logging, insights, sync and export are free, forever. A Premium tier with the gentle AI features is coming soon.</div>
+        <div class="faq-a">Yes — all core logging, insights, sync and export are free, forever. Premium (from $4.99/month or $49.99/year) adds the gentle AI features: Sleep Coach nap prediction, unlimited Bee AI, the Solid Food Allergen Test, multi-baby sync and extra co-parents.</div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">Does my baby's data train AI models? <span class="fic">+</span></summary>

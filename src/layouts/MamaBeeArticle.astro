@@ -4,8 +4,19 @@ import GtmHead from '../components/GtmHead.astro';
 import GtmBody from '../components/GtmBody.astro';
 import MamaBeeAppBanner from '../components/MamaBeeAppBanner.astro';
 import MamaBeeMobileNav from '../components/MamaBeeMobileNav.astro';
-const { title, description, publishedDate, updatedDate, author, cover, canonical, readingTime, related = [], faq = [], tool = null } = Astro.props;
+const { title, description, publishedDate, updatedDate, author, cover, canonical, readingTime, related = [], faq = [], tool = null, wordCount = null, itemList = null } = Astro.props;
 const faqSchema = faq.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) } : null;
+// Breadcrumbs help search + AI engines place the article in the site hierarchy.
+const site = 'https://www.realmlabs.app';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'MamaBee', item: `${site}/mamabee/` },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: `${site}/mamabee/articles` },
+    { '@type': 'ListItem', position: 3, name: title, item: new URL(canonical, site).toString() },
+  ],
+};
 const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <!DOCTYPE html>
@@ -18,8 +29,10 @@ const dateFmt = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric'
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="/mamabee/assets/bee.png" />
-  <ArticleSeo brand="MamaBee" {title} {description} {publishedDate} {updatedDate} {author} image={cover} {canonical} />
+  <ArticleSeo brand="MamaBee" {title} {description} {publishedDate} {updatedDate} {author} image={cover} {canonical} {wordCount} />
   {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  {itemList && <script type="application/ld+json" set:html={JSON.stringify(itemList)} />}
   <!-- is:global so styles reach the article body injected via set:html (Portable
        Text). Scoped styles never match that content — it carries no scope attr.
        This CSS only loads on article pages, so global here is safe. -->

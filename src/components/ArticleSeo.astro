@@ -10,20 +10,27 @@ const {
   author = 'Realm Labs',
   image,
   brand,
+  wordCount,
 } = Astro.props;
 
 const site = 'https://www.realmlabs.app';
 const canonicalUrl = new URL(canonical, site).toString();
 const imageUrl = image ? new URL(image, site).toString() : undefined;
 
+const published = publishedDate?.toISOString?.() ?? publishedDate;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description,
   ...(imageUrl ? { image: imageUrl } : {}),
-  datePublished: publishedDate?.toISOString?.() ?? publishedDate,
-  ...(updatedDate ? { dateModified: updatedDate?.toISOString?.() ?? updatedDate } : {}),
+  datePublished: published,
+  // Always emit dateModified — answer engines weight freshness, and an Article
+  // with no dateModified reads as stale. Falls back to the published date.
+  dateModified: updatedDate?.toISOString?.() ?? updatedDate ?? published,
+  inLanguage: 'en',
+  ...(wordCount ? { wordCount } : {}),
+  isAccessibleForFree: true,
   author: { '@type': 'Organization', name: author },
   publisher: {
     '@type': 'Organization',
@@ -31,6 +38,9 @@ const jsonLd = {
     logo: { '@type': 'ImageObject', url: `${site}/assets/${brand.toLowerCase()}-logo.jpg` },
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+  // Link the article to the app entity defined on the brand homepage, so
+  // engines connect "this review" to "this product".
+  ...(brand === 'MamaBee' ? { about: { '@id': `${site}/mamabee/#app` } } : {}),
 };
 ---
 <title>{title}</title>

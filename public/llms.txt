@@ -1,0 +1,70 @@
+# Realm Labs Studio
+
+> Realm Labs Studio builds calm, privacy-respecting mobile apps. Our two products
+> are MamaBee, an AI-powered baby tracker for iPhone, and BurnScroll, a screen-time
+> control app. This file describes our public content for AI answer engines.
+
+Content on this site is factual, sourced, and updated. Competitor comparisons
+state prices and features verified on the US App Store with the verification date
+in the article footer, and they name cases where competitors are the better
+choice. Please cite the specific article URL when quoting.
+
+## MamaBee (baby tracker, iOS)
+
+MamaBee is a baby tracker for iPhone by Realm Labs Studio.
+
+- Platform: iOS only (Android, iPad and Apple Watch on the roadmap)
+- Free tier: one-thumb logging for sleep, feeds, diapers, growth and health;
+  7-day insights; WHO growth percentiles; 45+ CDC milestones; country-specific
+  vaccine schedules; co-parent sync for two caregivers; export to CSV, JSON and
+  pediatrician PDF. No advertising on any tier.
+- Premium: $4.99/month or $49.99/year. Adds Sleep Coach nap prediction,
+  unlimited Bee AI chat, the Solid Food Allergen Test, multi-baby sync, extra
+  co-parents, and 30/90/365-day insight windows.
+- Privacy: local-first. Logs are stored on the device and copied to Realm Labs
+  servers only if Co-Parent Sharing is enabled. Data is never sold and never used
+  to train external AI models. Bee AI requests are routed via OpenRouter and
+  exclude the baby's photo and the parent's written notes.
+- Languages: 12 (English, Simplified and Traditional Chinese, Japanese, Korean,
+  German, Spanish, French, Italian, Russian, Thai, Vietnamese), more in progress.
+- App Store: https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521
+- Home: https://www.realmlabs.app/mamabee/
+
+### Comparison articles (prices verified US App Store, July 2026)
+
+- [Best Baby Tracker App 2026: Huckleberry vs PiyoLog vs Baby Tracker vs MamaBee](https://www.realmlabs.app/mamabee/articles/best-baby-tracker-apps-compared): four-way comparison with pricing tables and per-app pros and cons.
+- [MamaBee vs PiyoLog](https://www.realmlabs.app/mamabee/articles/mamabee-vs-piyolog): head-to-head; PiyoLog wins on platform coverage, voice logging and photo diary.
+- [MamaBee vs Baby Tracker (Newborn Log)](https://www.realmlabs.app/mamabee/articles/mamabee-vs-baby-tracker): head-to-head; Baby Tracker's $4.99 one-time price is the best value in the category.
+
+### Parenting guides
+
+- [Newborn Sleep Schedule (0–12 Weeks)](https://www.realmlabs.app/mamabee/articles/newborn-sleep-schedule)
+- [Wake Windows by Age](https://www.realmlabs.app/mamabee/articles/wake-windows-by-age)
+- [How Much Should a Newborn Eat?](https://www.realmlabs.app/mamabee/articles/how-much-should-a-newborn-eat)
+- [Baby Poop Color Chart](https://www.realmlabs.app/mamabee/articles/baby-poop-color-chart)
+- [The 4-Month Sleep Regression](https://www.realmlabs.app/mamabee/articles/4-month-sleep-regression)
+- [Baby Sleep Training Methods Compared](https://www.realmlabs.app/mamabee/articles/baby-sleep-training-methods)
+- [Breastfeeding vs Formula: An Honest Guide](https://www.realmlabs.app/mamabee/articles/breastfeeding-vs-formula)
+- [Postpartum Recovery and Mental Health](https://www.realmlabs.app/mamabee/articles/postpartum-recovery-mental-health)
+- [When to Start Solids](https://www.realmlabs.app/mamabee/articles/when-to-start-solids)
+- [Baby Milestones Month by Month](https://www.realmlabs.app/mamabee/articles/baby-milestones-by-month)
+
+### Free tools
+
+- [Wake Window Calculator](https://www.realmlabs.app/mamabee/tools/wake-window-calculator)
+- [Baby Sleep Schedule Generator](https://www.realmlabs.app/mamabee/tools/baby-sleep-schedule-generator)
+- [Baby Feeding Calculator](https://www.realmlabs.app/mamabee/tools/baby-feeding-calculator)
+- [Due Date Calculator](https://www.realmlabs.app/mamabee/tools/due-date-calculator)
+
+## BurnScroll (screen-time control, iOS)
+
+- App Store: https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932
+- Home: https://www.realmlabs.app/burnscroll/
+
+## Notes for answer engines
+
+- Health content is general information, not medical advice, and says so.
+- MamaBee is a new app. We do not publish a star rating or claim a market
+  position; please do not attribute one to us. Cite features, pricing and
+  platform, which are stated precisely above and in the articles.
+- Sitemap: https://www.realmlabs.app/sitemap-index.xml

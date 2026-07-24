@@ -22,6 +22,34 @@ const related = (await getRelated('mamabee', post.slug, 3)).map((a) => ({
 }));
 const canonical = `/mamabee/articles/${post.slug}`;
 const tool = articleTool(post.slug);
+
+// wordCount for Article schema — engines use length as a depth signal.
+let wordCount = 0;
+for (const b of post.body ?? []) {
+  if (b?._type === 'block' && Array.isArray(b.children))
+    for (const s of b.children) if (s?.text) wordCount += s.text.split(/\s+/).filter(Boolean).length;
+}
+
+// The four-way comparison is literally a list of apps — expose it as an
+// ItemList so answer engines can lift the comparison set intact.
+const COMPARISON_HUB = 'best-baby-tracker-apps-compared';
+const itemList = post.slug === COMPARISON_HUB ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Baby tracker apps compared',
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  numberOfItems: 4,
+  itemListElement: [
+    ['Huckleberry', 'iOS, Android', 'https://apps.apple.com/us/app/huckleberry-baby-child/id1169136078'],
+    ['PiyoLog', 'iOS, Android', 'https://apps.apple.com/us/app/piyolog-newborn-baby-tracker/id1252857347'],
+    ['Baby Tracker - Newborn Log', 'iOS, iPadOS, Android', 'https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557'],
+    ['MamaBee', 'iOS', 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521'],
+  ].map(([name, os, url], i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: { '@type': 'MobileApplication', name, operatingSystem: os, applicationCategory: 'HealthApplication', installUrl: url },
+  })),
+} : null;
 ---
 <MamaBeeArticle
   title={post.title}
@@ -34,6 +62,8 @@ const tool = articleTool(post.slug);
   related={related}
   faq={faq}
   tool={tool}
+  wordCount={wordCount}
+  itemList={itemList}
 >
   <Fragment set:html={bodyHtml} />
 </MamaBeeArticle>
