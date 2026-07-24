@@ -9,6 +9,15 @@ short/long-tail/brand keywords, golden "Get the app" CTA (×2), flat-illustratio
 cover (see cover-style memory), reading time, "Keep reading" related cards.
 **Primary market: USA / English.** Then Spanish, Japanese, Chinese.
 
+**Competitor comparison articles** (App ◆ pillar) additionally: verify every
+competitor price/rating on the US App Store before publishing and date-stamp it
+in the footer; concede where rivals genuinely win; use the `comparisonTable`
+block; and attribute any competitor screenshot to its vendor in the caption.
+MamaBee Premium is **$4.99/mo or $49.99/yr** — Sleep Coach, unlimited Bee AI,
+Solid Food Allergen Test, multi-baby sync, extra co-parents. The free tier has
+**no ads on any tier**. Feature names are **Sleep Coach** and **Bee AI** (never
+"SweetDream Predictor" or "MamaBee Chat" — those names do not exist in the app).
+
 ---
 
 ## 🐝 MamaBee (baby tracker) — target: new & expecting US parents
@@ -34,21 +43,22 @@ cover (see cover-style memory), reading time, "Keep reading" related cards.
 | 17 | ✅ Published (Wk3) | When to Start Solids: Signs Your Baby Is Ready (+ app screenshot) | `when-to-start-solids` | when to start solids | Feeding |
 | 18 | ✅ Published (Wk3) | Baby Teething Symptoms: Signs, Timeline, and What Soothes | `baby-teething-symptoms` | baby teething symptoms | Health |
 | 19 | ✅ Published (Wk3) | Baby Nap Transitions: When Your Baby Drops a Nap | `baby-nap-transitions` | baby nap transitions | Sleep |
+| 20 | ✅ Published (Wk4) | Best Baby Tracker App 2026: Huckleberry vs. PiyoLog vs. Baby Tracker vs. MamaBee | `best-baby-tracker-apps-compared` | best baby tracker app | App ◆ |
+| 21 | ✅ Published (Wk4) | MamaBee vs. PiyoLog: Two Calm Baby Trackers, Honestly Compared | `mamabee-vs-piyolog` | piyolog vs mamabee | App ◆ |
+| 22 | ✅ Published (Wk4) | MamaBee vs. Baby Tracker (Newborn Log): The Workhorse vs. The Thinker | `mamabee-vs-baby-tracker` | baby tracker newborn log review | App ◆ |
+| 23 | ✅ Published (Wk4) | Baby Sleep Training Methods Compared: Which One Actually Fits Your Family | `baby-sleep-training-methods` | baby sleep training methods | Sleep |
+| 24 | ✅ Published (Wk4) | Breastfeeding vs. Formula: An Honest Guide Without the Guilt | `breastfeeding-vs-formula` | breastfeeding vs formula | Feeding |
+| 25 | ✅ Published (Wk4) | Postpartum Recovery and Mental Health: What Nobody Warns You About | `postpartum-recovery-mental-health` | postpartum tips | Parent wellness |
 
 ### 💡 MamaBee backlog (not yet written — future weeks)
 Keep these distinct from the topics above.
-- **Week 4:** Baby sleep training methods compared — `baby sleep training methods` — Sleep
-- **Week 4:** Breastfeeding vs. formula: an honest guide — `breastfeeding vs formula` — Feeding
-- **Week 4:** Postpartum recovery & mental health — `postpartum tips` — Parent wellness
 - Newborn hiccups: why & what to do — `newborn hiccups` — Health
 - Baby-led weaning basics — `baby led weaning` — Feeding
 - How to dream feed — `dream feed` — Sleep
-- Starting solids: when & how (4–6 months) — `when to start solids` — Feeding
-- Newborn hiccups: why & what to do — `newborn hiccups` — Health
-- Dropping to one nap / nap transitions — `nap transitions` — Sleep
-- Baby sleep training methods compared — `baby sleep training methods` — Sleep
-- Breastfeeding vs. formula: an honest guide — `breastfeeding vs formula` — Feeding
-- Postpartum survival tips for new parents — `postpartum tips` — Parent wellness
+- Is Huckleberry worth it? — `is huckleberry worth it` — App ◆
+- Best free baby tracker apps — `free baby tracker app` — App ◆
+- Are baby tracker apps safe? (Surfshark 80% data-sharing angle) — `baby tracker privacy` — App ◆
+- Baby growth percentile / clothing size tool + article — `baby size by age` — Growth
 
 ---
 
