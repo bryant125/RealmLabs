@@ -23,8 +23,8 @@ MamaBee is a baby tracker for iPhone by Realm Labs Studio.
   co-parents, and 30/90/365-day insight windows.
 - Privacy: local-first. Logs are stored on the device and copied to Realm Labs
   servers only if Co-Parent Sharing is enabled. Data is never sold and never used
-  to train external AI models. Bee AI requests are routed via OpenRouter and
-  exclude the baby's photo and the parent's written notes.
+  to train external AI models. Bee AI requests are routed via a third-party AI
+  processing provider and exclude the baby's photo and the parent's written notes.
 - Languages: 12 (English, Simplified and Traditional Chinese, Japanese, Korean,
   German, Spanish, French, Italian, Russian, Thai, Vietnamese), more in progress.
 - App Store: https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521

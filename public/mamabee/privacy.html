@@ -118,9 +118,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2><span class="hx"></span><span data-i18n="pv.h.lives">Where your data lives</span></h2>
         <ul class="bullets">
           <li data-i18n="pv2.lives.1"><strong>On your device, by default</strong> — everything you log is stored locally in Apple's SwiftData store. Photos use external storage attached to the record so the database stays small.</li>
-          <li data-i18n="pv2.lives.2"><strong>On our server, if you turn on Co-Parent Sharing</strong> — your baby's profile and logs are copied to our Google Firebase (Firestore) database, and full-size photos to Firebase Storage, so the co-parents you invite can see them.</li>
+          <li data-i18n="pv2.lives.2"><strong>On our server, if you turn on Co-Parent Sharing</strong> — your baby's profile, logs and notes are copied to our cloud database, and full-size photos to our cloud file storage, so the co-parents you invite can see them.</li>
         </ul>
-        <p data-i18n="pv2.lives.note">To be straight with you: that Firebase database is a server <strong>we</strong> run, not your private iCloud. Those records are technically accessible to us. We don't go looking at them, but we're not going to claim we can't.</p>
+        <p data-i18n="pv2.lives.note">To be straight with you: that cloud database is a server <strong>we</strong> run, not your private iCloud. Those records are technically accessible to us. We don't go looking at them, but we're not going to claim we can't.</p>
         <ul class="bullets">
           <li data-i18n="pv2.lives.3">Leaving a shared family stops the syncing.</li>
           <li data-i18n="pv2.lives.4">Deleting your account removes the records we hold.</li>
@@ -129,7 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <section id="analytics">
         <h2><span class="hx"></span><span data-i18n="pv2.h.analytics">Analytics</span></h2>
-        <p data-i18n="pv2.an.intro">We use Google Firebase Analytics and PostHog to understand how the app is used. They receive:</p>
+        <p data-i18n="pv2.an.intro">We use privacy-focused analytics providers to understand how the app is used. They receive:</p>
         <ul class="bullets">
           <li data-i18n="pv2.an.1">Which screen you opened, and when you opened the app.</li>
           <li data-i18n="pv2.an.2">That a log was created and what type it was (feed, sleep, diaper) — never the values, notes or photos inside it.</li>
@@ -140,13 +140,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <section id="ads">
         <h2><span class="hx"></span><span data-i18n="pv2.h.ads">Advertising measurement</span></h2>
-        <p data-i18n="pv2.ads.body">We use Meta's and TikTok's measurement tools to see whether our ads actually bring people to MamaBee. Apple's App Tracking Transparency prompt decides whether they may use your device's advertising identifier — if you choose "Ask App Not to Track", that's fully respected.</p>
+        <p data-i18n="pv2.ads.body">We use advertising-measurement partners' tools to see whether our ads actually bring people to MamaBee. Apple's App Tracking Transparency prompt decides whether they may use your device's advertising identifier — if you choose "Ask App Not to Track", that's fully respected.</p>
         <p data-i18n="pv2.ads.note">No ads are ever shown inside MamaBee.</p>
       </section>
 
       <section id="ai">
         <h2><span class="hx"></span><span data-i18n="pv2.h.ai">Bee AI</span></h2>
-        <p data-i18n="pv2.ai.intro">When you tap a question in Bee AI, we send to OpenRouter — which routes it to a large-language-model provider:</p>
+        <p data-i18n="pv2.ai.intro">When you tap a question in Bee AI, we send to our AI processing provider — which routes it to a large-language-model provider:</p>
         <ul class="bullets">
           <li data-i18n="pv2.ai.1">Your question.</li>
           <li data-i18n="pv2.ai.2">A summary of your baby's logged history.</li>
@@ -157,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <section id="purchases">
         <h2><span class="hx"></span><span data-i18n="pv2.h.purchases">Purchases</span></h2>
-        <p data-i18n="pv2.purch.body">Subscriptions are handled by Apple and by RevenueCat. We never see your card details — we only receive whether your subscription is active.</p>
+        <p data-i18n="pv2.purch.body">Subscriptions are handled by Apple and by our subscription provider. We never see your card details — we only receive whether your subscription is active.</p>
       </section>
 
       <section id="dont">
@@ -239,7 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.6-1.5A4 4 0 0 0 6 19h11.5Z"/></svg></span><span data-i18n="pv2.perm.share.t">Co-Parent Sharing</span></h3>
             <dl>
               <dt data-i18n="pv.perm.lbl.why">Why</dt>
-              <dd data-i18n="pv2.perm.share.why">Letting the co-parents you invite see the same logs. Turning it on copies your baby's profile and logs to our Firebase database so their device can read them.</dd>
+              <dd data-i18n="pv2.perm.share.why">Letting the co-parents you invite see the same logs. Turning it on copies your baby's profile and logs to our cloud database so their device can read them.</dd>
               <dt data-i18n="pv2.perm.lbl.off">If off</dt>
               <dd data-i18n="pv2.perm.share.denied">MamaBee runs entirely on this device and nothing is copied to our server.</dd>
               <dt data-i18n="pv.perm.lbl.change">Where to change</dt>
