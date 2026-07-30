@@ -23,6 +23,11 @@ dist
 .env
 .env.local
 
+# Internal docs — this repo is public. These name our actual service providers,
+# which are deliberately not disclosed in the published privacy policy.
+MAMABEE-PRIVACY-POLICY.md
+MAMABEE-APP-UPDATE-BRIEF.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
