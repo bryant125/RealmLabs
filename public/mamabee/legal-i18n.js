@@ -859,17 +859,17 @@
     '<strong>Trạng thái đăng ký</strong> — bạn có gói đăng ký đang hoạt động hay không.'
   ]);
   L('pv2.collect.note', [
-    '我们<strong>不会</strong>收集你的位置、通讯录，或你所写备注的内容。',
-    '我們<strong>不會</strong>收集你的位置、通訊錄，或你所寫備註的內容。',
-    '当社はあなたの位置情報、連絡先、そして書かれたメモの内容を<strong>収集しません</strong>。',
-    '저희는 위치, 연락처, 작성한 메모의 내용을 <strong>수집하지 않습니다</strong>.',
-    'Wir erfassen <strong>NICHT</strong> Ihren Standort, Ihre Kontakte oder den Inhalt der Notizen, die Sie schreiben.',
-    '<strong>NO</strong> recopilamos tu ubicación, tus contactos ni el contenido de las notas que escribes.',
-    'Nous ne collectons <strong>PAS</strong> votre position, vos contacts, ni le contenu des notes que vous écrivez.',
-    '<strong>NON</strong> raccogliamo la tua posizione, i tuoi contatti né il contenuto delle note che scrivi.',
-    'Мы <strong>НЕ</strong> собираем ваше местоположение, контакты и содержимое написанных вами заметок.',
-    'เรา<strong>ไม่</strong>เก็บตำแหน่งที่ตั้ง รายชื่อผู้ติดต่อ หรือเนื้อหาของโน้ตที่คุณเขียน',
-    'Chúng tôi <strong>KHÔNG</strong> thu thập vị trí, danh bạ, hay nội dung các ghi chú bạn viết.'
+    '我们<strong>不会</strong>收集你的位置或通讯录。你写下的备注会保存在你的设备上，除非你开启共同养育者共享——那样它们会连同你的其余记录一起同步到我们的云端。',
+    '我們<strong>不會</strong>收集你的位置或通訊錄。你寫下的備註會保存在你的裝置上，除非你開啟共同養育者共享——那樣它們會連同你的其餘記錄一起同步到我們的雲端。',
+    '当社があなたの位置情報や連絡先を<strong>収集することはありません</strong>。あなたが書いたメモは、共同養育者共有をオンにしない限りあなたの端末に留まります。オンにすると、他の記録とともに当社のクラウドへ同期されます。',
+    '저희는 당신의 위치나 연락처를 <strong>수집하지 않습니다</strong>. 당신이 작성한 메모는 공동양육자 공유를 켜지 않는 한 기기에 남아 있습니다. 켜면 나머지 기록과 함께 저희 클라우드로 동기화됩니다.',
+    'Wir erfassen <strong>NICHT</strong> Ihren Standort oder Ihre Kontakte. Notizen, die Sie schreiben, bleiben auf Ihrem Gerät, es sei denn, Sie aktivieren die Co-Eltern-Freigabe — dann werden sie zusammen mit Ihren übrigen Protokollen in unsere Cloud synchronisiert.',
+    '<strong>NO</strong> recopilamos tu ubicación ni tus contactos. Las notas que escribes permanecen en tu dispositivo, salvo que actives el Uso compartido con el co-progenitor, que las sincroniza a nuestra nube junto con el resto de tus registros.',
+    'Nous ne collectons <strong>PAS</strong> votre position ni vos contacts. Les notes que vous écrivez restent sur votre appareil, sauf si vous activez le partage co-parent, qui les synchronise vers notre cloud avec le reste de vos journaux.',
+    '<strong>NON</strong> raccogliamo la tua posizione né i tuoi contatti. Le note che scrivi restano sul tuo dispositivo, a meno che tu non attivi la condivisione con il co-genitore, che le sincronizza sul nostro cloud insieme al resto dei tuoi registri.',
+    'Мы <strong>НЕ</strong> собираем ваше местоположение или ваши контакты. Написанные вами заметки остаются на вашем устройстве, пока вы не включите совместный доступ для второго родителя — тогда они синхронизируются в наше облако вместе с остальными вашими записями.',
+    'เรา<strong>ไม่</strong>เก็บตำแหน่งที่ตั้งหรือรายชื่อผู้ติดต่อของคุณ โน้ตที่คุณเขียนจะอยู่บนอุปกรณ์ของคุณ เว้นแต่คุณจะเปิดการแชร์กับผู้ปกครองร่วม ซึ่งจะซิงค์โน้ตเหล่านั้นไปยังคลาวด์ของเราพร้อมกับบันทึกอื่น ๆ ของคุณ',
+    'Chúng tôi <strong>KHÔNG</strong> thu thập vị trí hay danh bạ của bạn. Các ghi chú bạn viết vẫn nằm trên thiết bị của bạn, trừ khi bạn bật Chia sẻ đồng phụ huynh, khi đó chúng được đồng bộ lên đám mây của chúng tôi cùng với các nhật ký còn lại của bạn.'
   ]);
   L('pv2.lives.1', [
     '<strong>默认存放在你的设备上</strong> — 你记录的一切都本地保存在 Apple 的 SwiftData 存储中。照片使用附加到记录的外部存储，让数据库保持轻量。',
@@ -1080,17 +1080,30 @@
     'Tên, tuổi, ngày sinh và giới tính của bé.'
   ]);
   L('pv2.ai.note', [
-    '我们<strong>不会</strong>发送宝宝的照片，也不会发送你写下的任何自由文本备注。',
-    '我們<strong>不會</strong>傳送寶寶的照片，也不會傳送你寫下的任何自由文字備註。',
-    '当社は赤ちゃんの写真や、あなたが書いた自由記述のメモを<strong>送信しません</strong>。',
-    '저희는 아기의 사진이나 당신이 작성한 자유 서술 메모를 <strong>보내지 않습니다</strong>.',
-    'Wir senden <strong>NICHT</strong> das Foto Ihres Babys oder Freitext-Notizen, die Sie geschrieben haben.',
-    '<strong>NO</strong> enviamos la foto de tu bebé ni ninguna nota de texto libre que hayas escrito.',
-    'Nous n\'envoyons <strong>PAS</strong> la photo de votre bébé ni les notes en texte libre que vous avez écrites.',
-    '<strong>NON</strong> inviamo la foto del tuo bambino né le note in testo libero che hai scritto.',
-    'Мы <strong>НЕ</strong> отправляем фотографию малыша и написанные вами свободные заметки.',
-    'เรา<strong>ไม่</strong>ส่งรูปของลูกคุณ หรือโน้ตข้อความอิสระใด ๆ ที่คุณเขียน',
-    'Chúng tôi <strong>KHÔNG</strong> gửi ảnh của bé hay bất kỳ ghi chú văn bản tự do nào bạn đã viết.'
+    '我们发送的唯一自由文本，是你为一次辅食记录的食物，好让助手知道你的宝宝吃了什么。我们<strong>不会</strong>发送宝宝的照片，也不会发送任何其他记录中的备注。',
+    '我們傳送的唯一自由文字，是你為一次副食品記錄的食物，好讓助手知道你的寶寶吃了什麼。我們<strong>不會</strong>傳送寶寶的照片，也不會傳送任何其他記錄中的備註。',
+    '当社が送信する唯一の自由記述は、離乳食の記録として入力した食べ物だけで、これはアシスタントが赤ちゃんの食べたものを把握するためです。当社は赤ちゃんの写真や、他の記録のメモを<strong>送信しません</strong>。',
+    '저희가 보내는 유일한 자유 텍스트는 이유식 기록으로 입력한 음식뿐이며, 이는 어시스턴트가 아기가 무엇을 먹었는지 알 수 있도록 하기 위함입니다. 저희는 아기의 사진이나 다른 기록의 메모를 <strong>보내지 않습니다</strong>.',
+    'Der einzige Freitext, den wir senden, ist das Essen, das Sie für eine Beikost-Mahlzeit erfassen, damit der Assistent weiß, was Ihr Baby gegessen hat. Wir senden <strong>NICHT</strong> das Foto Ihres Babys oder die Notizen aus einem anderen Protokoll.',
+    'El único texto libre que enviamos es la comida que registras para una comida de sólidos, para que el asistente sepa qué comió tu bebé. <strong>NO</strong> enviamos la foto de tu bebé ni las notas de ningún otro registro.',
+    'Le seul texte libre que nous envoyons est l\'aliment que vous notez pour un repas solide, afin que l\'assistant sache ce que votre bébé a mangé. Nous n\'envoyons <strong>PAS</strong> la photo de votre bébé ni les notes d\'un autre journal.',
+    'L\'unico testo libero che inviamo è il cibo che registri per un pasto di svezzamento, così l\'assistente sa cosa ha mangiato il tuo bambino. <strong>NON</strong> inviamo la foto del tuo bambino né le note di qualsiasi altro registro.',
+    'Единственный свободный текст, который мы отправляем, — это еда, которую вы записываете для приёма прикорма, чтобы ассистент знал, что ел ваш малыш. Мы <strong>НЕ</strong> отправляем фотографию малыша или заметки из любой другой записи.',
+    'ข้อความอิสระเพียงอย่างเดียวที่เราส่งคืออาหารที่คุณบันทึกสำหรับมื้ออาหารแข็ง เพื่อให้ผู้ช่วยรู้ว่าลูกของคุณกินอะไร เรา<strong>ไม่</strong>ส่งรูปของลูกคุณหรือโน้ตจากบันทึกอื่นใด',
+    'Văn bản tự do duy nhất chúng tôi gửi là thức ăn bạn ghi cho một bữa ăn dặm, để trợ lý biết bé đã ăn gì. Chúng tôi <strong>KHÔNG</strong> gửi ảnh của bé hay ghi chú từ bất kỳ nhật ký nào khác.'
+  ]);
+  L('pv2.ai.voice', [
+    '语音记录的原理相同：你的语音由 Apple 的语音识别转写（在支持的设备上于本机处理，否则由 Apple 处理——音频绝不会被存储或发送给我们），随后文本会被完全当作你输入的问题来处理。',
+    '語音記錄的原理相同：你的語音由 Apple 的語音辨識轉寫（在支援的裝置上於本機處理，否則由 Apple 處理——音訊絕不會被儲存或傳送給我們），隨後文字會被完全當作你輸入的問題來處理。',
+    '音声での記録も同じ仕組みです。あなたの音声は Apple の音声認識で文字起こしされ（対応する端末では端末内で、そうでなければ Apple が処理します——音声が保存されたり当社に送られたりすることは決してありません）、その後テキストは入力した質問とまったく同じように扱われます。',
+    '음성 기록도 같은 방식으로 작동합니다. 당신의 음성은 Apple의 음성 인식으로 전사되며(지원되는 기기에서는 기기 내에서, 그렇지 않으면 Apple이 처리합니다 — 오디오는 결코 저장되거나 저희에게 전송되지 않습니다), 그런 다음 텍스트는 직접 입력한 질문과 똑같이 처리됩니다.',
+    'Die Sprachaufzeichnung funktioniert genauso: Ihre Sprache wird von Apples Spracherkennung transkribiert (auf Ihrem Gerät, wo unterstützt, andernfalls von Apple verarbeitet — die Audiodaten werden nie gespeichert oder an uns gesendet), dann wird der Text genau wie eine getippte Frage behandelt.',
+    'El registro por voz funciona igual: tu voz se transcribe mediante el reconocimiento de voz de Apple (en tu dispositivo cuando es compatible; de lo contrario, lo procesa Apple — el audio nunca se almacena ni se nos envía) y luego el texto se trata exactamente como una pregunta escrita.',
+    'La saisie vocale fonctionne de la même façon : votre voix est transcrite par la reconnaissance vocale d\'Apple (sur votre appareil lorsque c\'est pris en charge, sinon traitée par Apple — l\'audio n\'est jamais stocké ni envoyé chez nous), puis le texte est traité exactement comme une question saisie.',
+    'La registrazione vocale funziona allo stesso modo: la tua voce viene trascritta dal riconoscimento vocale di Apple (sul tuo dispositivo dove supportato, altrimenti elaborata da Apple — l\'audio non viene mai memorizzato né inviato a noi), poi il testo viene trattato esattamente come una domanda digitata.',
+    'Голосовой ввод работает так же: ваша речь расшифровывается распознаванием речи Apple (на вашем устройстве, где это поддерживается, иначе её обрабатывает Apple — аудио никогда не сохраняется и не отправляется нам), после чего текст обрабатывается точно так же, как набранный вопрос.',
+    'การบันทึกด้วยเสียงทำงานแบบเดียวกัน: เสียงพูดของคุณจะถูกถอดความด้วยการรู้จำเสียงพูดของ Apple (บนอุปกรณ์ของคุณเมื่อรองรับ มิฉะนั้น Apple จะเป็นผู้ประมวลผล — เสียงจะไม่ถูกจัดเก็บหรือส่งถึงเราเลย) จากนั้นข้อความจะถูกจัดการเหมือนคำถามที่พิมพ์ทุกประการ',
+    'Ghi bằng giọng nói hoạt động theo cách tương tự: giọng nói của bạn được chuyển thành văn bản bởi nhận dạng giọng nói của Apple (trên thiết bị của bạn khi được hỗ trợ, nếu không thì do Apple xử lý — âm thanh không bao giờ được lưu trữ hay gửi cho chúng tôi), rồi văn bản được xử lý y hệt như một câu hỏi bạn gõ vào.'
   ]);
   L('pv2.purch.body', [
     '订阅由 Apple 和我们的订阅服务提供商处理。我们绝不会看到你的银行卡信息——我们只会收到你的订阅是否有效。',
