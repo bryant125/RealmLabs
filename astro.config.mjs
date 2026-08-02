@@ -14,7 +14,11 @@ const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 export default defineConfig({
   site: 'https://www.realmlabs.app',
   outDir: './dist',
-  trailingSlash: 'ignore',
+  // MUST stay 'never' to match vercel.json's "trailingSlash": false. With
+  // 'ignore', @astrojs/sitemap falls back to build.format ('directory') and
+  // emits every URL with a trailing slash — Vercel then 308-redirects each
+  // one, and Google files the whole sitemap under "Page with redirect".
+  trailingSlash: 'never',
   integrations: [
     sanity({
       projectId,
@@ -30,10 +34,10 @@ export default defineConfig({
       // important ones here so Google indexes the whole site, not just articles.
       customPages: [
         'https://www.realmlabs.app/',
-        'https://www.realmlabs.app/mamabee/',
+        'https://www.realmlabs.app/mamabee',
         'https://www.realmlabs.app/mamabee/support',
         'https://www.realmlabs.app/mamabee/contact',
-        'https://www.realmlabs.app/burnscroll/',
+        'https://www.realmlabs.app/burnscroll',
         'https://www.realmlabs.app/burnscroll/features',
         'https://www.realmlabs.app/burnscroll/use-cases',
         'https://www.realmlabs.app/burnscroll/contact',
