@@ -49,16 +49,26 @@ Solid Food Allergen Test, multi-baby sync, extra co-parents. The free tier has
 | 23 | ✅ Published (Wk4) | Baby Sleep Training Methods Compared: Which One Actually Fits Your Family | `baby-sleep-training-methods` | baby sleep training methods | Sleep |
 | 24 | ✅ Published (Wk4) | Breastfeeding vs. Formula: An Honest Guide Without the Guilt | `breastfeeding-vs-formula` | breastfeeding vs formula | Feeding |
 | 25 | ✅ Published (Wk4) | Postpartum Recovery and Mental Health: What Nobody Warns You About | `postpartum-recovery-mental-health` | postpartum tips | Parent wellness |
+| 26 | 📝 Draft (Wk5) | Safe Sleep for Babies: The Guidelines, Explained Without the Fear | `safe-sleep-guidelines` | safe sleep guidelines | Sleep |
+| 27 | 📝 Draft (Wk5) | How to Introduce Allergens to Your Baby (Without the Guesswork) | `introducing-allergens-to-baby` | introducing allergens to baby | Feeding/Health |
+| 28 | 📝 Draft (Wk5) | Baby-Led Weaning: How to Start, What Is Safe, and What to Skip | `baby-led-weaning` | baby led weaning | Feeding |
+| 29 | 📝 Draft (Wk5) | The Dream Feed: How to Do It, When It Works, and When to Drop It | `dream-feed` | dream feed | Sleep |
+| 30 | 📝 Draft (Wk5) | Newborn Hiccups: Why They Happen and What Actually Helps | `newborn-hiccups` | newborn hiccups | Health |
+
+Week-5 drafts live in Sanity via `scripts/week5-articles.mjs`. They still need
+**cover images** before `scripts/publish-week5.mjs` will promote them — the
+publish script refuses any draft without one. Note #27 leans on the **Solid
+Food Allergen Test** premium feature, so keep that name exact.
 
 ### 💡 MamaBee backlog (not yet written — future weeks)
 Keep these distinct from the topics above.
-- Newborn hiccups: why & what to do — `newborn hiccups` — Health
-- Baby-led weaning basics — `baby led weaning` — Feeding
-- How to dream feed — `dream feed` — Sleep
 - Is Huckleberry worth it? — `is huckleberry worth it` — App ◆
 - Best free baby tracker apps — `free baby tracker app` — App ◆
 - Are baby tracker apps safe? (Surfshark 80% data-sharing angle) — `baby tracker privacy` — App ◆
 - Baby growth percentile / clothing size tool + article — `baby size by age` — Growth
+- Bottle refusal: when a breastfed baby won't take a bottle — `baby refuses bottle` — Feeding
+- Baby eczema and cradle cap — `baby eczema` — Health
+- Starting daycare: the transition — `baby starting daycare` — Parent wellness
 
 ---
 
