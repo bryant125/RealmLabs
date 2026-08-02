@@ -22,8 +22,8 @@
     '    </div>',
     '    <nav class="footer-links" aria-label="Footer">',
     '      <div class="footer-col"><h4>Product</h4><a href="index.html#how">How it works</a><a href="index.html#features">Features</a><a href="index.html#ai">AI</a><a href="/mamabee/tools">Free tools</a><a href="/mamabee/articles">Articles</a><a href="index.html#download">Download</a></div>',
-    '      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="contact.html">Contact</a></div>',
-    '      <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>',
+    '      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="/mamabee/contact">Contact</a></div>',
+    '      <div class="footer-col"><h4>Legal</h4><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="/mamabee/support">Support</a></div>',
     '      <div class="footer-col"><h4>Language</h4>',
     '        <select class="lang-select" id="lang-select" aria-label="Choose language">',
     '          <option value="en">English</option><option value="zh-Hans">\u7b80\u4f53\u4e2d\u6587</option><option value="zh-Hant">\u7e41\u9ad4\u4e2d\u6587</option><option value="ja">\u65e5\u672c\u8a9e</option><option value="ko">\ud55c\uad6d\uc5b4</option><option value="de">Deutsch</option><option value="es">Espa\u00f1ol</option><option value="fr">Fran\u00e7ais</option><option value="it">Italiano</option><option value="ru">\u0420\u0443\u0441\u0441\u043a\u0438\u0439</option><option value="th">\u0e44\u0e17\u0e22</option><option value="vi">Ti\u1ebfng Vi\u1ec7t</option>',
@@ -33,7 +33,7 @@
     '  </div>',
     '  <div class="wrap footer-bottom">',
     '    <span>\u00a9 2026 Realm Labs Studio \u00b7 Made with \uD83C\uDF6F for tired parents everywhere</span>',
-    '    <span class="fb-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:support@realmlabs.app">Support</a></span>',
+    '    <span class="fb-links"><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="mailto:support@realmlabs.app">Support</a></span>',
     '  </div>',
     '</footer>'
   ].join('\n');

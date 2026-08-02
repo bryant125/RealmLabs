@@ -29,17 +29,17 @@
      PRIVACY
      ==================================================== */
   L('pv.crumb', [
-    '<a href="index.html" style="color:inherit">主页</a> · 法律 · 隐私',
-    '<a href="index.html" style="color:inherit">首頁</a> · 法律 · 隱私',
-    '<a href="index.html" style="color:inherit">ホーム</a> · 法的事項 · プライバシー',
-    '<a href="index.html" style="color:inherit">홈</a> · 법적 고지 · 개인정보',
-    '<a href="index.html" style="color:inherit">Start</a> · Rechtliches · Datenschutz',
-    '<a href="index.html" style="color:inherit">Inicio</a> · Legal · Privacidad',
-    '<a href="index.html" style="color:inherit">Accueil</a> · Mentions légales · Confidentialité',
-    '<a href="index.html" style="color:inherit">Home</a> · Note legali · Privacy',
-    '<a href="index.html" style="color:inherit">Главная</a> · Правовое · Конфиденциальность',
-    '<a href="index.html" style="color:inherit">หน้าแรก</a> · กฎหมาย · ความเป็นส่วนตัว',
-    '<a href="index.html" style="color:inherit">Trang chủ</a> · Pháp lý · Quyền riêng tư'
+    '<a href="/mamabee" style="color:inherit">主页</a> · 法律 · 隐私',
+    '<a href="/mamabee" style="color:inherit">首頁</a> · 法律 · 隱私',
+    '<a href="/mamabee" style="color:inherit">ホーム</a> · 法的事項 · プライバシー',
+    '<a href="/mamabee" style="color:inherit">홈</a> · 법적 고지 · 개인정보',
+    '<a href="/mamabee" style="color:inherit">Start</a> · Rechtliches · Datenschutz',
+    '<a href="/mamabee" style="color:inherit">Inicio</a> · Legal · Privacidad',
+    '<a href="/mamabee" style="color:inherit">Accueil</a> · Mentions légales · Confidentialité',
+    '<a href="/mamabee" style="color:inherit">Home</a> · Note legali · Privacy',
+    '<a href="/mamabee" style="color:inherit">Главная</a> · Правовое · Конфиденциальность',
+    '<a href="/mamabee" style="color:inherit">หน้าแรก</a> · กฎหมาย · ความเป็นส่วนตัว',
+    '<a href="/mamabee" style="color:inherit">Trang chủ</a> · Pháp lý · Quyền riêng tư'
   ]);
   L('pv.title', ['隐私政策','隱私政策','プライバシーポリシー','개인정보 처리방침','Datenschutzerklärung','Política de privacidad','Politique de confidentialité','Informativa sulla privacy','Политика конфиденциальности','นโยบายความเป็นส่วนตัว','Chính sách quyền riêng tư']);
   L('pv.updated', ['最后更新：2026 年 7 月','最後更新：2026 年 7 月','最終更新：2026 年 7 月','최종 업데이트: 2026년 7월','Zuletzt aktualisiert: Juli 2026','Última actualización: julio de 2026','Dernière mise à jour : juillet 2026','Ultimo aggiornamento: luglio 2026','Последнее обновление: июль 2026','อัปเดตล่าสุด: กรกฎาคม 2026','Cập nhật lần cuối: Tháng 7 năm 2026']);
@@ -273,17 +273,17 @@
      TERMS
      ==================================================== */
   L('tm.crumb', [
-    '<a href="index.html" style="color:inherit">主页</a> · 法律 · 条款',
-    '<a href="index.html" style="color:inherit">首頁</a> · 法律 · 條款',
-    '<a href="index.html" style="color:inherit">ホーム</a> · 法的事項 · 利用規約',
-    '<a href="index.html" style="color:inherit">홈</a> · 법적 고지 · 약관',
-    '<a href="index.html" style="color:inherit">Start</a> · Rechtliches · Bedingungen',
-    '<a href="index.html" style="color:inherit">Inicio</a> · Legal · Términos',
-    '<a href="index.html" style="color:inherit">Accueil</a> · Mentions légales · Conditions',
-    '<a href="index.html" style="color:inherit">Home</a> · Note legali · Termini',
-    '<a href="index.html" style="color:inherit">Главная</a> · Правовое · Условия',
-    '<a href="index.html" style="color:inherit">หน้าแรก</a> · กฎหมาย · ข้อกำหนด',
-    '<a href="index.html" style="color:inherit">Trang chủ</a> · Pháp lý · Điều khoản'
+    '<a href="/mamabee" style="color:inherit">主页</a> · 法律 · 条款',
+    '<a href="/mamabee" style="color:inherit">首頁</a> · 法律 · 條款',
+    '<a href="/mamabee" style="color:inherit">ホーム</a> · 法的事項 · 利用規約',
+    '<a href="/mamabee" style="color:inherit">홈</a> · 법적 고지 · 약관',
+    '<a href="/mamabee" style="color:inherit">Start</a> · Rechtliches · Bedingungen',
+    '<a href="/mamabee" style="color:inherit">Inicio</a> · Legal · Términos',
+    '<a href="/mamabee" style="color:inherit">Accueil</a> · Mentions légales · Conditions',
+    '<a href="/mamabee" style="color:inherit">Home</a> · Note legali · Termini',
+    '<a href="/mamabee" style="color:inherit">Главная</a> · Правовое · Условия',
+    '<a href="/mamabee" style="color:inherit">หน้าแรก</a> · กฎหมาย · ข้อกำหนด',
+    '<a href="/mamabee" style="color:inherit">Trang chủ</a> · Pháp lý · Điều khoản'
   ]);
   L('tm.title', ['服务条款','服務條款','利用規約','이용약관','Nutzungsbedingungen','Términos de servicio','Conditions de service','Termini di servizio','Условия использования','ข้อกำหนดการให้บริการ','Điều khoản dịch vụ']);
   L('tm.updated', ['最后更新：2026 年 6 月','最後更新：2026 年 6 月','最終更新：2026 年 6 月','최종 업데이트: 2026년 6월','Zuletzt aktualisiert: Juni 2026','Última actualización: junio de 2026','Dernière mise à jour : juin 2026','Ultimo aggiornamento: giugno 2026','Последнее обновление: июнь 2026','อัปเดตล่าสุด: มิถุนายน 2026','Cập nhật lần cuối: Tháng 6 năm 2026']);
