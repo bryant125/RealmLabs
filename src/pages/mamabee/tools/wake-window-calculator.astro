@@ -1,5 +1,6 @@
 ---
 import MamaBeeMobileNav from '../../../components/MamaBeeMobileNav.astro';
+import MamaBeeFooter from '../../../components/MamaBeeFooter.astro';
 const title = 'Baby Wake Window Calculator — Free Nap Timing Tool | MamaBee';
 const description = 'Free baby wake window calculator: enter your baby’s age and last wake-up time to get the ideal next nap window instantly. Stop guessing nap times and beat the overtired meltdown.';
 const canonical = 'https://www.realmlabs.app/mamabee/tools/wake-window-calculator';
@@ -197,9 +198,8 @@ const appSchema = { '@context': 'https://schema.org', '@type': 'WebApplication',
     </div>
   </section>
 
-  <footer>Free tool · <a href="/mamabee">MamaBee</a> — the calm, AI-powered baby tracker · <a href="/">Realm Labs Studio</a><br />
-    <span style="font-size:13px">Not medical advice — a helpful guide, always follow your baby’s cues and your pediatrician.</span>
-  </footer>
+  <p style="text-align:center;color:#8A7A68;font-size:13px;padding:22px 22px 0;max-width:640px;margin:0 auto">Not medical advice — a helpful guide, always follow your baby’s cues and your pediatrician.</p>
+  <MamaBeeFooter />
 
   <script is:inline>
     (function () {

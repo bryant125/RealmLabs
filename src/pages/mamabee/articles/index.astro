@@ -1,5 +1,6 @@
 ---
 import { getArticlesByBrand, urlForImage } from '../../../sanity/lib';
+import MamaBeeFooter from '../../../components/MamaBeeFooter.astro';
 import GtmHead from '../../../components/GtmHead.astro';
 import GtmBody from '../../../components/GtmBody.astro';
 import MamaBeeAppBanner from '../../../components/MamaBeeAppBanner.astro';
@@ -127,6 +128,6 @@ const description = 'Gentle, practical articles on newborn sleep, feeding, and c
     )}
   </section>
 
-  <footer>© MamaBee · Made with honey by parents · <a href="/">Realm Labs Studio</a></footer>
+  <MamaBeeFooter />
 </body>
 </html>

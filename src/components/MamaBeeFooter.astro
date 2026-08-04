@@ -1,0 +1,70 @@
+---
+// Shared MamaBee footer — one source of truth across articles, tools and the demo.
+// Rich internal linking (tools, articles, try, legal) improves crawl depth + SEO.
+const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
+const year = 2026;
+---
+<footer class="mb-footer">
+  <div class="mb-foot-inner">
+    <div class="mb-foot-brand">
+      <a class="mb-foot-logo" href="/mamabee"><img src="/mamabee/assets/bee.png" alt="" width="40" height="40" />MamaBee</a>
+      <p class="mb-foot-tag">Track every little moment, gently. The honey-warm baby tracker — made with 🍯 by Realm Labs Studio.</p>
+      <a class="mb-foot-app" href={appUrl} target="_blank" rel="noopener">Download on the App&nbsp;Store</a>
+    </div>
+    <div class="mb-foot-cols">
+      <div class="mb-foot-col">
+        <h4>Explore</h4>
+        <a href="/mamabee/articles">Articles</a>
+        <a href="/mamabee/tools">Free tools</a>
+        <a href="/mamabee/try">Try it free</a>
+        <a href="/mamabee/#features">Features</a>
+      </div>
+      <div class="mb-foot-col">
+        <h4>Popular guides</h4>
+        <a href="/mamabee/articles/newborn-sleep-schedule">Newborn sleep</a>
+        <a href="/mamabee/articles/wake-windows-by-age">Wake windows</a>
+        <a href="/mamabee/articles/when-to-start-solids">Starting solids</a>
+        <a href="/mamabee/articles/best-baby-tracker-apps-compared">Best tracker apps</a>
+      </div>
+      <div class="mb-foot-col">
+        <h4>Company</h4>
+        <a href="/">Realm Labs Studio</a>
+        <a href="/mamabee/contact">Contact</a>
+        <a href="/mamabee/support">Support</a>
+      </div>
+      <div class="mb-foot-col">
+        <h4>Legal</h4>
+        <a href="/mamabee/privacy">Privacy</a>
+        <a href="/mamabee/terms">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="mb-foot-bottom">
+    <span>© {year} Realm Labs Studio · Made with 🍯 for tired parents everywhere</span>
+    <span class="mb-foot-blinks"><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="/mamabee/support">Support</a></span>
+  </div>
+</footer>
+
+<style>
+  .mb-footer{background:#643018;color:#f0dcc1;padding:56px 22px 26px;margin-top:56px;border-radius:40px 40px 0 0;font-family:"Nunito",system-ui,sans-serif}
+  .mb-foot-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.2fr 2fr;gap:44px}
+  .mb-foot-logo{display:inline-flex;align-items:center;gap:11px;color:#fff;font-size:1.5rem;font-weight:900;text-decoration:none;letter-spacing:-.02em}
+  .mb-foot-logo img{width:40px;height:40px}
+  .mb-foot-tag{margin:16px 0 20px;color:#e3c79f;font-size:.98rem;font-weight:600;line-height:1.55;max-width:320px}
+  .mb-foot-app{display:inline-block;background:#000;color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:12px;text-decoration:none}
+  .mb-foot-app:hover{opacity:.85}
+  .mb-foot-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .mb-foot-col h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#caa980;margin-bottom:12px;font-weight:800}
+  .mb-foot-col a{display:block;color:#e7d2b4;padding:6px 0;font-size:.96rem;font-weight:700;text-decoration:none;transition:color .16s,transform .16s}
+  .mb-foot-col a:hover{color:#fff;transform:translateX(3px)}
+  .mb-foot-bottom{max-width:1000px;margin:40px auto 0;padding-top:22px;border-top:2px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#c9a87f;font-size:.9rem;font-weight:600}
+  .mb-foot-blinks{display:flex;gap:20px}
+  .mb-foot-blinks a{color:#c9a87f;text-decoration:none}
+  .mb-foot-blinks a:hover{color:#fff}
+  @media(max-width:720px){
+    .mb-foot-inner{grid-template-columns:1fr;gap:30px}
+    .mb-foot-cols{grid-template-columns:repeat(2,1fr);gap:22px}
+    .mb-footer{border-radius:28px 28px 0 0;padding:44px 18px 24px}
+    .mb-foot-bottom{flex-direction:column;gap:10px}
+  }
+</style>
