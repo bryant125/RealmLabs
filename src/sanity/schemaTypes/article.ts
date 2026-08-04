@@ -58,7 +58,7 @@ export const article = defineType({
       name: 'author',
       title: 'Author',
       type: 'string',
-      initialValue: 'Realm Labs',
+      initialValue: 'Realm Labs Studio',
     }),
     defineField({
       name: 'tags',
