@@ -14,69 +14,63 @@ const A=(slug,title,description,tags,tables,body)=>({slug,title,description,tags
 
 const articles = [
 
-  A('huckleberry-pricing-explained',
-    'Huckleberry Pricing and Plans Explained (2026): What Each Tier Includes',
-    'A clear, neutral guide to the Huckleberry plans and pricing — what the free, Plus and Premium tiers each include, how to choose the right one, and other baby-tracker options to consider.',
-    ['huckleberry pricing', 'huckleberry plans', 'huckleberry cost', 'huckleberry features', 'huckleberry tiers'],
-    {
-      tiers: {
-        caption: 'Huckleberry tiers, verified on the US App Store, August 2026. Prices may change — check the App Store for current pricing.',
-        headers: ['', 'Free', 'Plus', 'Premium'],
-        rows: [
-          ['Per year', '$0', '$58.99', '$119.99'],
-          ['Per month', '$0', '$11.99', '$14.99'],
-          ['Logging', 'Yes', 'Yes', 'Yes'],
-          ['SweetSpot nap prediction', 'No', 'Yes', 'Yes'],
-          ['Berry AI chat', 'No', 'No', 'Yes'],
-          ['Expert sleep plans', 'No', 'No', 'Yes'],
-        ],
-      },
-    },
-`Huckleberry is one of the best-known baby sleep and tracking apps, and it's easy to see why — it's polished, well-reviewed, and its nap-prediction feature is genuinely well-regarded. If you're considering it, the main question most parents have is simply which plan to choose. This is a clear, neutral guide to Huckleberry's tiers and what each one includes, so you can pick the right fit for your family.
-## Huckleberry's plans at a glance
-Huckleberry offers three tiers. Here's how they compare, based on the current US App Store listing.
-[[TABLE:tiers]]
-The key thing to understand is which features live in which tier — the free version handles logging, while the signature features sit in the paid plans.
-## What each tier includes
-**Free** covers the essentials: logging your baby's sleep, feeds and diapers, and viewing the day. If you mainly want a reliable place to record and remember, the free tier does that job.
-**Plus ($58.99/year)** adds **SweetSpot**, Huckleberry's nap-prediction feature. After about two weeks of sleep data, it suggests the window when your baby is most likely to settle easily, based on their own accumulated rhythm rather than a generic age chart. Parents who struggle with nap timing tend to find this the standout feature.
-**Premium ($119.99/year)** adds **Berry AI**, a 24/7 chat assistant, and **expert-built sleep plans** written by certified sleep consultants. For families dealing with a serious sleep challenge, having consultant-designed guidance inside the app is the main draw at this tier.
-## How to choose the right Huckleberry plan
-A simple way to decide:
-- **Choose Free** if you want straightforward logging and aren't focused on nap prediction.
-- **Choose Plus** if nap timing is your main challenge and SweetSpot's prediction would genuinely help your days.
-- **Choose Premium** if your baby's sleep is a significant, ongoing struggle and you'd value consultant-designed sleep plans plus AI support — which can be more affordable than hiring a sleep consultant directly.
-Match the plan to the size of the problem you're solving, and you'll avoid paying for features you won't use.
-## What Huckleberry is known for
-It helps to know the app's strengths when weighing the tiers. Huckleberry has built its reputation on a few things parents consistently praise: an accurate, personalized nap-prediction feature that improves as it learns your baby; a clean, approachable interface that's easy to use one-handed; and access to sleep expertise inside the app at the Premium tier. It also spans the journey from pregnancy into the newborn phase, so some parents start using it before the baby arrives. Those strengths are the reason it's so widely recommended, and they're worth factoring into which tier makes sense for you.
-## A few practical questions before you subscribe
-Beyond price, a few practical points help you choose well:
-- **Try the free tier first.** Because logging is free, you can get comfortable with the app before deciding whether the paid features would genuinely help your situation.
-- **Give prediction time.** SweetSpot needs roughly two weeks of consistent data before its suggestions sharpen, so judge it after that, not on day one.
-- **You can start and stop.** If you subscribe during a hard stretch and later find you no longer need the paid features, you can return to logging — your recorded data stays with you.
-- **Check current pricing.** App pricing changes; confirm the latest figures on the App Store before you commit to a plan.
-## Other baby trackers worth considering
-Huckleberry is a strong choice, and it's also worth knowing the landscape so you can pick what fits your budget and platform. A few well-regarded options:
-- **MamaBee** — our own app. [Sleep Coach nap prediction](APP), unlimited Bee AI and a Solid Food Allergen Test are on Premium at **$4.99/month or $49.99/year**, and the free tier is complete and ad-free. iPhone only.
-- **PiyoLog** — a beautifully designed, complete log with real-time sharing; Premium is $34.99/year. No nap prediction.
-- **Baby Tracker by Nighp** — a one-time $4.99 with no subscription, available on iPhone, iPad and Android. Logging-focused.
-For a full side-by-side, see our [best baby tracker apps comparison](/mamabee/articles/best-baby-tracker-apps-compared).
-[[CTA||Prefer nap prediction on a lower-cost plan? MamaBee starts free — see if it fits.]]
-## A note on getting the most from any sleep app
-Whichever app and tier you choose, the fundamentals do most of the work: a consistent bedtime routine, age-appropriate wake windows, and safe sleep. An app's prediction or plan is a helpful layer on top of those, not a replacement for them. If you're comparing tools, our guides on [wake windows by age](/mamabee/articles/wake-windows-by-age) and [how to get baby to sleep through the night](/mamabee/articles/how-to-get-baby-to-sleep-through-the-night) pair well with any tracker.
+  A('protecting-baby-from-household-chemicals',
+    'Baby-Safe Home: Household Chemicals and Hygiene Every Parent Should Know',
+    'A calm, practical guide to protecting your baby from everyday household chemicals and germs — safer cleaning, plastics and food, safe storage, sensible hygiene, and what actually matters.',
+    ['baby safe home', 'household chemicals baby', 'non toxic baby', 'baby hygiene', 'baby chemical safety'],
+    {},
+`Once your baby starts grabbing, mouthing and crawling, the ordinary house turns into a landscape of things they'll try to eat, lick or spill on themselves. It's easy to spiral into fear about chemicals and germs — the internet is happy to help you panic. So let's do the opposite: a calm, practical guide to what genuinely matters for keeping your baby safe from everyday chemicals and hygiene hazards, and what you can safely stop worrying about.
+## Two different risks, don't confuse them
+First, separate the two things people lump together, because they need very different responses:
+- **Acute poisoning** — a baby swallowing a cleaning product, medicine or detergent pod *right now*. This is the real, immediate, high-stakes danger, and it's almost entirely preventable with storage.
+- **Chronic low-level exposure** — long-term contact with certain chemicals in plastics, fragrances and finishes. This is lower-stakes and more debated, worth reducing sensibly without losing sleep.
+Put your energy where the risk is biggest: **locking things up beats chasing every trace chemical.** Get the first one right and you've handled the danger that actually sends babies to the ER.
+## Lock it up: the single most important step
+Accidental poisoning is one of the most common household injuries for small children, and it's preventable. Do this first:
+- **Store all cleaning products, laundry pods, medicines, vitamins, cosmetics and alcohol up high and locked** — not under the sink, which is exactly where curious crawlers head. Cabinet locks are cheap.
+- **Keep everything in its original container.** Never decant chemicals into cups, water bottles or food containers — a huge cause of accidental poisoning.
+- **Laundry and dishwasher pods are especially dangerous** — they look like candy or toys and are highly concentrated. Store them sealed and out of reach.
+- **Handbags and visitors' bags** often hold medicines and hand sanitizer — keep them out of baby's reach too.
+- **Save the Poison Control number now:** in the US, **1-800-222-1222**, free and 24/7. Put it in your phone and on the fridge. If you suspect your child swallowed something, call immediately — don't wait for symptoms, and don't make them vomit unless told to.
+[[CTA||Keep meds, symptoms and doctor visits in one place — MamaBee logs it all for the moments that matter.]]
+## Safer cleaning around a baby
+You don't need a chemistry degree, just a few sensible habits:
+- **Ventilate.** Open a window when cleaning; babies' airways are more sensitive to fumes.
+- **Never mix products** — especially bleach and ammonia, which create toxic gas.
+- **Clean baby's zones simply.** For floors, high chairs and toys they mouth, plain soap and water or a damp cloth handles most jobs. Simple often beats "stronger."
+- **Rinse and dry surfaces** your baby touches or mouths after using any cleaner or disinfectant.
+- **Go fragrance-light where you can.** "Fragrance" is a common irritant; unscented or low-fragrance products are a reasonable default for a baby's environment.
+## Plastics and food: reduce, don't panic
+This is the chronic-exposure side, and a little care goes a long way:
+- **Never microwave or pour boiling liquid into plastic.** Heat is what drives chemicals like BPA and phthalates out of plastic into food. Heat food in glass or ceramic instead.
+- **Choose glass or stainless bottles and food containers** where practical, and BPA-free plastics otherwise.
+- **Retire scratched, cloudy or old plastic** — worn plastic leaches more.
+- **Don't put plastic in the dishwasher's hot cycle** if you can hand-wash it instead.
+The goal is sensible reduction, not a plastic-free life. Warming a bottle in glass rather than a plastic container is an easy, meaningful win. This matters most as your baby starts solids — see [when to start solids](/mamabee/articles/when-to-start-solids).
+## Air, fragrance and smoke
+- **Secondhand (and thirdhand) smoke** is one of the clearest, best-proven household risks to babies — linked to SIDS, chest infections and ear infections. Keep your baby's environment completely smoke-free, and note that residue lingers on clothes, furniture and skin.
+- **Go easy on air fresheners, plug-ins and scented candles** around babies; fragrance chemicals can irritate developing airways. Fresh air and ventilation are the better "air freshener."
+## Hygiene that actually matters (and over-doing it)
+Germ safety is real, but more sanitizing isn't always better:
+- **Handwashing is the highest-value habit** — yours and, later, your baby's. Wash before feeds and after diaper changes; it prevents more illness than any spray. See [baby's first cold](/mamabee/articles/baby-first-cold).
+- **Clean, don't sterilize everything, forever.** Sterilizing bottles matters in the early months. But scrubbing every surface with disinfectant constantly isn't necessary and adds chemical exposure. Normal clean is the goal for most things.
+- **A little dirt is okay.** Everyday exposure to ordinary germs is part of how a baby's immune system develops. You're aiming for clean, not sterile.
+- **Wash new clothes and bedding** before first use to remove manufacturing residues, ideally in a fragrance-free, baby-friendly detergent.
+## What you can stop stressing about
+Balance matters, so here's permission to relax on a few things: you do not need to buy every "non-toxic" branded product marketed to anxious parents; a normally clean home is fine, not a hazard; and trace exposures from occasional ordinary use are far down the risk list compared to unlocked cabinets and secondhand smoke. Spend your worry budget on the big, proven risks and let the rest go.
 ## Frequently asked questions
-### What does the free version of Huckleberry include?
-The free tier covers core logging of sleep, feeds and diapers. SweetSpot nap prediction and Berry AI are part of the paid Plus and Premium tiers respectively.
-### What's the difference between Huckleberry Plus and Premium?
-Plus adds SweetSpot nap prediction. Premium adds Berry AI chat and expert-built sleep plans on top of everything in Plus.
-### How much does Huckleberry cost?
-As of August 2026, Plus is $11.99/month or $58.99/year and Premium is $14.99/month or $119.99/year, with a free tier available. Always check the App Store for current pricing.
-### Are there lower-cost alternatives with nap prediction?
-Yes — for example, MamaBee offers nap prediction on a $4.99/month or $49.99/year plan, and other trackers focus on logging at lower or one-time prices. The best choice depends on your platform and which features you need.
+### What is the biggest household chemical danger to babies?
+Accidental poisoning from swallowing cleaning products, laundry pods or medicines is the most immediate, serious risk — and it's largely preventable by storing everything locked, up high, and in original containers. Save Poison Control (1-800-222-1222 in the US) in your phone.
+### Do I need to buy special non-toxic baby cleaning products?
+Not necessarily. Plain soap and water handles most of a baby's zones, and good habits — ventilating, not mixing products, rinsing surfaces, choosing low-fragrance options — matter more than any particular branded product.
+### Are plastics dangerous for my baby?
+The main concern is heat driving chemicals like BPA out of plastic, so never microwave or pour boiling liquid into plastic — use glass or ceramic to heat food, choose glass or BPA-free containers, and retire worn plastic. Sensible reduction, not panic, is the aim.
+### How clean does my home really need to be?
+Clean, not sterile. Handwashing and cleaning baby's feeding items matter most; constant disinfecting of every surface isn't necessary and adds exposure. Some everyday germ contact actually helps a baby's immune system develop.
 ## The takeaway
-Huckleberry is a capable, well-made app, and choosing the right tier comes down to what you need: free for logging, Plus for nap prediction, Premium for consultant-designed sleep plans and AI. Weigh it against your budget, your platform, and the features you'll actually use — and remember that consistent routines and safe sleep matter more than any single app. There's no single right answer here: the best plan is simply the one whose features solve a problem you actually have, at a price you're comfortable paying. Start on the free tier, see how you use it, and upgrade only if a paid feature would genuinely make your days easier. For the wider view, see our [baby tracker comparison](/mamabee/articles/best-baby-tracker-apps-compared).
-[[CTA||Download MamaBee free — complete logging with no ads, and nap prediction on an affordable plan.]]
-*Prices and features verified on the US App Store, August 2026, and may change. This article is general information, not medical advice.*`),
+Protecting your baby from household chemicals is mostly about one high-value move — locking away cleaners, pods and medicines and keeping the Poison Control number handy — plus a handful of sensible habits: ventilate when cleaning, heat food in glass not plastic, keep the air smoke- and fragrance-light, wash hands, and clean rather than sterilize. Skip the fear and the pricey "non-toxic" marketing; put your attention on the big, proven risks and your baby's daily world becomes genuinely safer without the anxiety. For more on everyday baby health, see [baby's first cold](/mamabee/articles/baby-first-cold) and [safe sleep guidelines](/mamabee/articles/safe-sleep-guidelines).
+[[CTA||Get MamaBee free — track health, meds and milestones so nothing important slips through.]]
+*This article is general information, not medical advice. In a suspected poisoning, call Poison Control (1-800-222-1222 in the US) or your local emergency number immediately.*`),
 
   A('best-free-baby-tracker-apps',
     'Best Free Baby Tracker Apps 2026: Which Free Tier Is Actually Worth It',
