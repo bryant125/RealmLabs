@@ -14,7 +14,7 @@ const A=(slug,title,description,tags,tables,body)=>({slug,title,description,tags
 const articles = [
 
   A('teen-phone-addiction',
-    'Teen Phone Addiction: A Parent Guide to Signs, Causes and What Actually Helps',
+    'Teen Phone Addiction in 2026: A Parent Guide to Signs, Causes and What Actually Helps',
     'Worried about your teen and their phone? The real signs of teen phone addiction, why teenage brains are especially vulnerable, and practical, non-nuclear strategies that actually work.',
     ['teen phone addiction', 'teenager phone addiction', 'kids screen time', 'teen social media', 'parenting screen time'],
     {},
@@ -65,7 +65,7 @@ Heavy phone use is normal for teens; the concern is when it costs sleep, school,
 *This article is general wellbeing information, not medical or psychological advice. If you're worried about your teen's mental health, speak to a professional.*`),
 
   A('social-media-and-mental-health',
-    'Social Media and Mental Health: What the Research Actually Says',
+    'Social Media and Mental Health in 2026: What the Research Actually Says',
     'Is social media bad for your mental health? An honest look at what the research shows, who is most at risk, why it affects mood, and how to use social media more safely.',
     ['social media mental health', 'social media anxiety', 'social media depression', 'is social media bad', 'social media wellbeing'],
     {},
@@ -455,7 +455,7 @@ Text neck is the very real, very common price of hours spent looking down at a p
 *This article is general wellbeing information, not medical advice. See a professional for persistent pain or any numbness or tingling.*`),
 
   A('how-to-set-screen-time-limits-on-iphone',
-    'How to Set Screen Time Limits on iPhone (and Actually Stick to Them)',
+    'How to Set Screen Time Limits on iPhone in 2026 (and Actually Stick to Them)',
     'A step-by-step guide to setting screen time limits on iPhone with Apple Screen Time — app limits, downtime, content limits for kids — plus why the built-in limits are easy to ignore.',
     ['screen time iphone', 'set screen time limits iphone', 'iphone app limits', 'apple screen time', 'limit screen time iphone'],
     {},
