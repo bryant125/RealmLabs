@@ -56,6 +56,15 @@ Germ safety is real, but more sanitizing isn't always better:
 - **Clean, don't sterilize everything, forever.** Sterilizing bottles matters in the early months. But scrubbing every surface with disinfectant constantly isn't necessary and adds chemical exposure. Normal clean is the goal for most things.
 - **A little dirt is okay.** Everyday exposure to ordinary germs is part of how a baby's immune system develops. You're aiming for clean, not sterile.
 - **Wash new clothes and bedding** before first use to remove manufacturing residues, ideally in a fragrance-free, baby-friendly detergent.
+## A quick room-by-room audit
+Ten minutes with this checklist catches most of the real hazards:
+- **Kitchen:** cleaners and dishwasher pods out of the under-sink cabinet and up high or locked; sharp items and small magnets away; nothing decanted into food containers.
+- **Bathroom:** medicines, vitamins, mouthwash, nail products and cosmetics up high and closed; toilet lid down; no standing water. Many poisonings happen with medicines left on a low shelf or in a handbag.
+- **Laundry:** detergent and pods sealed and out of reach — these are among the most dangerous because they look like sweets.
+- **Living areas:** houseplants checked (some are toxic if chewed); alcohol out of reach; visitors' bags with pills or sanitizer kept up high.
+- **Nursery:** unscented or low-fragrance products where possible; nothing with strong "new plastic" smell left to off-gas in a closed room; wash new items before use.
+- **Garage/utility:** the highest-risk zone — pesticides, antifreeze, paint, solvents. Keep the door to it closed and everything locked; antifreeze in particular is sweet-tasting and highly toxic.
+You don't have to do it all at once — start with the kitchen and bathroom, since that's where crawlers spend the most time and where the most poisonings happen.
 ## What you can stop stressing about
 Balance matters, so here's permission to relax on a few things: you do not need to buy every "non-toxic" branded product marketed to anxious parents; a normally clean home is fine, not a hazard; and trace exposures from occasional ordinary use are far down the risk list compared to unlocked cabinets and secondhand smoke. Spend your worry budget on the big, proven risks and let the rest go.
 ## Frequently asked questions
@@ -121,6 +130,14 @@ Knowing the common paywalls saves disappointment. Across the category, the featu
 - **Want it to look beautiful?** PiyoLog's time bar.
 - **Want prediction later?** MamaBee's free tier upgrades to Sleep Coach cheaply; Huckleberry's upgrades to SweetSpot expensively.
 And the golden rule: pick one and stay. A tracker's value compounds — six weeks of history in a "good enough" free app beats starting over in a "better" one.
+## How to actually get started (or switch) for free
+Picking a free tracker is easy; using one consistently is what actually helps. A few tips to make it stick:
+- **Set it up before you're desperate.** Download and log in during a calm moment, not at 3 AM mid-meltdown. Add your baby's details and pin the app somewhere easy to reach.
+- **Put it on your home screen and lock screen.** A tracker you have to hunt for is a tracker you won't use. Widgets, if the app has them, make one-tap logging realistic.
+- **Log the big three first.** Sleep, feeds and diapers are the high-value entries. Don't try to track everything from day one — you'll burn out. Add more detail once the habit sticks.
+- **Get both parents on it.** If your free tier offers caregiver sharing, use it — a shared log ends the "did you already feed her?" texts and doubles the data quality.
+- **Give it a week before judging.** A tracker feels pointless on day one and genuinely useful by day seven, once there's a pattern to see.
+**Switching from another app?** There's rarely a direct import between baby trackers, so most people export a summary from the old app for their records and simply start fresh. It sounds worse than it is — a tracker becomes useful again within about a week of new data, so you're not really losing much by moving to one that fits you better.
 ## Does free mean worse?
 A fair worry: is a free tracker just a crippled version of a paid one? Usually not, for the core job. Logging feeds, sleeps and diapers, seeing a daily timeline, and tracking growth are table stakes that every app here does free and does well. What you pay for is the *intelligence and convenience layer* on top — prediction, AI, unlimited history, backup, no ads. Plenty of parents use a free tracker for a baby's entire first year and never feel the lack, because what they needed was a reliable memory, not a sleep algorithm. Start free, use it for a few weeks, and you'll know quickly whether you're bumping into a limit worth paying to remove — or whether free was always enough. Upgrading later is one tap; you won't lose your history.
 ## Frequently asked questions
@@ -183,6 +200,14 @@ Not all collected data is equal. A few categories deserve extra caution because 
 - **Device identifiers** — let advertisers link your baby data to the rest of your digital life across apps.
 - **Your baby's name + birth date** — the seed of an identity, years before your child can consent to any of it.
 If an app collects these *and* shares with third parties *and* shows ads, that's three strikes — the profile it builds is detailed and it's leaving the building.
+## How to read an app's privacy label in 60 seconds
+Apple requires every App Store listing to show a privacy summary, and it's the fastest way to vet a tracker before you download. On the app's App Store page, scroll to **"App Privacy"** and look at three things:
+- **"Data Used to Track You"** — this is the big red flag. It means data is shared with third parties (usually advertisers) to follow you across other apps and sites. For an app holding your baby's health data, you want this section empty.
+- **"Data Linked to You"** — information tied to your identity. Some is normal (an email for your account), but a long list here — health, photos, location, contacts — deserves a second look.
+- **"Data Not Linked to You"** — the least concerning bucket; anonymized analytics live here.
+A privacy-respecting baby tracker typically shows little or nothing under "Used to Track You," and keeps "Linked to You" short. If the label is long and ad-heavy, that tells you where the app's incentives really sit — no matter how gentle the marketing sounds.
+On Android, the Play Store's **"Data safety"** section does the same job: check what's collected, what's shared, and whether you can request deletion.
+One more sixty-second check: search the app's name plus "privacy policy" and skim for the words "sell," "share," "advertising" and "third parties." Vague or missing policies are themselves a warning.
 ## Practical steps to protect your baby's data
 - Prefer an app that stores data on-device and shows no ads
 - Skip attaching photos to apps that collect them, unless you trust the storage
@@ -234,6 +259,13 @@ Once the foundations are solid and your baby is old enough (check with your pedi
 [[CTA||Track night feeds and sleep stretches in MamaBee — and see the pattern that's actually forming.]]
 ## If you want to go further: sleep training
 If gentle steps aren't enough and everyone is depleted, structured sleep training (from around 4–6 months, with your pediatrician's okay) can help — and it ranges from gentle to more direct. It's optional, not required. Our [sleep training methods compared](/mamabee/articles/baby-sleep-training-methods) walks through the options honestly, including the gentlest ones.
+## Night weaning, gently (when they're ready)
+If your baby is old enough, gaining weight well, and your pediatrician agrees they no longer need overnight calories, you can gently reduce night feeds rather than cutting them cold. A gradual approach is kinder on everyone:
+- **For bottle feeds:** reduce the amount by half an ounce every few nights, or add a little water to dilute, until the feed is small enough to drop.
+- **For breastfeeds:** shorten the time on the breast by a minute or two every few nights.
+- **Push the first feed later** in small increments, using other comfort — a pat, a shush, a partner going in — to bridge the gap.
+- **Send in the non-feeding parent** for night wakings; a baby who smells milk holds out for it, but often settles more easily for someone who can't provide it.
+Go slowly and follow your baby. If they're clearly hungry, genuinely distressed, or unwell, pause — this isn't a race, and a growth spurt or regression is not the week to night-wean. The goal is to phase out feeds your baby no longer needs, not to withhold ones they do. And always clear it with your pediatrician first, especially if there have ever been any concerns about weight gain.
 ## Safe sleep always comes first
 However you approach nights, keep sleep safe: baby on their back, on a firm flat surface, in a bare crib with no loose bedding, pillows or bumpers. See our [safe sleep guide](/mamabee/articles/safe-sleep-guidelines). Never trade safety for a longer stretch.
 ## Common mistakes that keep nights broken
@@ -312,6 +344,10 @@ Not every bad sleep patch is a "regression." Before you file it under developmen
 - **An outgrown schedule** — sometimes "the regression" is really a nap that needs dropping or wake windows that need lengthening. See our [nap transitions guide](/mamabee/articles/baby-nap-transitions).
 - **A new habit** — a crutch introduced during a rough week that has quietly become the new normal.
 The tell: a true regression lifts within a few weeks and isn't driven by an obvious external cause. If it drags on, look harder at these.
+## How to tell a regression is ending
+When you're deep in it, a regression feels endless — so it helps to know the signs it's lifting. You'll usually notice the pattern loosen before it fully resolves: wakings become less frequent or shorter, your baby resettles a little more easily, naps start to lengthen again, and the daytime fussiness eases. Often the clearest sign is the new skill "landing" — the rolling, crawling, babbling or standing that was brewing suddenly clicks into place, and sleep settles within days of it. If you're tracking sleep, you'll often see it in the data before you feel it in your body: the 3 AM wake-ups thin out over a week. That's your cue that the routine and habits you held steady are about to pay off — so keep them consistent through the tail end rather than declaring victory (or defeat) too early.
+## Look after yourself through it, too
+A regression is exhausting for parents, and running on broken sleep makes everything harder to cope with. Tag-team the nights with your partner so nobody takes every wake-up, lower your standards on everything non-essential for a couple of weeks, and accept help when it's offered. Caffeine and daylight are your friends; guilt is not. Remember the frame that makes it bearable: this bad patch is your baby's brain sprinting forward, it is temporary, and the version of you that's rested enough to be patient is worth protecting. If low mood lingers well beyond the regression, though, mention it to your doctor — exhaustion and postpartum mood changes can overlap.
 ## When it's not just a regression
 Call your pediatrician if the sleep disruption comes with fever, ear-pulling, pain, poor feeding or weight concerns, or if "the regression" drags on for many weeks without lifting. Sometimes what looks like a regression is illness, teething needing relief, or a genuine schedule that's stopped fitting.
 ## Frequently asked questions
@@ -372,6 +408,13 @@ Developed by pediatrician Dr. Harvey Karp, the "5 S's" combine techniques that m
 The trick is doing several at once and sticking with it for a few minutes before deciding it isn't working. For many colicky babies, the combination succeeds where any single technique fails.
 ## Looking after yourself matters too
 This is not a footnote. Relentless inconsolable crying is genuinely one of the hardest things new parents face, and it can push anyone to the edge. **If you feel overwhelmed, it is okay to put your baby down safely in their crib and step away for a few minutes to breathe.** A few minutes of crying in a safe crib will not harm your baby — but a parent at breaking point is a real risk. Never, ever shake a baby. Share the load, tag in your partner, and reach out to your pediatrician or a helpline if the despair is mounting.
+## Colic and feeding: what's worth trying
+Because colic often looks like tummy discomfort, feeding tweaks are a common first line — worth trying, but with realistic expectations and your pediatrician's input:
+- **Check the latch and flow.** A poor latch or a too-fast bottle nipple means more swallowed air. A slower-flow nipple and a good seal reduce gas. See our [gas relief guide](/mamabee/articles/newborn-gas-relief).
+- **Feed more upright, and burp well.** Keeping baby upright during and after feeds, with thorough burping, helps trapped air escape.
+- **Ask before cutting foods.** If you breastfeed, a small number of babies react to cow's-milk protein in the parent's diet; if you formula-feed, a different formula occasionally helps. But don't overhaul your diet or switch formula on your own — talk to your pediatrician first, since most diet changes make no difference and an unnecessary elimination diet is hard on you.
+- **Paced feeding for bottles.** Holding the bottle horizontal and pausing mimics breastfeeding's rhythm and slows down a gulping, air-swallowing baby.
+The honest caveat: for many colicky babies, feeding changes don't fix it, because colic isn't always about digestion. Try the low-risk tweaks, but don't blame yourself if they don't work — that's the nature of colic, not a failure on your part.
 ## Red flags — when it's not colic
 Colic is crying in a *healthy* baby. Call your doctor promptly if the crying comes with any of these, which point to something other than colic:
 - Fever, vomiting (especially green or forceful), or diarrhea
@@ -444,6 +487,13 @@ Once things are moving again, a few habits keep constipation from returning, esp
 - **Keep up movement** — tummy time and floor kicking help the whole system, including the bowel.
 - **Watch the transitions** — starting solids and weaning off breast milk are the classic trigger points, so add fiber and fluids proactively then.
 Small, consistent habits prevent far more discomfort than any single remedy fixes.
+## Baby poop that looks alarming but usually isn't
+Constipation worries send a lot of parents down a rabbit hole of scrutinizing diapers, so here's some reassurance about normal variation that often gets mistaken for a problem:
+- **Infrequent isn't the same as constipated.** An older breastfed baby can genuinely go several days, even a week, between poops and be perfectly fine — soft stool when it comes means no constipation.
+- **Grunting, straining and going red** while passing a *soft* stool is normal (infant dyschezia); babies simply haven't coordinated pushing yet.
+- **Wildly changing colors** — yellow, green, brown, even orange — are usually normal, especially as diet changes. Iron supplements and some foods can darken stool.
+- **First foods show up.** Undigested bits of solids (peas, corn, tomato skins) in the diaper are completely normal as the gut learns to process new textures.
+The colors that *do* warrant a prompt call are the classic three: **white or chalky** (possible liver issue), **red blood** beyond a tiny streak, and **black** (after the newborn meconium stage). For the full picture, see our [baby poop color chart](/mamabee/articles/baby-poop-color-chart). Everything else is usually just the normal, dramatic variety of baby digestion.
 ## When to call the doctor
 Contact your pediatrician if:
 - Your baby is **under a few months old** and seems constipated (get young babies checked rather than treating at home)
@@ -510,6 +560,8 @@ Schedules aren't clocks, but a shape helps. Loose examples:
 The pattern to notice: feeds anchor to wake-ups early on, then gradually reorganize around meals and naps as your baby grows into a day-shaped rhythm.
 ## A note on breast vs bottle amounts
 The ounce figures above apply most cleanly to bottle-fed babies. If you're breastfeeding, you can't measure intake directly — and you don't need to. Feed on cue, let your baby end the feed, and judge sufficiency by diapers and weight gain rather than volume. If you're [combination feeding](/mamabee/articles/breastfeeding-vs-formula), a bottle lets you see amounts on those feeds while breastfeeds stay cue-led. Either way, the body-based signs below matter more than any number.
+## Night feeds by age: what's normal
+Night feeds are the part of the schedule parents most want to understand, so here's the rough shape. **Newborns** need to feed overnight, usually every 2–4 hours — this is non-negotiable early on and not something to push against. Through **1–3 months**, many babies begin stretching one longer gap at night as their stomach grows. Around **4–6 months**, some babies can go most or all of the night without a feed, but plenty still genuinely need one or two, and that's normal. By **6–12 months**, as solids provide more daytime calories, night feeds often reduce naturally. The key principle: let daytime intake do the heavy lifting so nights can shorten on their own, and don't actively drop night feeds until your baby is old enough, gaining well, and — ideally — your pediatrician agrees. Some babies simply need a night feed longer than others, and following that need isn't "spoiling" them. For how to gently phase them out when the time comes, see [how to get baby to sleep through the night](/mamabee/articles/how-to-get-baby-to-sleep-through-the-night).
 ## Cluster feeds and growth spurts break the schedule (normally)
 Expect your neat schedule to fall apart periodically — and that's fine. During a [growth spurt](/mamabee/articles/baby-growth-spurts), your baby may suddenly want to feed far more often for a couple of days as they signal your supply (or appetite) to increase. Evenings often bring [cluster feeding](/mamabee/articles/cluster-feeding), where feeds bunch close together for a few hours. Neither means your schedule is broken or your supply is failing — they're your baby doing exactly what they should. Ride them out by feeding on cue, and the rhythm re-settles within a few days. A tracker helps here: when you can see "oh, this is day two of feeding every hour," a growth spurt feels like a phase rather than an alarm.
 ## Signs your baby is getting enough
@@ -570,8 +622,17 @@ You don't need a cupboard of bottles. Start small and let your baby tell you wha
 - **Don't chase "anti-colic" claims.** Any decent bottle vented properly and used with paced feeding reduces swallowed air; the fancy systems aren't essential.
 - **Have a couple on hand** once one works, so you're never caught without a clean bottle at 2 AM.
 If your baby rejects the first nipple, that's information, not failure — try a different shape before assuming they won't take a bottle at all.
-## What to put in the bottle
+## What to put in the bottle — and how much
 Expressed breast milk, formula, or a combination — all are fine. Many parents start with expressed breast milk so the taste is familiar, then introduce formula later if needed. There's no wrong answer; a fed baby is the goal.
+**How much to offer:** breastfed babies typically take smaller, steadier amounts than formula-fed babies — often around 2–4 ounces per bottle in the early months, rather than the larger volumes formula-fed babies sometimes take. Start on the smaller side and let your baby's fullness cues, not the ounce line, decide when they're done. Paced feeding helps here: it stops a fast bottle from overriding those cues and overfeeding.
+**Handling expressed milk safely** matters too, since breast milk isn't formula:
+- Fresh expressed milk keeps at room temperature for a few hours, in the fridge for around four days, and in the freezer for months — follow current storage guidelines.
+- **Thaw in the fridge or under warm running water, never in the microwave** — microwaving creates dangerous hot spots and damages the milk's protective components.
+- **Swirl, don't shake**, to mix separated layers gently.
+- **Don't re-freeze** thawed milk, and use leftovers from a started bottle within a couple of hours.
+Getting the storage right means all that pumping effort actually makes it into your baby.
+## What if I only need occasional bottles?
+Not everyone is returning to full-time work — plenty of parents just want the *option* of a bottle for a date night or a longer stretch of sleep. If that's you, the same early-introduction window still applies: offer a bottle regularly (even once every few days) from around 3–4 weeks so your baby stays willing to take one. A baby who never sees a bottle for two months often refuses it exactly when you finally need one. A little maintenance now keeps the option open later.
 ## Frequently asked questions
 ### When should I introduce a bottle to a breastfed baby?
 Around 3–4 weeks is the common sweet spot — after breastfeeding is well established but before your baby becomes too set to accept a bottle. Introducing much later can lead to more refusal.
@@ -619,8 +680,11 @@ Whether you call it a leap, a regression or just a rough week, the support is th
 [[CTA||Track the fussy days and the new skills in MamaBee — and see your baby's real developmental rhythm.]]
 ## The ten leaps at a glance
 For reference, the leaps are timed from your baby's *due date* (not birth date), which matters for premature babies. The commonly cited windows fall around: **weeks 5, 8, 12, 19, 26, 37, 46, 55, 64 and 75.** Roughly, the early leaps center on the senses and patterns (noticing the world, smooth changes, events), the middle ones on relationships and categories (distance, sequences, how things fit together), and the later ones on systems and independence (making choices, understanding "principles," navigating rules). You'll notice the gaps widen with age — leaps cluster in the busy first year and space out into toddlerhood. Treat these as approximate signposts, not appointments: a baby who gets fussy two weeks off the listed week is completely normal, and a premature baby's leaps track to the adjusted age.
+## Leaps vs. sleep regressions: are they the same thing?
+Parents often wonder how "leaps" relate to "[sleep regressions](/mamabee/articles/baby-sleep-regressions-by-age)" — because they describe overlapping rough patches. The honest answer: they're two lenses on the same underlying reality. Both point at the fact that development happens in bursts, and those bursts tend to disrupt sleep and mood. The Wonder Weeks frames it around *mental* leaps in perception; the sleep-regression framing focuses on the sleep disruption itself, often tied to physical milestones like rolling or crawling. Don't get tangled trying to decide which one your baby is "in" — the support is identical either way: more comfort, steady routines, protected sleep, and patience. Whether you call this week a leap, a regression or just a hard stretch changes nothing about what your baby needs from you.
 ## Is the app worth using?
 Many parents love The Wonder Weeks app simply because it reframes hard weeks as *progress* rather than something wrong — and that reframe is genuinely valuable for morale. Just use the calendar as a rough guide, not a prophecy. If it makes a fussy Tuesday feel meaningful instead of alarming, it's doing its job. If your baby is "off schedule," that's normal, not a problem.
+The one trap to avoid is letting the app create anxiety rather than relieve it — refreshing it to see if a "storm" is coming, or worrying because your baby's fussiness doesn't match the predicted week. If you notice that happening, that's your sign to close the app and just respond to the baby in front of you. The framework is a comfort tool, not a diagnostic one; the moment it starts generating worry instead of dissolving it, it has stopped being useful for you. Trust what you see in your own child over what any calendar predicts.
 ## Frequently asked questions
 ### Are The Wonder Weeks scientifically proven?
 Partly. That babies develop in bursts with accompanying fussiness is well supported. The specific claim of ten leaps on a universal, due-date-timed schedule has not been reliably replicated in independent research — treat the timing as a loose guide.
