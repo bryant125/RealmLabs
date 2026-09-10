@@ -60,6 +60,24 @@ Week-5 drafts live in Sanity via `scripts/week5-articles.mjs`. They still need
 publish script refuses any draft without one. Note #27 leans on the **Solid
 Food Allergen Test** premium feature, so keep that name exact.
 
+### ✅ MamaBee Weeks 6–8 (all live; log rows condensed to slugs for dedup)
+Weeks 6–7 (20 live, see `scripts/week6-articles.mjs`, `scripts/week7-articles.mjs`):
+`protecting-baby-from-household-chemicals`, plus the week-6/7 sleep/health/feeding
+set (bathe, diaper rash, eczema, fever, vaccine schedule, play by age, separation
+anxiety, flying with a baby, baby-proofing, pacifier, etc.).
+
+**Week 8 (10 live, `scripts/week8-articles.mjs`, 2026-09-10, 1.2k–1.5k words, covers ✅):**
+- `baby-reflux-and-spit-up` — baby reflux / spit up — Health
+- `contact-naps-and-independent-sleep` — contact naps — Sleep
+- `baby-sign-language` — baby sign language — Milestones
+- `how-to-burp-a-baby` — how to burp a baby — Feeding
+- `when-can-babies-drink-water` — when can babies drink water — Feeding
+- `baby-sun-safety` — baby sun protection / sunscreen — Health
+- `c-section-recovery` — c-section recovery — Parent wellness
+- `postpartum-hair-loss` — postpartum hair loss — Parent wellness
+- `dressing-baby-for-sleep` — baby sleep temperature / TOG — Sleep
+- `how-to-cut-baby-nails` — how to cut baby nails — Health
+
 ### 💡 MamaBee backlog (not yet written — future weeks)
 Keep these distinct from the topics above.
 - Is Huckleberry worth it? — `is huckleberry worth it` — App ◆
@@ -85,12 +103,29 @@ All under `/mamabee/tools/`, email opt-in delivers the [Baby Sleep Cheat-Sheet](
 Lead magnet: `/mamabee/baby-sleep-cheat-sheet` (printable, branded). Welcome-email copy drafted (set up as a MailerLite automation on group "MamaBee Sleep Tips").
 
 ## 🔥 BurnScroll (screen-time control) — target: US users beating doomscrolling
-*No articles written yet.* Backlog ideas (target US "digital wellbeing" searches):
-- 💡 How to stop doomscrolling — `how to stop doomscrolling`
-- 💡 Screen time and dopamine, explained — `dopamine detox`
-- 💡 Best ways to reduce phone addiction — `phone addiction`
-- 💡 Digital wellbeing habits that stick — `digital wellbeing`
-- 💡 Why we scroll: the psychology of infinite feeds — `why do we doomscroll`
+**40 articles live** (4 batches). Brand: black + neon #CEFF00, flat-vector covers.
+Batches 1–3 (30 live, `scripts/burnscroll-articles.mjs`, `-batch2.mjs`, `-batch3.mjs`):
+the-attention-economy, how-to-break-phone-addiction, how-to-stop-doomscrolling,
+dopamine-detox, digital-minimalism, mindful-phone-use, turn-off-notifications,
+fomo-and-social-media, nomophobia, phubbing, benefits-of-boredom, phone-free-morning,
+screen-time-and-sleep, digital-eye-strain, text-neck, short-form-video-and-your-brain,
+social-media-and-mental-health, teen-phone-addiction, video-game-addiction,
+focus-at-work-phone-distraction, how-to-improve-focus, how-to-quit-social-media,
+study-without-your-phone, read-more-instead-of-scrolling, exercise-vs-anxiety,
+digital-wellbeing-habits, how-much-screen-time-is-too-much, why-do-we-doomscroll,
+how-to-set-screen-time-limits-on-iphone, best-screen-time-apps-compared.
+
+**Batch 4 (10 live, `scripts/burnscroll-batch4.mjs`, 2026-09-10, 1.2k–1.5k words, covers ✅):**
+- `grayscale-phone-trick` — grayscale phone / make phone less addictive
+- `digital-detox-weekend` — digital detox weekend plan
+- `the-myth-of-multitasking` — multitasking / task switching / focus
+- `switching-to-a-dumbphone` — dumbphone / minimalist phone
+- `why-apps-are-addictive` — persuasive design / infinite scroll / dark patterns
+- `social-media-and-body-image` — comparison / self-esteem / filters
+- `screen-free-family-time` — family screen rules / phones at dinner
+- `hobbies-to-replace-scrolling` — hobbies instead of scrolling
+- `declutter-your-phone-home-screen` — minimalist home screen setup
+- `screen-time-for-toddlers` — toddler / young-kid screen time (parent guide)
 
 ---
 
