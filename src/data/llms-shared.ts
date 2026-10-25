@@ -26,7 +26,8 @@ locks distracting apps until you burn active calories to earn the time back.
 - Exercise data: reads active calories from Apple Health and Apple Watch, so any
   workout counts automatically.
 - Platform: iPhone, iOS 18.6 or later. Works alongside Apple Watch.
-- Price: free to download on the App Store.
+- Price: free to download; Lifetime Access unlocks every feature for a one-time
+  $29.99 (no subscription).
 - App Store: https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932
 - Home: https://www.realmlabs.app/burnscroll`
 

@@ -38,7 +38,7 @@ const articles = [
 
   // ─────────────────────────────────────────────────────────────────────────
   A('nara-baby-vs-mamabee',
-    'Nara Baby Is No Longer Free: How It Compares to MamaBee',
+    'Nara Baby vs MamaBee (2026): Nara Is No Longer Free',
     'Nara Baby now costs $9.99/month or $99.99 lifetime after a 7-day trial. Here is how it compares to MamaBee, a free, ad-free baby tracker for iPhone.',
     ['nara baby alternative', 'is nara baby still free', 'nara baby subscription', 'nara baby app', 'free baby tracker app'],
     {
@@ -134,7 +134,7 @@ ${FOOT}`),
 
   // ─────────────────────────────────────────────────────────────────────────
   A('baby-feed-timer-vs-mamabee',
-    'Baby Feed Timer vs MamaBee: Which Breastfeeding App Fits?',
+    'Baby Feed Timer vs MamaBee (2026): Which Breastfeeding App?',
     'Baby Feed Timer costs $9.99 once and runs on Apple Watch and Android. MamaBee is free with no ads. How the two compare on price, sharing and privacy.',
     ['baby feed timer', 'baby feed timer app cost', 'baby feed timer share with partner', 'breastfeeding tracker app', 'baby feed timer alternative'],
     {
@@ -220,7 +220,7 @@ ${FOOT}`),
 
   // ─────────────────────────────────────────────────────────────────────────
   A('sprout-baby-vs-mamabee',
-    'Sprout Baby Tracker vs MamaBee: Price, Features, Privacy',
+    'Sprout Baby vs MamaBee (2026): Price, Features, Privacy',
     'Sprout Baby is a 13-year-old favourite with Apple Watch, Android and a photo keepsake book. MamaBee is free with no ads. How they compare, side by side.',
     ['sprout baby app', 'sprout baby tracker review', 'sprout baby tracker price', 'sprout baby alternative', 'baby tracker app comparison'],
     {
@@ -313,7 +313,7 @@ ${FOOT}`),
 
   // ─────────────────────────────────────────────────────────────────────────
   A('glow-baby-vs-mamabee',
-    'Glow Baby vs MamaBee: Ads, Price and Partner Sharing',
+    'Glow Baby vs MamaBee (2026): Ads, Price, Partner Sharing',
     'Glow Baby has a free tier with ads and charges about $90 a year to add a second caregiver. MamaBee is free with no ads and free partner sync.',
     ['glow baby app', 'glow baby app review', 'glow baby premium', 'glow baby alternative', 'glow baby family plan'],
     {

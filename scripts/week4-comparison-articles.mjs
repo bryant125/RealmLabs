@@ -213,7 +213,7 @@ Pick the one that fixes what is actually broken tonight, and stop reading compar
 
   // ─────────────────────────────────────────────────────────────────────────
   A('mamabee-vs-piyolog',
-    'MamaBee vs. PiyoLog: Two Calm Baby Trackers, Honestly Compared',
+    'MamaBee vs PiyoLog (2026): Two Calm Baby Trackers Compared',
     'PiyoLog is one of the best free baby trackers ever made — here is exactly where it wins, where it stops, and when MamaBee is the better fit. Real prices, real trade-offs.',
     ['piyolog vs mamabee', 'piyolog review', 'piyolog alternative', 'best free baby tracker app', 'baby tracker no ads'],
     {
@@ -306,7 +306,7 @@ If your phone is an iPhone and you are tired of doing the arithmetic yourself, t
 
   // ─────────────────────────────────────────────────────────────────────────
   A('mamabee-vs-baby-tracker',
-    'MamaBee vs. Baby Tracker (Newborn Log): The Workhorse vs. The Thinker',
+    'MamaBee vs Baby Tracker (Newborn Log): 2026 Comparison',
     'Baby Tracker by Nighp has 227,000 ratings and costs $4.99 once. Here is honestly where it wins, where it stops, and when MamaBee is the better fit for your family.',
     ['baby tracker newborn log review', 'baby tracker app comparison', 'free baby tracker no ads', 'nighp baby tracker', 'best baby log app'],
     {

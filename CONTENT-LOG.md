@@ -78,6 +78,14 @@ anxiety, flying with a baby, baby-proofing, pacifier, etc.).
 - `dressing-baby-for-sleep` — baby sleep temperature / TOG — Sleep
 - `how-to-cut-baby-nails` — how to cut baby nails — Health
 
+### ✅ MamaBee Week 10 — practical care guides (5 live, `scripts/week10-articles.mjs`, 2026-10-25, covers ✅)
+Specific, question-shaped topics with US autocomplete demand (not broad health head terms). Every medical figure cites a source at the end of the article.
+- `how-many-wet-diapers-newborn` — how many wet diapers should a newborn have (day by day) — Feeding/Health
+- `well-baby-visit-schedule` — well baby visit schedule (chart, birth to 3) — Health
+- `exclusive-pumping-schedule` — exclusive pumping schedule by month — Feeding
+- `newborn-night-shifts` — newborn night shift schedule (with partner) — Sleep/Parent wellness
+- `baby-weight-gain-chart` — how much weight should a baby gain (per week/month) — Growth
+
 ### ✅ MamaBee Week 9 — competitor 1-on-1s (5 live, `scripts/week9-competitor-articles.mjs`, 2026-10-25, covers ✅)
 Strategy change from the Search Playbook (GSC data Jul–Oct 2026): app comparisons rank ~#21 vs ~#72
 for broad health topics, so new MamaBee batches lean on competitor comparisons. Competitors picked
@@ -118,7 +126,7 @@ All under `/mamabee/tools/`, email opt-in delivers the [Baby Sleep Cheat-Sheet](
 Lead magnet: `/mamabee/baby-sleep-cheat-sheet` (printable, branded). Welcome-email copy drafted (set up as a MailerLite automation on group "MamaBee Sleep Tips").
 
 ## 🔥 BurnScroll (screen-time control) — target: US users beating doomscrolling
-**40 articles live** (4 batches). Brand: black + neon #CEFF00, flat-vector covers.
+**50 articles live** (5 batches). Brand: black + neon #CEFF00, flat-vector covers.
 Batches 1–3 (30 live, `scripts/burnscroll-articles.mjs`, `-batch2.mjs`, `-batch3.mjs`):
 the-attention-economy, how-to-break-phone-addiction, how-to-stop-doomscrolling,
 dopamine-detox, digital-minimalism, mindful-phone-use, turn-off-notifications,
@@ -141,6 +149,20 @@ how-to-set-screen-time-limits-on-iphone, best-screen-time-apps-compared.
 - `hobbies-to-replace-scrolling` — hobbies instead of scrolling
 - `declutter-your-phone-home-screen` — minimalist home screen setup
 - `screen-time-for-toddlers` — toddler / young-kid screen time (parent guide)
+
+
+**Batch 5 (10 live, `scripts/burnscroll-batch5.mjs`, 2026-10-25, covers ✅) — theme: trade 1–2 hours of scrolling for exercise:**
+- `apps-that-make-you-exercise-to-unlock-your-phone` — app that makes you exercise for screen time (2026 roundup: Pushscroll, PushUp Time, ScrollFit, Unrot, Steppin, BurnScroll)
+- `what-happens-when-you-stop-scrolling` — what happens when you stop scrolling
+- `pushups-to-unlock-instagram` — pushups to unlock instagram / phone
+- `earn-screen-time-chart` — earn screen time chart (kids, exercise)
+- `how-to-fix-brain-rot` — how to fix brain rot
+- `exercise-snacks` — exercise snacks (examples, benefits)
+- `how-to-limit-screen-time-to-2-hours` — how to limit screen time to 2 hours
+- `exercise-dopamine-vs-scrolling` — exercise dopamine
+- `screen-time-and-weight-gain` — does screen time cause weight gain
+- `exercise-before-studying` — exercise before studying
+BurnScroll pricing (App Store, Oct 2026): free download; Lifetime Access $29.99 one-time. Listing also still shows legacy "BurnScroll Premium" IAPs ($69.99, $6.99).
 
 ---
 
