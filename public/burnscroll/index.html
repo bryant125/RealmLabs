@@ -7,6 +7,10 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PVHXK8ML');</script>
+<script>/* App Store click tracking -> GTM event "app_store_click" (mark as a GA4 key event) */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+(window.dataLayer=window.dataLayer||[]).push({event:'app_store_click',app:/mamabee/.test(a.href)?'mamabee':'burnscroll',
+cta_placement:a.getAttribute('data-cta')||(a.className||'link').toString().split(' ')[0],page_path:location.pathname});},true);</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +18,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="BurnScroll locks your apps until you burn the calories. Stop doomscrolling and build real focus." />
 <meta name="keywords" content="stop doomscrolling, screen time control, app blocker, phone addiction, digital wellbeing, focus app, dopamine detox" />
 <meta name="theme-color" content="#000000" />
-<link rel="canonical" href="https://www.realmlabs.app/burnscroll/" />
+<link rel="canonical" href="https://www.realmlabs.app/burnscroll" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="BurnScroll" />
 <meta property="og:title" content="BurnScroll — Burn to Unlock | Screen-time control" />
 <meta property="og:description" content="BurnScroll locks your distracting apps until you burn the calories. Stop doomscrolling and build real focus — free on iPhone." />
-<meta property="og:url" content="https://www.realmlabs.app/burnscroll/" />
+<meta property="og:url" content="https://www.realmlabs.app/burnscroll" />
 <meta property="og:image" content="https://www.realmlabs.app/assets/burnscroll-logo.jpg" />
 
 <meta name="twitter:card" content="summary_large_image" />
@@ -40,7 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "description": "A screen-time control app that locks your distracting apps until you burn the calories to earn them back. Blocks apps via the Apple Screen Time API and syncs with Apple Health and Apple Watch.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS 18.6+",
-  "url": "https://www.realmlabs.app/burnscroll/",
+  "url": "https://www.realmlabs.app/burnscroll",
   "installUrl": "https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932",
   "offers": {
     "@type": "Offer",
@@ -56,7 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Realm Labs Studio", "item": "https://www.realmlabs.app/" },
-    { "@type": "ListItem", "position": 2, "name": "BurnScroll", "item": "https://www.realmlabs.app/burnscroll/" }
+    { "@type": "ListItem", "position": 2, "name": "BurnScroll", "item": "https://www.realmlabs.app/burnscroll" }
   ]
 }
 </script>

@@ -20,17 +20,26 @@ const related = (await getRelated('burnscroll', post.slug, 3)).map((a) => ({
   cover: a.coverImage ? urlForImage(a.coverImage).width(480).height(270).fit('crop').auto('format').url() : null,
 }));
 const canonical = `/burnscroll/articles/${post.slug}`;
+
+// wordCount for Article schema — engines use length as a depth signal.
+let wordCount = 0;
+for (const b of post.body ?? []) {
+  if (b?._type === 'block' && Array.isArray(b.children))
+    for (const s of b.children) if (s?.text) wordCount += s.text.split(/\s+/).filter(Boolean).length;
+}
 ---
 <BurnScrollArticle
   title={post.title}
   description={post.description}
   publishedDate={post.publishedAt}
+  updatedDate={post._updatedAt}
   author={post.author}
   cover={cover}
   canonical={canonical}
   readingTime={readingTime}
   related={related}
   faq={faq}
+  wordCount={wordCount}
 >
   <Fragment set:html={bodyHtml} />
 </BurnScrollArticle>

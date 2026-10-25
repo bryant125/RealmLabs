@@ -8,6 +8,19 @@ import react from '@astrojs/react';
 const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || '1jrna7ry';
 const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 
+// <lastmod> for every article URL in the sitemap, from Sanity's _updatedAt.
+// Google uses lastmod to decide what to recrawl first, so stale/absent dates
+// slow down indexing of new and refreshed articles. Fails soft: no lastmod.
+let lastmodByUrl = {};
+try {
+  const query = encodeURIComponent('*[_type == "article" && defined(slug.current)]{ "slug": slug.current, brand, _updatedAt }');
+  const res = await fetch(`https://${projectId}.api.sanity.io/v2024-01-01/data/query/${dataset}?query=${query}`);
+  const docs = (await res.json()).result || [];
+  for (const d of docs) lastmodByUrl[`https://www.realmlabs.app/${d.brand}/articles/${d.slug}`] = d._updatedAt;
+} catch (e) {
+  console.warn('[sitemap] could not fetch lastmod dates:', e.message);
+}
+
 // NOTE: publicDir defaults to ./public — every existing page in public/
 // (homepage, /mamabee, /burnscroll) is copied to the build output UNCHANGED.
 // Astro only ADDS the new /*/articles routes + the /studio editor on top.
@@ -29,6 +42,10 @@ export default defineConfig({
     react(),
     sitemap({
       filter: (page) => !page.includes('/studio') && !page.includes('/admin'),
+      serialize: (item) => {
+        const lastmod = lastmodByUrl[item.url.replace(/\/$/, '')];
+        return lastmod ? { ...item, lastmod } : item;
+      },
       // The static pages in public/ are passed through by Astro but aren't
       // "routes", so the sitemap can't discover them automatically. List the
       // important ones here so Google indexes the whole site, not just articles.

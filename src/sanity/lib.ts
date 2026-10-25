@@ -26,6 +26,7 @@ export type Article = {
   description: string
   brand: 'mamabee' | 'burnscroll'
   publishedAt: string
+  _updatedAt?: string
   author?: string
   tags?: string[]
   coverImage?: any
@@ -39,6 +40,7 @@ const ARTICLE_FIELDS = `
   description,
   brand,
   publishedAt,
+  _updatedAt,
   author,
   tags,
   coverImage,
@@ -107,13 +109,38 @@ export function extractFaq(body: any): {question: string; answer: string}[] {
 }
 
 // Up to `limit` other articles from the same brand, for a "Keep reading" block.
+// Ranked by topical overlap (shared tag words), so each article links to its
+// genuine neighbours instead of every page linking to the same 3 newest posts.
+// Ties fall back to newest-first, which keeps fresh articles discoverable.
+const STOP = new Set(['baby', 'babies', 'newborn', 'how', 'to', 'the', 'a', 'and', 'for', 'of', 'your', 'phone', 'screen', 'time', 'app', 'apps', 'vs', 'what', 'when', 'is', 'in', 'with'])
+const tagWords = (a: Article) =>
+  new Set(
+    [...(a.tags || []), a.slug.replace(/-/g, ' ')]
+      .join(' ')
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((w) => w.length > 2 && !STOP.has(w)),
+  )
+
 export async function getRelated(
   brand: 'mamabee' | 'burnscroll',
   currentSlug: string,
   limit = 3,
 ): Promise<Article[]> {
   const all = await getArticlesByBrand(brand)
-  return all.filter((a) => a.slug !== currentSlug).slice(0, limit)
+  const current = all.find((a) => a.slug === currentSlug)
+  const others = all.filter((a) => a.slug !== currentSlug)
+  if (!current) return others.slice(0, limit)
+  const mine = tagWords(current)
+  return others
+    .map((a, i) => {
+      let score = 0
+      for (const w of tagWords(a)) if (mine.has(w)) score++
+      return {a, score, i}
+    })
+    .sort((x, y) => y.score - x.score || x.i - y.i)
+    .slice(0, limit)
+    .map((x) => x.a)
 }
 
 // Render Portable Text body to HTML: optimized images, inline download links,
@@ -140,7 +167,7 @@ export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee
           const heading = value?.heading
             ? `<p class="article-cta-h">${value.heading}</p>`
             : ''
-          return `<div class="article-cta">${heading}<a class="article-cta-btn" href="${appUrl}" target="_blank" rel="noopener">${label}</a></div>`
+          return `<div class="article-cta">${heading}<a class="article-cta-btn" data-cta="article-inline" href="${appUrl}" target="_blank" rel="noopener">${label}</a></div>`
         },
         comparisonTable: ({value}: any) => {
           const esc = (s: any) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -162,9 +189,14 @@ export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee
       },
       marks: {
         appLink: ({children}: any) =>
-          `<a href="${appUrl}" target="_blank" rel="noopener">${children}</a>`,
-        link: ({children, value}: any) =>
-          `<a href="${value?.href || '#'}" target="_blank" rel="noopener">${children}</a>`,
+          `<a data-cta="article-textlink" href="${appUrl}" target="_blank" rel="noopener">${children}</a>`,
+        link: ({children, value}: any) => {
+          const href = value?.href || '#'
+          const internal = href.startsWith('/') || href.startsWith('https://www.realmlabs.app')
+          return internal
+            ? `<a href="${href.replace('https://www.realmlabs.app', '')}">${children}</a>`
+            : `<a href="${href}" target="_blank" rel="noopener">${children}</a>`
+        },
       },
     },
   })

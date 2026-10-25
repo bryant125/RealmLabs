@@ -7,6 +7,10 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PVHXK8ML');</script>
+<script>/* App Store click tracking -> GTM event "app_store_click" (mark as a GA4 key event) */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+(window.dataLayer=window.dataLayer||[]).push({event:'app_store_click',app:/mamabee/.test(a.href)?'mamabee':'burnscroll',
+cta_placement:a.getAttribute('data-cta')||(a.className||'link').toString().split(' ')[0],page_path:location.pathname});},true);</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -35,23 +39,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       MamaBee
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#how">How it works</a>
-      <a href="index.html#features">Features</a>
-      <a href="index.html#ai">AI</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="/mamabee#how">How it works</a>
+      <a href="/mamabee#features">Features</a>
+      <a href="/mamabee#ai">AI</a>
+      <a href="/mamabee#faq">FAQ</a>
       <a href="/mamabee/tools">Free tools</a>
       <a href="/mamabee/articles">Articles</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="index.html#download">Get the app</a>
+      <a class="btn btn-primary" href="/mamabee#download">Get the app</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
   <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
-    <a href="index.html#how">How it works</a>
-    <a href="index.html#features">Features</a>
-    <a href="index.html#ai">AI</a>
-    <a href="index.html#faq">FAQ</a>
+    <a href="/mamabee#how">How it works</a>
+    <a href="/mamabee#features">Features</a>
+    <a href="/mamabee#ai">AI</a>
+    <a href="/mamabee#faq">FAQ</a>
     <a href="/mamabee/tools">Free tools</a>
     <a href="/mamabee/articles">Articles</a>
   </nav>
@@ -275,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="mb-foot-app" href="https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521" target="_blank" rel="noopener">Download on the App&nbsp;Store</a>
     </div>
     <div class="mb-foot-cols">
-      <div class="mb-foot-col"><h4>Explore</h4><a href="/mamabee/articles">Articles</a><a href="/mamabee/tools">Free tools</a><a href="/mamabee/try">Try it free</a><a href="/mamabee/#features">Features</a></div>
+      <div class="mb-foot-col"><h4>Explore</h4><a href="/mamabee/articles">Articles</a><a href="/mamabee/tools">Free tools</a><a href="/mamabee/try">Try it free</a><a href="/mamabee#features">Features</a></div>
       <div class="mb-foot-col"><h4>Popular guides</h4><a href="/mamabee/articles/newborn-sleep-schedule">Newborn sleep</a><a href="/mamabee/articles/wake-windows-by-age">Wake windows</a><a href="/mamabee/articles/when-to-start-solids">Starting solids</a><a href="/mamabee/articles/best-baby-tracker-apps-compared">Best tracker apps</a></div>
       <div class="mb-foot-col"><h4>Company</h4><a href="/">Realm Labs Studio</a><a href="/mamabee/contact">Contact</a><a href="/mamabee/support">Support</a></div>
       <div class="mb-foot-col"><h4>Legal</h4><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a></div>

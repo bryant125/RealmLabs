@@ -7,12 +7,96 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PVHXK8ML');</script>
+<script>/* App Store click tracking -> GTM event "app_store_click" (mark as a GA4 key event) */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+(window.dataLayer=window.dataLayer||[]).push({event:'app_store_click',app:/mamabee/.test(a.href)?'mamabee':'burnscroll',
+cta_placement:a.getAttribute('data-cta')||(a.className||'link').toString().split(' ')[0],page_path:location.pathname});},true);</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <base href="/mamabee/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>MamaBee — The calm, AI-powered baby tracker</title>
 <meta name="description" content="MamaBee is the calm, AI-powered baby tracker. One-thumb logging, gentle insights at 3 AM, and your data always yours. Made with honey by parents." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MamaBee — The calm, AI-powered baby tracker" />
+<meta property="og:description" content="One-thumb baby logging, gentle insights at 3 AM, free co-parent sync and no ads. Your baby's data stays yours." />
+<meta property="og:url" content="https://www.realmlabs.app/mamabee" />
+<meta property="og:site_name" content="MamaBee" />
+<meta property="og:image" content="https://www.realmlabs.app/assets/mamabee-logo.jpg" />
+<meta name="twitter:card" content="summary" />
+<!-- FAQPage generated from the visible FAQ section below — keep in sync if you edit the FAQ. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is MamaBee free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — all core logging, insights, sync and export are free, forever. Premium (from $4.99/month or $49.99/year) adds the gentle AI features: Sleep Coach nap prediction, unlimited Bee AI, the Solid Food Allergen Test, multi-baby sync and extra co-parents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my baby's data train AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your logs live on your device, and are copied to our own secure database only if you turn on Co-Parent Sharing. When you use Bee AI, your question, a summary of your baby's logged history and your baby's first name, age, date of birth and gender go to our AI processing provider, which routes it to a language-model provider — never your baby's photo or your written notes. See our Privacy Policy for the full detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I share with my partner, nanny or grandma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — co-parent sync is free for up to 2 caregivers. Premium unlocks unlimited caregiver sharing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I cancel Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All your data stays exactly where it is — you keep everything you've logged. Only the AI features turn off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why iPhone only?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're iOS-first. Android, iPad and Apple Watch are on the roadmap — but only when we can do them genuinely well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages do you support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "12 at launch: English, 简体中文, 繁體中文, 日本語, 한국어, Deutsch, Español, Français, Italiano, Русский, ไทย and Tiếng Việt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — CSV, a PDF pediatrician report, and JSON. Free, anytime, with no lock-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — all core logging works offline. Sync happens quietly the moment you're connected again."
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -45,7 +129,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "MamaBee",
       "alternateName": "MamaBee Baby Tracker",
       "description": "MamaBee is a calm, AI-powered baby tracker for iPhone. One-thumb logging for sleep, feeds, diapers and growth; gentle insights; Sleep Coach nap prediction and Bee AI on Premium. Local-first, no ads, free to start.",
-      "url": "https://www.realmlabs.app/mamabee/",
+      "url": "https://www.realmlabs.app/mamabee",
       "installUrl": "https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521",
       "applicationCategory": "HealthApplication",
       "applicationSubCategory": "Baby Tracker",
@@ -92,7 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {
       "@type": "WebSite",
       "@id": "https://www.realmlabs.app/mamabee/#website",
-      "url": "https://www.realmlabs.app/mamabee/",
+      "url": "https://www.realmlabs.app/mamabee",
       "name": "MamaBee",
       "publisher": { "@id": "https://www.realmlabs.app/#organization" },
       "inLanguage": "en"
@@ -138,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#how">How it works</a>
     <a href="#features">Features</a>
     <a href="#ai">AI</a>
-    <a href="index.html#faq">FAQ</a>
+    <a href="/mamabee#faq">FAQ</a>
     <a href="/mamabee/tools">Free tools</a>
     <a href="/mamabee/articles">Articles</a>
     <div class="drawer-lang">
@@ -616,13 +700,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Language / i18n -->
 <script src="i18n.js?v=3"></script>
 
-<!-- Tweaks panel -->
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<div id="tweaks-root"></div>
-<script type="text/babel" src="tweaks.jsx?v=2"></script>
 
 </body>
 </html>

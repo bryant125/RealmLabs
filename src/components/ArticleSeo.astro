@@ -31,16 +31,20 @@ const jsonLd = {
   inLanguage: 'en',
   ...(wordCount ? { wordCount } : {}),
   isAccessibleForFree: true,
-  author: { '@type': 'Organization', name: author },
+  // Author/publisher resolve to the Organization entity defined on the
+  // homepage (@id), so engines attribute every article to one known studio.
+  author: { '@type': 'Organization', '@id': `${site}/#organization`, name: author, url: `${site}/` },
   publisher: {
     '@type': 'Organization',
-    name: brand,
+    '@id': `${site}/#organization`,
+    name: 'Realm Labs Studio',
+    url: `${site}/`,
     logo: { '@type': 'ImageObject', url: `${site}/assets/${brand.toLowerCase()}-logo.jpg` },
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
   // Link the article to the app entity defined on the brand homepage, so
   // engines connect "this review" to "this product".
-  ...(brand === 'MamaBee' ? { about: { '@id': `${site}/mamabee/#app` } } : {}),
+  about: { '@id': brand === 'MamaBee' ? `${site}/mamabee/#app` : `${site}/burnscroll/#app` },
 };
 ---
 <title>{title}</title>

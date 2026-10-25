@@ -7,6 +7,10 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PVHXK8ML');</script>
+<script>/* App Store click tracking -> GTM event "app_store_click" (mark as a GA4 key event) */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+(window.dataLayer=window.dataLayer||[]).push({event:'app_store_click',app:/mamabee/.test(a.href)?'mamabee':'burnscroll',
+cta_placement:a.getAttribute('data-cta')||(a.className||'link').toString().split(' ')[0],page_path:location.pathname});},true);</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "description": "A calm, AI-powered baby tracker for iPhone.",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "iOS",
-        "url": "https://www.realmlabs.app/mamabee/",
+        "url": "https://www.realmlabs.app/mamabee",
         "installUrl": "https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521"
       }
     },
@@ -64,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "description": "Screen-time control that locks your apps until you burn the calories.",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "iOS",
-        "url": "https://www.realmlabs.app/burnscroll/",
+        "url": "https://www.realmlabs.app/burnscroll",
         "installUrl": "https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932"
       }
     }
@@ -502,7 +506,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <ul class="n-menu">
         <li>
-          <a href="https://www.realmlabs.app/mamabee/" target="_blank" class="n-menu-item">
+          <a href="https://www.realmlabs.app/mamabee" target="_blank" class="n-menu-item">
             <div class="n-menu-ic"><img src="assets/mamabee-logo.jpg" alt="MamaBee"></div>
             <div class="n-menu-tx">
               <div class="n-menu-name">MamaBee</div>
@@ -535,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#capabilities" class="n-m-link">What we build</a>
   <div class="n-m-sec">
     <div class="n-m-label">Projects</div>
-    <a href="https://www.realmlabs.app/mamabee/" target="_blank" class="n-menu-item">
+    <a href="https://www.realmlabs.app/mamabee" target="_blank" class="n-menu-item">
       <div class="n-menu-ic"><img src="assets/mamabee-logo.jpg" alt="MamaBee"></div>
       <div class="n-menu-tx">
         <div class="n-menu-name">MamaBee</div>

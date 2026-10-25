@@ -40,3 +40,7 @@ INTERNAL-SUBPROCESSORS.md
 *.sln
 *.sw?
 .vercel
+
+# Google API key + SEO data pulls (repo is public)
+.secrets/
+reports/
