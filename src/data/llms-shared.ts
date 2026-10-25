@@ -4,7 +4,7 @@ import type {Article} from '../sanity/lib'
 
 // Comparison/review articles get their own list so engines find them fast.
 const APPS = 'mamabee|burnscroll|huckleberry|piyolog|napper|nara|glow|opal|screenzen|one-sec|brick|freedom|forest|jomo|clearspace'
-const COMPARISON = new RegExp(`(apps-compared|^best-.*-apps?$|-apps-safe|alternatives|worth-it|-review$|^(${APPS})-vs-)`)
+const COMPARISON = new RegExp(`(apps-compared|^best-.*-apps?$|-apps-safe|alternatives|worth-it|-review$|^(${APPS})-vs-|-vs-(mamabee|burnscroll)$)`)
 export const isComparison = (a: Article) => COMPARISON.test(a.slug)
 
 export const MAMABEE_TOOLS = `### MamaBee free tools

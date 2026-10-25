@@ -78,6 +78,21 @@ anxiety, flying with a baby, baby-proofing, pacifier, etc.).
 - `dressing-baby-for-sleep` — baby sleep temperature / TOG — Sleep
 - `how-to-cut-baby-nails` — how to cut baby nails — Health
 
+### ✅ MamaBee Week 9 — competitor 1-on-1s (5 live, `scripts/week9-competitor-articles.mjs`, 2026-10-25, covers ✅)
+Strategy change from the Search Playbook (GSC data Jul–Oct 2026): app comparisons rank ~#21 vs ~#72
+for broad health topics, so new MamaBee batches lean on competitor comparisons. Competitors picked
+by App Store rating count across 13 storefronts + US autocomplete demand. All facts checked 2026-10-25
+(US App Store listing + vendor site/help centre + Google Play); re-verify prices before refreshing.
+- `nara-baby-vs-mamabee` — nara baby alternative / is nara baby still free (Nara went paid Oct 2026) — App ◆
+- `baby-feed-timer-vs-mamabee` — baby feed timer app cost / share with partner — App ◆
+- `sprout-baby-vs-mamabee` — sprout baby app / sprout baby tracker price (App Store name "Baby Tracker & Newborn Log", Med ART Studios) — App ◆
+- `glow-baby-vs-mamabee` — glow baby app / premium / family plan — App ◆
+- `napper-vs-mamabee` — is napper worth it / napper app cost — App ◆
+
+**Next competitor candidates** (by ratings + demand): Baby Connect (14K US, "not working" searches),
+The Wonder Weeks (294K ratings, "worth it"), Baby+ by Philips (43K, EU-heavy), Baby Tracker • My Baby
+(77K, BR/FR/DE), BabyTime (KR, 51K). Huckleberry de-prioritised (already covered in the 4-way).
+
 ### 💡 MamaBee backlog (not yet written — future weeks)
 Keep these distinct from the topics above.
 - Is Huckleberry worth it? — `is huckleberry worth it` — App ◆
