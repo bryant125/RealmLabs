@@ -166,6 +166,32 @@ BurnScroll pricing (App Store, Oct 2026): free download; Lifetime Access $29.99 
 
 ---
 
+## 🌍 MamaBee localized articles (`/mamabee/<lang>/articles/<slug>`)
+Plan: `INTERNATIONAL-SEO-PLAN.md` (gitignored). A translation of an English article reuses the English slug, which is what links the two with hreflang. Sanity IDs are `mamabee-<lang>-<slug>`. Publish with `scripts/publish-intl.mjs`, never `publish-live.mjs`.
+**Vaccine schedule = Premium** (free shows first 3 months). Quote local App Store in-app purchase prices, date-stamped.
+
+**Wave 1 (15 live, 2026-11-13, `scripts/intl-wave1-<lang>.mjs`):**
+
+| Lang | Slug | Title | Main keyword |
+|---|---|---|---|
+| ja | `mamabee-vs-piyolog` | ぴよログとMamaBeeを比較【2026】広告なしで選ぶなら | ぴよログ 比較 |
+| ja | `best-baby-tracker-apps-compared` | 育児記録アプリおすすめ比較【2026】無料で夫婦共有 | 育児記録アプリ おすすめ |
+| ja | `piyolog-vs-junyu-note` (JA only) | ぴよログと授乳ノートどっち？違いを徹底比較【2026】 | ぴよログ 授乳ノート どっち |
+| ko | `best-baby-tracker-apps-compared` | 2026 수유 어플 추천 비교: 베이비타임·삐요로그 | 수유어플 추천 |
+| ko | `mamabee-vs-babytime` (KO only) | 베이비타임 vs MamaBee 2026: 광고없는 수유기록 | 베이비타임 |
+| ko | `wake-windows-by-age` | 월령별 깨시 표: 낮잠 횟수·깨어있는 시간 총정리 | 월령별 깨시 |
+| zh-tw | `best-baby-tracker-apps-compared` | 2026寶寶紀錄App推薦：5款育兒紀錄App功能價格比較 | 寶寶紀錄app推薦 |
+| zh-tw | `mamabee-vs-baby-tracker` | 寶寶生活記錄同步失敗怎麼辦？2026與MamaBee比較 | 寶寶生活記錄 同步 |
+| zh-tw | `baby-feeding-schedule-by-age` | 新生兒奶量怎麼算？0–12個月寶寶奶量表 | 新生兒 奶量 |
+| zh-cn | `best-baby-tracker-apps-compared` | 宝宝记录App哪个好？2026年5款横向对比 | 宝宝记录app哪个好 |
+| zh-cn | `baobaoshu-vs-qinbaobao-vs-mamabee` (ZH-CN only) | 宝宝树和亲宝宝哪个好？2026年对比，附纯记录之选 | 宝宝树和亲宝宝哪个好 |
+| zh-cn | `baby-feeding-schedule-by-age` | 新生儿奶量标准表：按月龄怎么喂、怎么记 | 新生儿奶量标准表 |
+| pt-br | `best-baby-tracker-apps-compared` | Melhor aplicativo para bebê em 2026: 6 apps comparados | melhor aplicativo para acompanhar bebê |
+| pt-br | `napper-vs-mamabee` | Napper é bom? Napper vs MamaBee: preço e diferenças em 2026 | napper é bom |
+| pt-br | `mamabee-vs-meu-bebe` (PT only) | Meu Bebê (Diário da Amamentação) vs MamaBee em 2026 | meu bebê diário da amamentação |
+
+Covers for the 4 language-only slugs are borrowed from related English articles (Higgsfield was unavailable); swap for new ones later.
+
 ## 🌍 Localization tracker (US English first, then ES / JA / ZH)
 Translate winning English articles once they rank. Add rows as translations ship.
 
