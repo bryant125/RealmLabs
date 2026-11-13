@@ -7,7 +7,8 @@ const KEY = 'b6f55acadfc60822dff3c80335507fd9'
 const HOST = 'www.realmlabs.app'
 
 const urls = execSync(
-  `curl -s https://${HOST}/sitemap-0.xml | grep -oE 'https://${HOST.replace(/\./g, '\\.')}/[^<]+' | sort -u`,
+  // Only <loc> entries; the sitemap also holds hreflang <xhtml:link href="..."/> tags.
+  `curl -s https://${HOST}/sitemap-0.xml | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g' | sort -u`,
   {encoding: 'utf8'},
 ).split('\n').map((s) => s.trim()).filter(Boolean)
 
