@@ -38,7 +38,7 @@ const articles = [
           ['Piyo日誌', 'NT$120', 'NT$1,190', '首月免費試用', '約 NT$3,570'],
           ['初日手帳', '—', '—', 'NT$30、NT$90、NT$290 三個項目', '依項目而定'],
           ['Huckleberry', 'Plus NT$390；Premium NT$470–490', 'Plus NT$1,990–2,290；Premium NT$3,690–3,990', '睡眠計畫 NT$2,990', 'Plus 約 NT$5,970 起；Premium 約 NT$11,070 起'],
-          ['MamaBee', 'Premium NT$150', 'Premium NT$1,490', '另列 NT$1,290 年費項目', '免費版 NT$0；Premium 約 NT$4,470'],
+          ['MamaBee', 'Premium NT$150', 'Premium NT$1,490', '—', '免費版 NT$0；Premium 約 NT$4,470'],
         ],
       },
     },

@@ -55,7 +55,7 @@ A('mamabee-vs-piyolog',
       ],
     },
     cost: {
-      caption: `${DATE}時点の App Store（日本）の価格（税込）で計算。MamaBee の App Store ページには年額6,000円のプランも掲載されています。`,
+      caption: `${DATE}時点の App Store（日本）の価格（税込）で計算。`,
       headers: ['プラン', '1年', '3年'],
       rows: [
         ['ぴよログ 無料版（広告あり）', '0円', '0円'],

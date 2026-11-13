@@ -168,7 +168,20 @@ BurnScroll pricing (App Store, Oct 2026): free download; Lifetime Access $29.99 
 
 ## 🌍 MamaBee localized articles (`/mamabee/<lang>/articles/<slug>`)
 Plan: `INTERNATIONAL-SEO-PLAN.md` (gitignored). A translation of an English article reuses the English slug, which is what links the two with hreflang. Sanity IDs are `mamabee-<lang>-<slug>`. Publish with `scripts/publish-intl.mjs`, never `publish-live.mjs`.
-**Vaccine schedule = Premium** (free shows first 3 months). Quote local App Store in-app purchase prices, date-stamped.
+**Vaccine schedule = Premium** (free shows first 3 months). Quote only the standard monthly/yearly price from the App Store Connect price list, date-stamped. **Never mention the lower yearly promo price** (in-app offer only).
+
+| Market | Monthly | Yearly |
+|---|---|---|
+| US | $4.99 | $49.99 |
+| Taiwan | NT$150 | NT$1,490 |
+| Japan | ¥800 | ¥8,000 |
+| Korea | ₩7,700 | ₩77,000 |
+| Brazil | R$29,90 | R$299,90 |
+| Portugal | €5,99 | €59,99 |
+| China | ¥38 | ¥328 |
+| Hong Kong | HK$38 | HK$388 |
+| Malaysia | RM22.90 | RM229.90 |
+| Singapore | S$6.98 | S$69.98 |
 
 **Wave 1 (15 live, 2026-11-13, `scripts/intl-wave1-<lang>.mjs`):**
 

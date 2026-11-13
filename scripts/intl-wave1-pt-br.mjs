@@ -39,7 +39,7 @@ const articles = [
           ['Bebê+ (Philips)', '10,8 mil (4,77)', 'Registro, artigos e vídeos', 'Não é preciso pagar (a página indica compras opcionais, sem preços)', 'Sim', 'Não'],
           ['Baby Tracker (Nighp)', '4,3 mil (4,85)', 'Registro completo, com anúncios', 'Sem anúncios R$ 29,90; Plus R$ 39,90/mês ou R$ 299,90/ano', 'Sim', 'Sim'],
           ['Blumy', '1,6 mil (4,86)', 'Versão limitada', 'Pro R$ 24,90/mês ou R$ 134,90 a R$ 149,90/ano; Premium R$ 29,90/mês ou R$ 239,00/ano', 'Sim', 'Não'],
-          ['MamaBee', 'Novo no Brasil', 'Registro completo, sem anúncios, 2 cuidadores, PDF', 'Premium R$ 29,90/mês ou R$ 299,90/ano (também listado: R$ 249,90/ano)', 'Não', 'Não'],
+          ['MamaBee', 'Novo no Brasil', 'Registro completo, sem anúncios, 2 cuidadores, PDF', 'Premium R$ 29,90/mês ou R$ 299,90/ano', 'Não', 'Não'],
         ],
       },
       custo: {
@@ -53,7 +53,7 @@ const articles = [
           ['Napper Unlimited', 'R$ 89,90', 'Previsão de sonecas, curso e sons de sono'],
           ['Blumy Pro anual', 'R$ 134,90 a R$ 149,90', 'Previsões, compartilhamento com a família, IA'],
           ['Blumy Premium anual', 'R$ 239,00', 'Plano mais completo da Blumy'],
-          ['MamaBee Premium anual', 'R$ 249,90 a R$ 299,90', 'Sleep Coach, Bee AI ilimitada, alergênicos, calendário vacinal completo'],
+          ['MamaBee Premium anual', 'R$ 299,90', 'Sleep Coach, Bee AI ilimitada, alergênicos, calendário vacinal completo'],
           ['Baby Tracker Plus anual', 'R$ 299,90', 'Sem anúncios e dicas de horários (What’s Next)'],
         ],
       },
@@ -114,7 +114,7 @@ Os registros ficam no seu aparelho, a menos que você ative o compartilhamento c
 Não. A Caderneta da Criança, que toda criança nascida no Brasil recebe na alta da maternidade, é o documento oficial: nela o profissional de saúde anota crescimento, desenvolvimento e vacinas. O app serve para o dia a dia, com as mamadas, fraldas e sonecas que ninguém consegue lembrar na consulta.
 Os gráficos de crescimento da Caderneta seguem as curvas da OMS, a mesma referência dos percentis do MamaBee. Já os marcos do desenvolvimento do MamaBee vêm da lista do CDC americano, que não é idêntica à da Caderneta. Na dúvida, vale o que o pediatra avalia na consulta de puericultura. As vacinas seguem o calendário do Ministério da Saúde, e o registro oficial é o da Caderneta.
 ## E em Portugal?
-Os mesmos apps existem em Portugal, mas a App Store portuguesa mostra os preços em euros. O MamaBee aparece como "MamaBee: Diário do Bebé", com Premium a 5,99 € por mês ou 59,99 € por ano (também listado a 44,99 € por ano). O Napper Unlimited aparece a 35,99 €. O documento oficial é o Boletim de Saúde Infantil e Juvenil, do SNS 24.
+Os mesmos apps existem em Portugal, mas a App Store portuguesa mostra os preços em euros. O MamaBee aparece como "MamaBee: Diário do Bebé", com Premium a 5,99 € por mês ou 59,99 € por ano. O Napper Unlimited aparece a 35,99 €. O documento oficial é o Boletim de Saúde Infantil e Juvenil, do SNS 24.
 ## Como escolher em um minuto
 Pergunte a si mesmo: o que está mais difícil agora?
 - **O sono:** Napper, ou Blumy se preferir um app brasileiro.
@@ -152,7 +152,7 @@ Preços, avaliações e recursos conferidos na App Store do Brasil e de Portugal
           ['Avaliações na App Store (BR)', '17,8 mil, média 4,96', 'Novo no Brasil'],
           ['Foco', 'Sono do bebê', 'Registro completo do bebê'],
           ['O que é grátis', 'Acompanhamento diário do sono e horário baseado na idade', 'Sono, mamadas, fraldas, crescimento, saúde, marcos, sincronização para 2 e exportação'],
-          ['Plano pago', 'Napper Unlimited R$ 89,90/ano', 'Premium R$ 29,90/mês ou R$ 299,90/ano (também listado: R$ 249,90/ano)'],
+          ['Plano pago', 'Napper Unlimited R$ 89,90/ano', 'Premium R$ 29,90/mês ou R$ 299,90/ano'],
           ['Teste grátis', '7 dias', 'Não é preciso: o núcleo é grátis'],
           ['Previsão de soneca', 'Sim, personalizada (pago)', 'Sleep Coach (Premium)'],
           ['Curso e sons de sono', 'Sim', 'Não'],
@@ -170,8 +170,7 @@ Preços, avaliações e recursos conferidos na App Store do Brasil e de Portugal
           ['Napper grátis (sem previsão)', 'R$ 0', 'R$ 0'],
           ['Napper Unlimited', 'R$ 89,90', 'R$ 179,80'],
           ['MamaBee grátis (sem previsão)', 'R$ 0', 'R$ 0'],
-          ['MamaBee Premium (plano de R$ 249,90)', 'R$ 249,90', 'R$ 499,80'],
-          ['MamaBee Premium (plano de R$ 299,90)', 'R$ 299,90', 'R$ 599,80'],
+          ['MamaBee Premium anual', 'R$ 299,90', 'R$ 599,80'],
         ],
       },
     },
@@ -296,7 +295,7 @@ Os dois são gratuitos e sem anúncios, então a escolha não é sobre preço. �
 - **Resumos de 7 dias.** Quantas mamadas, quanto sono e quantas fraldas por dia, sem fazer conta de cabeça.
 - **PDF para o pediatra.** Exportação grátis em PDF, CSV e JSON, para levar à consulta ou guardar.
 - **Sincronização em tempo real para 2 cuidadores**, grátis, com os dois no iPhone.
-O Premium, opcional, custa R$ 29,90 por mês ou R$ 299,90 por ano na App Store brasileira (há também um plano anual listado a R$ 249,90). Ele traz o Sleep Coach, que prevê a próxima soneca a partir do histórico do seu bebê, a Bee AI ilimitada, o teste de alergênicos da introdução alimentar com cronômetro de reação de 3 dias, vários bebês, mais cuidadores, análises de 30, 90 e 365 dias e o calendário vacinal completo. No grátis, o calendário vacinal mostra só os 3 primeiros meses. Em Portugal, os preços aparecem em euros: 5,99 € por mês ou 59,99 € por ano.
+O Premium, opcional, custa R$ 29,90 por mês ou R$ 299,90 por ano na App Store brasileira. Ele traz o Sleep Coach, que prevê a próxima soneca a partir do histórico do seu bebê, a Bee AI ilimitada, o teste de alergênicos da introdução alimentar com cronômetro de reação de 3 dias, vários bebês, mais cuidadores, análises de 30, 90 e 365 dias e o calendário vacinal completo. No grátis, o calendário vacinal mostra só os 3 primeiros meses. Em Portugal, os preços aparecem em euros: 5,99 € por mês ou 59,99 € por ano.
 [[CTA||Quer percentis, resumos e um PDF para o pediatra? Experimente o MamaBee grátis]]
 ## Onde o MamaBee perde
 - Não tem Apple Watch nem iPad, e exige iOS 17.6 ou mais recente.
