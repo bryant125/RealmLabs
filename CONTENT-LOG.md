@@ -205,6 +205,30 @@ Plan: `INTERNATIONAL-SEO-PLAN.md` (gitignored). A translation of an English arti
 
 Covers for the 4 language-only slugs are borrowed from related English articles (Higgsfield was unavailable); swap for new ones later.
 
+**Wave 2 (15 live, 2026-11-14, `scripts/intl-wave2-<lang>.mjs`):**
+
+| Lang | Slug | Title | Main keyword |
+|---|---|---|---|
+| ja | `shared-baby-tracker-for-couples` (JA only) | 夫婦で共有できる育児記録アプリ｜共有人数・同期を比較【2026】 | 育児アプリ 夫婦 共有 |
+| ja | `baby-feeding-schedule-by-age` | 授乳間隔とミルク量の目安【月齢別早見表】 | 授乳間隔 月齢 |
+| ja | `well-baby-visit-schedule` | 乳幼児健診はいつ？1ヶ月〜5歳の時期と内容 | 乳幼児健診 いつ |
+| ko | `well-baby-visit-schedule` | 영유아검진 시기표: 1~8차 시기·문진표·준비물 | 영유아검진 시기 |
+| ko | `baby-feeding-schedule-by-age` | 신생아 수유량·수유텀 표: 일령·개월별 정리 | 신생아 수유량 |
+| ko | `mamabee-vs-piyolog` | 삐요로그 vs MamaBee 2026 수면·공유·가격 비교 | 삐요로그 |
+| zh-tw | `mamabee-vs-piyolog` | Piyo日誌怎麼共享？2026與MamaBee比較：廣告、價格 | piyo日誌 共享 |
+| zh-tw | `well-baby-visit-schedule` | 兒童預防保健7+2：9次健檢時程一次看【2026】 | 兒童預防保健 9次 |
+| zh-tw | `baby-vaccine-schedule-explained` | 寶寶疫苗時程表2026：公費疫苗一覽＋輪狀病毒新制 | 寶寶 疫苗 時程 |
+| zh-cn | `mamabee-vs-baby-tracker` | 2026宝宝生活记录 vs MamaBee：同步、广告与价格对比 | 宝宝生活记录app |
+| zh-cn | `newborn-night-shifts` | 夫妻带娃分工表：新生儿夜奶怎么轮班 | 夫妻带娃分工 |
+| zh-cn | `how-many-wet-diapers-newborn` | 新生儿一天换几片尿不湿？尿量与大便次数对照表 | 尿不湿一天换几片 |
+| pt-br | `mamabee-vs-baby-plus-philips` (PT only) | Bebê+ (Philips) vs MamaBee em 2026: qual app escolher? | app bebê mais |
+| pt-br | `wake-windows-by-age` | Janela de sono do bebê por idade: tabela mês a mês | janela de sono bebê |
+| pt-br | `how-many-wet-diapers-newborn` | Quantas fraldas o recém-nascido usa por dia? Xixi e cocô | quantas fraldas o recém-nascido usa por dia |
+
+Remaining planned localized topics (waves 3+): see `INTERNATIONAL-SEO-PLAN.md` / `intl-research/*.md` §4.
+
+**English week 11 (2026-11-14), picked from GSC queries:** new `luli-vs-napper`, `best-nap-prediction-apps`, `huckleberry-vs-baby-tracker` (`scripts/week11-articles.mjs`); refreshed `best-baby-tracker-apps-compared` and `newborn-night-shifts` (`scripts/refresh-week11.mjs`, already applied; do not re-run). Fixed Nighp facts (Plus $5.99/mo or $49.99/yr with "What's Next"; sync groups with iCloud/Dropbox backup) in `mamabee-vs-baby-tracker`. Covers for the 3 new English and 2 new localized articles are borrowed; replace when Higgsfield is available.
+
 ## 🌍 Localization tracker (US English first, then ES / JA / ZH)
 Translate winning English articles once they rank. Add rows as translations ship.
 
