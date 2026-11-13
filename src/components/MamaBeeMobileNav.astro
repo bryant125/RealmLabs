@@ -3,16 +3,19 @@
 // the <header>, and put <button class="nav-toggle" id="mbToggle" ...> inside the
 // header's .nav-cta. Styles are global so the .nav-toggle button (which lives in
 // the parent header) is styled and the desktop links hide at the same breakpoint.
-const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
+import { T, appStoreUrl, articlesPath, normLang } from '../i18n/mamabee';
+const lang = normLang(Astro.props.lang);
+const t = T[lang];
+const appUrl = appStoreUrl(lang);
 ---
 <nav class="nav-drawer" id="mbDrawer" aria-label="Mobile navigation">
-  <a href="/mamabee#how">How it works</a>
-  <a href="/mamabee#features">Features</a>
-  <a href="/mamabee#ai">AI</a>
-  <a href="/mamabee#faq">FAQ</a>
-  <a href="/mamabee/tools">Free tools</a>
-  <a href="/mamabee/articles">Articles</a>
-  <a class="drawer-app" href={appUrl} target="_blank" rel="noopener">Get the app</a>
+  <a href="/mamabee#how">{t.nav.how}</a>
+  <a href="/mamabee#features">{t.nav.features}</a>
+  <a href="/mamabee#ai">{t.nav.ai}</a>
+  <a href="/mamabee#faq">{t.nav.faq}</a>
+  {lang === 'en' && <a href="/mamabee/tools">{t.nav.tools}</a>}
+  <a href={articlesPath(lang)}>{t.nav.articles}</a>
+  <a class="drawer-app" data-cta="drawer" href={appUrl} target="_blank" rel="noopener">{t.getApp}</a>
 </nav>
 
 <style is:global>

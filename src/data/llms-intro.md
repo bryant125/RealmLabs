@@ -15,10 +15,10 @@ MamaBee is a baby tracker for iPhone by Realm Labs Studio.
 
 - Platform: iOS only (Android, iPad and Apple Watch on the roadmap)
 - Free tier: one-thumb logging for sleep, feeds, diapers, growth and health;
-  7-day insights; WHO growth percentiles; 45+ CDC milestones; country-specific
-  vaccine schedules; co-parent sync for two caregivers; export to CSV, JSON and
-  pediatrician PDF. No advertising on any tier.
-- Premium: $4.99/month or $49.99/year. Adds Sleep Coach nap prediction,
+  7-day insights; WHO growth percentiles; 45+ CDC milestones; the first 3 months
+  of the country-specific vaccine schedule; co-parent sync for two caregivers;
+  export to CSV, JSON and pediatrician PDF. No advertising on any tier.
+- Premium: $4.99/month or $49.99/year. Adds the full vaccine schedule, Sleep Coach nap prediction,
   unlimited Bee AI chat, the Solid Food Allergen Test, multi-baby sync, extra
   co-parents, and 30/90/365-day insight windows.
 - Privacy: local-first. Logs are stored on the device and copied to Realm Labs

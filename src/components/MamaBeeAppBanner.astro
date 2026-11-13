@@ -2,19 +2,21 @@
 // Slim "app is available" announcement banner shown at the top of MamaBee
 // article pages (like GainFrame's blog banner). On-brand honey styling, an
 // official-style black App Store badge, fully responsive (stacks on mobile).
-const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
-const { title = 'MamaBee is now available', subtitle = 'Download free on the App Store and let your phone do the 3 AM feed-and-nap math.' } = Astro.props;
+import { T, appStoreUrl, normLang } from '../i18n/mamabee';
+const lang = normLang(Astro.props.lang);
+const appUrl = appStoreUrl(lang);
+const { title = T[lang].bannerTitle, subtitle = T[lang].bannerSub } = Astro.props;
 ---
 <aside class="app-banner">
   <div class="ab-text">
     <strong class="ab-title">{title}</strong>
     <span class="ab-sub">{subtitle}</span>
   </div>
-  <a class="appstore-badge" href={appUrl} target="_blank" rel="noopener" aria-label="Download MamaBee on the App Store">
+  <a class="appstore-badge" data-cta="banner" href={appUrl} target="_blank" rel="noopener" aria-label="Download MamaBee on the App Store">
     <svg viewBox="0 0 384 512" width="20" height="24" aria-hidden="true" focusable="false">
       <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C62.3 141.9 0 184.3 0 270.5c0 25.5 4.7 51.8 14 78.9 12.4 35.7 57.2 123.4 103.9 121.9 24.4-.6 41.7-17.3 73.5-17.3 30.8 0 46.8 17.3 73.9 17.3 47.1-.7 87.6-80.4 99.4-116.2-63.1-29.7-59.9-87-59.9-89.4zm-58.4-168.4c28.2-33.5 25.6-64 24.8-75-24.9 1.4-53.7 16.9-70.1 36-18.1 20.4-28.7 45.6-26.4 74.4 26.9 2.1 51.5-11.7 71.7-35.4z"/>
     </svg>
-    <span class="ab-badge-txt"><small>Download on the</small><b>App Store</b></span>
+    <span class="ab-badge-txt"><small>{T[lang].bannerBadgeSmall}</small><b>App Store</b></span>
   </a>
 </aside>
 

@@ -8,15 +8,31 @@ import react from '@astrojs/react';
 const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || '1jrna7ry';
 const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 
-// <lastmod> for every article URL in the sitemap, from Sanity's _updatedAt.
-// Google uses lastmod to decide what to recrawl first, so stale/absent dates
-// slow down indexing of new and refreshed articles. Fails soft: no lastmod.
+// <lastmod> for every article URL in the sitemap, from Sanity's _updatedAt, plus
+// hreflang alternates (xhtml:link) for articles that exist in several languages.
+// Google uses lastmod to decide what to recrawl first. Fails soft: no lastmod.
+// Keep HREFLANG in sync with src/i18n/mamabee.ts.
+const SITE = 'https://www.realmlabs.app';
+const HREFLANG = { en: ['en'], 'zh-tw': ['zh-TW', 'zh-HK'], 'zh-cn': ['zh-CN', 'zh-SG', 'zh-MY'], ja: ['ja'], ko: ['ko'], 'pt-br': ['pt-BR', 'pt'] };
+const articleUrl = (brand, lang, slug) => `${SITE}/${brand}${lang === 'en' ? '' : `/${lang}`}/articles/${slug}`;
 let lastmodByUrl = {};
+let alternatesByUrl = {};
 try {
-  const query = encodeURIComponent('*[_type == "article" && defined(slug.current)]{ "slug": slug.current, brand, _updatedAt }');
+  const query = encodeURIComponent('*[_type == "article" && defined(slug.current)]{ "slug": slug.current, brand, _updatedAt, "lang": coalesce(language, "en") }');
   const res = await fetch(`https://${projectId}.api.sanity.io/v2024-01-01/data/query/${dataset}?query=${query}`);
   const docs = (await res.json()).result || [];
-  for (const d of docs) lastmodByUrl[`https://www.realmlabs.app/${d.brand}/articles/${d.slug}`] = d._updatedAt;
+  const groups = {};
+  for (const d of docs) {
+    lastmodByUrl[articleUrl(d.brand, d.lang, d.slug)] = d._updatedAt;
+    (groups[`${d.brand}/${d.slug}`] ??= []).push(d);
+  }
+  for (const g of Object.values(groups)) {
+    if (g.length < 2) continue;
+    const links = g.flatMap((d) => (HREFLANG[d.lang] || []).map((h) => ({ lang: h, url: articleUrl(d.brand, d.lang, d.slug) })));
+    const en = g.find((d) => d.lang === 'en');
+    if (en) links.push({ lang: 'x-default', url: articleUrl(en.brand, 'en', en.slug) });
+    for (const d of g) alternatesByUrl[articleUrl(d.brand, d.lang, d.slug)] = links;
+  }
 } catch (e) {
   console.warn('[sitemap] could not fetch lastmod dates:', e.message);
 }
@@ -43,8 +59,10 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.includes('/studio') && !page.includes('/admin'),
       serialize: (item) => {
-        const lastmod = lastmodByUrl[item.url.replace(/\/$/, '')];
-        return lastmod ? { ...item, lastmod } : item;
+        const url = item.url.replace(/\/$/, '');
+        const lastmod = lastmodByUrl[url];
+        const links = alternatesByUrl[url];
+        return { ...item, ...(lastmod ? { lastmod } : {}), ...(links ? { links } : {}) };
       },
       // The static pages in public/ are passed through by Astro but aren't
       // "routes", so the sitemap can't discover them automatically. List the

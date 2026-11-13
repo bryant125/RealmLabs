@@ -22,6 +22,23 @@ export const article = defineType({
       validation: (r) => r.required(),
     }),
     defineField({
+      name: 'language',
+      title: 'Language',
+      description: 'Translations of one article share the same slug. English pages live at /<brand>/articles/<slug>; others at /mamabee/<language>/articles/<slug>.',
+      type: 'string',
+      initialValue: 'en',
+      options: {
+        list: [
+          {title: 'English', value: 'en'},
+          {title: '繁體中文 (Taiwan)', value: 'zh-tw'},
+          {title: '简体中文 (China)', value: 'zh-cn'},
+          {title: '日本語 (Japan)', value: 'ja'},
+          {title: '한국어 (Korea)', value: 'ko'},
+          {title: 'Português (Brazil/Portugal)', value: 'pt-br'},
+        ],
+      },
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -31,7 +48,18 @@ export const article = defineType({
       name: 'slug',
       title: 'Slug (URL)',
       type: 'slug',
-      options: {source: 'title', maxLength: 96},
+      // Unique per brand + language, so a translation can reuse the English slug.
+      options: {
+        source: 'title',
+        maxLength: 96,
+        isUnique: async (slug, {document, getClient}) => {
+          const id = (document?._id || '').replace(/^drafts\./, '')
+          return !(await getClient({apiVersion: '2024-01-01'}).fetch(
+            'count(*[_type == "article" && slug.current == $slug && brand == $brand && coalesce(language, "en") == $lang && !(_id in [$id, "drafts." + $id])])',
+            {slug, id, brand: document?.brand, lang: document?.language || 'en'},
+          ))
+        },
+      },
       validation: (r) => r.required(),
     }),
     defineField({
@@ -161,9 +189,9 @@ export const article = defineType({
     }),
   ],
   preview: {
-    select: {title: 'title', brand: 'brand', media: 'coverImage'},
-    prepare({title, brand, media}) {
-      return {title, subtitle: brand === 'mamabee' ? '🐝 MamaBee' : '🔥 BurnScroll', media}
+    select: {title: 'title', brand: 'brand', media: 'coverImage', language: 'language'},
+    prepare({title, brand, media, language}) {
+      return {title, subtitle: `${brand === 'mamabee' ? '🐝 MamaBee' : '🔥 BurnScroll'} · ${(language || 'en').toUpperCase()}`, media}
     },
   },
 })

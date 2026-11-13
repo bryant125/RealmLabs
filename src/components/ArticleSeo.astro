@@ -11,6 +11,9 @@ const {
   image,
   brand,
   wordCount,
+  inLanguage = 'en',
+  ogLocale = 'en_US',
+  alternates = [], // [{hreflang, href}] — only emitted when a page has translations
 } = Astro.props;
 
 const site = 'https://www.realmlabs.app';
@@ -28,7 +31,7 @@ const jsonLd = {
   // Always emit dateModified — answer engines weight freshness, and an Article
   // with no dateModified reads as stale. Falls back to the published date.
   dateModified: updatedDate?.toISOString?.() ?? updatedDate ?? published,
-  inLanguage: 'en',
+  inLanguage,
   ...(wordCount ? { wordCount } : {}),
   isAccessibleForFree: true,
   // Author/publisher resolve to the Organization entity defined on the
@@ -50,12 +53,14 @@ const jsonLd = {
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
+{alternates.length > 1 && alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
 
 <meta property="og:type" content="article" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonicalUrl} />
 <meta property="og:site_name" content={brand} />
+<meta property="og:locale" content={ogLocale} />
 {imageUrl && <meta property="og:image" content={imageUrl} />}
 
 <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />

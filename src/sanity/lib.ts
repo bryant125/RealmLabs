@@ -2,6 +2,7 @@ import {sanityClient} from 'sanity:client'
 import {createClient} from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 import {toHTML} from '@portabletext/to-html'
+import {type Lang, T, appStoreUrl, FAQ_HEADING} from '../i18n/mamabee'
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -27,6 +28,7 @@ export type Article = {
   brand: 'mamabee' | 'burnscroll'
   publishedAt: string
   _updatedAt?: string
+  language?: string
   author?: string
   tags?: string[]
   coverImage?: any
@@ -41,25 +43,51 @@ const ARTICLE_FIELDS = `
   brand,
   publishedAt,
   _updatedAt,
+  language,
   author,
   tags,
   coverImage,
   body
 `
 
-// All published articles for one brand, newest first.
+// All published articles for one brand and language, newest first. Articles
+// without a language are English (everything published before Nov 2026).
 // Returns [] if Sanity isn't reachable / not configured yet, so the build
 // never fails just because there are no articles or no projectId.
-export async function getArticlesByBrand(brand: 'mamabee' | 'burnscroll'): Promise<Article[]> {
-  try {
-    return await readClient.fetch(
-      `*[_type == "article" && brand == $brand && defined(slug.current)] | order(publishedAt desc){${ARTICLE_FIELDS}}`,
-      {brand}
-    )
-  } catch (e) {
-    console.warn(`[sanity] could not fetch ${brand} articles:`, (e as Error).message)
-    return []
+// Memoized per build: every article page asks for its brand's list.
+const cache = new Map<string, Promise<Article[]>>()
+export function getArticlesByBrand(brand: 'mamabee' | 'burnscroll', lang: Lang = 'en'): Promise<Article[]> {
+  const key = `${brand}:${lang}`
+  if (!cache.has(key)) {
+    cache.set(key, readClient
+      .fetch(
+        `*[_type == "article" && brand == $brand && coalesce(language, "en") == $lang && defined(slug.current)] | order(publishedAt desc){${ARTICLE_FIELDS}}`,
+        {brand, lang},
+      )
+      .catch((e: Error) => {
+        console.warn(`[sanity] could not fetch ${brand}/${lang} articles:`, e.message)
+        return []
+      }))
   }
+  return cache.get(key)!
+}
+
+// slug -> languages it exists in, for hreflang alternates and language links.
+let langIndex: Promise<Map<string, Lang[]>> | null = null
+export async function getTranslationLangs(brand: 'mamabee' | 'burnscroll', slug: string): Promise<Lang[]> {
+  langIndex ??= readClient
+    .fetch(`*[_type == "article" && defined(slug.current)]{brand, "slug": slug.current, "lang": coalesce(language, "en")}`)
+    .then((rows: {brand: string; slug: string; lang: Lang}[]) => {
+      const m = new Map<string, Lang[]>()
+      for (const r of rows) {
+        const k = `${r.brand}:${r.slug}`
+        if (!m.has(k)) m.set(k, [])
+        if (!m.get(k)!.includes(r.lang)) m.get(k)!.push(r.lang)
+      }
+      return m
+    })
+    .catch(() => new Map())
+  return (await langIndex).get(`${brand}:${slug}`) ?? []
 }
 
 export const APP_STORE_URL: Record<'mamabee' | 'burnscroll', string> = {
@@ -67,18 +95,22 @@ export const APP_STORE_URL: Record<'mamabee' | 'burnscroll', string> = {
   burnscroll: 'https://apps.apple.com/us/app/burnscroll-screen-time-control/id6758544932',
 }
 
-// Estimate reading time in minutes from a Portable Text body (~200 wpm).
+// Estimate reading time in minutes from a Portable Text body: ~200 words/min
+// for space-separated languages, ~450 characters/min for Chinese/Japanese/Korean.
 export function readingMinutes(body: any): number {
   if (!Array.isArray(body)) return 1
   let words = 0
+  let cjk = 0
   for (const block of body) {
     if (block?._type === 'block' && Array.isArray(block.children)) {
       for (const span of block.children) {
-        if (span?.text) words += span.text.split(/\s+/).filter(Boolean).length
+        if (!span?.text) continue
+        cjk += (span.text.match(/[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/g) || []).length
+        words += span.text.split(/\s+/).filter(Boolean).length
       }
     }
   }
-  return Math.max(1, Math.round(words / 200))
+  return Math.max(1, Math.round(cjk > words ? cjk / 450 : words / 200))
 }
 
 // Extract Q&A pairs from the "Frequently asked questions" section of a body,
@@ -93,7 +125,7 @@ export function extractFaq(body: any): {question: string; answer: string}[] {
     if (block?._type !== 'block') continue
     if (block.style === 'h2') {
       if (current) { faqs.push(current); current = null }
-      inFaq = /frequently asked questions/i.test(textOf(block))
+      inFaq = FAQ_HEADING.test(textOf(block))
       continue
     }
     if (!inFaq) continue
@@ -126,8 +158,9 @@ export async function getRelated(
   brand: 'mamabee' | 'burnscroll',
   currentSlug: string,
   limit = 3,
+  lang: Lang = 'en',
 ): Promise<Article[]> {
-  const all = await getArticlesByBrand(brand)
+  const all = await getArticlesByBrand(brand, lang)
   const current = all.find((a) => a.slug === currentSlug)
   const others = all.filter((a) => a.slug !== currentSlug)
   if (!current) return others.slice(0, limit)
@@ -145,9 +178,10 @@ export async function getRelated(
 
 // Render Portable Text body to HTML: optimized images, inline download links,
 // and an insertable "Download the app" CTA button (brand-aware App Store link).
-export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee'): string {
+export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee', lang: Lang = 'en'): string {
   if (!body) return ''
-  const appUrl = APP_STORE_URL[brand]
+  // MamaBee links to the reader's own App Store storefront (jp, kr, tw, cn, br…).
+  const appUrl = brand === 'mamabee' ? appStoreUrl(lang) : APP_STORE_URL[brand]
   const html = toHTML(body, {
     components: {
       types: {
@@ -163,7 +197,7 @@ export function renderBody(body: any, brand: 'mamabee' | 'burnscroll' = 'mamabee
           return `<figure class="shot"><img src="${url}" alt="${alt}" loading="lazy" />${caption}</figure>`
         },
         appCta: ({value}: any) => {
-          const label = value?.label || 'Get the app'
+          const label = value?.label || (brand === 'mamabee' ? T[lang].getApp : 'Get the app')
           const heading = value?.heading
             ? `<p class="article-cta-h">${value.heading}</p>`
             : ''

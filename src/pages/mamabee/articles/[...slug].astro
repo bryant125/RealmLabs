@@ -1,6 +1,6 @@
 ---
 import MamaBeeArticle from '../../../layouts/MamaBeeArticle.astro';
-import { getArticlesByBrand, getRelated, readingMinutes, extractFaq, urlForImage, renderBody } from '../../../sanity/lib';
+import { getArticlesByBrand, getRelated, getTranslationLangs, readingMinutes, extractFaq, urlForImage, renderBody } from '../../../sanity/lib';
 import { articleTool } from '../../../data/mamabeeTools';
 
 export async function getStaticPaths() {
@@ -22,6 +22,7 @@ const related = (await getRelated('mamabee', post.slug, 3)).map((a) => ({
 }));
 const canonical = `/mamabee/articles/${post.slug}`;
 const tool = articleTool(post.slug);
+const translations = await getTranslationLangs('mamabee', post.slug);
 
 // wordCount for Article schema — engines use length as a depth signal.
 let wordCount = 0;
@@ -65,6 +66,8 @@ const itemList = post.slug === COMPARISON_HUB ? {
   tool={tool}
   wordCount={wordCount}
   itemList={itemList}
+  slug={post.slug}
+  translations={translations}
 >
   <Fragment set:html={bodyHtml} />
 </MamaBeeArticle>

@@ -1,24 +1,36 @@
 ---
 // Shared MamaBee footer — one source of truth across articles, tools and the demo.
 // Rich internal linking (tools, articles, try, legal) improves crawl depth + SEO.
-const appUrl = 'https://apps.apple.com/us/app/mamabee-baby-tracker/id6773179521';
+import { T, LANGS, appStoreUrl, articlesPath, articlePath, normLang } from '../i18n/mamabee';
+import { getArticlesByBrand } from '../sanity/lib';
+const lang = normLang(Astro.props.lang);
+const t = T[lang];
+const appUrl = appStoreUrl(lang);
 const year = 2026;
+// Link every language section that has articles, from every MamaBee page, so
+// search engines discover the localized journals (and readers can switch).
+const langsWithArticles = [];
+for (const l of LANGS) if ((await getArticlesByBrand('mamabee', l)).length) langsWithArticles.push(l);
+// Localized pages link their own newest articles instead of English guides.
+const localGuides = lang === 'en' ? [] : (await getArticlesByBrand('mamabee', lang)).slice(0, 4);
+const f = t.foot;
 ---
 <footer class="mb-footer">
   <div class="mb-foot-inner">
     <div class="mb-foot-brand">
       <a class="mb-foot-logo" href="/mamabee"><img src="/mamabee/assets/bee.png" alt="" width="40" height="40" />MamaBee</a>
-      <p class="mb-foot-tag">Track every little moment, gently. The honey-warm baby tracker — made with 🍯 by Realm Labs Studio.</p>
-      <a class="mb-foot-app" href={appUrl} target="_blank" rel="noopener">Download on the App&nbsp;Store</a>
+      <p class="mb-foot-tag">{t.footerTag}</p>
+      <a class="mb-foot-app" data-cta="footer" href={appUrl} target="_blank" rel="noopener">{t.footerDownload}</a>
     </div>
     <div class="mb-foot-cols">
       <div class="mb-foot-col">
-        <h4>Explore</h4>
-        <a href="/mamabee/articles">Articles</a>
-        <a href="/mamabee/tools">Free tools</a>
-        <a href="/mamabee/try">Try it free</a>
-        <a href="/mamabee#features">Features</a>
+        <h4>{f.explore}</h4>
+        <a href={articlesPath(lang)}>{t.footerArticles}</a>
+        {lang === 'en' && <a href="/mamabee/tools">Free tools</a>}
+        <a href="/mamabee/try">{f.tryFree}</a>
+        <a href="/mamabee#features">{f.features}</a>
       </div>
+      {lang === 'en' ? (
       <div class="mb-foot-col">
         <h4>Popular guides</h4>
         <a href="/mamabee/articles/newborn-sleep-schedule">Newborn sleep</a>
@@ -26,22 +38,33 @@ const year = 2026;
         <a href="/mamabee/articles/when-to-start-solids">Starting solids</a>
         <a href="/mamabee/articles/best-baby-tracker-apps-compared">Best tracker apps</a>
       </div>
+      ) : (
       <div class="mb-foot-col">
-        <h4>Company</h4>
+        <h4>{f.guides}</h4>
+        {localGuides.map((a) => <a href={articlePath(a.slug, lang)}>{a.title}</a>)}
+      </div>
+      )}
+      <div class="mb-foot-col">
+        <h4>{f.company}</h4>
         <a href="/">Realm Labs Studio</a>
-        <a href="/mamabee/contact">Contact</a>
-        <a href="/mamabee/support">Support</a>
+        <a href="/mamabee/contact">{f.contact}</a>
+        <a href="/mamabee/support">{f.support}</a>
       </div>
       <div class="mb-foot-col">
-        <h4>Legal</h4>
-        <a href="/mamabee/privacy">Privacy</a>
-        <a href="/mamabee/terms">Terms</a>
+        <h4>{f.legal}</h4>
+        <a href="/mamabee/privacy">{f.privacy}</a>
+        <a href="/mamabee/terms">{f.terms}</a>
       </div>
     </div>
   </div>
+  {langsWithArticles.length > 1 && (
+    <nav class="mb-foot-langs" aria-label="MamaBee articles in other languages">
+      {langsWithArticles.map((l) => <a href={articlesPath(l)} hreflang={T[l].hreflang[0]} lang={T[l].htmlLang}>{T[l].name}</a>)}
+    </nav>
+  )}
   <div class="mb-foot-bottom">
-    <span>© {year} Realm Labs Studio · Made with 🍯 for tired parents everywhere</span>
-    <span class="mb-foot-blinks"><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="/mamabee/support">Support</a></span>
+    <span>© {year} Realm Labs Studio · {f.bottom}</span>
+    <span class="mb-foot-blinks"><a href="/mamabee/privacy">{f.privacy}</a><a href="/mamabee/terms">{f.terms}</a><a href="/mamabee/support">{f.support}</a></span>
   </div>
 </footer>
 
@@ -57,6 +80,9 @@ const year = 2026;
   .mb-foot-col h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#caa980;margin-bottom:12px;font-weight:800}
   .mb-foot-col a{display:block;color:#e7d2b4;padding:6px 0;font-size:.96rem;font-weight:700;text-decoration:none;transition:color .16s,transform .16s}
   .mb-foot-col a:hover{color:#fff;transform:translateX(3px)}
+  .mb-foot-langs{max-width:1000px;margin:34px auto 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+  .mb-foot-langs a{color:#e7d2b4;font-weight:800;font-size:.92rem;text-decoration:none}
+  .mb-foot-langs a:hover{color:#fff}
   .mb-foot-bottom{max-width:1000px;margin:40px auto 0;padding-top:22px;border-top:2px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#c9a87f;font-size:.9rem;font-weight:600}
   .mb-foot-blinks{display:flex;gap:20px}
   .mb-foot-blinks a{color:#c9a87f;text-decoration:none}

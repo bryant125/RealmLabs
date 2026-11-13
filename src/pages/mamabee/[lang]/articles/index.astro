@@ -1,0 +1,14 @@
+---
+// /mamabee/<lang>/articles — built only for languages that have articles.
+import MamaBeeArticleIndex from '../../../../components/MamaBeeArticleIndex.astro';
+import { getArticlesByBrand } from '../../../../sanity/lib';
+import { LOCAL_LANGS } from '../../../../i18n/mamabee';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of LOCAL_LANGS) if ((await getArticlesByBrand('mamabee', lang)).length) paths.push({ params: { lang } });
+  return paths;
+}
+const { lang } = Astro.params;
+---
+<MamaBeeArticleIndex lang={lang} />

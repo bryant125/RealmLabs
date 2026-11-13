@@ -1,0 +1,55 @@
+---
+// Localized MamaBee articles: /mamabee/<lang>/articles/<slug> (zh-tw, zh-cn, ja,
+// ko, pt-br). Same layout as English, with the page language, local App Store
+// storefront and hreflang alternates to the other versions of the article.
+import MamaBeeArticle from '../../../../layouts/MamaBeeArticle.astro';
+import { getArticlesByBrand, getRelated, getTranslationLangs, readingMinutes, extractFaq, urlForImage, renderBody } from '../../../../sanity/lib';
+import { LOCAL_LANGS, articlePath } from '../../../../i18n/mamabee';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of LOCAL_LANGS) {
+    for (const post of await getArticlesByBrand('mamabee', lang)) {
+      paths.push({ params: { lang, slug: post.slug }, props: { post, lang } });
+    }
+  }
+  return paths;
+}
+
+const { post, lang } = Astro.props;
+const bodyHtml = renderBody(post.body, 'mamabee', lang);
+const cover = post.coverImage
+  ? urlForImage(post.coverImage).width(1600).fit('max').auto('format').url()
+  : undefined;
+const readingTime = readingMinutes(post.body);
+const faq = extractFaq(post.body);
+const related = (await getRelated('mamabee', post.slug, 3, lang)).map((a) => ({
+  title: a.title,
+  slug: a.slug,
+  cover: a.coverImage ? urlForImage(a.coverImage).width(480).height(270).fit('crop').auto('format').url() : null,
+}));
+const translations = await getTranslationLangs('mamabee', post.slug);
+let wordCount = 0;
+for (const b of post.body ?? []) {
+  if (b?._type === 'block' && Array.isArray(b.children))
+    for (const s of b.children) if (s?.text) wordCount += s.text.split(/\s+/).filter(Boolean).length;
+}
+---
+<MamaBeeArticle
+  title={post.title}
+  description={post.description}
+  publishedDate={post.publishedAt}
+  updatedDate={post._updatedAt}
+  author={post.author}
+  cover={cover}
+  canonical={articlePath(post.slug, lang)}
+  readingTime={readingTime}
+  related={related}
+  faq={faq}
+  wordCount={wordCount}
+  slug={post.slug}
+  translations={translations}
+  lang={lang}
+>
+  <Fragment set:html={bodyHtml} />
+</MamaBeeArticle>
