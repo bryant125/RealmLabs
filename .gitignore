@@ -46,3 +46,4 @@ intl-research/
 # Google API key + SEO data pulls (repo is public)
 .secrets/
 reports/
+TRAFFIC-GOAL-PLAN.md

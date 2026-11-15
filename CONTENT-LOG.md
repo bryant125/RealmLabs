@@ -229,6 +229,34 @@ Remaining planned localized topics (waves 3+): see `INTERNATIONAL-SEO-PLAN.md` /
 
 **English week 11 (2026-11-14), picked from GSC queries:** new `luli-vs-napper`, `best-nap-prediction-apps`, `huckleberry-vs-baby-tracker` (`scripts/week11-articles.mjs`); refreshed `best-baby-tracker-apps-compared` and `newborn-night-shifts` (`scripts/refresh-week11.mjs`, already applied; do not re-run). Fixed Nighp facts (Plus $5.99/mo or $49.99/yr with "What's Next"; sync groups with iCloud/Dropbox backup) in `mamabee-vs-baby-tracker`. Covers for the 3 new English and 2 new localized articles are borrowed; replace when Higgsfield is available.
 
+**English week 12 (2026-11-15, live), app rankings picked by Google Trends:**
+- New articles: `best-baby-apps` (hub by category), `best-breastfeeding-apps` (9 apps), `huckleberry-alternatives` (8 apps, value score).
+- Upgraded `best-baby-tracker-apps-compared` to 8 scored apps. Canonical scores, which every ranking article must reuse:
+
+  | App | Score |
+  |---|---|
+  | Huckleberry | 8.5 (Best overall) |
+  | Baby Tracker by Nighp | 8.0 (Best value) |
+  | PiyoLog | 7.5 |
+  | Sprout | 7.25 |
+  | MamaBee | 7.0 |
+  | Napper | 6.75 |
+  | Nara | 6.0 |
+  | Luli | 5.75 |
+
+- Retargeted `best-free-baby-tracker-apps` to "free baby tracker app".
+- Added one-sentence internal links in 15 guides.
+- Scripts are `scripts/week12-*.mjs`. Do NOT re-run `week12-harmonize-scores.mjs`; the others overwrite drafts.
+- Price and fact fixes:
+  - Huckleberry Plus is now **$68.99/yr** (was $58.99), fixed in 3 articles.
+  - Baby Feed Timer: the unverified shared-login and Siri claims were replaced with App Store facts.
+
+**English week 13 (drafts, 2026-11-15), "N month old schedule" series:**
+- `2-`, `3-`, `4-`, `5-`, `6-`, `7-month-old-schedule` (`scripts/week13-schedules-{a,b,c}.mjs`).
+- Each article has a sample day, sleep, feeding, milestones, challenges and when to call the pediatrician.
+- Numbers match the wake-window and feeding tables in the tools and existing articles.
+- Next in the series: 8, 9, 10 and 12 months, a newborn schedule, and a "baby schedule by month" hub.
+
 ## 🌍 Localization tracker (US English first, then ES / JA / ZH)
 Translate winning English articles once they rank. Add rows as translations ship.
 
