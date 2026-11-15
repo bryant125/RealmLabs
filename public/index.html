@@ -38,7 +38,9 @@ cta_placement:a.getAttribute('data-cta')||(a.className||'link').toString().split
   "@type": "Organization",
   "@id": "https://www.realmlabs.app/#organization",
   "name": "Realm Labs Studio",
+  "legalName": "REALM LABS STUDIO",
   "alternateName": "Realm Labs",
+  "email": "support@realmlabs.app",
   "url": "https://www.realmlabs.app/",
   "description": "Independent technology studio building calm, privacy-first mobile apps and SaaS products.",
   "logo": {
@@ -413,6 +415,10 @@ nav{
 }
 .proj-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 400px 280px at 60% 40%,rgba(255,107,53,0.18) 0%,transparent 70%)}
 .proj-glyph{width:96px;height:96px;border-radius:26px;background:linear-gradient(135deg,#FF6B35,#FF3B30);display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 24px 60px rgba(255,59,48,.35);position:relative;z-index:1}
+.proj-glyph img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.proj-visual--mamabee{background:linear-gradient(150deg,#2a1d00 0%,#3d2a00 50%,#1a1200 100%)}
+.proj-visual--mamabee::before{background:radial-gradient(ellipse 400px 280px at 60% 40%,rgba(255,196,0,0.18) 0%,transparent 70%)}
+.proj-visual--mamabee .proj-glyph{background:#FFC83D;box-shadow:0 24px 60px rgba(255,190,0,.3)}
 .proj-more{
   border:1px dashed var(--line);border-radius:4px;padding:32px 40px;
   display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
@@ -448,7 +454,7 @@ footer{background:var(--g1);padding:40px;border-top:1px solid var(--line)}
 .ft-logo{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
 .ft-mark{width:20px;height:20px;border-radius:5px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
 .ft-mark svg{width:10px;height:10px}
-.ft-links{display:flex;gap:28px;list-style:none}
+.ft-links{display:flex;flex-wrap:wrap;gap:12px 28px;list-style:none}
 .ft-links a{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
 .ft-links a:hover{color:rgba(255,255,255,.65)}
 .ft-copy{font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.15)}
@@ -640,8 +646,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="proj-head sr">
       <div class="sec-label">Projects</div>
       <h2 class="h2">Built in the lab.<br>Shipped to the world.</h2>
-      <p class="psub">We're always building — quietly, and only when a problem is worth solving. New projects are on the way.</p>
+      <p class="psub">Every product below is live on the App Store and actively maintained by Realm Labs Studio.</p>
     </div>
+
+    <a href="/mamabee" class="proj-card sr">
+      <div class="proj-info">
+        <div class="proj-tag">Live <span>· iOS · Parenting</span></div>
+        <div class="proj-name">MamaBee</div>
+        <p class="proj-desc">A calm, AI-powered baby tracker for iPhone. Log feeds, sleep, diapers and growth in seconds, and see the patterns that matter.</p>
+        <span class="proj-link">
+          Visit MamaBee
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </span>
+      </div>
+      <div class="proj-visual proj-visual--mamabee">
+        <div class="proj-glyph"><img src="assets/mamabee-logo.jpg" alt="MamaBee logo"></div>
+      </div>
+    </a>
+
+    <a href="/burnscroll" class="proj-card sr">
+      <div class="proj-info">
+        <div class="proj-tag">Live <span>· iOS · Digital wellbeing</span></div>
+        <div class="proj-name">BurnScroll</div>
+        <p class="proj-desc">Screen-time control that locks your distracting apps until you burn the calories. Move first, scroll later.</p>
+        <span class="proj-link">
+          Visit BurnScroll
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </span>
+      </div>
+      <div class="proj-visual">
+        <div class="proj-glyph"><img src="assets/burnscroll-logo.jpg" alt="BurnScroll logo"></div>
+      </div>
+    </a>
 
     <div class="proj-more sr">
       <div>
@@ -710,7 +746,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <div class="sec-label">About</div>
         <div class="about-big">Small studio.<br>Serious work.</div>
-        <p class="about-p">Realm Labs is an independent mobile technology studio. We create our own products — building things we believe the world genuinely needs and shipping them publicly for everyone.</p>
+        <p class="about-p">Realm Labs (legal name: REALM LABS STUDIO) is an independent mobile technology studio and the publisher of MamaBee and BurnScroll. We create our own products — building things we believe the world genuinely needs and shipping them publicly for everyone.</p>
         <p class="about-p">We're not an agency. But when we encounter clients who share our standards and their problem is worth solving, we collaborate.</p>
         <div class="about-contact-l">Contact</div>
         <a href="mailto:support@realmlabs.app" class="about-email">
@@ -719,6 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </div>
       <div class="about-table">
+        <div class="about-row"><span class="about-row-l">Legal name</span><span class="about-row-v">REALM LABS STUDIO</span></div>
         <div class="about-row"><span class="about-row-l">Studio type</span><span class="about-row-v">Independent</span></div>
         <div class="about-row"><span class="about-row-l">Platform</span><span class="about-row-v">iOS &amp; Android</span></div>
         <div class="about-row"><span class="about-row-l">Approach</span><span class="about-row-v">Original products</span></div>
@@ -757,9 +794,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="ft-links">
       <li><a href="#vision">Vision</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="/mamabee/privacy">Privacy</a></li>
+      <li><a href="/mamabee/terms">Terms</a></li>
       <li><a href="mailto:support@realmlabs.app">Contact</a></li>
     </ul>
-    <div class="ft-copy">© 2026 Realm Labs Studio</div>
+    <div class="ft-copy">© 2026 REALM LABS STUDIO. All rights reserved.</div>
   </div>
 </footer>
 
