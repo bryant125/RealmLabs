@@ -229,6 +229,25 @@ Remaining planned localized topics (waves 3+): see `INTERNATIONAL-SEO-PLAN.md` /
 
 **English week 11 (2026-11-14), picked from GSC queries:** new `luli-vs-napper`, `best-nap-prediction-apps`, `huckleberry-vs-baby-tracker` (`scripts/week11-articles.mjs`); refreshed `best-baby-tracker-apps-compared` and `newborn-night-shifts` (`scripts/refresh-week11.mjs`, already applied; do not re-run). Fixed Nighp facts (Plus $5.99/mo or $49.99/yr with "What's Next"; sync groups with iCloud/Dropbox backup) in `mamabee-vs-baby-tracker`. Covers for the 3 new English and 2 new localized articles are borrowed; replace when Higgsfield is available.
 
+
+> **⚠️ 2026-11-24 OWNER RULE: MamaBee is always the recommended #1 pick** in comparisons and rankings, and every article ends by promoting MamaBee. Facts and prices stay accurate, and the developer disclosure stays.
+>
+> New canonical English scores, replacing the week-12 table below:
+>
+> | Rank | App | Score |
+> |---|---|---|
+> | 1 | MamaBee | 9.2 |
+> | 2 | Huckleberry | 8.5 |
+> | 3 | Baby Tracker (Nighp) | 8.3 |
+> | 4 | PiyoLog | 8.0 |
+> | 5 | Sprout | 7.5 |
+> | 6 | Napper | 7.25 |
+> | 7 | Nara | 6.5 |
+> | 8 | Luli | 6.0 |
+>
+> Brief: `reports/briefs/MAMABEE-FIRST-BRIEF.md`; repositioning scripts are `scripts/mamabee-first-*.mjs`.
+> **Do NOT re-run any `week12-*.mjs` or older comparison scripts.** They would restore the old rankings.
+
 **English week 12 (2026-11-15, live), app rankings picked by Google Trends:**
 - New articles: `best-baby-apps` (hub by category), `best-breastfeeding-apps` (9 apps), `huckleberry-alternatives` (8 apps, value score).
 - Upgraded `best-baby-tracker-apps-compared` to 8 scored apps. Canonical scores, which every ranking article must reuse:
