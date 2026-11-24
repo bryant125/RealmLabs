@@ -301,3 +301,17 @@ Translate winning English articles once they rank. Add rows as translations ship
 | Article | 🇺🇸 EN | 🇪🇸 ES | 🇯🇵 JA | 🇨🇳 ZH |
 |---------|-------|-------|-------|-------|
 | (all MamaBee, above) | ✅ | — | — | — |
+
+
+**Week 15 (live 2026-11-24, every article ends promoting MamaBee):**
+- **EN** (`scripts/week15-en-{a,b,c}.mjs`):
+  - `baby-sleep-schedule-by-age` (hub)
+  - `1-month-old-schedule`, `11-month-old-schedule`, `12-month-old-schedule`
+  - `3-month-sleep-regression`, `12-month-sleep-regression`, `2-year-sleep-regression`
+- **JA** (`week15-ja.mjs`): `baby-sleep-regressions-by-age` (睡眠退行) and `baby-food-schedule` (離乳食スケジュール, JA-only).
+- **ZH-TW** (`week15-zh-tw.mjs`): `baby-sleep-regressions-by-age` (睡眠倒退期) and `baby-milk-refusal-phase` (厭奶期, TW-only).
+- **PT-BR** (`week15-pt-br.mjs`): `the-wonder-weeks-leaps` (salto de desenvolvimento) and `when-to-start-solids` (introdução alimentar).
+- **All 6 languages** (`week15-community.mjs`): `mamabee-creator-program` (rev-share, no upfront cost, apply by email to support@realmlabs.app) and `mamabee-feature-requests`.
+- **Cross-links:** `week15-links.mjs`, idempotent; it links the hub, regressions and series.
+- **Publishing:** use `scripts/publish-ids.mjs [lang/]slug …` to publish selected drafts only.
+- Brief: `reports/briefs/WEEK15-BRIEF.md`.

@@ -72,6 +72,19 @@ const prevQ = new Set(qPrev.map((r) => r.keys[0]))
 const newQueries = qCur.filter((r) => !prevQ.has(r.keys[0])).sort((a, b) => b.impressions - a.impressions).slice(0, 15)
 const striking = pq.filter((r) => r.position >= 4 && r.position <= 20 && r.impressions >= 5).sort((a, b) => b.impressions - a.impressions).slice(0, 20)
 
+// --- Bing (search clicks/impressions; Copilot AI citations are only in the Bing UI) ---
+let bingLine = 'no BING_WMT_API_KEY'
+if (process.env.BING_WMT_API_KEY) {
+  try {
+    const u = `https://ssl.bing.com/webmaster/api.svc/json/GetRankAndTrafficStats?siteUrl=${encodeURIComponent('https://www.realmlabs.app/')}&apikey=${process.env.BING_WMT_API_KEY}`
+    const rows = ((await fetch(u).then((r) => r.json())).d || []).map((r) => ({t: +r.Date.match(/\d+/)[0], c: r.Clicks, i: r.Impressions}))
+    const cut = Date.now() - 7 * 864e5, cut2 = Date.now() - 14 * 864e5
+    const s = (f) => rows.filter(f).reduce((a, r) => ({c: a.c + r.c, i: a.i + r.i}), {c: 0, i: 0})
+    const now7 = s((r) => r.t >= cut), prev7 = s((r) => r.t >= cut2 && r.t < cut)
+    bingLine = `${now7.c} clicks, ${now7.i} impressions (prev ${prev7.c} / ${prev7.i}). Copilot citations: check Bing Webmaster → AI Performance`
+  } catch (e) { bingLine = 'Bing API error: ' + e.message }
+}
+
 // --- Index coverage (sitemap URLs) ---
 let indexLine = 'skipped', notIndexed = []
 if (INSPECT) {
@@ -109,6 +122,7 @@ const md = [
   `**Visits/day (GA4, ${ga.cur.startDate}..${ga.cur.endDate}): ${perDay.toFixed(1)}** (prev week ${(sessPrev / 7).toFixed(1)}, ${pct(sessCur, sessPrev)})`,
   `**Google (GSC, ${gs.cur.startDate}..${gs.cur.endDate}):** ${clicks} clicks (prev ${clicksPrev}, ${pct(clicks, clicksPrev)}), ${imps} impressions (prev ${impsPrev}, ${pct(imps, impsPrev)})`,
   `**AI assistants (GEO):** ${sum(aiCur, 'sessions')} sessions (prev ${sum(aiPrev, 'sessions')})${aiCur.length ? ' — ' + aiCur.map((r) => `${r.sessionSource} ${r.sessions}`).join(', ') : ''}`,
+  `**Bing (7 days):** ${bingLine}`,
   `**Index:** ${indexLine}`,
   `**Next checkpoint:** ${next[0]} — ${next[1]}${next[2] ? ` (now ${perDay.toFixed(1)}/day = ${Math.round((100 * perDay) / next[2])}% of target)` : ''}`,
   '',
