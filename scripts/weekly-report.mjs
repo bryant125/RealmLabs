@@ -54,6 +54,10 @@ const [chCur, chPrev, daily, landing] = await Promise.all([
 ])
 const sum = (rows, k) => rows.reduce((a, r) => a + (r[k] || 0), 0)
 const sessCur = sum(chCur, 'sessions'), sessPrev = sum(chPrev, 'sessions')
+// AI answer engines (GEO): ChatGPT also shows up as "openai / Organic Search".
+const AI = /chatgpt|openai|perplexity|gemini|copilot|claude|bard|you\.com|phind/i
+const srcAI = (range) => ga4(range, {dimensions: [{name: 'sessionSource'}], metrics: [{name: 'sessions'}]}).then((rows) => rows.filter((r) => AI.test(r.sessionSource)))
+const [aiCur, aiPrev] = await Promise.all([srcAI(ga.cur), srcAI(ga.prev)])
 const perDay = sessCur / 7
 
 // --- Search Console ---
@@ -104,6 +108,7 @@ const md = [
   '',
   `**Visits/day (GA4, ${ga.cur.startDate}..${ga.cur.endDate}): ${perDay.toFixed(1)}** (prev week ${(sessPrev / 7).toFixed(1)}, ${pct(sessCur, sessPrev)})`,
   `**Google (GSC, ${gs.cur.startDate}..${gs.cur.endDate}):** ${clicks} clicks (prev ${clicksPrev}, ${pct(clicks, clicksPrev)}), ${imps} impressions (prev ${impsPrev}, ${pct(imps, impsPrev)})`,
+  `**AI assistants (GEO):** ${sum(aiCur, 'sessions')} sessions (prev ${sum(aiPrev, 'sessions')})${aiCur.length ? ' — ' + aiCur.map((r) => `${r.sessionSource} ${r.sessions}`).join(', ') : ''}`,
   `**Index:** ${indexLine}`,
   `**Next checkpoint:** ${next[0]} — ${next[1]}${next[2] ? ` (now ${perDay.toFixed(1)}/day = ${Math.round((100 * perDay) / next[2])}% of target)` : ''}`,
   '',

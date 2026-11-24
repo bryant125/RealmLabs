@@ -256,6 +256,25 @@ Remaining planned localized topics (waves 3+): see `INTERNATIONAL-SEO-PLAN.md` /
 - Each article has a sample day, sleep, feeding, milestones, challenges and when to call the pediatrician.
 - Numbers match the wake-window and feeding tables in the tools and existing articles.
 - Next in the series: 8, 9, 10 and 12 months, a newborn schedule, and a "baby schedule by month" hub.
+- Live 2026-11-15. Retitled 2026-11-24 to "N Month Old Sleep Schedule" (Ahrefs: the sleep-schedule keyword has 3–5× the volume).
+
+**English week 14 (live 2026-11-24), picked with Ahrefs (US volume / KD):**
+- New sleep schedules (`scripts/week14-schedules-a.mjs`, `week14-mixed-b.mjs`):
+  - `8-month-old-schedule` (5k / 1)
+  - `9-month-old-schedule` (7.4k / 2)
+  - `10-month-old-schedule` (7.2k / 1)
+- New sleep regressions (`scripts/week14-regressions-c.mjs`, `week14-mixed-b.mjs`):
+  - `6-month-sleep-regression` (15k / 1)
+  - `8-month-sleep-regression` (12k / 5; also covers the 9-month wording)
+  - `18-month-sleep-regression` (11k / 3)
+- Retitled (`scripts/week14-retitle.mjs`):
+  - `baby-diaper-rash-treatment` → "Diaper Rash Treatment for Babies"
+  - `4-month-sleep-regression`
+  - `newborn-sleep-schedule`
+- Links added:
+  - Regressions hub → new regression articles (`week14-hub-links.mjs`; do not re-run).
+  - 7-month schedule → 8-month schedule, and 6-month schedule → 6-month regression (`week14-series-links.mjs`).
+- Brief: `reports/briefs/WEEK14-BRIEF.md` (gitignored).
 
 ## 🌍 Localization tracker (US English first, then ES / JA / ZH)
 Translate winning English articles once they rank. Add rows as translations ship.
