@@ -1,6 +1,21 @@
 // Vercel serverless function: adds an email to MailerLite (server-side, so the
 // API token is never exposed to the browser). Called by the calculator form.
+// mamabee.app is a separate Vercel project, so its forms POST here cross-origin.
+const ALLOWED_ORIGINS = new Set(['https://mamabee.app', 'https://www.mamabee.app'])
+
 export default async function handler(req, res) {
+  const origin = req.headers?.origin
+  if (origin && ALLOWED_ORIGINS.has(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin)
+    res.setHeader('Vary', 'Origin')
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    res.setHeader('Access-Control-Max-Age', '86400')
+  }
+  if (req.method === 'OPTIONS') {
+    res.status(204).end()
+    return
+  }
   if (req.method !== 'POST') {
     res.status(405).json({error: 'Method not allowed'})
     return

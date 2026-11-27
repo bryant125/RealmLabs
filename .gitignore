@@ -47,3 +47,4 @@ intl-research/
 .secrets/
 reports/
 TRAFFIC-GOAL-PLAN.md
+.dist-full
