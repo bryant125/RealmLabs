@@ -45,6 +45,8 @@ const rewrite = (s) =>
     .replace(/(www\.)?realmlabs\.app\/mamabee\b/g, 'mamabee.app')
     // The email signup function (and its MailerLite key) lives on the realm-labs project.
     .replace(/fetch\((['"])\/api\/subscribe/g, `fetch($1${OLD}/api/subscribe`)
+    // mamabee.app has its own Tag Manager container (MamaBee GA4 + Realm Labs rollup GA4).
+    .replace(/GTM-PVHXK8ML/g, 'GTM-WTTPP8JK')
 
 const TEXT = new Set(['.html', '.js', '.jsx', '.css', '.txt', '.xml', '.json', '.webmanifest'])
 const walk = (dir) => {
