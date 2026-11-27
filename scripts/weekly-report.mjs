@@ -53,7 +53,7 @@ const chan = (range) => ga4(range, {dimensions: [{name: 'sessionDefaultChannelGr
 const [chCur, chPrev, daily, landing] = await Promise.all([
   chan(ga.cur), chan(ga.prev),
   ga4(ga.cur, {dimensions: [{name: 'date'}], metrics: [{name: 'sessions'}], orderBys: [{dimension: {dimensionName: 'date'}}]}),
-  ga4(ga.cur, {dimensions: [{name: 'landingPage'}], metrics: [{name: 'sessions'}], orderBys: [{metric: {metricName: 'sessions'}, desc: true}], limit: 15}),
+  ga4(ga.cur, {dimensions: [{name: 'hostName'}, {name: 'landingPage'}], metrics: [{name: 'sessions'}], orderBys: [{metric: {metricName: 'sessions'}, desc: true}], limit: 15}),
 ])
 const sum = (rows, k) => rows.reduce((a, r) => a + (r[k] || 0), 0)
 const sessCur = sum(chCur, 'sessions'), sessPrev = sum(chPrev, 'sessions')
@@ -62,6 +62,25 @@ const AI = /chatgpt|openai|perplexity|gemini|copilot|claude|bard|you\.com|phind/
 const srcAI = (range) => ga4(range, {dimensions: [{name: 'sessionSource'}], metrics: [{name: 'sessions'}]}).then((rows) => rows.filter((r) => AI.test(r.sessionSource)))
 const [aiCur, aiPrev] = await Promise.all([srcAI(ga.cur), srcAI(ga.prev)])
 const perDay = sessCur / 7
+
+// --- MamaBee's own GA4 property (mamabee.app, from 2026-11-27) + App Store clicks ---
+// The main property above stays the Realm Labs rollup (both domains) so the goal trend is unbroken.
+let mbLine = 'no MAMABEE_GA4_PROPERTY_ID'
+if (process.env.MAMABEE_GA4_PROPERTY_ID) {
+  try {
+    const mbUrl = `https://analyticsdata.googleapis.com/v1beta/properties/${process.env.MAMABEE_GA4_PROPERTY_ID}:runReport`
+    const mb = async (range, body) => flat(await post(mbUrl, {dateRanges: [range], limit: 50, ...body}))
+    const [mbCur, mbPrev, clk] = await Promise.all([
+      mb(ga.cur, {metrics: [{name: 'sessions'}]}), mb(ga.prev, {metrics: [{name: 'sessions'}]}),
+      mb(ga.cur, {dimensions: [{name: 'customEvent:cta_placement'}], metrics: [{name: 'eventCount'}],
+        dimensionFilter: {filter: {fieldName: 'eventName', stringFilter: {value: 'app_store_click'}}}}).catch(() =>
+        mb(ga.cur, {metrics: [{name: 'eventCount'}], dimensionFilter: {filter: {fieldName: 'eventName', stringFilter: {value: 'app_store_click'}}}})),
+    ])
+    const s1 = sum(mbCur, 'sessions'), s0 = sum(mbPrev, 'sessions'), c = sum(clk, 'eventCount')
+    const by = clk.filter((r) => r['customEvent:cta_placement']).map((r) => `${r['customEvent:cta_placement']} ${r.eventCount}`).join(', ')
+    mbLine = `${(s1 / 7).toFixed(1)} visits/day (prev ${(s0 / 7).toFixed(1)}); App Store clicks: ${c}${by ? ` — ${by}` : ''}`
+  } catch (e) { mbLine = 'MamaBee GA4 error: ' + e.message.slice(0, 120) }
+}
 
 // --- Search Console ---
 // Both properties are summed while Google moves rankings from realmlabs.app/mamabee to mamabee.app.
@@ -141,6 +160,7 @@ const md = [
   `# Weekly traffic report — ${today}`,
   '',
   `**Visits/day (GA4, ${ga.cur.startDate}..${ga.cur.endDate}): ${perDay.toFixed(1)}** (prev week ${(sessPrev / 7).toFixed(1)}, ${pct(sessCur, sessPrev)})`,
+  `**MamaBee (own GA4, mamabee.app):** ${mbLine}`,
   `**Google (GSC, ${gs.cur.startDate}..${gs.cur.endDate}):** ${clicks} clicks (prev ${clicksPrev}, ${pct(clicks, clicksPrev)}), ${imps} impressions (prev ${impsPrev}, ${pct(imps, impsPrev)})`,
   `**AI assistants (GEO):** ${sum(aiCur, 'sessions')} sessions (prev ${sum(aiPrev, 'sessions')})${aiCur.length ? ' — ' + aiCur.map((r) => `${r.sessionSource} ${r.sessions}`).join(', ') : ''}`,
   `**Bing (7 days):** ${bingLine}`,
@@ -155,7 +175,7 @@ const md = [
   daily.map((r) => `${r.date.slice(4, 6)}-${r.date.slice(6)}: ${r.sessions}`).join(' | '),
   '',
   '## Top landing pages (GA4)',
-  ...landing.map((r) => `- ${r.sessions} ${r.landingPage}`),
+  ...landing.map((r) => `- ${r.sessions} ${r.hostName === 'mamabee.app' ? 'mamabee.app' : ''}${r.landingPage}`),
   '',
   '## Top Google pages',
   ...pCur.sort((a, b) => b.clicks - a.clicks || b.impressions - a.impressions).slice(0, 15).map((r) => `- ${r.clicks} clk / ${r.impressions} imp / pos ${r.position.toFixed(1)} — ${short(r.keys[0])}`),
