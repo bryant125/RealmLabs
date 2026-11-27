@@ -3,5 +3,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/mamabee",
+      "destination": "https://mamabee.app/",
+      "permanent": true
+    },
+    {
+      "source": "/mamabee/:path*",
+      "destination": "https://mamabee.app/:path*",
+      "permanent": true
+    }
+  ]
 }

@@ -47,5 +47,6 @@ export const GET: APIRoute = async () => {
     `- Full text summaries and FAQs for every article: ${SITE}/llms-full.txt`,
     '',
   ]
-  return new Response(out.join('\n'), {headers: {'Content-Type': 'text/plain; charset=utf-8'}})
+  // MamaBee moved to its own domain (2026-11); every /mamabee URL 308-redirects there.
+  return new Response(out.join('\n').replaceAll('https://www.realmlabs.app/mamabee/', 'https://mamabee.app/').replaceAll('https://www.realmlabs.app/mamabee', 'https://mamabee.app'), {headers: {'Content-Type': 'text/plain; charset=utf-8'}})
 }

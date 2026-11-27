@@ -315,3 +315,5 @@ Translate winning English articles once they rank. Add rows as translations ship
 - **Cross-links:** `week15-links.mjs`, idempotent; it links the hub, regressions and series.
 - **Publishing:** use `scripts/publish-ids.mjs [lang/]slug …` to publish selected drafts only.
 - Brief: `reports/briefs/WEEK15-BRIEF.md`.
+
+**OWNER RULE (2026-11-27): no month-by-month article series.** New age-based articles only at 1, 2, 3, 6, 9, 12 and 18 months, for any topic (sleep, feeding, milestones, wake windows). The existing 4, 5, 7, 8, 10 and 11 month sleep schedules stay live, but don't add any more like them. Cover the in-between ages inside the hubs (`baby-sleep-schedule-by-age`, `baby-feeding-schedule-by-age`, `wake-windows-by-age`).
