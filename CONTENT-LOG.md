@@ -326,3 +326,18 @@ Translate winning English articles once they rank. Add rows as translations ship
 - Newsletter signups from mamabee.app go to `https://www.realmlabs.app/api/subscribe` (CORS), where the MailerLite key lives.
 - **TODO around 2026-12-27:** drop the `/mamabee` URLs from the realmlabs.app sitemap once Google has picked up the redirects.
 - Request-indexing and IndexNow URLs are now `https://mamabee.app/...`.
+
+**Week 16 (live 2026-11-27 on mamabee.app, every article ends promoting MamaBee, no per-month pages):**
+- **EN new:** `thrush-in-babies`, `how-to-increase-milk-supply`, `how-long-is-breast-milk-good-for` (`scripts/week16-en-a.mjs`); `when-do-babies-start-talking`, `when-do-babies-roll-over` (`week16-en-b.mjs`).
+- **JA:** `when-do-babies-roll-over` (寝返り いつ), `baby-eczema-care` (乳児湿疹), `when-do-babies-start-talking` (喃語) (`week16-ja.mjs`).
+- **ZH-TW:** `when-to-start-solids` (寶寶副食品), `thrush-in-babies` (鵝口瘡), `colic-in-babies` (腸絞痛) (`week16-zh-tw.mjs`).
+- **PT-BR:** `how-to-increase-milk-supply`, `how-long-is-breast-milk-good-for` (Brazilian Rede BLH storage rules) (`week16-pt-br.mjs`).
+- **Upgrades** (`week16-upgrades.mjs`, idempotent):
+  - `wake-windows-by-age`: newborn section
+  - `baby-feeding-schedule-by-age`: sections for 1/2/3/6/9/12 months
+  - `baby-diaper-rash-treatment`, `how-to-get-baby-to-sleep-through-the-night`, `how-much-should-a-newborn-eat`: answer boxes, tables and FAQs
+  - cross-links from pumping, milestones, tummy time and cluster feeding
+- **SAFETY FIX:** removed "add a little water to dilute" (bottle feeds) from `how-to-get-baby-to-sleep-through-the-night`. Never advise diluting formula.
+- **Owner rule backfill** (`scripts/mamabee-sections.mjs`, idempotent): added a "How MamaBee helps" H2 before the last CTA in 55 EN, 3 KO, 2 ZH-CN, 1 ZH-TW and 1 PT-BR articles.
+- **TODO:** shorten the over-60-character titles (wake-windows, sleep-through-night, newborn-eat, milestones, tummy-time, cluster-feeding) once the domain move has settled, around mid-December.
+- **Publishing tip:** every published doc fires both Sanity webhooks. Vercel auto-cancels most superseded builds, but big batches still queue for 5–15 minutes.
