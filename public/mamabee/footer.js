@@ -22,7 +22,7 @@
     '    </div>',
     '    <nav class="footer-links" aria-label="Footer">',
     '      <div class="footer-col"><h4>Product</h4><a href="/mamabee#how">How it works</a><a href="/mamabee#features">Features</a><a href="/mamabee#ai">AI</a><a href="/mamabee/tools">Free tools</a><a href="/mamabee/articles">Articles</a><a href="/mamabee#download">Download</a></div>',
-    '      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="/mamabee/contact">Contact</a></div>',
+    '      <div class="footer-col"><h4>Company</h4><a href="/">About</a><a href="/mamabee/contact">Contact</a></div>',
     '      <div class="footer-col"><h4>Legal</h4><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="/mamabee/support">Support</a></div>',
     '      <div class="footer-col"><h4>Language</h4>',
     '        <select class="lang-select" id="lang-select" aria-label="Choose language">',
