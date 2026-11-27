@@ -670,12 +670,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function getAllLangSelects() {
       return document.querySelectorAll('#nav-lang-select, #nav-lang-select-mobile, #lang-select');
     }
+    // The footer select's own 'change' listener calls setLang again, so guard
+    // against re-entry (without it every language switch recursed until the
+    // browser threw "Maximum call stack size exceeded").
+    var settingLang = false;
     function setLang(lang) {
-      try { localStorage.setItem('mb_lang', lang); } catch(e) {}
-      getAllLangSelects().forEach(function(s){ s.value = lang; });
-      // trigger change on footer select so i18n.js engine fires
-      var footer = document.getElementById('lang-select');
-      if (footer) { footer.dispatchEvent(new Event('change')); }
+      if (settingLang) return;
+      settingLang = true;
+      try {
+        try { localStorage.setItem('mb_lang', lang); } catch(e) {}
+        getAllLangSelects().forEach(function(s){ s.value = lang; });
+        // trigger change on footer select so i18n.js engine fires
+        var footer = document.getElementById('lang-select');
+        if (footer) { footer.dispatchEvent(new Event('change')); }
+      } finally { settingLang = false; }
     }
     function initLangSelects() {
       var saved = 'en'; try { saved = localStorage.getItem('mb_lang') || 'en'; } catch(e) {}
