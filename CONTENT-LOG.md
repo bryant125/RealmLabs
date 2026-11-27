@@ -317,3 +317,12 @@ Translate winning English articles once they rank. Add rows as translations ship
 - Brief: `reports/briefs/WEEK15-BRIEF.md`.
 
 **OWNER RULE (2026-11-27): no month-by-month article series.** New age-based articles only at 1, 2, 3, 6, 9, 12 and 18 months, for any topic (sleep, feeding, milestones, wake windows). The existing 4, 5, 7, 8, 10 and 11 month sleep schedules stay live, but don't add any more like them. Cover the in-between ages inside the hubs (`baby-sleep-schedule-by-age`, `baby-feeding-schedule-by-age`, `wake-windows-by-age`).
+
+**DOMAIN MOVE (2026-11-27): MamaBee now lives at https://mamabee.app.**
+- It's a separate Vercel project, `mamabee`, built from this repo with env `SITE_TARGET=mamabee`. `scripts/build-mamabee-site.mjs` turns `dist/mamabee/*` into a site at the domain root.
+- Content and source code still use `/mamabee/...` paths; the build rewrites them, so keep writing internal links as `/mamabee/articles/<slug>`.
+- realmlabs.app returns a 308 redirect for every `/mamabee/*` URL to the same path on mamabee.app (`vercel.json`).
+- Sanity publishes need **both** deploy hooks (realm-labs and mamabee).
+- Newsletter signups from mamabee.app go to `https://www.realmlabs.app/api/subscribe` (CORS), where the MailerLite key lives.
+- **TODO around 2026-12-27:** drop the `/mamabee` URLs from the realmlabs.app sitemap once Google has picked up the redirects.
+- Request-indexing and IndexNow URLs are now `https://mamabee.app/...`.

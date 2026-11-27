@@ -1,7 +1,9 @@
 // Weekly traffic check against the 500–1,000 visits/day goal.
 // Writes reports/weekly-<date>.md (gitignored) and appends a row to reports/weekly-history.csv.
 // Run: node scripts/weekly-report.mjs            (add --no-inspect to skip the slow index check)
-// Needs in .env: GOOGLE_SA_KEY_FILE, GA4_PROPERTY_ID, GSC_SITE_URL
+// Needs in .env: GOOGLE_SA_KEY_FILE, GA4_PROPERTY_ID, GSC_SITE_URL (realmlabs.app).
+// Optional: MAMABEE_GSC_SITE_URL (e.g. sc-domain:mamabee.app). MamaBee moved there on 2026-11-27;
+// until the service account is added to that property, only the old domain is counted.
 import {readFileSync, mkdirSync, writeFileSync, appendFileSync, existsSync} from 'node:fs'
 import {createSign} from 'node:crypto'
 import {fileURLToPath} from 'node:url'
@@ -32,6 +34,7 @@ const post = async (url, body) => {
 }
 
 const iso = (d) => d.toISOString().slice(0, 10)
+const short = (u) => u.replace('https://www.realmlabs.app', '').replace('https://mamabee.app', '[mamabee.app]')
 const ago = (n) => iso(new Date(Date.now() - n * 864e5))
 // GA4: last 7 full days vs the 7 before. GSC lags ~3 days, so its weeks end 3 days ago.
 const ga = {cur: {startDate: ago(7), endDate: ago(1)}, prev: {startDate: ago(14), endDate: ago(8)}}
@@ -61,8 +64,20 @@ const [aiCur, aiPrev] = await Promise.all([srcAI(ga.cur), srcAI(ga.prev)])
 const perDay = sessCur / 7
 
 // --- Search Console ---
-const gscUrl = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GSC_SITE_URL)}/searchAnalytics/query`
-const gsc = async (range, dimensions, rowLimit = 1000) => (await post(gscUrl, {...range, dimensions, rowLimit})).rows || []
+// Both properties are summed while Google moves rankings from realmlabs.app/mamabee to mamabee.app.
+const MB_GSC = process.env.MAMABEE_GSC_SITE_URL
+const gscSites = [GSC_SITE_URL, MB_GSC].filter(Boolean)
+const gscMissing = new Set()
+const gsc = async (range, dimensions, rowLimit = 1000) => {
+  const all = []
+  for (const site of gscSites) {
+    try {
+      const url = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`
+      all.push(...((await post(url, {...range, dimensions, rowLimit})).rows || []))
+    } catch { gscMissing.add(site) }
+  }
+  return all
+}
 const [pCur, pPrev, qCur, qPrev, pq] = await Promise.all([
   gsc(gs.cur, ['page']), gsc(gs.prev, ['page']), gsc(gs.cur, ['query']), gsc(gs.prev, ['query']), gsc(gs.cur, ['page', 'query'], 5000),
 ])
@@ -76,8 +91,11 @@ const striking = pq.filter((r) => r.position >= 4 && r.position <= 20 && r.impre
 let bingLine = 'no BING_WMT_API_KEY'
 if (process.env.BING_WMT_API_KEY) {
   try {
-    const u = `https://ssl.bing.com/webmaster/api.svc/json/GetRankAndTrafficStats?siteUrl=${encodeURIComponent('https://www.realmlabs.app/')}&apikey=${process.env.BING_WMT_API_KEY}`
-    const rows = ((await fetch(u).then((r) => r.json())).d || []).map((r) => ({t: +r.Date.match(/\d+/)[0], c: r.Clicks, i: r.Impressions}))
+    const rows = []
+    for (const site of ['https://www.realmlabs.app/', 'https://mamabee.app/']) {
+      const u = `https://ssl.bing.com/webmaster/api.svc/json/GetRankAndTrafficStats?siteUrl=${encodeURIComponent(site)}&apikey=${process.env.BING_WMT_API_KEY}`
+      try { rows.push(...((await fetch(u).then((r) => r.json())).d || []).map((r) => ({t: +r.Date.match(/\d+/)[0], c: r.Clicks, i: r.Impressions}))) } catch {}
+    }
     const cut = Date.now() - 7 * 864e5, cut2 = Date.now() - 14 * 864e5
     const s = (f) => rows.filter(f).reduce((a, r) => ({c: a.c + r.c, i: a.i + r.i}), {c: 0, i: 0})
     const now7 = s((r) => r.t >= cut), prev7 = s((r) => r.t >= cut2 && r.t < cut)
@@ -88,19 +106,23 @@ if (process.env.BING_WMT_API_KEY) {
 // --- Index coverage (sitemap URLs) ---
 let indexLine = 'skipped', notIndexed = []
 if (INSPECT) {
-  const sm = await fetch('https://www.realmlabs.app/sitemap-0.xml').then((r) => r.text())
-  const urls = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).filter((u) => u.includes('/mamabee'))
+  // After the move, inspect mamabee.app URLs in the mamabee.app property (once the service account has access).
+  let mbAccess = false
+  if (MB_GSC) { try { await post('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {inspectionUrl: 'https://mamabee.app/', siteUrl: MB_GSC}); mbAccess = true } catch {} }
+  const inspectSite = mbAccess ? MB_GSC : GSC_SITE_URL
+  const sm = await fetch(mbAccess ? 'https://mamabee.app/sitemap.xml' : 'https://www.realmlabs.app/sitemap-0.xml').then((r) => r.text())
+  const urls = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).filter((u) => mbAccess || u.includes('/mamabee'))
   let indexed = 0
   for (let i = 0; i < urls.length; i += 5) {
     await Promise.all(urls.slice(i, i + 5).map(async (u) => {
       try {
-        const r = await post('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {inspectionUrl: u, siteUrl: GSC_SITE_URL})
+        const r = await post('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {inspectionUrl: u, siteUrl: inspectSite})
         const s = r.inspectionResult?.indexStatusResult || {}
-        if (s.verdict === 'PASS') indexed++; else notIndexed.push(`${u.replace('https://www.realmlabs.app', '')} (${s.coverageState || '?'})`)
+        if (s.verdict === 'PASS') indexed++; else notIndexed.push(`${short(u)} (${s.coverageState || '?'})`)
       } catch (e) { notIndexed.push(`${u} (inspect error)`) }
     }))
   }
-  indexLine = `${indexed} / ${urls.length} MamaBee URLs indexed (${Math.round((100 * indexed) / urls.length)}%)`
+  indexLine = `${indexed} / ${urls.length} MamaBee URLs indexed (${Math.round((100 * indexed) / urls.length)}%) on ${mbAccess ? 'mamabee.app' : 'realmlabs.app/mamabee (old URLs — add the service account to the mamabee.app property)'}`
 }
 
 // --- Checkpoints ---
@@ -115,7 +137,6 @@ const today = iso(new Date())
 const next = checkpoints.find(([d]) => d >= today) || checkpoints.at(-1)
 
 const pct = (a, b) => (b ? `${a >= b ? '+' : ''}${Math.round(((a - b) / b) * 100)}%` : 'n/a')
-const short = (u) => u.replace('https://www.realmlabs.app', '')
 const md = [
   `# Weekly traffic report — ${today}`,
   '',
@@ -123,6 +144,7 @@ const md = [
   `**Google (GSC, ${gs.cur.startDate}..${gs.cur.endDate}):** ${clicks} clicks (prev ${clicksPrev}, ${pct(clicks, clicksPrev)}), ${imps} impressions (prev ${impsPrev}, ${pct(imps, impsPrev)})`,
   `**AI assistants (GEO):** ${sum(aiCur, 'sessions')} sessions (prev ${sum(aiPrev, 'sessions')})${aiCur.length ? ' — ' + aiCur.map((r) => `${r.sessionSource} ${r.sessions}`).join(', ') : ''}`,
   `**Bing (7 days):** ${bingLine}`,
+  `**Domains:** GSC ${gscSites.filter((x) => !gscMissing.has(x)).join(' + ')}${gscMissing.size ? ` (no access yet: ${[...gscMissing].join(', ')})` : ''}`,
   `**Index:** ${indexLine}`,
   `**Next checkpoint:** ${next[0]} — ${next[1]}${next[2] ? ` (now ${perDay.toFixed(1)}/day = ${Math.round((100 * perDay) / next[2])}% of target)` : ''}`,
   '',
