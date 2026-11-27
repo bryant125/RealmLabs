@@ -2,7 +2,7 @@
 // in en, ja, ko, zh-tw, zh-cn and pt-br, saved as DRAFTS only (never published by this script).
 // These are company pages, not health articles: no medical claims, no prices, no invented
 // percentages, payout schedules, follower minimums, contract terms, features or timelines.
-// MamaBee facts follow reports/briefs/MAMABEE-FIRST-BRIEF.md. Contact: support@realmlabs.app.
+// MamaBee facts follow reports/briefs/MAMABEE-FIRST-BRIEF.md. Contact: support@mamabee.app.
 // IDs: EN drafts.mamabee-<slug> (no language field, like other EN docs);
 //      localized drafts.mamabee-<lang>-<slug> with language=<lang> (like intl-wave2-*).
 // Run: cd RealmLabs && set -a && source .env && set +a && node scripts/week15-community.mjs
@@ -23,8 +23,8 @@ const COVERS = {
   'mamabee-creator-program': ['day-with-mamabee-baby-tracker', '3am-question-mamabee-ai-tracker'],
   'mamabee-feature-requests': ['3am-question-mamabee-ai-tracker', 'day-with-mamabee-baby-tracker'],
 }
-const MAIL_CREATOR = 'mailto:support@realmlabs.app?subject=Creator%20program'
-const MAIL_IDEA = 'mailto:support@realmlabs.app?subject=Feature%20idea'
+const MAIL_CREATOR = 'mailto:support@mamabee.app?subject=Creator%20program'
+const MAIL_IDEA = 'mailto:support@mamabee.app?subject=Feature%20idea'
 const base = (lang) => (lang === 'en' ? '/mamabee/articles/' : `/mamabee/${lang}/articles/`)
 const FAQ_H2 = {en: 'Frequently asked questions', ja: 'よくある質問', ko: '자주 묻는 질문', 'zh-tw': '常見問題', 'zh-cn': '常见问题', 'pt-br': 'Perguntas frequentes'}
 
@@ -48,7 +48,7 @@ PAGES.en = [
           ['What we provide', 'MamaBee Premium access, so you can try every feature properly'],
           ['Audience size', 'Any size is welcome'],
           ['Full terms', 'We share them with you by email'],
-          ['How to apply', 'Email support@realmlabs.app with the subject "Creator program"'],
+          ['How to apply', 'Email support@mamabee.app with the subject "Creator program"'],
         ],
       },
     },
@@ -60,7 +60,7 @@ Hi, we're a small team at Realm Labs, the people who build MamaBee. We made it b
 - **Any audience size.** A small account with followers who trust you matters to us as much as a big one.
 - **iPhone families.** MamaBee is iPhone only for now (iOS 17.6 or later), so you'll need an iPhone to try it, and it suits audiences where many parents use iPhone.
 ## How does it work?
-- **Step 1: Email us.** Write to [support@realmlabs.app](${MAIL_CREATOR}) with the subject "Creator program".
+- **Step 1: Email us.** Write to [support@mamabee.app](${MAIL_CREATOR}) with the subject "Creator program".
 - **Step 2: Get the details.** We reply personally, share the full terms by email and set you up with MamaBee Premium.
 - **Step 3: Use it for real.** Track feeds, sleep and diapers with your own baby, and see what fits your family.
 - **Step 4: Share it your way.** A day-in-the-life Reel, a night-feed routine on TikTok, a YouTube review or a blog post. Your voice, your format.
@@ -80,7 +80,7 @@ Here is what MamaBee does today, so everything you share is accurate:
 - **Premium:** Sleep Coach nap prediction, unlimited Bee AI (an assistant that knows your baby's log), the full vaccine schedule, a solid food allergen test, multi-baby sync and extra co-parents.
 - **Privacy:** logs stay on the phone and only reach our servers if Co-Parent Sharing is on. We never sell your data.
 ## How to apply
-Email [support@realmlabs.app](${MAIL_CREATOR}) with the subject **"Creator program"** and include:
+Email [support@mamabee.app](${MAIL_CREATOR}) with the subject **"Creator program"** and include:
 - links to your channels
 - the country you live in
 - your audience size (a rough number is fine)
@@ -102,7 +102,7 @@ Have an idea for the app itself? See [MamaBee feature requests](${base('en')}mam
 
   A('mamabee-feature-requests',
     'MamaBee Feature Requests: Tell Us What to Build Next',
-    'Tell the MamaBee team which features would help you most. Email support@realmlabs.app. We read every email and try our best to build workable ideas.',
+    'Tell the MamaBee team which features would help you most. Email support@mamabee.app. We read every email and try our best to build workable ideas.',
     ['mamabee feature requests', 'mamabee feedback', 'baby tracker app ideas', 'contact mamabee'],
     {
       today: {
@@ -119,10 +119,10 @@ Have an idea for the app itself? See [MamaBee feature requests](${base('en')}mam
         ],
       },
     },
-`**Want MamaBee to do something it doesn't do yet? Email support@realmlabs.app with the subject "Feature idea" and tell us what would make your days with a baby easier. We're a small team at Realm Labs. We read every email, and we'll try our best to build the ideas that are workable and help new parents around the world.**
+`**Want MamaBee to do something it doesn't do yet? Email support@mamabee.app with the subject "Feature idea" and tell us what would make your days with a baby easier. We're a small team at Realm Labs. We read every email, and we'll try our best to build the ideas that are workable and help new parents around the world.**
 We build MamaBee for moms and parents everywhere, from New York to Tokyo, Seoul, Taipei and São Paulo. Many of the best ideas in a baby tracker start with a parent noticing one small frustration at 3 AM. We can't promise that every idea will be built, or say when, but every message is read by the people who make the app, and it shapes what we work on.
 ## How do I send a feature request?
-- **Write to** [support@realmlabs.app](${MAIL_IDEA}).
+- **Write to** [support@mamabee.app](${MAIL_IDEA}).
 - **Use the subject** "Feature idea", so your message reaches the right pile.
 - **Describe the problem, not only the solution.** "I can't tell which side I fed on last when I'm half asleep" helps us more than "add a button".
 - **One idea per email is perfect**, but a list is welcome too.
@@ -173,7 +173,7 @@ PAGES.ja = [
           ['ご用意するもの', 'MamaBee Premium（すべての機能を試せます）'],
           ['フォロワー数', '問いません'],
           ['詳しい条件', 'メールでお知らせします'],
-          ['応募方法', 'support@realmlabs.app に件名「Creator program」でメール'],
+          ['応募方法', 'support@mamabee.app に件名「Creator program」でメール'],
         ],
       },
     },
@@ -186,7 +186,7 @@ PAGES.ja = [
 - **フォロワー数の条件はありません。**小さなアカウントでも、信頼してくれるフォロワーがいることのほうが大切です。
 - **iPhone をお使いの方。**MamaBee は今のところ iPhone 専用（iOS 17.6以降）です。お試しには iPhone が必要です。
 ## どんな仕組みですか？
-- **1. メールで応募：**[support@realmlabs.app](${MAIL_CREATOR}) に、件名「Creator program」で送ってください。
+- **1. メールで応募：**[support@mamabee.app](${MAIL_CREATOR}) に、件名「Creator program」で送ってください。
 - **2. 条件のご案内：**チームから直接お返事し、詳しい条件をメールでお知らせします。あわせて MamaBee Premium をご用意します。
 - **3. 実際に使う：**ご自身の赤ちゃんの授乳・睡眠・おむつを記録して、ご家庭に合うか確かめてください。
 - **4. 自分の言葉で紹介：**1日の流れを見せるリール、夜間授乳のルーティン動画、YouTube のレビュー、ブログ記事など、形式は自由です。
@@ -206,7 +206,7 @@ PAGES.ja = [
 - **Premium：**Sleep Coach、回数無制限の Bee AI（記録をふまえて答えるアシスタント）、予防接種スケジュールの全期間、離乳食のアレルゲンテスト、複数の赤ちゃんの同期と3人目以降の家族共有。
 - **プライバシー：**記録は基本的に端末の中に保存され、共有をオンにしたときだけ Realm Labs のサーバーに送られます。データを販売することはありません。
 ## 応募方法
-[support@realmlabs.app](${MAIL_CREATOR}) に、件名を **「Creator program」** にして、次の内容をお送りください。
+[support@mamabee.app](${MAIL_CREATOR}) に、件名を **「Creator program」** にして、次の内容をお送りください。
 - 発信しているチャンネルの URL
 - お住まいの国
 - フォロワー数（おおよそで大丈夫です）
@@ -226,7 +226,7 @@ PAGES.ja = [
 
   A('mamabee-feature-requests',
     'MamaBee への機能リクエスト・ご意見募集',
-    'MamaBee にほしい機能や改善してほしい点を、support@realmlabs.app までお送りください。開発チームがすべてのメールに目を通し、実現できるアイデアの形にできるよう力を尽くします。',
+    'MamaBee にほしい機能や改善してほしい点を、support@mamabee.app までお送りください。開発チームがすべてのメールに目を通し、実現できるアイデアの形にできるよう力を尽くします。',
     ['MamaBee', '機能リクエスト', 'ご意見募集', '育児記録アプリ'],
     {
       today: {
@@ -243,10 +243,10 @@ PAGES.ja = [
         ],
       },
     },
-`**「MamaBee にこんな機能があったらいいのに」と思ったら、support@realmlabs.app に件名「Feature idea」でメールをください。私たちは Realm Labs の小さなチームです。いただいたメールにはすべて目を通し、実現できるアイデアは、世界中の新米ママ・パパの助けになるよう形にできるよう力を尽くします。**
+`**「MamaBee にこんな機能があったらいいのに」と思ったら、support@mamabee.app に件名「Feature idea」でメールをください。私たちは Realm Labs の小さなチームです。いただいたメールにはすべて目を通し、実現できるアイデアは、世界中の新米ママ・パパの助けになるよう形にできるよう力を尽くします。**
 MamaBee は、日本、台湾、韓国、アメリカ、ブラジルなど、世界中のママ・パパに使っていただくことを目指して作っています。育児記録アプリの良いアイデアの多くは、夜中の授乳中にふと感じた「ちょっと不便」から生まれます。すべてのご要望にお応えできるとは限らず、時期をお約束することもできませんが、届いた声は開発メンバーが直接読み、これからの開発の参考にしています。
 ## 機能リクエストの送り方
-- **宛先：**[support@realmlabs.app](${MAIL_IDEA})
+- **宛先：**[support@mamabee.app](${MAIL_IDEA})
 - **件名：**「Feature idea」にしていただくと、確実に担当に届きます。
 - **困っていることを書いてください。**「寝ぼけていて、前回どちらの胸で授乳したか分からなくなる」のような具体的な場面が、「ボタンを追加して」よりも大きなヒントになります。
 - **1通に1つのアイデア**が理想ですが、まとめて送っていただいても大丈夫です。日本語でどうぞ。
@@ -297,7 +297,7 @@ PAGES.ko = [
           ['제공', 'MamaBee 프리미엄 이용 권한'],
           ['팔로워 수', '제한 없음'],
           ['자세한 조건', '이메일로 안내'],
-          ['지원 방법', 'support@realmlabs.app 으로 제목 "Creator program" 메일'],
+          ['지원 방법', 'support@mamabee.app 으로 제목 "Creator program" 메일'],
         ],
       },
     },
@@ -310,7 +310,7 @@ PAGES.ko = [
 - **팔로워 수 제한은 없어요.** 규모보다 크리에이터를 믿고 찾아오는 이웃이 더 중요해요.
 - **아이폰 사용자.** MamaBee는 현재 아이폰 전용(iOS 17.6 이상)이라, 써 보시려면 아이폰이 필요해요.
 ## 어떻게 진행되나요?
-- **1단계, 이메일 지원:** [support@realmlabs.app](${MAIL_CREATOR}) 으로 제목을 "Creator program"으로 해서 보내 주세요.
+- **1단계, 이메일 지원:** [support@mamabee.app](${MAIL_CREATOR}) 으로 제목을 "Creator program"으로 해서 보내 주세요.
 - **2단계, 조건 안내:** 저희 팀이 직접 답장을 드리고, 자세한 조건을 이메일로 안내해 드려요. MamaBee 프리미엄도 함께 준비해 드려요.
 - **3단계, 직접 사용:** 아기의 수유, 수면, 기저귀를 기록하면서 우리 집에 맞는지 확인해 보세요.
 - **4단계, 나만의 방식으로 소개:** 하루 루틴 릴스, 밤수유 브이로그, 네이버 블로그 사용 후기 등 형식은 자유예요.
@@ -330,7 +330,7 @@ PAGES.ko = [
 - **프리미엄:** Sleep Coach, 무제한 Bee AI(기록을 바탕으로 답하는 도우미), 전체 예방접종 일정, 이유식 알레르기 테스트, 다둥이 동기화와 공동양육자 추가.
 - **개인정보:** 기록은 기본적으로 휴대폰에 저장되고, 공동양육 공유를 켰을 때만 Realm Labs 서버로 전송돼요. 데이터를 판매하지 않아요.
 ## 지원 방법
-[support@realmlabs.app](${MAIL_CREATOR}) 으로 제목을 **"Creator program"** 으로 해서 아래 내용을 보내 주세요.
+[support@mamabee.app](${MAIL_CREATOR}) 으로 제목을 **"Creator program"** 으로 해서 아래 내용을 보내 주세요.
 - 운영 중인 채널 링크
 - 사는 나라
 - 팔로워나 이웃 수 (대략적인 숫자도 괜찮아요)
@@ -350,7 +350,7 @@ PAGES.ko = [
 
   A('mamabee-feature-requests',
     'MamaBee 기능 제안: 필요한 기능을 알려 주세요',
-    'MamaBee에 바라는 기능이나 개선할 점을 support@realmlabs.app 으로 보내 주세요. 개발팀이 모든 메일을 읽고, 실현 가능한 아이디어는 최선을 다해 만들어 볼게요.',
+    'MamaBee에 바라는 기능이나 개선할 점을 support@mamabee.app 으로 보내 주세요. 개발팀이 모든 메일을 읽고, 실현 가능한 아이디어는 최선을 다해 만들어 볼게요.',
     ['MamaBee', '기능 제안', '육아 앱 피드백', '육아 기록 앱'],
     {
       today: {
@@ -367,10 +367,10 @@ PAGES.ko = [
         ],
       },
     },
-`**MamaBee에 이런 기능이 있었으면 좋겠다 싶을 때, support@realmlabs.app 으로 제목을 "Feature idea"로 해서 메일을 보내 주세요. 저희는 Realm Labs의 작은 팀이에요. 모든 메일을 읽고, 실현 가능한 아이디어는 전 세계 초보 엄마·아빠에게 도움이 되도록 최선을 다해 만들어 볼게요.**
+`**MamaBee에 이런 기능이 있었으면 좋겠다 싶을 때, support@mamabee.app 으로 제목을 "Feature idea"로 해서 메일을 보내 주세요. 저희는 Realm Labs의 작은 팀이에요. 모든 메일을 읽고, 실현 가능한 아이디어는 전 세계 초보 엄마·아빠에게 도움이 되도록 최선을 다해 만들어 볼게요.**
 MamaBee는 한국, 일본, 대만, 미국, 브라질 등 세계 곳곳의 엄마·아빠를 위해 만들고 있어요. 좋은 육아 앱 아이디어는 대부분 새벽 수유 중에 느낀 작은 불편함에서 시작돼요. 모든 제안을 반영하거나 시기를 약속드릴 수는 없지만, 보내 주신 의견은 앱을 만드는 팀원이 직접 읽고 앞으로의 개발에 참고해요.
 ## 기능 제안은 어떻게 보내나요?
-- **받는 주소:** [support@realmlabs.app](${MAIL_IDEA})
+- **받는 주소:** [support@mamabee.app](${MAIL_IDEA})
 - **제목:** "Feature idea"로 해 주시면 담당자에게 바로 전달돼요.
 - **불편한 상황을 적어 주세요.** "비몽사몽이라 마지막에 어느 쪽으로 수유했는지 헷갈려요" 같은 구체적인 장면이 "버튼 하나 추가해 주세요"보다 훨씬 큰 도움이 돼요.
 - **메일 한 통에 아이디어 하나**가 가장 좋지만, 여러 개를 모아 보내셔도 괜찮아요. 한국어로 편하게 써 주세요.
@@ -421,7 +421,7 @@ PAGES['zh-tw'] = [
           ['我們提供', 'MamaBee Premium，所有功能都能完整試用'],
           ['粉絲人數', '不限'],
           ['完整條件', '用電子郵件寄給你'],
-          ['如何申請', '寄信到support@realmlabs.app，主旨「Creator program」'],
+          ['如何申請', '寄信到support@mamabee.app，主旨「Creator program」'],
         ],
       },
     },
@@ -434,7 +434,7 @@ PAGES['zh-tw'] = [
 - **粉絲人數不限。**比起追蹤數，我們更在意你和粉絲之間的信任。
 - **使用iPhone的爸媽。**MamaBee目前只支援iPhone（iOS 17.6以上），試用需要一支iPhone。
 ## 合作怎麼進行？
-- **第1步，寄信申請：**寄到[support@realmlabs.app](${MAIL_CREATOR})，主旨寫「Creator program」。
+- **第1步，寄信申請：**寄到[support@mamabee.app](${MAIL_CREATOR})，主旨寫「Creator program」。
 - **第2步，收到完整條件：**團隊會親自回信，用電子郵件說明完整條件，並幫你開通MamaBee Premium。
 - **第3步，真的用用看：**記錄寶寶的餵奶、睡眠和尿布，看看適不適合你們家。
 - **第4步，用你的方式分享：**一天作息的Reels、夜奶日常的短影音、YouTube開箱，或一篇部落格心得，形式由你決定。
@@ -454,7 +454,7 @@ PAGES['zh-tw'] = [
 - **Premium：**Sleep Coach、無限次Bee AI（會參考寶寶紀錄回答的助理）、完整疫苗時程、副食品過敏原測試、多寶寶同步與第3位以上家人共享。
 - **隱私：**紀錄預設存在手機裡，只有開啟家人共享時才會傳到Realm Labs的伺服器。我們不會販售你的資料。
 ## 如何申請
-寄信到[support@realmlabs.app](${MAIL_CREATOR})，主旨寫 **「Creator program」**，並附上：
+寄信到[support@mamabee.app](${MAIL_CREATOR})，主旨寫 **「Creator program」**，並附上：
 - 你的頻道或帳號連結
 - 你住的國家或地區
 - 粉絲人數（大概的數字就可以）
@@ -474,7 +474,7 @@ PAGES['zh-tw'] = [
 
   A('mamabee-feature-requests',
     'MamaBee功能許願：告訴我們你需要什麼',
-    '想要MamaBee多一個功能，或有哪裡可以更好？寄信到support@realmlabs.app告訴我們。每一封信我們都會看，可行的點子會盡最大努力做出來。',
+    '想要MamaBee多一個功能，或有哪裡可以更好？寄信到support@mamabee.app告訴我們。每一封信我們都會看，可行的點子會盡最大努力做出來。',
     ['MamaBee', '功能許願', '意見回饋', '育兒紀錄App'],
     {
       today: {
@@ -491,10 +491,10 @@ PAGES['zh-tw'] = [
         ],
       },
     },
-`**希望MamaBee多一個功能嗎？寄信到support@realmlabs.app，主旨寫「Feature idea」，告訴我們什麼能讓你帶寶寶的日子更輕鬆。我們是Realm Labs的小團隊，每一封信都會看，也會盡最大努力，把可行的點子做出來，幫助世界各地的新手爸媽。**
+`**希望MamaBee多一個功能嗎？寄信到support@mamabee.app，主旨寫「Feature idea」，告訴我們什麼能讓你帶寶寶的日子更輕鬆。我們是Realm Labs的小團隊，每一封信都會看，也會盡最大努力，把可行的點子做出來，幫助世界各地的新手爸媽。**
 MamaBee是為世界各地的爸媽做的，從台灣、日本、韓國，到美國和巴西。很多好用的育兒紀錄功能，都是從爸媽半夜餵奶時一個小小的「不方便」開始的。我們沒辦法保證每個想法都會實現，也無法承諾時間，但每一封信都會由做App的團隊成員親自閱讀，並成為我們規劃開發時的參考。
 ## 怎麼寄功能許願？
-- **收件人：**[support@realmlabs.app](${MAIL_IDEA})
+- **收件人：**[support@mamabee.app](${MAIL_IDEA})
 - **主旨：**寫「Feature idea」，信件才會送到對的人手上。
 - **描述遇到的狀況。**像是「半夜睡眼惺忪，記不得上次餵哪一邊」這種具體情境，比「加一個按鈕」更能幫助我們。
 - **一封信一個想法最好**，但整理成清單一起寄也沒問題。用中文寫就可以。
@@ -545,7 +545,7 @@ PAGES['zh-cn'] = [
           ['我们提供', 'MamaBee高级版，所有功能都能完整体验'],
           ['粉丝数量', '不限'],
           ['完整条款', '通过邮件发给你'],
-          ['如何申请', '发邮件到support@realmlabs.app，主题写“Creator program”'],
+          ['如何申请', '发邮件到support@mamabee.app，主题写“Creator program”'],
         ],
       },
     },
@@ -558,7 +558,7 @@ PAGES['zh-cn'] = [
 - **粉丝数量不限。**比起粉丝数，我们更看重你和粉丝之间的信任。
 - **使用iPhone的爸妈。**MamaBee目前只支持iPhone（iOS 17.6及以上），体验需要一部iPhone。
 ## 合作怎么进行？
-- **第1步，发邮件申请：**发到[support@realmlabs.app](${MAIL_CREATOR})，主题写“Creator program”。
+- **第1步，发邮件申请：**发到[support@mamabee.app](${MAIL_CREATOR})，主题写“Creator program”。
 - **第2步，收到完整条款：**团队会亲自回复，通过邮件说明完整条款，并为你开通MamaBee高级版。
 - **第3步，真实使用：**记录宝宝的喂奶、睡眠和尿不湿，看看适不适合你家。
 - **第4步，用你的方式分享：**一天作息的笔记、夜奶日常的短视频、B站测评或一篇公众号文章，形式你来定。
@@ -578,7 +578,7 @@ PAGES['zh-cn'] = [
 - **高级版：**Sleep Coach、不限次数的Bee AI（会参考宝宝记录回答的助手）、完整疫苗时间表、辅食过敏原测试、多宝宝同步和更多家人共享。
 - **隐私：**记录默认保存在手机里，只有开启家人共享时才会上传到Realm Labs的服务器。我们不会出售你的数据。
 ## 如何申请
-发邮件到[support@realmlabs.app](${MAIL_CREATOR})，主题写 **“Creator program”**，并附上：
+发邮件到[support@mamabee.app](${MAIL_CREATOR})，主题写 **“Creator program”**，并附上：
 - 你的账号或频道链接
 - 你所在的国家或地区
 - 粉丝数量（大概的数字就行）
@@ -598,7 +598,7 @@ PAGES['zh-cn'] = [
 
   A('mamabee-feature-requests',
     'MamaBee功能许愿：告诉我们你需要什么',
-    '希望MamaBee增加什么功能，或者哪里可以做得更好？发邮件到support@realmlabs.app告诉我们。每一封邮件我们都会看，可行的想法会尽最大努力做出来。',
+    '希望MamaBee增加什么功能，或者哪里可以做得更好？发邮件到support@mamabee.app告诉我们。每一封邮件我们都会看，可行的想法会尽最大努力做出来。',
     ['MamaBee', '功能许愿', '意见反馈', '育儿记录App'],
     {
       today: {
@@ -615,10 +615,10 @@ PAGES['zh-cn'] = [
         ],
       },
     },
-`**希望MamaBee增加一个功能？发邮件到support@realmlabs.app，主题写“Feature idea”，告诉我们什么能让你带娃的日子更轻松。我们是Realm Labs的小团队，每一封邮件都会看，也会尽最大努力把可行的想法做出来，帮助世界各地的新手爸妈。**
+`**希望MamaBee增加一个功能？发邮件到support@mamabee.app，主题写“Feature idea”，告诉我们什么能让你带娃的日子更轻松。我们是Realm Labs的小团队，每一封邮件都会看，也会尽最大努力把可行的想法做出来，帮助世界各地的新手爸妈。**
 MamaBee是为世界各地的爸妈做的，从中国、马来西亚、新加坡，到日本、美国和巴西。很多好用的育儿记录功能，都源于爸妈半夜喂奶时的一个小小的“不方便”。我们无法保证每个想法都会实现，也不能承诺时间，但每一封邮件都会由做App的团队成员亲自阅读，并作为我们规划开发的参考。
 ## 怎么提交功能许愿？
-- **收件人：**[support@realmlabs.app](${MAIL_IDEA})
+- **收件人：**[support@mamabee.app](${MAIL_IDEA})
 - **主题：**写“Feature idea”，邮件才能到对的人手里。
 - **描述你遇到的情况。**比如“半夜迷迷糊糊，记不清上次喂的是哪一边”，这样具体的场景比“加一个按钮”更有帮助。
 - **一封邮件一个想法最好**，整理成清单一起发也没问题。用中文写就可以。
@@ -669,7 +669,7 @@ PAGES['pt-br'] = [
           ['O que oferecemos', 'Acesso ao MamaBee Premium para testar todos os recursos'],
           ['Tamanho do público', 'Qualquer tamanho é bem-vindo'],
           ['Termos completos', 'Enviados para você por e-mail'],
-          ['Como participar', 'E-mail para support@realmlabs.app com o assunto "Creator program"'],
+          ['Como participar', 'E-mail para support@mamabee.app com o assunto "Creator program"'],
         ],
       },
     },
@@ -682,7 +682,7 @@ A gente acredita que a indicação que mais pesa na hora de escolher um app é a
 - **Qualquer tamanho de público.** Um perfil pequeno, com seguidores que confiam em você, importa tanto quanto um grande.
 - **Famílias com iPhone.** Por enquanto o MamaBee é só para iPhone (iOS 17.6 ou mais recente), então você vai precisar de um iPhone para testar.
 ## Como funciona?
-- **Passo 1: mande um e-mail.** Escreva para [support@realmlabs.app](${MAIL_CREATOR}) com o assunto "Creator program".
+- **Passo 1: mande um e-mail.** Escreva para [support@mamabee.app](${MAIL_CREATOR}) com o assunto "Creator program".
 - **Passo 2: receba os detalhes.** Nosso time responde pessoalmente, envia os termos completos por e-mail e libera o MamaBee Premium para você.
 - **Passo 3: use de verdade.** Registre mamadas, sono e fraldas do seu bebê e veja se o app combina com a sua família.
 - **Passo 4: compartilhe do seu jeito.** Um Reels com o dia a dia, um vídeo da madrugada no TikTok, uma resenha no YouTube ou um post no blog. Sua voz, seu formato.
@@ -702,7 +702,7 @@ Para tudo o que você compartilhar ser correto, aqui está o que o MamaBee faz h
 - **Premium:** Sleep Coach, Bee AI ilimitada (uma assistente que conhece os registros do seu bebê), calendário de vacinas completo, teste de alergênicos da introdução alimentar, sincronização de vários bebês e mais cuidadores.
 - **Privacidade:** os registros ficam no celular e só vão para os servidores da Realm Labs se o compartilhamento estiver ligado. Nunca vendemos seus dados.
 ## Como participar
-Mande um e-mail para [support@realmlabs.app](${MAIL_CREATOR}) com o assunto **"Creator program"** e inclua:
+Mande um e-mail para [support@mamabee.app](${MAIL_CREATOR}) com o assunto **"Creator program"** e inclua:
 - os links dos seus canais
 - o país onde você mora
 - o tamanho do seu público (um número aproximado já ajuda)
@@ -722,7 +722,7 @@ Tem uma ideia para o próprio app? Veja [sugestões de recursos para o MamaBee](
 
   A('mamabee-feature-requests',
     'Sugestões para o MamaBee: conte o que você precisa',
-    'Conte ao time do MamaBee quais recursos ajudariam você: mande sua ideia para support@realmlabs.app. Lemos todos os e-mails e fazemos o possível.',
+    'Conte ao time do MamaBee quais recursos ajudariam você: mande sua ideia para support@mamabee.app. Lemos todos os e-mails e fazemos o possível.',
     ['MamaBee', 'sugestões de recursos', 'app de rotina do bebê', 'fale com o MamaBee'],
     {
       today: {
@@ -739,10 +739,10 @@ Tem uma ideia para o próprio app? Veja [sugestões de recursos para o MamaBee](
         ],
       },
     },
-`**Quer que o MamaBee faça algo que ainda não faz? Mande um e-mail para support@realmlabs.app com o assunto "Feature idea" e conte o que deixaria seus dias com o bebê mais leves. Somos um time pequeno na Realm Labs: lemos todos os e-mails e faremos o possível para criar as ideias viáveis que ajudem famílias no mundo todo.**
+`**Quer que o MamaBee faça algo que ainda não faz? Mande um e-mail para support@mamabee.app com o assunto "Feature idea" e conte o que deixaria seus dias com o bebê mais leves. Somos um time pequeno na Realm Labs: lemos todos os e-mails e faremos o possível para criar as ideias viáveis que ajudem famílias no mundo todo.**
 Fazemos o MamaBee para famílias do mundo todo, do Brasil e de Portugal ao Japão, à Coreia, a Taiwan e aos Estados Unidos. Muitas das melhores ideias de um app de rotina do bebê nascem de um pequeno incômodo na mamada da madrugada. Não podemos prometer que toda ideia vai sair do papel, nem quando, mas cada mensagem é lida por quem faz o app e ajuda a decidir no que vamos trabalhar.
 ## Como mandar uma sugestão?
-- **Escreva para** [support@realmlabs.app](${MAIL_IDEA}).
+- **Escreva para** [support@mamabee.app](${MAIL_IDEA}).
 - **Use o assunto** "Feature idea", para a mensagem chegar no lugar certo.
 - **Conte o problema, não só a solução.** "Meio dormindo, eu esqueço de que lado dei de mamar por último" ajuda mais do que "coloquem um botão".
 - **Uma ideia por e-mail é o ideal**, mas uma lista também é bem-vinda. Pode escrever em português.

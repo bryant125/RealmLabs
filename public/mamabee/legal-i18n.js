@@ -153,17 +153,17 @@
   ]);
 
   L('pv.contact.body', [
-    '对隐私有疑问或顾虑？请发送电子邮件至 <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>，我们会在几天内回复。本政策的更新会在此处以新的"最后更新"日期标示。',
-    '對隱私有疑問或顧慮？請發送電子郵件至 <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>，我們會在幾天內回覆。本政策的更新會在此處以新的「最後更新」日期標示。',
-    'プライバシーに関するご質問やご懸念は <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> までメールしてください。数日以内に返信します。本ポリシーの更新は、新しい「最終更新」日とともにここに示します。',
-    '개인정보에 대한 질문이나 우려가 있으신가요? <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> 로 이메일을 보내시면 며칠 내에 답변드립니다. 이 방침의 업데이트는 새 "최종 업데이트" 날짜와 함께 여기에 표시됩니다.',
-    'Fragen oder Bedenken zum Datenschutz? Schreiben Sie an <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>, wir antworten innerhalb weniger Tage. Aktualisierungen dieser Richtlinie werden hier mit einem neuen „Zuletzt aktualisiert"-Datum hervorgehoben.',
-    '¿Dudas o inquietudes sobre privacidad? Escribe a <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> y responderemos en unos días. Las actualizaciones de esta política se destacarán aquí con una nueva fecha de "Última actualización".',
-    'Des questions ou des préoccupations sur la confidentialité ? Écrivez à <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> et nous répondrons sous quelques jours. Les mises à jour de cette politique seront signalées ici avec une nouvelle date de « Dernière mise à jour ».',
-    'Domande o dubbi sulla privacy? Scrivi a <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> e risponderemo entro pochi giorni. Gli aggiornamenti di questa informativa saranno evidenziati qui con una nuova data di "Ultimo aggiornamento".',
-    'Вопросы или сомнения по поводу конфиденциальности? Напишите на <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>, и мы ответим в течение нескольких дней. Обновления этой политики будут отмечены здесь новой датой «Последнее обновление».',
-    'มีคำถามหรือข้อกังวลเรื่องความเป็นส่วนตัว? อีเมลถึง <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> แล้วเราจะตอบกลับภายในไม่กี่วัน การอัปเดตนโยบายนี้จะถูกเน้นไว้ที่นี่พร้อมวันที่ "อัปเดตล่าสุด" ใหม่',
-    'Có câu hỏi hoặc lo ngại về quyền riêng tư? Gửi email đến <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> và chúng tôi sẽ phản hồi trong vài ngày. Các cập nhật của chính sách này sẽ được nêu rõ tại đây kèm ngày "Cập nhật lần cuối" mới.'
+    '对隐私有疑问或顾虑？请发送电子邮件至 <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>，我们会在几天内回复。本政策的更新会在此处以新的"最后更新"日期标示。',
+    '對隱私有疑問或顧慮？請發送電子郵件至 <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>，我們會在幾天內回覆。本政策的更新會在此處以新的「最後更新」日期標示。',
+    'プライバシーに関するご質問やご懸念は <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> までメールしてください。数日以内に返信します。本ポリシーの更新は、新しい「最終更新」日とともにここに示します。',
+    '개인정보에 대한 질문이나 우려가 있으신가요? <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> 로 이메일을 보내시면 며칠 내에 답변드립니다. 이 방침의 업데이트는 새 "최종 업데이트" 날짜와 함께 여기에 표시됩니다.',
+    'Fragen oder Bedenken zum Datenschutz? Schreiben Sie an <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>, wir antworten innerhalb weniger Tage. Aktualisierungen dieser Richtlinie werden hier mit einem neuen „Zuletzt aktualisiert"-Datum hervorgehoben.',
+    '¿Dudas o inquietudes sobre privacidad? Escribe a <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> y responderemos en unos días. Las actualizaciones de esta política se destacarán aquí con una nueva fecha de "Última actualización".',
+    'Des questions ou des préoccupations sur la confidentialité ? Écrivez à <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> et nous répondrons sous quelques jours. Les mises à jour de cette politique seront signalées ici avec une nouvelle date de « Dernière mise à jour ».',
+    'Domande o dubbi sulla privacy? Scrivi a <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> e risponderemo entro pochi giorni. Gli aggiornamenti di questa informativa saranno evidenziati qui con una nuova data di "Ultimo aggiornamento".',
+    'Вопросы или сомнения по поводу конфиденциальности? Напишите на <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>, и мы ответим в течение нескольких дней. Обновления этой политики будут отмечены здесь новой датой «Последнее обновление».',
+    'มีคำถามหรือข้อกังวลเรื่องความเป็นส่วนตัว? อีเมลถึง <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> แล้วเราจะตอบกลับภายในไม่กี่วัน การอัปเดตนโยบายนี้จะถูกเน้นไว้ที่นี่พร้อมวันที่ "อัปเดตล่าสุด" ใหม่',
+    'Có câu hỏi hoặc lo ngại về quyền riêng tư? Gửi email đến <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> và chúng tôi sẽ phản hồi trong vài ngày. Các cập nhật của chính sách này sẽ được nêu rõ tại đây kèm ngày "Cập nhật lần cuối" mới.'
   ]);
 
   L('pv.perm.why', [
@@ -335,17 +335,17 @@
   ]);
 
   L('tm.who.body', [
-    'MamaBee 由 <strong>Realm Labs Studio</strong>（"我们"）构建和运营。联系方式：<a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>。',
-    'MamaBee 由 <strong>Realm Labs Studio</strong>（「我們」）構建和營運。聯絡方式：<a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>。',
-    'MamaBee は <strong>Realm Labs Studio</strong>（「私たち」）が構築・運営しています。連絡先：<a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>。',
-    'MamaBee는 <strong>Realm Labs Studio</strong>("우리")가 구축하고 운영합니다. 연락처: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'MamaBee wird von <strong>Realm Labs Studio</strong> („wir", „uns") entwickelt und betrieben. Kontakt: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'MamaBee es creado y operado por <strong>Realm Labs Studio</strong> ("nosotros"). Contacto: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'MamaBee est créé et exploité par <strong>Realm Labs Studio</strong> (« nous »). Contact : <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'MamaBee è creato e gestito da <strong>Realm Labs Studio</strong> ("noi"). Contatto: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'MamaBee создаётся и управляется <strong>Realm Labs Studio</strong> («мы»). Контакт: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'MamaBee สร้างและดำเนินการโดย <strong>Realm Labs Studio</strong> ("เรา") ติดต่อ: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>',
-    'MamaBee được xây dựng và vận hành bởi <strong>Realm Labs Studio</strong> ("chúng tôi"). Liên hệ: <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.'
+    'MamaBee 由 <strong>Realm Labs Studio</strong>（"我们"）构建和运营。联系方式：<a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>。',
+    'MamaBee 由 <strong>Realm Labs Studio</strong>（「我們」）構建和營運。聯絡方式：<a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>。',
+    'MamaBee は <strong>Realm Labs Studio</strong>（「私たち」）が構築・運営しています。連絡先：<a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>。',
+    'MamaBee는 <strong>Realm Labs Studio</strong>("우리")가 구축하고 운영합니다. 연락처: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'MamaBee wird von <strong>Realm Labs Studio</strong> („wir", „uns") entwickelt und betrieben. Kontakt: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'MamaBee es creado y operado por <strong>Realm Labs Studio</strong> ("nosotros"). Contacto: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'MamaBee est créé et exploité par <strong>Realm Labs Studio</strong> (« nous »). Contact : <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'MamaBee è creato e gestito da <strong>Realm Labs Studio</strong> ("noi"). Contatto: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'MamaBee создаётся и управляется <strong>Realm Labs Studio</strong> («мы»). Контакт: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'MamaBee สร้างและดำเนินการโดย <strong>Realm Labs Studio</strong> ("เรา") ติดต่อ: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>',
+    'MamaBee được xây dựng và vận hành bởi <strong>Realm Labs Studio</strong> ("chúng tôi"). Liên hệ: <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.'
   ]);
 
   L('tm.whocan.body', [
@@ -752,17 +752,17 @@
   ]);
 
   L('tm.contact.body', [
-    '对这些条款有疑问？请发送电子邮件至 <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>。',
-    '對這些條款有疑問？請發送電子郵件至 <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>。',
-    'これらの規約についてご質問は <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> までメールしてください。',
-    '이 약관에 대해 궁금한 점이 있으신가요? <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a> 로 이메일을 보내주세요.',
-    'Fragen zu diesen Bedingungen? Schreiben Sie an <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    '¿Preguntas sobre estos términos? Escribe a <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'Des questions sur ces conditions ? Écrivez à <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'Domande su questi termini? Scrivi a <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'Вопросы по этим условиям? Напишите на <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.',
-    'มีคำถามเกี่ยวกับข้อกำหนดเหล่านี้? อีเมลถึง <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>',
-    'Có câu hỏi về các điều khoản này? Gửi email đến <a class="inline" href="mailto:support@realmlabs.app">support@realmlabs.app</a>.'
+    '对这些条款有疑问？请发送电子邮件至 <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>。',
+    '對這些條款有疑問？請發送電子郵件至 <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>。',
+    'これらの規約についてご質問は <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> までメールしてください。',
+    '이 약관에 대해 궁금한 점이 있으신가요? <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a> 로 이메일을 보내주세요.',
+    'Fragen zu diesen Bedingungen? Schreiben Sie an <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    '¿Preguntas sobre estos términos? Escribe a <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'Des questions sur ces conditions ? Écrivez à <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'Domande su questi termini? Scrivi a <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'Вопросы по этим условиям? Напишите на <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.',
+    'มีคำถามเกี่ยวกับข้อกำหนดเหล่านี้? อีเมลถึง <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>',
+    'Có câu hỏi về các điều khoản này? Gửi email đến <a class="inline" href="mailto:support@mamabee.app">support@mamabee.app</a>.'
   ]);
 
 

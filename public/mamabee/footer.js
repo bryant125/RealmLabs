@@ -33,7 +33,7 @@
     '  </div>',
     '  <div class="wrap footer-bottom">',
     '    <span>\u00a9 2026 Realm Labs Studio \u00b7 Made with \uD83C\uDF6F for tired parents everywhere</span>',
-    '    <span class="fb-links"><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="mailto:support@realmlabs.app">Support</a></span>',
+    '    <span class="fb-links"><a href="/mamabee/privacy">Privacy</a><a href="/mamabee/terms">Terms</a><a href="mailto:support@mamabee.app">Support</a></span>',
     '  </div>',
     '</footer>'
   ].join('\n');
